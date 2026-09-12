@@ -1,0 +1,3651 @@
+[
+ {
+  "id": "M1",
+  "g": "M",
+  "name": "Strategic Planning & Performance Management",
+  "l0": "Direction & Oversight, Corporate Planner",
+  "owner": "Corporate Planner",
+  "purpose": "Menerjemahkan arahan Direksi dan Group menjadi RKAP, KPI, dan siklus pemantauan kinerja yang berjalan setiap bulan.",
+  "kpi": [
+   "RKAP disetujui sebelum tahun anggaran dimulai",
+   "Persentase KPI korporat tercapai",
+   "Akurasi forecast pendapatan (selisih vs realisasi)"
+  ],
+  "sys": [
+   "Dashboard manajemen (BI)"
+  ],
+  "ref": "Kebijakan TÜV NORD Group, Anggaran Dasar perusahaan",
+  "rel": [
+   "S1",
+   "M2"
+  ],
+  "lanes": [
+   "md",
+   "planner",
+   "hods",
+   "ric",
+   "boc",
+   "sec"
+  ],
+  "steps": [
+   {
+    "k": "a",
+    "l": "planner",
+    "c": 0,
+    "y": "s",
+    "t": "Kalender perencanaan tahunan dimulai",
+    "n": [
+     "b"
+    ]
+   },
+   {
+    "k": "b",
+    "l": "md",
+    "c": 1,
+    "t": "Menetapkan arahan strategis",
+    "d": "Direksi menurunkan arahan dan target TÜV NORD Group menjadi arah strategis perusahaan untuk tahun berikutnya.",
+    "o": "Strategic direction",
+    "n": [
+     "c"
+    ]
+   },
+   {
+    "k": "c",
+    "l": "planner",
+    "c": 2,
+    "t": "Analisis lingkungan & kinerja berjalan",
+    "d": "Menganalisis pasar, kompetitor, regulasi, dan kinerja tahun berjalan per BU.",
+    "o": "Environmental scan",
+    "n": [
+     "d"
+    ]
+   },
+   {
+    "k": "d",
+    "l": "hods",
+    "c": 3,
+    "t": "Menyusun rencana bisnis unit",
+    "d": "Setiap BU dan divisi menyusun target, rencana layanan, kebutuhan SDM, dan usulan CAPEX.",
+    "o": "Draft business plan unit",
+    "n": [
+     "e"
+    ]
+   },
+   {
+    "k": "e",
+    "l": "ric",
+    "c": 4,
+    "t": "Konsolidasi anggaran & CAPEX",
+    "d": "Mengonsolidasikan proyeksi pendapatan, biaya, dan investasi serta menguji kewajarannya.",
+    "o": "Draft budget & CAPEX",
+    "n": [
+     "f"
+    ]
+   },
+   {
+    "k": "f",
+    "l": "planner",
+    "c": 5,
+    "t": "Menyusun RKAP & KPI korporat",
+    "d": "Menyatukan rencana bisnis dan anggaran menjadi RKAP beserta KPI korporat.",
+    "o": "Draft RKAP & KPI",
+    "n": [
+     "g"
+    ]
+   },
+   {
+    "k": "g",
+    "l": "md",
+    "c": 6,
+    "y": "d",
+    "t": "Disetujui Direksi?",
+    "d": "Direksi menilai keselarasan RKAP dengan arahan strategis dan kemampuan sumber daya.",
+    "o": "Keputusan Direksi",
+    "n": [
+     [
+      "h",
+      "Ya"
+     ],
+     [
+      "f",
+      "Revisi"
+     ]
+    ]
+   },
+   {
+    "k": "h",
+    "l": "boc",
+    "c": 7,
+    "t": "Menelaah & menyetujui RKAP",
+    "d": "Dewan Komisaris menelaah dan memberi persetujuan sesuai Anggaran Dasar.",
+    "o": "RKAP disetujui",
+    "n": [
+     "i"
+    ]
+   },
+   {
+    "k": "i",
+    "l": "planner",
+    "c": 8,
+    "t": "Cascading KPI ke unit",
+    "d": "Menurunkan KPI korporat ke BU, divisi, dan departemen sebagai kontrak kinerja.",
+    "o": "Scorecard unit",
+    "n": [
+     "j"
+    ]
+   },
+   {
+    "k": "j",
+    "l": "ric",
+    "c": 9,
+    "t": "Laporan realisasi vs target",
+    "d": "Menyusun laporan manajemen bulanan: pendapatan, margin, biaya, dan forecast.",
+    "o": "Management report",
+    "n": [
+     "k"
+    ]
+   },
+   {
+    "k": "k",
+    "l": "md",
+    "c": 10,
+    "t": "Review kinerja & tindakan perbaikan",
+    "d": "Direksi mengevaluasi kinerja bersama HoD dan menetapkan tindakan perbaikan.",
+    "o": "Keputusan & action item",
+    "n": [
+     "l"
+    ]
+   },
+   {
+    "k": "l",
+    "l": "sec",
+    "c": 11,
+    "t": "Notulen & pemantauan action item",
+    "d": "Mendokumentasikan keputusan rapat dan memantau penyelesaian action item hingga tuntas.",
+    "o": "Notulen & action log",
+    "n": [
+     "z",
+     [
+      "j",
+      "Siklus bulanan"
+     ]
+    ]
+   },
+   {
+    "k": "z",
+    "l": "planner",
+    "c": 12,
+    "y": "e",
+    "t": "Target & tindakan terpantau"
+   }
+  ],
+  "num": {
+   "b": "M1-01",
+   "c": "M1-02",
+   "d": "M1-03",
+   "e": "M1-04",
+   "f": "M1-05",
+   "g": "M1-06",
+   "h": "M1-07",
+   "i": "M1-08",
+   "j": "M1-09",
+   "k": "M1-10",
+   "l": "M1-11"
+  }
+ },
+ {
+  "id": "M2",
+  "g": "M",
+  "name": "Portfolio & New Business Development",
+  "l0": "Corporate Portfolio & Client Management, New Business Unit Development",
+  "owner": "Corporate Portfolio & Client Management (portofolio BU) dan New Business Unit Development (bisnis baru)",
+  "purpose": "Menyaring, mengkaji, dan meluncurkan layanan atau bisnis baru secara terkendali, termasuk kesiapan akreditasi dan perizinannya.",
+  "kpi": [
+   "Jumlah layanan baru diluncurkan per tahun",
+   "Kontribusi pendapatan layanan baru",
+   "Waktu dari ide sampai peluncuran"
+  ],
+  "sys": [
+   "Opportunity register",
+   "Katalog layanan"
+  ],
+  "ref": "Persyaratan akreditasi KAN untuk perluasan ruang lingkup",
+  "rel": [
+   "C1",
+   "G1",
+   "G3"
+  ],
+  "lanes": [
+   "bizbd",
+   "portfolio",
+   "nbud",
+   "ric",
+   "cms",
+   "legal",
+   "md"
+  ],
+  "steps": [
+   {
+    "k": "a",
+    "l": "bizbd",
+    "c": 0,
+    "y": "s",
+    "t": "Ide / peluang layanan baru",
+    "n": [
+     "b"
+    ]
+   },
+   {
+    "k": "b",
+    "l": "portfolio",
+    "c": 1,
+    "t": "Registrasi & screening ide",
+    "d": "Mencatat ide dari BU, pelanggan, atau pasar dan menyaring kesesuaiannya dengan strategi.",
+    "o": "Opportunity register",
+    "n": [
+     "c"
+    ]
+   },
+   {
+    "k": "c",
+    "l": "portfolio",
+    "c": 2,
+    "y": "d",
+    "t": "Dalam portofolio BU?",
+    "d": "Menentukan apakah peluang dikembangkan oleh BU yang ada atau oleh New Business Unit Development.",
+    "o": "Penetapan pengembang",
+    "n": [
+     [
+      "d",
+      "Ya"
+     ],
+     [
+      "e",
+      "Tidak"
+     ]
+    ]
+   },
+   {
+    "k": "d",
+    "l": "bizbd",
+    "c": 3,
+    "t": "Kajian pasar & teknis oleh BU",
+    "d": "BU mengkaji ukuran pasar, kebutuhan teknis, kompetensi, dan peralatan.",
+    "o": "Kajian awal",
+    "n": [
+     "f"
+    ]
+   },
+   {
+    "k": "e",
+    "l": "nbud",
+    "c": 3,
+    "t": "Kajian bisnis baru",
+    "d": "Mengkaji peluang di luar portofolio BU, termasuk People & Employment.",
+    "o": "Kajian awal",
+    "n": [
+     "f"
+    ]
+   },
+   {
+    "k": "f",
+    "l": "portfolio",
+    "c": 4,
+    "t": "Menyusun business case",
+    "d": "Menyatukan kajian pasar, teknis, investasi, dan risiko menjadi business case.",
+    "o": "Business case",
+    "n": [
+     "g",
+     "h",
+     "i"
+    ]
+   },
+   {
+    "k": "g",
+    "l": "ric",
+    "c": 5,
+    "t": "Uji kelayakan finansial",
+    "d": "Menguji proyeksi pendapatan, biaya, ROI, dan payback.",
+    "o": "Evaluasi finansial",
+    "n": [
+     "j"
+    ]
+   },
+   {
+    "k": "h",
+    "l": "cms",
+    "c": 5,
+    "t": "Kajian akreditasi & imparsialitas",
+    "d": "Menilai kebutuhan akreditasi baru atau perluasan ruang lingkup serta risiko imparsialitas.",
+    "o": "Rencana akreditasi",
+    "n": [
+     "j"
+    ]
+   },
+   {
+    "k": "i",
+    "l": "legal",
+    "c": 5,
+    "t": "Kajian perizinan & regulasi",
+    "d": "Mengidentifikasi izin, penunjukan, dan kewajiban regulasi yang diperlukan.",
+    "o": "Daftar izin",
+    "n": [
+     "j"
+    ]
+   },
+   {
+    "k": "j",
+    "l": "md",
+    "c": 6,
+    "y": "d",
+    "t": "Disetujui Direksi?",
+    "d": "Direksi memutuskan berdasarkan business case dan hasil kajian pendukung.",
+    "o": "Keputusan Direksi",
+    "n": [
+     [
+      "k",
+      "Ya"
+     ],
+     [
+      "x",
+      "Tidak"
+     ]
+    ]
+   },
+   {
+    "k": "x",
+    "l": "md",
+    "c": 7,
+    "y": "e",
+    "t": "Ditunda / ditolak"
+   },
+   {
+    "k": "k",
+    "l": "cms",
+    "c": 7,
+    "t": "Menyiapkan prosedur & akreditasi",
+    "d": "Menyiapkan prosedur, kriteria kompetensi, dan pengajuan akreditasi atau izin bersama Legal.",
+    "o": "Prosedur & pengajuan akreditasi",
+    "n": [
+     "l"
+    ]
+   },
+   {
+    "k": "l",
+    "l": "bizbd",
+    "c": 8,
+    "t": "Pilot & peluncuran layanan",
+    "d": "BU atau NBUD menjalankan pilot bersama pelanggan terpilih, lalu meluncurkan layanan bersama Marketing.",
+    "o": "Layanan diluncurkan",
+    "n": [
+     "m"
+    ]
+   },
+   {
+    "k": "m",
+    "l": "portfolio",
+    "c": 9,
+    "t": "Update katalog layanan & harga",
+    "d": "Memasukkan layanan ke katalog, daftar harga, dan sistem terkait.",
+    "o": "Katalog layanan",
+    "n": [
+     "o"
+    ]
+   },
+   {
+    "k": "o",
+    "l": "portfolio",
+    "c": 10,
+    "t": "Post-launch review",
+    "d": "Mengevaluasi pencapaian target 6 sampai 12 bulan setelah peluncuran.",
+    "o": "Laporan evaluasi",
+    "n": [
+     "z"
+    ]
+   },
+   {
+    "k": "z",
+    "l": "portfolio",
+    "c": 11,
+    "y": "e",
+    "t": "Layanan masuk portofolio"
+   }
+  ],
+  "num": {
+   "b": "M2-01",
+   "c": "M2-02",
+   "d": "M2-03",
+   "e": "M2-04",
+   "f": "M2-05",
+   "g": "M2-06",
+   "h": "M2-07",
+   "i": "M2-08",
+   "j": "M2-09",
+   "k": "M2-10",
+   "l": "M2-11",
+   "m": "M2-12",
+   "o": "M2-13"
+  }
+ },
+ {
+  "id": "M3",
+  "g": "M",
+  "name": "Continuous Improvement & Innovation",
+  "l0": "Corporate Innovation & Sustainability",
+  "owner": "Corporate Innovation & Sustainability",
+  "purpose": "Mengubah ide perbaikan dari seluruh karyawan menjadi perbaikan terukur yang distandarkan ke dalam SOP.",
+  "kpi": [
+   "Jumlah ide masuk dan diimplementasikan",
+   "Nilai penghematan / dampak terukur",
+   "Persentase perbaikan yang distandarkan"
+  ],
+  "sys": [
+   "Suggestion system"
+  ],
+  "ref": "Program suggestion system dan QCC perusahaan",
+  "rel": [
+   "M4",
+   "G1"
+  ],
+  "note": "Siklus pelaporan keberlanjutan (ESG) juga dikelola Corporate Innovation & Sustainability dan dapat dirinci pada Level 2.",
+  "lanes": [
+   "emp",
+   "cis",
+   "hods",
+   "it",
+   "md"
+  ],
+  "steps": [
+   {
+    "k": "a",
+    "l": "emp",
+    "c": 0,
+    "y": "s",
+    "t": "Ide perbaikan / masalah proses",
+    "n": [
+     "b"
+    ]
+   },
+   {
+    "k": "b",
+    "l": "emp",
+    "c": 1,
+    "t": "Mengajukan ide",
+    "d": "Karyawan mengajukan ide melalui suggestion system beserta masalah, usulan, dan perkiraan dampak.",
+    "o": "Formulir ide",
+    "n": [
+     "c"
+    ]
+   },
+   {
+    "k": "c",
+    "l": "cis",
+    "c": 2,
+    "t": "Registrasi & klasifikasi ide",
+    "d": "Mencatat, mengelompokkan, dan menentukan penilai ide.",
+    "o": "Idea register",
+    "n": [
+     "d"
+    ]
+   },
+   {
+    "k": "d",
+    "l": "hods",
+    "c": 3,
+    "y": "d",
+    "t": "Layak dijalankan?",
+    "d": "Atasan atau HoD terkait menilai manfaat, biaya, dan risiko ide.",
+    "o": "Keputusan kelayakan",
+    "n": [
+     [
+      "f",
+      "Ya"
+     ],
+     [
+      "e",
+      "Tidak"
+     ]
+    ]
+   },
+   {
+    "k": "e",
+    "l": "cis",
+    "c": 4,
+    "t": "Umpan balik ke pengusul",
+    "d": "Menyampaikan alasan penolakan atau saran pengembangan ide.",
+    "o": "Umpan balik",
+    "n": [
+     "x"
+    ]
+   },
+   {
+    "k": "x",
+    "l": "cis",
+    "c": 5,
+    "y": "e",
+    "t": "Ide ditutup"
+   },
+   {
+    "k": "f",
+    "l": "emp",
+    "c": 4,
+    "t": "Implementasi perbaikan",
+    "d": "Pengusul bersama tim menjalankan perbaikan melalui QCC, Kaizen, atau proyek kecil.",
+    "o": "Hasil implementasi",
+    "n": [
+     "h",
+     "g"
+    ]
+   },
+   {
+    "k": "g",
+    "l": "it",
+    "c": 5,
+    "t": "Dukungan digitalisasi",
+    "d": "Bila perlu, IT mengotomasi atau mengubah sistem untuk mendukung perbaikan.",
+    "o": "Perubahan sistem",
+    "n": [
+     "h"
+    ]
+   },
+   {
+    "k": "h",
+    "l": "cis",
+    "c": 6,
+    "t": "Verifikasi dampak",
+    "d": "Mengukur dampak terhadap waktu, biaya, mutu, dan keselamatan.",
+    "o": "Laporan dampak",
+    "n": [
+     "i"
+    ]
+   },
+   {
+    "k": "i",
+    "l": "cis",
+    "c": 7,
+    "t": "Standardisasi SOP & process map",
+    "d": "Memperbarui SOP dan peta proses bersama CMS agar perbaikan melekat.",
+    "o": "SOP revisi",
+    "n": [
+     "j"
+    ]
+   },
+   {
+    "k": "j",
+    "l": "md",
+    "c": 8,
+    "t": "Apresiasi & publikasi",
+    "d": "Memberi penghargaan dan membagikan praktik baik ke seluruh unit.",
+    "o": "Reward & knowledge sharing",
+    "n": [
+     "z"
+    ]
+   },
+   {
+    "k": "z",
+    "l": "cis",
+    "c": 9,
+    "y": "e",
+    "t": "Perbaikan terstandar"
+   }
+  ],
+  "num": {
+   "b": "M3-01",
+   "c": "M3-02",
+   "d": "M3-03",
+   "e": "M3-04",
+   "f": "M3-05",
+   "g": "M3-06",
+   "h": "M3-07",
+   "i": "M3-08",
+   "j": "M3-09"
+  }
+ },
+ {
+  "id": "M4",
+  "g": "M",
+  "name": "Digital & IT Service Management",
+  "l0": "IT & Digitalization",
+  "owner": "IT & Digitalization",
+  "purpose": "Mengelola permintaan layanan TI dan pengembangan sistem dari pengajuan sampai operasi yang aman.",
+  "kpi": [
+   "Penyelesaian tiket sesuai SLA",
+   "Ketersediaan sistem inti (uptime SIM's)",
+   "Persentase proyek roadmap selesai tepat waktu"
+  ],
+  "sys": [
+   "Helpdesk / ticketing",
+   "SIMCert, SIMLab, SIMCal",
+   "Central Customer, Central Invoicing"
+  ],
+  "ref": "Kebijakan TI Group (K-RL 550), UU PDP",
+  "rel": [
+   "M3"
+  ],
+  "lanes": [
+   "user",
+   "it",
+   "steer"
+  ],
+  "steps": [
+   {
+    "k": "a",
+    "l": "user",
+    "c": 0,
+    "y": "s",
+    "t": "Kebutuhan / masalah sistem",
+    "n": [
+     "b"
+    ]
+   },
+   {
+    "k": "b",
+    "l": "user",
+    "c": 1,
+    "t": "Mengajukan tiket / demand",
+    "d": "Pengguna mengajukan tiket insiden, permintaan layanan, atau demand pengembangan.",
+    "o": "Tiket / demand request",
+    "n": [
+     "c"
+    ]
+   },
+   {
+    "k": "c",
+    "l": "it",
+    "c": 2,
+    "y": "d",
+    "t": "Jenis permintaan?",
+    "d": "IT mengklasifikasikan permintaan menjadi insiden/layanan atau pengembangan.",
+    "o": "Klasifikasi tiket",
+    "n": [
+     [
+      "d",
+      "Insiden / layanan"
+     ],
+     [
+      "e",
+      "Pengembangan"
+     ]
+    ]
+   },
+   {
+    "k": "d",
+    "l": "it",
+    "c": 3,
+    "t": "Penanganan insiden & layanan",
+    "d": "Menangani tiket sesuai prioritas dan SLA, termasuk eskalasi.",
+    "o": "Tiket selesai",
+    "n": [
+     "y"
+    ]
+   },
+   {
+    "k": "y",
+    "l": "user",
+    "c": 4,
+    "y": "e",
+    "t": "Layanan pulih"
+   },
+   {
+    "k": "e",
+    "l": "steer",
+    "c": 3,
+    "t": "Prioritisasi dalam roadmap",
+    "d": "Steering menilai nilai bisnis, urgensi, dan kapasitas, lalu memasukkan ke roadmap.",
+    "o": "Roadmap & backlog",
+    "n": [
+     "f"
+    ]
+   },
+   {
+    "k": "f",
+    "l": "it",
+    "c": 4,
+    "t": "Analisis kebutuhan & desain",
+    "d": "Menyusun spesifikasi fungsional, alur proses, dan rancangan data.",
+    "o": "Spesifikasi / PRD",
+    "n": [
+     "g"
+    ]
+   },
+   {
+    "k": "g",
+    "l": "it",
+    "c": 5,
+    "t": "Pengembangan & konfigurasi",
+    "d": "Membangun atau mengonfigurasi solusi sesuai spesifikasi dan standar keamanan.",
+    "o": "Build",
+    "n": [
+     "h"
+    ]
+   },
+   {
+    "k": "h",
+    "l": "user",
+    "c": 6,
+    "y": "d",
+    "t": "UAT diterima?",
+    "d": "Pengguna menguji solusi terhadap skenario bisnis.",
+    "o": "Berita acara UAT",
+    "n": [
+     [
+      "i",
+      "Ya"
+     ],
+     [
+      "g",
+      "Perbaikan"
+     ]
+    ]
+   },
+   {
+    "k": "i",
+    "l": "it",
+    "c": 7,
+    "t": "Deploy & migrasi data",
+    "d": "Merilis ke produksi dan memigrasikan data yang diperlukan.",
+    "o": "Rilis",
+    "n": [
+     "j"
+    ]
+   },
+   {
+    "k": "j",
+    "l": "user",
+    "c": 8,
+    "t": "Pelatihan & adopsi",
+    "d": "Pengguna dilatih dan mulai memakai sistem baru.",
+    "o": "Pengguna terlatih",
+    "n": [
+     "k"
+    ]
+   },
+   {
+    "k": "k",
+    "l": "it",
+    "c": 9,
+    "t": "Operasi, keamanan & monitoring",
+    "d": "Monitoring, backup, kontrol akses, dan penanganan insiden keamanan informasi.",
+    "o": "Laporan layanan TI",
+    "n": [
+     "z"
+    ]
+   },
+   {
+    "k": "z",
+    "l": "it",
+    "c": 10,
+    "y": "e",
+    "t": "Sistem beroperasi stabil"
+   }
+  ],
+  "num": {
+   "b": "M4-01",
+   "c": "M4-02",
+   "d": "M4-03",
+   "e": "M4-04",
+   "f": "M4-05",
+   "g": "M4-06",
+   "h": "M4-07",
+   "i": "M4-08",
+   "j": "M4-09",
+   "k": "M4-10"
+  }
+ },
+ {
+  "id": "G1",
+  "g": "G",
+  "name": "Management System & Accreditation",
+  "l0": "Corporate Management System",
+  "owner": "Corporate Management System",
+  "purpose": "Menjaga sistem manajemen dan akreditasi tetap efektif melalui pengendalian dokumen, audit, CAPA, dan management review.",
+  "kpi": [
+   "Temuan asesmen KAN ditutup tepat waktu",
+   "Persentase CAPA efektif pada verifikasi pertama",
+   "Program audit internal terlaksana 100%"
+  ],
+  "sys": [
+   "Document control",
+   "CAPA register"
+  ],
+  "ref": "ISO/IEC 17021-1, 17025, 17020, 17065; persyaratan KAN",
+  "rel": [
+   "G2",
+   "S3"
+  ],
+  "lanes": [
+   "cms",
+   "owner",
+   "md",
+   "kan"
+  ],
+  "steps": [
+   {
+    "k": "a",
+    "l": "cms",
+    "c": 0,
+    "y": "s",
+    "t": "Program audit & kalender akreditasi",
+    "n": [
+     "b",
+     "d"
+    ]
+   },
+   {
+    "k": "b",
+    "l": "cms",
+    "c": 1,
+    "t": "Pengendalian dokumen",
+    "d": "Menerbitkan, merevisi, dan mendistribusikan dokumen terkendali.",
+    "o": "Master list dokumen",
+    "n": [
+     "c"
+    ]
+   },
+   {
+    "k": "c",
+    "l": "cms",
+    "c": 2,
+    "t": "Audit internal",
+    "d": "Melaksanakan audit internal terhadap persyaratan standar akreditasi dan prosedur perusahaan.",
+    "o": "Laporan audit internal",
+    "n": [
+     "e"
+    ]
+   },
+   {
+    "k": "d",
+    "l": "kan",
+    "c": 2,
+    "t": "Asesmen akreditasi / witness",
+    "d": "KAN, pemilik skema, atau Group melakukan asesmen dan witness.",
+    "o": "Laporan asesmen",
+    "n": [
+     "e"
+    ]
+   },
+   {
+    "k": "e",
+    "l": "owner",
+    "c": 3,
+    "t": "Analisis akar masalah & CAPA",
+    "d": "Pemilik proses menganalisis akar masalah dan menetapkan tindakan korektif.",
+    "o": "Rencana CAPA",
+    "n": [
+     "f"
+    ]
+   },
+   {
+    "k": "f",
+    "l": "cms",
+    "c": 4,
+    "t": "Verifikasi efektivitas CAPA",
+    "d": "Memeriksa bukti pelaksanaan dan efektivitas tindakan korektif.",
+    "o": "Hasil verifikasi",
+    "n": [
+     "g"
+    ]
+   },
+   {
+    "k": "g",
+    "l": "cms",
+    "c": 5,
+    "y": "d",
+    "t": "Efektif?",
+    "d": "Menilai apakah akar masalah telah tertangani dan tidak berulang.",
+    "o": "Status CAPA",
+    "n": [
+     [
+      "h",
+      "Ya"
+     ],
+     [
+      "e",
+      "Tidak"
+     ],
+     [
+      "j",
+      "Temuan eksternal"
+     ]
+    ]
+   },
+   {
+    "k": "h",
+    "l": "cms",
+    "c": 6,
+    "t": "Input management review",
+    "d": "Merangkum hasil audit, keluhan, risiko, kinerja, dan status CAPA.",
+    "o": "Input MR",
+    "n": [
+     "i"
+    ]
+   },
+   {
+    "k": "j",
+    "l": "kan",
+    "c": 6,
+    "t": "Penutupan temuan & keputusan akreditasi",
+    "d": "Badan akreditasi menutup temuan dan memutuskan kelanjutan akreditasi.",
+    "o": "Sertifikat akreditasi berlaku",
+    "n": [
+     "z"
+    ]
+   },
+   {
+    "k": "i",
+    "l": "md",
+    "c": 7,
+    "t": "Management review",
+    "d": "Direksi meninjau kinerja sistem, risiko, sumber daya, dan peluang perbaikan.",
+    "o": "Notulen & keputusan MR",
+    "n": [
+     "z"
+    ]
+   },
+   {
+    "k": "z",
+    "l": "cms",
+    "c": 8,
+    "y": "e",
+    "t": "Sistem terpelihara & akreditasi berlanjut"
+   }
+  ],
+  "num": {
+   "b": "G1-01",
+   "c": "G1-02",
+   "d": "G1-03",
+   "e": "G1-04",
+   "f": "G1-05",
+   "g": "G1-06",
+   "h": "G1-07",
+   "j": "G1-08",
+   "i": "G1-09"
+  }
+ },
+ {
+  "id": "G2",
+  "g": "G",
+  "name": "Complaints, Appeals & Impartiality",
+  "l0": "Corporate Management System, Governing Board & Appeals Committee",
+  "owner": "Corporate Management System (keluhan) dan Governing Board & Appeals Committee (banding & imparsialitas)",
+  "purpose": "Menangani keluhan dan banding secara adil dan independen, serta menjaga imparsialitas lembaga.",
+  "kpi": [
+   "Konfirmasi penerimaan keluhan dalam batas waktu",
+   "Waktu penyelesaian keluhan dan banding",
+   "Keluhan berulang untuk penyebab yang sama"
+  ],
+  "sys": [
+   "Register keluhan & banding"
+  ],
+  "ref": "ISO/IEC 17021-1 (9.7, 9.8), 17025 (7.9), 17020 (7.5, 7.6), 17065 (7.13)",
+  "rel": [
+   "G1",
+   "C5"
+  ],
+  "lanes": [
+   "cust",
+   "cms",
+   "bu",
+   "indep",
+   "gbac"
+  ],
+  "steps": [
+   {
+    "k": "a",
+    "l": "cust",
+    "c": 0,
+    "y": "s",
+    "t": "Keluhan / banding diajukan",
+    "n": [
+     "b"
+    ]
+   },
+   {
+    "k": "b",
+    "l": "cms",
+    "c": 1,
+    "t": "Registrasi & konfirmasi penerimaan",
+    "d": "Mencatat, memberi nomor, dan mengonfirmasi penerimaan kepada pelanggan.",
+    "o": "Register keluhan & banding",
+    "n": [
+     "c"
+    ]
+   },
+   {
+    "k": "c",
+    "l": "cms",
+    "c": 2,
+    "y": "d",
+    "t": "Keluhan atau banding?",
+    "d": "Memisahkan keluhan atas layanan dari banding atas keputusan (sertifikasi / inspeksi).",
+    "o": "Klasifikasi",
+    "n": [
+     [
+      "d",
+      "Keluhan"
+     ],
+     [
+      "g",
+      "Banding"
+     ]
+    ]
+   },
+   {
+    "k": "d",
+    "l": "bu",
+    "c": 3,
+    "t": "Investigasi & koreksi",
+    "d": "Unit terkait menginvestigasi akar masalah dan mengusulkan koreksi serta tindakan korektif.",
+    "o": "Laporan investigasi",
+    "n": [
+     "e"
+    ]
+   },
+   {
+    "k": "e",
+    "l": "indep",
+    "c": 4,
+    "t": "Meninjau & menyetujui keputusan",
+    "d": "Personel yang tidak terlibat dalam kegiatan yang dikeluhkan meninjau dan menyetujui keputusan.",
+    "o": "Keputusan keluhan",
+    "n": [
+     "i"
+    ]
+   },
+   {
+    "k": "g",
+    "l": "gbac",
+    "c": 3,
+    "t": "Memeriksa banding",
+    "d": "Komite memeriksa banding secara independen dari personel yang membuat keputusan awal.",
+    "o": "Berkas pemeriksaan",
+    "n": [
+     "h"
+    ]
+   },
+   {
+    "k": "h",
+    "l": "gbac",
+    "c": 4,
+    "t": "Memutus banding",
+    "d": "Komite memutus banding dan menetapkan tindak lanjut.",
+    "o": "Keputusan banding",
+    "n": [
+     "i"
+    ]
+   },
+   {
+    "k": "i",
+    "l": "cms",
+    "c": 5,
+    "t": "Respons formal ke pelanggan",
+    "d": "Menyampaikan hasil dan keputusan secara tertulis kepada pelanggan.",
+    "o": "Surat respons",
+    "n": [
+     "y",
+     "j"
+    ]
+   },
+   {
+    "k": "y",
+    "l": "cust",
+    "c": 6,
+    "y": "e",
+    "t": "Pelanggan menerima respons"
+   },
+   {
+    "k": "j",
+    "l": "cms",
+    "c": 6,
+    "t": "CAPA & penutupan kasus",
+    "d": "Memastikan tindakan korektif selesai lalu menutup kasus.",
+    "o": "Kasus ditutup",
+    "n": [
+     "k"
+    ]
+   },
+   {
+    "k": "k",
+    "l": "gbac",
+    "c": 7,
+    "t": "Tinjauan imparsialitas berkala",
+    "d": "Menelaah tren keluhan dan banding serta analisis risiko imparsialitas.",
+    "o": "Notulen tinjauan imparsialitas",
+    "n": [
+     "z"
+    ]
+   },
+   {
+    "k": "z",
+    "l": "cms",
+    "c": 8,
+    "y": "e",
+    "t": "Kasus tertutup & risiko terkendali"
+   }
+  ],
+  "num": {
+   "b": "G2-01",
+   "c": "G2-02",
+   "d": "G2-03",
+   "e": "G2-04",
+   "g": "G2-05",
+   "h": "G2-06",
+   "i": "G2-07",
+   "j": "G2-08",
+   "k": "G2-09"
+  }
+ },
+ {
+  "id": "G3",
+  "g": "G",
+  "name": "Legal, Contract & Licensing Compliance",
+  "l0": "Legal Administration Support",
+  "owner": "Legal Administration Support",
+  "purpose": "Memastikan kontrak dan izin usaha sah, terdokumentasi, dan dipantau masa berlakunya.",
+  "kpi": [
+   "Waktu review kontrak",
+   "Izin dan penunjukan yang kedaluwarsa (target nol)",
+   "Kontrak tercatat di register"
+  ],
+  "sys": [
+   "Contract register",
+   "Legal register"
+  ],
+  "ref": "Peraturan perundang-undangan terkait perizinan dan penunjukan lembaga",
+  "rel": [
+   "C3",
+   "S2",
+   "M2"
+  ],
+  "lanes": [
+   "req",
+   "legal",
+   "md",
+   "reg"
+  ],
+  "steps": [
+   {
+    "k": "a",
+    "l": "req",
+    "c": 0,
+    "y": "s",
+    "t": "Draft kontrak / kebutuhan izin",
+    "n": [
+     "b"
+    ]
+   },
+   {
+    "k": "b",
+    "l": "req",
+    "c": 1,
+    "t": "Mengajukan legal review",
+    "d": "Unit pemohon mengajukan draft kontrak beserta latar belakang transaksi.",
+    "o": "Legal request",
+    "n": [
+     "c"
+    ]
+   },
+   {
+    "k": "c",
+    "l": "legal",
+    "c": 2,
+    "y": "d",
+    "t": "Template standar tanpa perubahan?",
+    "d": "Menilai apakah kontrak memakai template standar yang sudah disetujui.",
+    "o": "Klasifikasi",
+    "n": [
+     [
+      "f",
+      "Ya"
+     ],
+     [
+      "d",
+      "Tidak"
+     ]
+    ]
+   },
+   {
+    "k": "d",
+    "l": "legal",
+    "c": 3,
+    "t": "Review & markup kontrak",
+    "d": "Menelaah klausul tanggung jawab, kerahasiaan, pembayaran, dan penyelesaian sengketa.",
+    "o": "Legal opinion & markup",
+    "n": [
+     "e"
+    ]
+   },
+   {
+    "k": "e",
+    "l": "req",
+    "c": 4,
+    "t": "Negosiasi dengan pihak lawan",
+    "d": "Unit pemohon menegosiasikan perubahan dengan dukungan Legal.",
+    "o": "Draft final",
+    "n": [
+     "f"
+    ]
+   },
+   {
+    "k": "f",
+    "l": "md",
+    "c": 5,
+    "t": "Persetujuan & penandatanganan",
+    "d": "Kontrak ditandatangani pejabat sesuai matriks kewenangan.",
+    "o": "Kontrak ditandatangani",
+    "n": [
+     "g"
+    ]
+   },
+   {
+    "k": "g",
+    "l": "legal",
+    "c": 6,
+    "t": "Registrasi kontrak & kewajiban",
+    "d": "Mencatat kontrak dan kewajiban pentingnya (tenggat, perpanjangan, jaminan).",
+    "o": "Contract register",
+    "n": [
+     "h"
+    ]
+   },
+   {
+    "k": "h",
+    "l": "legal",
+    "c": 7,
+    "t": "Pemantauan izin & regulasi",
+    "d": "Memantau masa berlaku izin atau penunjukan serta perubahan regulasi, lalu memberi tahu unit terkait.",
+    "o": "Legal register",
+    "n": [
+     "i"
+    ]
+   },
+   {
+    "k": "i",
+    "l": "reg",
+    "c": 8,
+    "t": "Perpanjangan izin / penunjukan",
+    "d": "Legal mengajukan perpanjangan; kementerian atau lembaga teknis menerbitkannya.",
+    "o": "Izin berlaku",
+    "n": [
+     "z"
+    ]
+   },
+   {
+    "k": "z",
+    "l": "legal",
+    "c": 9,
+    "y": "e",
+    "t": "Kontrak & izin terkendali"
+   }
+  ],
+  "num": {
+   "b": "G3-01",
+   "c": "G3-02",
+   "d": "G3-03",
+   "e": "G3-04",
+   "f": "G3-05",
+   "g": "G3-06",
+   "h": "G3-07",
+   "i": "G3-08"
+  }
+ },
+ {
+  "id": "C1",
+  "g": "C",
+  "name": "Business Development",
+  "l0": "Core Business Process, tahap Business Development",
+  "owner": "HoD profit center (per BU)",
+  "purpose": "Menemukan peluang pasar dan akun prioritas, lalu merumuskan value proposition yang siap dipasarkan.",
+  "kpi": [
+   "Nilai pipeline peluang baru",
+   "Jumlah akun strategis aktif",
+   "Rasio cross-selling lintas BU"
+  ],
+  "sys": [
+   "Central Customer"
+  ],
+  "ref": "Rencana bisnis tahunan (M1)",
+  "rel": [
+   "M2",
+   "C2",
+   "C3"
+  ],
+  "note": "Peluang yang memerlukan layanan, skema, atau akreditasi baru diteruskan ke M2.",
+  "lanes": [
+   "bizbd",
+   "portfolio",
+   "planner",
+   "pchead",
+   "mkt"
+  ],
+  "steps": [
+   {
+    "k": "a",
+    "l": "bizbd",
+    "c": 0,
+    "y": "s",
+    "t": "Sinyal pasar, regulasi baru, customer insight",
+    "n": [
+     "b"
+    ]
+   },
+   {
+    "k": "b",
+    "l": "bizbd",
+    "c": 1,
+    "t": "Market & customer intelligence",
+    "d": "Mengumpulkan kebutuhan industri, regulasi baru, dan masukan pelanggan.",
+    "o": "Market insight",
+    "n": [
+     "c"
+    ]
+   },
+   {
+    "k": "c",
+    "l": "portfolio",
+    "c": 2,
+    "t": "Analisis portofolio & segmen",
+    "d": "Memetakan segmen prioritas, peluang cross-selling, dan layanan yang belum digarap.",
+    "o": "Opportunity map",
+    "n": [
+     "d"
+    ]
+   },
+   {
+    "k": "d",
+    "l": "planner",
+    "c": 3,
+    "t": "Penyelarasan dengan strategi",
+    "d": "Memastikan peluang selaras dengan target dan prioritas RKAP.",
+    "o": "Peluang prioritas",
+    "n": [
+     "e"
+    ]
+   },
+   {
+    "k": "e",
+    "l": "bizbd",
+    "c": 4,
+    "t": "Value proposition & account plan",
+    "d": "Merumuskan value proposition per segmen dan rencana pendekatan akun strategis.",
+    "o": "Account plan",
+    "n": [
+     "f"
+    ]
+   },
+   {
+    "k": "f",
+    "l": "pchead",
+    "c": 5,
+    "y": "d",
+    "t": "Disetujui HoD?",
+    "d": "HoD menilai potensi, kapasitas delivery, dan kebutuhan sumber daya.",
+    "o": "Keputusan HoD",
+    "n": [
+     [
+      "g",
+      "Ya"
+     ],
+     [
+      "h",
+      "Ya"
+     ],
+     [
+      "e",
+      "Revisi"
+     ]
+    ]
+   },
+   {
+    "k": "g",
+    "l": "mkt",
+    "c": 6,
+    "t": "Brief ke program pemasaran",
+    "d": "Menyerahkan segmen, pesan, dan target ke Marketing.",
+    "o": "Brief pemasaran",
+    "n": [
+     "z"
+    ]
+   },
+   {
+    "k": "h",
+    "l": "bizbd",
+    "c": 6,
+    "t": "Penjajakan akun strategis",
+    "d": "Menghubungi akun prioritas dan membuka peluang langsung.",
+    "o": "Pipeline peluang",
+    "n": [
+     "z"
+    ]
+   },
+   {
+    "k": "z",
+    "l": "bizbd",
+    "c": 7,
+    "y": "e",
+    "t": "Masuk ke C2 & C3"
+   }
+  ],
+  "num": {
+   "b": "C1-01",
+   "c": "C1-02",
+   "d": "C1-03",
+   "e": "C1-04",
+   "f": "C1-05",
+   "g": "C1-06",
+   "h": "C1-07"
+  }
+ },
+ {
+  "id": "C2",
+  "g": "C",
+  "name": "Marketing & Lead Generation",
+  "l0": "Core Business Process, tahap Marketing",
+  "owner": "Corporate Marketing & Communication",
+  "purpose": "Menjalankan kampanye yang patuh aturan akreditasi dan menghasilkan lead berkualitas untuk tim sales.",
+  "kpi": [
+   "Jumlah lead berkualitas (MQL / SQL)",
+   "Konversi lead ke peluang",
+   "Biaya per lead"
+  ],
+  "sys": [
+   "Website & kanal digital",
+   "CRM / Central Customer"
+  ],
+  "ref": "Aturan penggunaan logo akreditasi KAN, pedoman merek TÜV NORD",
+  "rel": [
+   "C1",
+   "C3",
+   "S5"
+  ],
+  "lanes": [
+   "mkt",
+   "pchead",
+   "cms",
+   "it",
+   "bizbd"
+  ],
+  "steps": [
+   {
+    "k": "a",
+    "l": "mkt",
+    "c": 0,
+    "y": "s",
+    "t": "Brief pemasaran & kalender kampanye",
+    "n": [
+     "b"
+    ]
+   },
+   {
+    "k": "b",
+    "l": "mkt",
+    "c": 1,
+    "t": "Rencana & anggaran kampanye",
+    "d": "Menyusun sasaran, kanal, pesan, jadwal, dan anggaran kampanye.",
+    "o": "Campaign plan",
+    "n": [
+     "c"
+    ]
+   },
+   {
+    "k": "c",
+    "l": "pchead",
+    "c": 2,
+    "t": "Menyetujui pesan & anggaran BU",
+    "d": "HoD menyetujui pesan layanan, segmen, dan anggaran.",
+    "o": "Campaign plan disetujui",
+    "n": [
+     "d",
+     "g"
+    ]
+   },
+   {
+    "k": "d",
+    "l": "cms",
+    "c": 3,
+    "t": "Cek klaim & logo akreditasi",
+    "d": "Memastikan klaim layanan dan penggunaan logo akreditasi sesuai aturan.",
+    "o": "Materi terverifikasi",
+    "n": [
+     "e"
+    ]
+   },
+   {
+    "k": "e",
+    "l": "mkt",
+    "c": 4,
+    "t": "Produksi materi & eksekusi kampanye",
+    "d": "Website, media sosial, email, event, seminar, dan pameran.",
+    "o": "Materi & kampanye",
+    "n": [
+     "f"
+    ]
+   },
+   {
+    "k": "g",
+    "l": "it",
+    "c": 4,
+    "t": "Kanal digital & integrasi lead",
+    "d": "Menyediakan form, landing page, dan integrasi lead ke data pelanggan terpusat.",
+    "o": "Lead tercatat otomatis",
+    "n": [
+     "f"
+    ]
+   },
+   {
+    "k": "f",
+    "l": "mkt",
+    "c": 5,
+    "t": "Kualifikasi lead",
+    "d": "Menyaring lead berdasarkan kecocokan segmen dan minat.",
+    "o": "Lead pool (MQL)",
+    "n": [
+     "h"
+    ]
+   },
+   {
+    "k": "h",
+    "l": "bizbd",
+    "c": 6,
+    "t": "Follow-up lead",
+    "d": "Tim sales menghubungi lead dan mengubahnya menjadi peluang.",
+    "o": "Peluang (SQL)",
+    "n": [
+     "i"
+    ]
+   },
+   {
+    "k": "i",
+    "l": "mkt",
+    "c": 7,
+    "t": "Evaluasi efektivitas kampanye",
+    "d": "Mengukur lead, konversi, dan biaya per lead untuk kampanye berikutnya.",
+    "o": "Laporan kampanye",
+    "n": [
+     "z"
+    ]
+   },
+   {
+    "k": "z",
+    "l": "mkt",
+    "c": 8,
+    "y": "e",
+    "t": "Peluang masuk ke C3"
+   }
+  ],
+  "num": {
+   "b": "C2-01",
+   "c": "C2-02",
+   "d": "C2-03",
+   "e": "C2-04",
+   "g": "C2-05",
+   "f": "C2-06",
+   "h": "C2-07",
+   "i": "C2-08"
+  }
+ },
+ {
+  "id": "C3",
+  "g": "C",
+  "name": "Sales & Contract Review",
+  "l0": "Core Business Process, tahap Sales & Contract Review",
+  "owner": "HoD profit center (per BU)",
+  "purpose": "Mengubah inquiry menjadi kontrak atau work order yang dapat dilaksanakan, dengan contract review sesuai standar akreditasi.",
+  "kpi": [
+   "Waktu inquiry sampai penawaran",
+   "Hit rate penawaran",
+   "Persentase order dengan contract review lengkap"
+  ],
+  "sys": [
+   "Central Customer",
+   "SIMCert, SIMLab, SIMCal"
+  ],
+  "ref": "ISO/IEC 17025 (7.1), 17021-1 (9.1), 17020 (7.1), 17065 (7.1–7.2)",
+  "rel": [
+   "C2",
+   "C4.1",
+   "C4.2",
+   "C4.3",
+   "C4.4",
+   "G3"
+  ],
+  "lanes": [
+   "cust",
+   "sales",
+   "tech",
+   "supp",
+   "pchead"
+  ],
+  "steps": [
+   {
+    "k": "a",
+    "l": "cust",
+    "c": 0,
+    "y": "s",
+    "t": "Inquiry / permohonan layanan",
+    "n": [
+     "b"
+    ]
+   },
+   {
+    "k": "b",
+    "l": "sales",
+    "c": 1,
+    "t": "Registrasi inquiry & klarifikasi kebutuhan",
+    "d": "Mencatat pelanggan di Central Customer dan mengklarifikasi ruang lingkup.",
+    "o": "Inquiry tercatat",
+    "n": [
+     "c"
+    ]
+   },
+   {
+    "k": "c",
+    "l": "tech",
+    "c": 2,
+    "t": "Contract review teknis",
+    "d": "Menilai kesesuaian dengan ruang lingkup akreditasi, metode, kompetensi, kapasitas, dan risiko imparsialitas.",
+    "o": "Checklist contract review",
+    "n": [
+     "d"
+    ]
+   },
+   {
+    "k": "d",
+    "l": "tech",
+    "c": 3,
+    "y": "d",
+    "t": "Dapat dilayani?",
+    "d": "Keputusan teknis apakah permintaan dapat dipenuhi.",
+    "o": "Keputusan teknis",
+    "n": [
+     [
+      "f",
+      "Ya"
+     ],
+     [
+      "x",
+      "Tidak"
+     ]
+    ]
+   },
+   {
+    "k": "x",
+    "l": "cust",
+    "c": 4,
+    "y": "e",
+    "t": "Diinformasikan & diberi alternatif"
+   },
+   {
+    "k": "f",
+    "l": "sales",
+    "c": 4,
+    "t": "Menyusun penawaran berbasis COGS",
+    "d": "Menghitung harga dari biaya pokok layanan, man-day, dan margin target.",
+    "o": "Quotation",
+    "n": [
+     "g"
+    ]
+   },
+   {
+    "k": "g",
+    "l": "sales",
+    "c": 5,
+    "y": "d",
+    "t": "Nonstandar?",
+    "d": "Diskon di atas batas atau klausul kontrak di luar template.",
+    "o": "Klasifikasi",
+    "n": [
+     [
+      "h",
+      "Ya"
+     ],
+     [
+      "i",
+      "Tidak"
+     ]
+    ]
+   },
+   {
+    "k": "h",
+    "l": "supp",
+    "c": 6,
+    "t": "Review Legal / RIC",
+    "d": "Legal menelaah klausul; RIC menelaah margin dan diskon.",
+    "o": "Rekomendasi",
+    "n": [
+     "i"
+    ]
+   },
+   {
+    "k": "i",
+    "l": "pchead",
+    "c": 7,
+    "t": "Menyetujui penawaran",
+    "d": "HoD menyetujui sesuai matriks kewenangan.",
+    "o": "Quotation disetujui",
+    "n": [
+     "j"
+    ]
+   },
+   {
+    "k": "j",
+    "l": "cust",
+    "c": 8,
+    "y": "d",
+    "t": "Pelanggan setuju?",
+    "d": "Pelanggan menerima atau meminta negosiasi.",
+    "o": "Keputusan pelanggan",
+    "n": [
+     [
+      "k",
+      "Ya"
+     ],
+     [
+      "f",
+      "Negosiasi"
+     ]
+    ]
+   },
+   {
+    "k": "k",
+    "l": "sales",
+    "c": 9,
+    "t": "Kontrak / PO & work order",
+    "d": "Menerbitkan kontrak atau work order dan meneruskannya ke tim operasional melalui SIM's.",
+    "o": "Contract / Work Order",
+    "n": [
+     "z"
+    ]
+   },
+   {
+    "k": "z",
+    "l": "tech",
+    "c": 10,
+    "y": "e",
+    "t": "Masuk ke C4 Service Delivery"
+   }
+  ],
+  "num": {
+   "b": "C3-01",
+   "c": "C3-02",
+   "d": "C3-03",
+   "f": "C3-04",
+   "g": "C3-05",
+   "h": "C3-06",
+   "i": "C3-07",
+   "j": "C3-08",
+   "k": "C3-09"
+  }
+ },
+ {
+  "id": "C4.1",
+  "g": "C",
+  "name": "Service Delivery: Certification Services",
+  "l0": "Core Business Process, Service Delivery, Certification Services",
+  "owner": "HoD Certification Services",
+  "purpose": "Menjalankan siklus sertifikasi sistem manajemen tiga tahunan, dari permohonan sampai surveilen dan resertifikasi.",
+  "kpi": [
+   "Waktu dari akhir audit sampai sertifikat terbit",
+   "Retensi klien pada surveilen dan resertifikasi",
+   "Temuan asesmen KAN terkait proses sertifikasi"
+  ],
+  "sys": [
+   "SIMCert"
+  ],
+  "ref": "ISO/IEC 17021-1:2015 klausul 9; IAF MD 5 (durasi audit); persyaratan KAN dan pemilik skema",
+  "rel": [
+   "C3",
+   "C5",
+   "G2",
+   "S3"
+  ],
+  "lanes": [
+   "cust",
+   "cs_sc",
+   "cs_bs",
+   "cs_aud",
+   "cs_rev"
+  ],
+  "steps": [
+   {
+    "k": "a",
+    "l": "cust",
+    "c": 0,
+    "y": "s",
+    "t": "Permohonan sertifikasi",
+    "n": [
+     "b"
+    ]
+   },
+   {
+    "k": "b",
+    "l": "cs_bs",
+    "c": 1,
+    "t": "Registrasi & application review",
+    "d": "Memeriksa kelengkapan informasi klien: ruang lingkup, lokasi, dan jumlah personel.",
+    "o": "Application review",
+    "n": [
+     "c"
+    ]
+   },
+   {
+    "k": "c",
+    "l": "cs_aud",
+    "c": 2,
+    "t": "Man-day & kompetensi tim",
+    "d": "Menghitung durasi audit sesuai aturan IAF dan menetapkan kebutuhan kompetensi tim.",
+    "o": "Perhitungan durasi audit",
+    "n": [
+     "d"
+    ]
+   },
+   {
+    "k": "d",
+    "l": "cs_sc",
+    "c": 3,
+    "t": "Penawaran & kontrak",
+    "d": "Menyusun penawaran dan kontrak sertifikasi (lihat C3).",
+    "o": "Kontrak sertifikasi",
+    "n": [
+     "e"
+    ]
+   },
+   {
+    "k": "e",
+    "l": "cs_bs",
+    "c": 4,
+    "t": "Program audit & penjadwalan",
+    "d": "Menyusun program audit tiga tahunan, menugaskan tim audit yang bebas konflik kepentingan, dan menjadwalkan audit.",
+    "o": "Audit program & audit plan",
+    "n": [
+     "f"
+    ]
+   },
+   {
+    "k": "f",
+    "l": "cs_aud",
+    "c": 5,
+    "t": "Audit Stage 1",
+    "d": "Menilai kesiapan sistem manajemen dan dokumentasi klien.",
+    "o": "Laporan Stage 1",
+    "n": [
+     "g"
+    ]
+   },
+   {
+    "k": "g",
+    "l": "cs_aud",
+    "c": 6,
+    "y": "d",
+    "t": "Siap Stage 2?",
+    "d": "Menilai apakah temuan Stage 1 menghalangi Stage 2.",
+    "o": "Keputusan kesiapan",
+    "n": [
+     [
+      "h",
+      "Ya"
+     ],
+     [
+      "y",
+      "Tidak"
+     ]
+    ]
+   },
+   {
+    "k": "y",
+    "l": "cust",
+    "c": 7,
+    "t": "Menindaklanjuti temuan Stage 1",
+    "d": "Klien memperbaiki kesiapan sebelum Stage 2.",
+    "o": "Bukti perbaikan",
+    "n": [
+     "f"
+    ]
+   },
+   {
+    "k": "h",
+    "l": "cs_aud",
+    "c": 7,
+    "t": "Audit Stage 2",
+    "d": "Menilai implementasi dan efektivitas sistem manajemen di lokasi.",
+    "o": "Laporan audit & temuan",
+    "n": [
+     "i"
+    ]
+   },
+   {
+    "k": "i",
+    "l": "cust",
+    "c": 8,
+    "t": "Koreksi & tindakan korektif",
+    "d": "Klien menyampaikan koreksi dan tindakan korektif atas ketidaksesuaian.",
+    "o": "Bukti CAPA klien",
+    "n": [
+     "j"
+    ]
+   },
+   {
+    "k": "j",
+    "l": "cs_aud",
+    "c": 9,
+    "t": "Verifikasi CAPA & rekomendasi",
+    "d": "Auditor memverifikasi CAPA dan memberi rekomendasi sertifikasi.",
+    "o": "Rekomendasi sertifikasi",
+    "n": [
+     "k"
+    ]
+   },
+   {
+    "k": "k",
+    "l": "cs_rev",
+    "c": 10,
+    "y": "d",
+    "t": "Sertifikasi diberikan?",
+    "d": "Tinjauan teknis dan keputusan oleh personel yang tidak terlibat dalam audit.",
+    "o": "Keputusan sertifikasi",
+    "n": [
+     [
+      "l",
+      "Ya"
+     ],
+     [
+      "j",
+      "Bukti tambahan"
+     ]
+    ]
+   },
+   {
+    "k": "l",
+    "l": "cs_bs",
+    "c": 11,
+    "t": "Sertifikat & direktori klien",
+    "d": "Menerbitkan sertifikat dan memperbarui direktori klien tersertifikasi.",
+    "o": "Sertifikat",
+    "n": [
+     "m"
+    ]
+   },
+   {
+    "k": "m",
+    "l": "cs_aud",
+    "c": 12,
+    "t": "Surveilen tahunan & resertifikasi",
+    "d": "Melaksanakan surveilen tahun ke-1 dan ke-2, lalu resertifikasi di tahun ke-3; hasilnya kembali ke keputusan sertifikasi.",
+    "o": "Laporan surveilen",
+    "n": [
+     "z"
+    ]
+   },
+   {
+    "k": "z",
+    "l": "cs_bs",
+    "c": 13,
+    "y": "e",
+    "t": "Siklus berlanjut; penagihan ke C5"
+   }
+  ],
+  "num": {
+   "b": "C4.1-01",
+   "c": "C4.1-02",
+   "d": "C4.1-03",
+   "e": "C4.1-04",
+   "f": "C4.1-05",
+   "g": "C4.1-06",
+   "y": "C4.1-07",
+   "h": "C4.1-08",
+   "i": "C4.1-09",
+   "j": "C4.1-10",
+   "k": "C4.1-11",
+   "l": "C4.1-12",
+   "m": "C4.1-13"
+  }
+ },
+ {
+  "id": "C4.2",
+  "g": "C",
+  "name": "Service Delivery: Laboratory Services",
+  "l0": "Core Business Process, Service Delivery, Laboratory Services",
+  "owner": "HoD Laboratory Services",
+  "purpose": "Menjalankan pengujian dan kalibrasi dari permintaan sampai laporan hasil yang valid dan tertelusur.",
+  "kpi": [
+   "Turnaround time (TAT) sesuai janji",
+   "Persentase laporan terbit tanpa revisi",
+   "Hasil uji profisiensi memuaskan"
+  ],
+  "sys": [
+   "SIMLab",
+   "SIMCal"
+  ],
+  "ref": "ISO/IEC 17025:2017 klausul 7.1–7.11; Lab CTS Cikarang terakreditasi KAN LP-411 (pengujian) dan LK-109 (kalibrasi)",
+  "rel": [
+   "C3",
+   "C5",
+   "S2",
+   "G1"
+  ],
+  "note": "Unit yang menjalankan penerimaan sampel (Lab Operation Support atau lab masing-masing) perlu dikonfirmasi.",
+  "lanes": [
+   "cust",
+   "lab_sales",
+   "lab_rcv",
+   "lab_anl",
+   "lab_spv",
+   "cms"
+  ],
+  "steps": [
+   {
+    "k": "a",
+    "l": "cust",
+    "c": 0,
+    "y": "s",
+    "t": "Permintaan uji / kalibrasi",
+    "n": [
+     "b"
+    ]
+   },
+   {
+    "k": "b",
+    "l": "lab_sales",
+    "c": 1,
+    "t": "Review permintaan & penawaran",
+    "d": "Review permintaan, tender, dan kontrak termasuk pemilihan metode dan TAT.",
+    "o": "Quotation / kontrak",
+    "n": [
+     "c"
+    ]
+   },
+   {
+    "k": "c",
+    "l": "cust",
+    "c": 2,
+    "t": "Mengirim sampel / alat",
+    "d": "Pelanggan mengirim sampel atau alat beserta formulir permintaan, atau lab melakukan sampling.",
+    "o": "Sampel & formulir",
+    "n": [
+     "d"
+    ]
+   },
+   {
+    "k": "d",
+    "l": "lab_rcv",
+    "c": 3,
+    "y": "d",
+    "t": "Sampel sesuai?",
+    "d": "Memeriksa identitas, kondisi, jumlah, dan kesesuaian dengan permintaan.",
+    "o": "Catatan penerimaan",
+    "n": [
+     [
+      "e",
+      "Ya"
+     ],
+     [
+      "c",
+      "Konfirmasi pelanggan"
+     ]
+    ]
+   },
+   {
+    "k": "e",
+    "l": "lab_rcv",
+    "c": 4,
+    "t": "Registrasi & pengodean sampel",
+    "d": "Memberi kode unik di SIMLab / SIMCal dan mendistribusikan ke lab.",
+    "o": "Sample ID & lembar kerja",
+    "n": [
+     "f"
+    ]
+   },
+   {
+    "k": "f",
+    "l": "lab_anl",
+    "c": 5,
+    "t": "Pengujian / kalibrasi",
+    "d": "Menjalankan metode terverifikasi atau tervalidasi dengan peralatan terkalibrasi.",
+    "o": "Data mentah",
+    "n": [
+     "g"
+    ]
+   },
+   {
+    "k": "g",
+    "l": "lab_anl",
+    "c": 6,
+    "t": "Kontrol mutu & perhitungan hasil",
+    "d": "Blanko, duplikat, sampel QC atau CRM, dan estimasi ketidakpastian pengukuran.",
+    "o": "Hasil & data QC",
+    "n": [
+     "h"
+    ]
+   },
+   {
+    "k": "h",
+    "l": "lab_spv",
+    "c": 7,
+    "y": "d",
+    "t": "Hasil valid?",
+    "d": "Penyelia meninjau data mentah, QC, dan kewajaran hasil.",
+    "o": "Keputusan validitas",
+    "n": [
+     [
+      "j",
+      "Ya"
+     ],
+     [
+      "x",
+      "Tidak"
+     ]
+    ]
+   },
+   {
+    "k": "x",
+    "l": "cms",
+    "c": 8,
+    "t": "Pekerjaan tidak sesuai",
+    "d": "Mengendalikan pekerjaan tidak sesuai, menilai dampak, dan memutuskan uji ulang.",
+    "o": "Laporan NC",
+    "n": [
+     "f"
+    ]
+   },
+   {
+    "k": "j",
+    "l": "lab_spv",
+    "c": 8,
+    "t": "Otorisasi & penerbitan laporan",
+    "d": "Penandatangan berwenang menerbitkan laporan hasil uji atau sertifikat kalibrasi.",
+    "o": "LHU / CoA / sertifikat kalibrasi",
+    "n": [
+     "k",
+     "l"
+    ]
+   },
+   {
+    "k": "k",
+    "l": "lab_sales",
+    "c": 9,
+    "t": "Penyerahan laporan",
+    "d": "Menyerahkan laporan kepada pelanggan dan menjawab pertanyaan hasil.",
+    "o": "Laporan terkirim",
+    "n": [
+     "z"
+    ]
+   },
+   {
+    "k": "l",
+    "l": "lab_rcv",
+    "c": 9,
+    "t": "Retensi & pemusnahan sampel",
+    "d": "Menyimpan sampel selama masa retensi lalu memusnahkannya sesuai prosedur.",
+    "o": "Log retensi",
+    "n": [
+     "z"
+    ]
+   },
+   {
+    "k": "z",
+    "l": "lab_sales",
+    "c": 10,
+    "y": "e",
+    "t": "Order selesai; penagihan ke C5"
+   }
+  ],
+  "num": {
+   "b": "C4.2-01",
+   "c": "C4.2-02",
+   "d": "C4.2-03",
+   "e": "C4.2-04",
+   "f": "C4.2-05",
+   "g": "C4.2-06",
+   "h": "C4.2-07",
+   "x": "C4.2-08",
+   "j": "C4.2-09",
+   "k": "C4.2-10",
+   "l": "C4.2-11"
+  }
+ },
+ {
+  "id": "C4.3",
+  "g": "C",
+  "name": "Service Delivery: Inspection Services",
+  "l0": "Core Business Process, Service Delivery, Inspection Services",
+  "owner": "HoD Inspection Services",
+  "purpose": "Menjalankan inspeksi pihak ketiga yang kompeten, aman, dan independen hingga laporan terbit dan jadwal inspeksi ulang terpantau.",
+  "kpi": [
+   "Laporan terbit sesuai tenggat",
+   "Insiden K3 di lapangan (target nol)",
+   "Persentase laporan tanpa revisi"
+  ],
+  "sys": [
+   "Belum dipetakan"
+  ],
+  "ref": "ISO/IEC 17020:2012 klausul 7; regulasi sektor (K3 / migas) sesuai lingkup",
+  "rel": [
+   "C3",
+   "C5",
+   "S3",
+   "S4"
+  ],
+  "lanes": [
+   "cust",
+   "is_bdm",
+   "is_tech",
+   "is_insp",
+   "reg"
+  ],
+  "steps": [
+   {
+    "k": "a",
+    "l": "cust",
+    "c": 0,
+    "y": "s",
+    "t": "Permintaan inspeksi",
+    "n": [
+     "b"
+    ]
+   },
+   {
+    "k": "b",
+    "l": "is_bdm",
+    "c": 1,
+    "t": "Review permintaan & penawaran / tender",
+    "d": "Menyiapkan penawaran atau dokumen tender setelah review kelayakan teknis.",
+    "o": "Kontrak / PO",
+    "n": [
+     "c"
+    ]
+   },
+   {
+    "k": "c",
+    "l": "is_tech",
+    "c": 2,
+    "t": "Rencana inspeksi & penugasan",
+    "d": "Menetapkan metode, checklist, dan inspektor yang kompeten serta independen.",
+    "o": "Inspection plan & surat tugas",
+    "n": [
+     "d"
+    ]
+   },
+   {
+    "k": "d",
+    "l": "is_insp",
+    "c": 3,
+    "t": "Persiapan & briefing K3",
+    "d": "Memeriksa peralatan, izin kerja, dan analisis bahaya di lokasi.",
+    "o": "JSA / izin kerja",
+    "n": [
+     "e"
+    ]
+   },
+   {
+    "k": "e",
+    "l": "is_insp",
+    "c": 4,
+    "t": "Pelaksanaan inspeksi",
+    "d": "Melakukan pemeriksaan visual, pengukuran, uji fungsi, atau review data sesuai metode.",
+    "o": "Catatan inspeksi",
+    "n": [
+     "f"
+    ]
+   },
+   {
+    "k": "f",
+    "l": "is_insp",
+    "c": 5,
+    "y": "d",
+    "t": "Ada ketidaksesuaian?",
+    "d": "Menilai apakah objek memenuhi kriteria penerimaan.",
+    "o": "Hasil penilaian",
+    "n": [
+     [
+      "h",
+      "Tidak"
+     ],
+     [
+      "g",
+      "Ya"
+     ]
+    ]
+   },
+   {
+    "k": "g",
+    "l": "cust",
+    "c": 6,
+    "t": "Perbaikan & permintaan re-inspeksi",
+    "d": "Pelanggan memperbaiki ketidaksesuaian dan meminta inspeksi ulang.",
+    "o": "Bukti perbaikan",
+    "n": [
+     "e"
+    ]
+   },
+   {
+    "k": "h",
+    "l": "is_insp",
+    "c": 6,
+    "t": "Menyusun draft laporan",
+    "d": "Menyusun temuan, data, dan kesimpulan inspeksi.",
+    "o": "Draft laporan",
+    "n": [
+     "i"
+    ]
+   },
+   {
+    "k": "i",
+    "l": "is_tech",
+    "c": 7,
+    "t": "Review teknis laporan",
+    "d": "Meninjau kelengkapan data dan kesimpulan sebelum penerbitan.",
+    "o": "Laporan terverifikasi",
+    "n": [
+     "j"
+    ]
+   },
+   {
+    "k": "j",
+    "l": "is_tech",
+    "c": 8,
+    "t": "Penerbitan laporan / sertifikat",
+    "d": "Menerbitkan laporan atau sertifikat inspeksi kepada pelanggan.",
+    "o": "Laporan / sertifikat inspeksi",
+    "n": [
+     "k"
+    ]
+   },
+   {
+    "k": "k",
+    "l": "reg",
+    "c": 9,
+    "t": "Pelaporan ke regulator",
+    "d": "Menyampaikan hasil ke instansi terkait bila dipersyaratkan regulasi.",
+    "o": "Bukti pelaporan",
+    "n": [
+     "l"
+    ]
+   },
+   {
+    "k": "l",
+    "l": "is_bdm",
+    "c": 10,
+    "t": "Jadwal inspeksi ulang & follow-up",
+    "d": "Mencatat interval inspeksi berikutnya dan menindaklanjuti pelanggan.",
+    "o": "Reminder inspeksi ulang",
+    "n": [
+     "z"
+    ]
+   },
+   {
+    "k": "z",
+    "l": "is_bdm",
+    "c": 11,
+    "y": "e",
+    "t": "Order selesai; penagihan ke C5"
+   }
+  ],
+  "num": {
+   "b": "C4.3-01",
+   "c": "C4.3-02",
+   "d": "C4.3-03",
+   "e": "C4.3-04",
+   "f": "C4.3-05",
+   "g": "C4.3-06",
+   "h": "C4.3-07",
+   "i": "C4.3-08",
+   "j": "C4.3-09",
+   "k": "C4.3-10",
+   "l": "C4.3-11"
+  }
+ },
+ {
+  "id": "C4.4",
+  "g": "C",
+  "name": "Service Delivery: PCT Services",
+  "l0": "Core Business Process, Service Delivery, PCT Services",
+  "owner": "HoD PCT Services",
+  "purpose": "Menjalankan sertifikasi produk dari permohonan, evaluasi, keputusan independen, hingga surveilen penggunaan tanda.",
+  "kpi": [
+   "Waktu dari permohonan sampai keputusan",
+   "Persentase keputusan tanpa bukti tambahan",
+   "Temuan surveilen penggunaan tanda"
+  ],
+  "sys": [
+   "Belum dipetakan"
+  ],
+  "ref": "ISO/IEC 17065:2012 klausul 7; persyaratan skema sertifikasi terkait",
+  "rel": [
+   "C3",
+   "C5",
+   "G2",
+   "S2"
+  ],
+  "lanes": [
+   "cust",
+   "pct_bd",
+   "pct_eval",
+   "pct_test",
+   "pct_dec"
+  ],
+  "steps": [
+   {
+    "k": "a",
+    "l": "cust",
+    "c": 0,
+    "y": "s",
+    "t": "Permohonan sertifikasi produk",
+    "n": [
+     "b"
+    ]
+   },
+   {
+    "k": "b",
+    "l": "pct_bd",
+    "c": 1,
+    "t": "Registrasi & penawaran",
+    "d": "Mencatat permohonan dan menyiapkan penawaran serta kontrak (lihat C3).",
+    "o": "Kontrak",
+    "n": [
+     "c"
+    ]
+   },
+   {
+    "k": "c",
+    "l": "pct_eval",
+    "c": 2,
+    "t": "Review permohonan terhadap skema",
+    "d": "Memastikan produk, standar acuan, dan persyaratan skema jelas dan dapat dilayani.",
+    "o": "Application review",
+    "n": [
+     "d"
+    ]
+   },
+   {
+    "k": "d",
+    "l": "pct_eval",
+    "c": 3,
+    "t": "Rencana evaluasi",
+    "d": "Menentukan pengambilan contoh, pengujian, dan audit pabrik.",
+    "o": "Evaluation plan",
+    "n": [
+     "e",
+     "f"
+    ]
+   },
+   {
+    "k": "e",
+    "l": "pct_test",
+    "c": 4,
+    "t": "Pengujian produk",
+    "d": "Menguji produk secara internal atau melalui laboratorium subkontrak yang memenuhi syarat.",
+    "o": "Laporan uji",
+    "n": [
+     "g"
+    ]
+   },
+   {
+    "k": "f",
+    "l": "pct_eval",
+    "c": 4,
+    "t": "Audit / inspeksi pabrik",
+    "d": "Menilai kendali produksi dan konsistensi mutu produk.",
+    "o": "Laporan audit pabrik",
+    "n": [
+     "g"
+    ]
+   },
+   {
+    "k": "g",
+    "l": "pct_eval",
+    "c": 5,
+    "y": "d",
+    "t": "Memenuhi persyaratan?",
+    "d": "Menilai seluruh hasil evaluasi terhadap persyaratan skema.",
+    "o": "Hasil evaluasi",
+    "n": [
+     [
+      "h",
+      "Ya"
+     ],
+     [
+      "y",
+      "Tidak"
+     ]
+    ]
+   },
+   {
+    "k": "y",
+    "l": "cust",
+    "c": 6,
+    "t": "Perbaikan produk / proses",
+    "d": "Pelanggan memperbaiki produk atau proses produksi.",
+    "o": "Bukti perbaikan",
+    "n": [
+     "d"
+    ]
+   },
+   {
+    "k": "h",
+    "l": "pct_dec",
+    "c": 6,
+    "t": "Review independen",
+    "d": "Personel yang tidak terlibat dalam evaluasi meninjau seluruh hasil.",
+    "o": "Review report",
+    "n": [
+     "i"
+    ]
+   },
+   {
+    "k": "i",
+    "l": "pct_dec",
+    "c": 7,
+    "t": "Keputusan sertifikasi",
+    "d": "Memutuskan pemberian, perluasan, atau penolakan sertifikasi.",
+    "o": "Keputusan sertifikasi",
+    "n": [
+     "j"
+    ]
+   },
+   {
+    "k": "j",
+    "l": "pct_eval",
+    "c": 8,
+    "t": "Sertifikat & lisensi tanda",
+    "d": "Menerbitkan sertifikat dan perjanjian lisensi penggunaan tanda.",
+    "o": "Sertifikat & lisensi",
+    "n": [
+     "k"
+    ]
+   },
+   {
+    "k": "k",
+    "l": "pct_eval",
+    "c": 9,
+    "t": "Surveilen & kontrol penggunaan tanda",
+    "d": "Pengujian ulang, audit pabrik berkala, dan pemantauan penggunaan tanda.",
+    "o": "Laporan surveilen",
+    "n": [
+     "z"
+    ]
+   },
+   {
+    "k": "z",
+    "l": "pct_bd",
+    "c": 10,
+    "y": "e",
+    "t": "Sertifikat terpelihara; penagihan ke C5"
+   }
+  ],
+  "num": {
+   "b": "C4.4-01",
+   "c": "C4.4-02",
+   "d": "C4.4-03",
+   "e": "C4.4-04",
+   "f": "C4.4-05",
+   "g": "C4.4-06",
+   "y": "C4.4-07",
+   "h": "C4.4-08",
+   "i": "C4.4-09",
+   "j": "C4.4-10",
+   "k": "C4.4-11"
+  }
+ },
+ {
+  "id": "C5",
+  "g": "C",
+  "name": "Billing, Closure & Customer Feedback",
+  "l0": "Core Business Process, tahap Billing, Closure & Customer Feedback",
+  "owner": "HoD profit center, bersama Accounting & Taxation dan Corporate Finance",
+  "purpose": "Menagih setiap order yang selesai, menutupnya dengan rapi, dan mengubah umpan balik pelanggan menjadi insight.",
+  "kpi": [
+   "Waktu dari order selesai sampai invoice terbit",
+   "Days Sales Outstanding (DSO)",
+   "Kepuasan pelanggan (CSAT / NPS)"
+  ],
+  "sys": [
+   "Central Invoicing (virtual account)",
+   "SIM's"
+  ],
+  "ref": "Kebijakan kredit & penagihan perusahaan",
+  "rel": [
+   "C4.1",
+   "C4.2",
+   "C4.3",
+   "C4.4",
+   "G2",
+   "S1",
+   "C1"
+  ],
+  "lanes": [
+   "ops",
+   "acc",
+   "cust",
+   "cf",
+   "portfolio",
+   "cms"
+  ],
+  "steps": [
+   {
+    "k": "a",
+    "l": "ops",
+    "c": 0,
+    "y": "s",
+    "t": "Laporan / sertifikat terbit",
+    "n": [
+     "b"
+    ]
+   },
+   {
+    "k": "b",
+    "l": "ops",
+    "c": 1,
+    "t": "Konfirmasi penyelesaian & data penagihan",
+    "d": "Memastikan pekerjaan selesai sesuai kontrak dan data penagihan lengkap.",
+    "o": "Delivery confirmation",
+    "n": [
+     "c"
+    ]
+   },
+   {
+    "k": "c",
+    "l": "acc",
+    "c": 2,
+    "t": "Menerbitkan invoice & e-Faktur",
+    "d": "Menerbitkan invoice dengan nomor virtual account pelanggan.",
+    "o": "Invoice",
+    "n": [
+     "d"
+    ]
+   },
+   {
+    "k": "d",
+    "l": "cust",
+    "c": 3,
+    "t": "Pembayaran via virtual account",
+    "d": "Pelanggan membayar sesuai termin.",
+    "o": "Pembayaran",
+    "n": [
+     "e"
+    ]
+   },
+   {
+    "k": "e",
+    "l": "cf",
+    "c": 4,
+    "y": "d",
+    "t": "Lunas sesuai jatuh tempo?",
+    "d": "Memantau status pembayaran terhadap jatuh tempo.",
+    "o": "Status piutang",
+    "n": [
+     [
+      "g",
+      "Ya"
+     ],
+     [
+      "f",
+      "Tidak"
+     ]
+    ]
+   },
+   {
+    "k": "f",
+    "l": "cf",
+    "c": 5,
+    "t": "Penagihan bersama BU",
+    "d": "Mengirim pengingat dan menagih bersama BU sesuai tahapan penagihan.",
+    "o": "Catatan penagihan",
+    "n": [
+     "d"
+    ]
+   },
+   {
+    "k": "g",
+    "l": "acc",
+    "c": 5,
+    "t": "Rekonsiliasi & pengakuan pendapatan",
+    "d": "Mencocokkan pembayaran dengan invoice dan menutup piutang.",
+    "o": "Piutang tertutup",
+    "n": [
+     "h"
+    ]
+   },
+   {
+    "k": "h",
+    "l": "portfolio",
+    "c": 6,
+    "t": "Survei kepuasan pelanggan",
+    "d": "Mengirim survei dan mengumpulkan skor serta komentar.",
+    "o": "CSAT / NPS",
+    "n": [
+     "i"
+    ]
+   },
+   {
+    "k": "i",
+    "l": "portfolio",
+    "c": 7,
+    "y": "d",
+    "t": "Ada keluhan?",
+    "d": "Memilah umpan balik yang merupakan keluhan.",
+    "o": "Klasifikasi umpan balik",
+    "n": [
+     [
+      "k",
+      "Tidak"
+     ],
+     [
+      "j",
+      "Ya"
+     ]
+    ]
+   },
+   {
+    "k": "j",
+    "l": "cms",
+    "c": 8,
+    "t": "Proses keluhan (G2)",
+    "d": "Keluhan diteruskan ke proses G2.",
+    "o": "Register keluhan",
+    "n": [
+     "k"
+    ]
+   },
+   {
+    "k": "k",
+    "l": "ops",
+    "c": 9,
+    "t": "Tutup order & jadwalkan layanan berikutnya",
+    "d": "Menutup order di SIM's dan menjadwalkan surveilen, kalibrasi ulang, atau inspeksi ulang.",
+    "o": "Order closed & jadwal lanjutan",
+    "n": [
+     "l"
+    ]
+   },
+   {
+    "k": "l",
+    "l": "portfolio",
+    "c": 10,
+    "t": "Customer insight ke C1",
+    "d": "Merangkum umpan balik dan peluang renewal untuk Business Development.",
+    "o": "Insight report",
+    "n": [
+     "z"
+    ]
+   },
+   {
+    "k": "z",
+    "l": "portfolio",
+    "c": 11,
+    "y": "e",
+    "t": "Siklus pelanggan berlanjut"
+   }
+  ],
+  "num": {
+   "b": "C5-01",
+   "c": "C5-02",
+   "d": "C5-03",
+   "e": "C5-04",
+   "f": "C5-05",
+   "g": "C5-06",
+   "h": "C5-07",
+   "i": "C5-08",
+   "j": "C5-09",
+   "k": "C5-10",
+   "l": "C5-11"
+  }
+ },
+ {
+  "id": "S1",
+  "g": "S",
+  "name": "Record-to-Report & Financial Control",
+  "l0": "Accounting & Taxation, Revenue & Investment Controlling, Corporate Finance",
+  "owner": "Accounting & Taxation",
+  "purpose": "Mencatat transaksi, menutup buku tepat waktu, dan menyajikan laporan keuangan serta manajemen yang andal.",
+  "kpi": [
+   "Closing bulanan sesuai jadwal (hari kerja ke-n)",
+   "SPT dan laporan Group tepat waktu",
+   "Opini audit eksternal"
+  ],
+  "sys": [
+   "Sistem akuntansi / ERP",
+   "Dashboard manajemen"
+  ],
+  "ref": "Standar akuntansi yang berlaku, peraturan perpajakan, pelaporan Group",
+  "rel": [
+   "M1",
+   "C5",
+   "S2"
+  ],
+  "lanes": [
+   "acc",
+   "cf",
+   "ric",
+   "unit",
+   "md",
+   "extaud"
+  ],
+  "steps": [
+   {
+    "k": "a",
+    "l": "acc",
+    "c": 0,
+    "y": "s",
+    "t": "Transaksi harian",
+    "n": [
+     "b"
+    ]
+   },
+   {
+    "k": "b",
+    "l": "acc",
+    "c": 1,
+    "t": "Pencatatan & verifikasi transaksi",
+    "d": "Memverifikasi dokumen pendukung dan mencatat jurnal.",
+    "o": "Jurnal",
+    "n": [
+     "c"
+    ]
+   },
+   {
+    "k": "c",
+    "l": "cf",
+    "c": 2,
+    "t": "Rekonsiliasi bank & kas",
+    "d": "Mencocokkan mutasi bank, kas, dan virtual account dengan catatan.",
+    "o": "Rekonsiliasi bank",
+    "n": [
+     "d"
+    ]
+   },
+   {
+    "k": "d",
+    "l": "acc",
+    "c": 3,
+    "t": "Closing bulanan",
+    "d": "Akrual, penyusutan, alokasi biaya, dan penyusunan neraca saldo.",
+    "o": "Trial balance",
+    "n": [
+     "e"
+    ]
+   },
+   {
+    "k": "e",
+    "l": "ric",
+    "c": 4,
+    "t": "Analisis budget vs actual & margin",
+    "d": "Menganalisis varians per BU, layanan, dan pusat biaya.",
+    "o": "Variance analysis",
+    "n": [
+     "f"
+    ]
+   },
+   {
+    "k": "f",
+    "l": "unit",
+    "c": 5,
+    "t": "Penjelasan varians & tindakan",
+    "d": "BU menjelaskan penyebab varians dan rencana tindakan.",
+    "o": "Action plan unit",
+    "n": [
+     "g"
+    ]
+   },
+   {
+    "k": "g",
+    "l": "ric",
+    "c": 6,
+    "t": "Laporan manajemen & forecast",
+    "d": "Menyusun laporan manajemen bulanan dan memperbarui forecast.",
+    "o": "Management report",
+    "n": [
+     "h"
+    ]
+   },
+   {
+    "k": "h",
+    "l": "md",
+    "c": 7,
+    "t": "Review & keputusan manajemen",
+    "d": "Direksi meninjau laporan dan menetapkan tindakan (lihat M1).",
+    "o": "Keputusan manajemen",
+    "n": [
+     "i"
+    ]
+   },
+   {
+    "k": "i",
+    "l": "acc",
+    "c": 8,
+    "t": "Pelaporan pajak & Group",
+    "d": "Menyusun SPT masa dan tahunan serta paket pelaporan Group.",
+    "o": "SPT & laporan Group",
+    "n": [
+     "j"
+    ]
+   },
+   {
+    "k": "j",
+    "l": "extaud",
+    "c": 9,
+    "t": "Audit eksternal / pemeriksaan pajak",
+    "d": "Mendukung audit tahunan dan pemeriksaan pajak.",
+    "o": "Opini audit",
+    "n": [
+     "z"
+    ]
+   },
+   {
+    "k": "z",
+    "l": "acc",
+    "c": 10,
+    "y": "e",
+    "t": "Laporan keuangan andal"
+   }
+  ],
+  "num": {
+   "b": "S1-01",
+   "c": "S1-02",
+   "d": "S1-03",
+   "e": "S1-04",
+   "f": "S1-05",
+   "g": "S1-06",
+   "h": "S1-07",
+   "i": "S1-08",
+   "j": "S1-09"
+  }
+ },
+ {
+  "id": "S2",
+  "g": "S",
+  "name": "Procure-to-Pay",
+  "l0": "Procurement, Accounting & Taxation, Corporate Finance",
+  "owner": "Procurement",
+  "purpose": "Mengadakan barang dan jasa yang sesuai spesifikasi dari vendor terevaluasi, lalu membayarnya secara terkendali.",
+  "kpi": [
+   "Lead time PR sampai PO",
+   "Persentase pembelian dari approved vendor",
+   "Pembayaran vendor tepat waktu"
+  ],
+  "sys": [
+   "Sistem pengadaan / ERP"
+  ],
+  "ref": "Kebijakan pengadaan; ISO/IEC 17025 (6.6) untuk produk dan layanan eksternal",
+  "rel": [
+   "S1",
+   "C4.2",
+   "C4.4"
+  ],
+  "lanes": [
+   "req",
+   "proc",
+   "acc",
+   "cf"
+  ],
+  "steps": [
+   {
+    "k": "a",
+    "l": "req",
+    "c": 0,
+    "y": "s",
+    "t": "Kebutuhan barang / jasa",
+    "n": [
+     "b"
+    ]
+   },
+   {
+    "k": "b",
+    "l": "req",
+    "c": 1,
+    "t": "Purchase request & spesifikasi",
+    "d": "Mengajukan PR beserta spesifikasi teknis dan persetujuan atasan.",
+    "o": "PR disetujui",
+    "n": [
+     "c"
+    ]
+   },
+   {
+    "k": "c",
+    "l": "proc",
+    "c": 2,
+    "y": "d",
+    "t": "Vendor di approved list?",
+    "d": "Memeriksa apakah vendor sudah dievaluasi dan disetujui.",
+    "o": "Status vendor",
+    "n": [
+     [
+      "e",
+      "Ya"
+     ],
+     [
+      "d",
+      "Tidak"
+     ]
+    ]
+   },
+   {
+    "k": "d",
+    "l": "proc",
+    "c": 3,
+    "t": "Evaluasi & persetujuan vendor",
+    "d": "Menilai legalitas, kemampuan, mutu, dan untuk penyedia teknis: kompetensi atau akreditasinya.",
+    "o": "Vendor disetujui",
+    "n": [
+     "e"
+    ]
+   },
+   {
+    "k": "e",
+    "l": "proc",
+    "c": 4,
+    "t": "Sourcing, negosiasi & PO",
+    "d": "Membandingkan penawaran, bernegosiasi, dan menerbitkan PO atau kontrak.",
+    "o": "PO / kontrak",
+    "n": [
+     "f"
+    ]
+   },
+   {
+    "k": "f",
+    "l": "req",
+    "c": 5,
+    "t": "Penerimaan & verifikasi",
+    "d": "Memverifikasi barang atau jasa; untuk reagen, bahan acuan, peralatan, dan jasa kalibrasi dilakukan verifikasi teknis sebelum digunakan.",
+    "o": "BAST / GRN",
+    "n": [
+     "g"
+    ]
+   },
+   {
+    "k": "g",
+    "l": "req",
+    "c": 6,
+    "y": "d",
+    "t": "Sesuai spesifikasi?",
+    "d": "Menilai hasil verifikasi terhadap spesifikasi PR.",
+    "o": "Hasil verifikasi",
+    "n": [
+     [
+      "h",
+      "Ya"
+     ],
+     [
+      "x",
+      "Tidak"
+     ]
+    ]
+   },
+   {
+    "k": "x",
+    "l": "proc",
+    "c": 7,
+    "t": "Retur / klaim vendor",
+    "d": "Mengembalikan barang atau menagih perbaikan kepada vendor.",
+    "o": "Nota retur",
+    "n": [
+     "f"
+    ]
+   },
+   {
+    "k": "h",
+    "l": "acc",
+    "c": 7,
+    "t": "Verifikasi invoice (3-way match)",
+    "d": "Mencocokkan PO, bukti terima, dan invoice vendor.",
+    "o": "Voucher pembayaran",
+    "n": [
+     "i"
+    ]
+   },
+   {
+    "k": "i",
+    "l": "cf",
+    "c": 8,
+    "t": "Pembayaran sesuai otorisasi",
+    "d": "Membayar sesuai jadwal dan matriks otorisasi.",
+    "o": "Bukti bayar",
+    "n": [
+     "j"
+    ]
+   },
+   {
+    "k": "j",
+    "l": "proc",
+    "c": 9,
+    "t": "Evaluasi kinerja vendor",
+    "d": "Menilai mutu, ketepatan waktu, dan layanan vendor secara berkala.",
+    "o": "Vendor scorecard",
+    "n": [
+     "z"
+    ]
+   },
+   {
+    "k": "z",
+    "l": "proc",
+    "c": 10,
+    "y": "e",
+    "t": "Kebutuhan terpenuhi"
+   }
+  ],
+  "num": {
+   "b": "S2-01",
+   "c": "S2-02",
+   "d": "S2-03",
+   "e": "S2-04",
+   "f": "S2-05",
+   "g": "S2-06",
+   "x": "S2-07",
+   "h": "S2-08",
+   "i": "S2-09",
+   "j": "S2-10"
+  }
+ },
+ {
+  "id": "S3",
+  "g": "S",
+  "name": "Hire-to-Retire & Competence Management",
+  "l0": "Human Resources",
+  "owner": "Human Resources",
+  "purpose": "Menyediakan personel yang kompeten dan terotorisasi untuk setiap kegiatan penilaian kesesuaian, serta mengelola siklus hidup karyawan.",
+  "kpi": [
+   "Waktu pemenuhan posisi (time-to-fill)",
+   "Persentase personel teknis dengan kualifikasi aktif",
+   "Turnover karyawan"
+  ],
+  "sys": [
+   "HRIS"
+  ],
+  "ref": "ISO/IEC 17021-1 (7.1–7.2), 17025 (6.2), 17020 (6.1), 17065 (6.1); regulasi ketenagakerjaan",
+  "rel": [
+   "G1",
+   "C4.1",
+   "C4.2",
+   "C4.3",
+   "C4.4"
+  ],
+  "lanes": [
+   "unit",
+   "hr",
+   "cms",
+   "md",
+   "emp"
+  ],
+  "steps": [
+   {
+    "k": "a",
+    "l": "unit",
+    "c": 0,
+    "y": "s",
+    "t": "Kebutuhan tenaga kerja",
+    "n": [
+     "b",
+     "m"
+    ]
+   },
+   {
+    "k": "b",
+    "l": "unit",
+    "c": 1,
+    "t": "Permintaan rekrutmen",
+    "d": "Mengajukan kebutuhan posisi beserta kualifikasi jabatan.",
+    "o": "Manpower request",
+    "n": [
+     "c"
+    ]
+   },
+   {
+    "k": "m",
+    "l": "cms",
+    "c": 1,
+    "t": "Kriteria kompetensi",
+    "d": "Menetapkan kriteria kompetensi per skema, sektor, atau metode.",
+    "o": "Matriks kompetensi",
+    "n": [
+     "f"
+    ]
+   },
+   {
+    "k": "c",
+    "l": "md",
+    "c": 2,
+    "t": "Persetujuan headcount",
+    "d": "Direksi menyetujui sesuai RKAP.",
+    "o": "Headcount disetujui",
+    "n": [
+     "d"
+    ]
+   },
+   {
+    "k": "d",
+    "l": "hr",
+    "c": 3,
+    "t": "Rekrutmen & seleksi",
+    "d": "Sourcing, tes, wawancara, dan pemeriksaan latar belakang.",
+    "o": "Kandidat terpilih",
+    "n": [
+     "e"
+    ]
+   },
+   {
+    "k": "e",
+    "l": "hr",
+    "c": 4,
+    "t": "Onboarding & kontrak kerja",
+    "d": "Kontrak, orientasi, dan pencatatan di HRIS, termasuk pernyataan kerahasiaan dan imparsialitas.",
+    "o": "Kontrak & data HRIS",
+    "n": [
+     "f"
+    ]
+   },
+   {
+    "k": "f",
+    "l": "unit",
+    "c": 5,
+    "t": "Pelatihan & witness",
+    "d": "Pelatihan skema atau metode, pekerjaan di bawah supervisi, dan witness.",
+    "o": "Rekaman pelatihan & witness",
+    "n": [
+     "g"
+    ]
+   },
+   {
+    "k": "g",
+    "l": "unit",
+    "c": 6,
+    "y": "d",
+    "t": "Memenuhi kriteria?",
+    "d": "Menilai hasil pelatihan dan witness terhadap matriks kompetensi.",
+    "o": "Evaluasi kompetensi",
+    "n": [
+     [
+      "h",
+      "Ya"
+     ],
+     [
+      "f",
+      "Belum"
+     ]
+    ]
+   },
+   {
+    "k": "h",
+    "l": "hr",
+    "c": 7,
+    "t": "Otorisasi & register kualifikasi",
+    "d": "Kualifikasi diotorisasi HoD terkait dan dicatat di HRIS sebagai dasar penugasan.",
+    "o": "Register kualifikasi",
+    "n": [
+     "i"
+    ]
+   },
+   {
+    "k": "i",
+    "l": "emp",
+    "c": 8,
+    "t": "Bekerja & penilaian kinerja",
+    "d": "Karyawan menjalankan tugas dan dinilai berdasarkan KPI individu.",
+    "o": "Penilaian kinerja",
+    "n": [
+     "j"
+    ]
+   },
+   {
+    "k": "j",
+    "l": "unit",
+    "c": 9,
+    "t": "Monitoring kompetensi berkala",
+    "d": "Memantau kinerja teknis melalui witness ulang, review laporan, atau uji profisiensi.",
+    "o": "Hasil monitoring",
+    "n": [
+     "k"
+    ]
+   },
+   {
+    "k": "k",
+    "l": "hr",
+    "c": 10,
+    "t": "Payroll, remunerasi & karier",
+    "d": "Mengelola penggajian, remunerasi, dan rencana pengembangan.",
+    "o": "Payroll & IDP",
+    "n": [
+     "l"
+    ]
+   },
+   {
+    "k": "l",
+    "l": "hr",
+    "c": 11,
+    "t": "Offboarding",
+    "d": "Exit clearance, pencabutan akses, dan penonaktifan kualifikasi.",
+    "o": "Exit clearance",
+    "n": [
+     "z"
+    ]
+   },
+   {
+    "k": "z",
+    "l": "hr",
+    "c": 12,
+    "y": "e",
+    "t": "Siklus karyawan selesai"
+   }
+  ],
+  "num": {
+   "b": "S3-01",
+   "m": "S3-02",
+   "c": "S3-03",
+   "d": "S3-04",
+   "e": "S3-05",
+   "f": "S3-06",
+   "g": "S3-07",
+   "h": "S3-08",
+   "i": "S3-09",
+   "j": "S3-10",
+   "k": "S3-11",
+   "l": "S3-12"
+  }
+ },
+ {
+  "id": "S4",
+  "g": "S",
+  "name": "Facility, Asset & Travel Management",
+  "l0": "General Affairs",
+  "owner": "General Affairs",
+  "purpose": "Menyediakan fasilitas yang aman, aset yang terpelihara, dan perjalanan dinas yang lancar bagi auditor, inspektor, dan staf.",
+  "kpi": [
+   "Permintaan layanan GA selesai sesuai SLA",
+   "Perawatan fasilitas terjadwal terlaksana",
+   "Settlement perjalanan tepat waktu"
+  ],
+  "sys": [
+   "Service request",
+   "Asset register"
+  ],
+  "ref": "Kebijakan perjalanan dinas, persyaratan K3 fasilitas",
+  "rel": [
+   "S2",
+   "G1"
+  ],
+  "lanes": [
+   "user",
+   "ga",
+   "proc",
+   "acc",
+   "cms"
+  ],
+  "steps": [
+   {
+    "k": "a",
+    "l": "user",
+    "c": 0,
+    "y": "s",
+    "t": "Kebutuhan perjalanan / fasilitas",
+    "n": [
+     "b"
+    ]
+   },
+   {
+    "k": "b",
+    "l": "user",
+    "c": 1,
+    "t": "Mengajukan permintaan layanan",
+    "d": "Mengajukan kebutuhan perjalanan, fasilitas, atau perbaikan.",
+    "o": "Service request",
+    "n": [
+     "c"
+    ]
+   },
+   {
+    "k": "c",
+    "l": "ga",
+    "c": 2,
+    "y": "d",
+    "t": "Jenis permintaan?",
+    "d": "Memisahkan perjalanan dinas dari fasilitas dan aset.",
+    "o": "Klasifikasi",
+    "n": [
+     [
+      "d",
+      "Perjalanan"
+     ],
+     [
+      "g",
+      "Fasilitas / aset"
+     ]
+    ]
+   },
+   {
+    "k": "d",
+    "l": "ga",
+    "c": 3,
+    "t": "Booking tiket, akomodasi & transport",
+    "d": "Memesan sesuai kebijakan perjalanan dinas.",
+    "o": "Itinerary",
+    "n": [
+     "e"
+    ]
+   },
+   {
+    "k": "e",
+    "l": "user",
+    "c": 4,
+    "t": "Pelaksanaan perjalanan",
+    "d": "Karyawan melakukan perjalanan dan menyimpan bukti biaya.",
+    "o": "Bukti perjalanan",
+    "n": [
+     "f"
+    ]
+   },
+   {
+    "k": "f",
+    "l": "acc",
+    "c": 5,
+    "t": "Settlement biaya perjalanan",
+    "d": "Memverifikasi dan menyelesaikan uang muka atau reimbursement.",
+    "o": "Settlement",
+    "n": [
+     "z"
+    ]
+   },
+   {
+    "k": "g",
+    "l": "ga",
+    "c": 4,
+    "t": "Inspeksi fasilitas & rencana perawatan",
+    "d": "Menilai kondisi dan menyusun work order perawatan.",
+    "o": "Work order",
+    "n": [
+     "h"
+    ]
+   },
+   {
+    "k": "h",
+    "l": "proc",
+    "c": 5,
+    "t": "Pengadaan jasa / suku cadang",
+    "d": "Mengadakan kebutuhan perbaikan melalui S2.",
+    "o": "PO",
+    "n": [
+     "i"
+    ]
+   },
+   {
+    "k": "i",
+    "l": "ga",
+    "c": 6,
+    "t": "Perbaikan & update register aset",
+    "d": "Menyelesaikan perbaikan dan memperbarui register aset.",
+    "o": "Asset register",
+    "n": [
+     "j"
+    ]
+   },
+   {
+    "k": "j",
+    "l": "cms",
+    "c": 7,
+    "t": "Inspeksi K3 fasilitas",
+    "d": "Memeriksa aspek keselamatan dan lingkungan fasilitas.",
+    "o": "Checklist K3",
+    "n": [
+     "z"
+    ]
+   },
+   {
+    "k": "z",
+    "l": "ga",
+    "c": 8,
+    "y": "e",
+    "t": "Layanan GA selesai"
+   }
+  ],
+  "num": {
+   "b": "S4-01",
+   "c": "S4-02",
+   "d": "S4-03",
+   "e": "S4-04",
+   "f": "S4-05",
+   "g": "S4-06",
+   "h": "S4-07",
+   "i": "S4-08",
+   "j": "S4-09"
+  }
+ },
+ {
+  "id": "S5",
+  "g": "S",
+  "name": "Corporate Communication & Branding",
+  "l0": "Corporate Marketing & Communication",
+  "owner": "Corporate Marketing & Communication",
+  "purpose": "Menjaga konsistensi merek serta komunikasi internal dan eksternal yang tepat dan disetujui.",
+  "kpi": [
+   "Konten terbit sesuai kalender",
+   "Sentimen dan jangkauan media",
+   "Keterlibatan komunikasi internal"
+  ],
+  "sys": [
+   "Website & media sosial",
+   "Kanal komunikasi internal"
+  ],
+  "ref": "Pedoman merek TÜV NORD",
+  "rel": [
+   "C2",
+   "M3"
+  ],
+  "lanes": [
+   "unit",
+   "cis",
+   "mkt",
+   "md"
+  ],
+  "steps": [
+   {
+    "k": "a",
+    "l": "unit",
+    "c": 0,
+    "y": "s",
+    "t": "Kebutuhan komunikasi",
+    "n": [
+     "b",
+     "h"
+    ]
+   },
+   {
+    "k": "b",
+    "l": "unit",
+    "c": 1,
+    "t": "Brief komunikasi",
+    "d": "Unit pengusul menyampaikan tujuan, audiens, dan pesan utama.",
+    "o": "Brief",
+    "n": [
+     "c"
+    ]
+   },
+   {
+    "k": "h",
+    "l": "cis",
+    "c": 1,
+    "t": "Materi CSR & keberlanjutan",
+    "d": "Menyediakan data dan cerita program CSR serta keberlanjutan.",
+    "o": "Materi CSR",
+    "n": [
+     "c"
+    ]
+   },
+   {
+    "k": "c",
+    "l": "mkt",
+    "c": 2,
+    "t": "Menyusun konten",
+    "d": "Menyusun konten sesuai pedoman merek TÜV NORD.",
+    "o": "Draft konten",
+    "n": [
+     "d"
+    ]
+   },
+   {
+    "k": "d",
+    "l": "mkt",
+    "c": 3,
+    "y": "d",
+    "t": "Perlu persetujuan Direksi?",
+    "d": "Komunikasi eksternal yang sensitif atau atas nama perusahaan memerlukan persetujuan.",
+    "o": "Klasifikasi",
+    "n": [
+     [
+      "e",
+      "Ya"
+     ],
+     [
+      "f",
+      "Tidak"
+     ]
+    ]
+   },
+   {
+    "k": "e",
+    "l": "md",
+    "c": 4,
+    "t": "Persetujuan Direksi",
+    "d": "Direksi menyetujui atau meminta revisi.",
+    "o": "Konten disetujui",
+    "n": [
+     "f"
+    ]
+   },
+   {
+    "k": "f",
+    "l": "mkt",
+    "c": 5,
+    "t": "Publikasi",
+    "d": "Menerbitkan di website, media sosial, media massa, atau kanal internal.",
+    "o": "Konten terbit",
+    "n": [
+     "g"
+    ]
+   },
+   {
+    "k": "g",
+    "l": "mkt",
+    "c": 6,
+    "t": "Monitoring media & reputasi",
+    "d": "Memantau pemberitaan, sentimen, dan respons audiens.",
+    "o": "Laporan media monitoring",
+    "n": [
+     "z"
+    ]
+   },
+   {
+    "k": "z",
+    "l": "mkt",
+    "c": 7,
+    "y": "e",
+    "t": "Pesan tersampaikan"
+   }
+  ],
+  "num": {
+   "b": "S5-01",
+   "h": "S5-02",
+   "c": "S5-03",
+   "d": "S5-04",
+   "e": "S5-05",
+   "f": "S5-06",
+   "g": "S5-07"
+  }
+ }
+]

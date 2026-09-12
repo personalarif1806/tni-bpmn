@@ -1,0 +1,1139 @@
+{
+ "vc": {
+  "vc_bd": [
+   [
+    "md",
+    "A",
+    "Menyetujui arah pengembangan bisnis, layanan atau skema baru, dan investasi yang dibutuhkan."
+   ],
+   [
+    "PC_HEADS",
+    "R",
+    "Menetapkan prioritas pengembangan layanan di BU masing-masing dan mengusulkan layanan atau skema baru."
+   ],
+   [
+    "cs_sc",
+    "R",
+    "Memetakan kebutuhan pasar sertifikasi dan peluang skema baru bersama departemen sektor."
+   ],
+   [
+    "lab_sales",
+    "R",
+    "Menangkap kebutuhan pengujian baru dari pelanggan dan pasar untuk dikembangkan bersama laboratorium."
+   ],
+   [
+    "is_bdm",
+    "R",
+    "Mengidentifikasi peluang pasar inspeksi dan merumuskan layanan baru."
+   ],
+   [
+    "pct_bd",
+    "R",
+    "Mengidentifikasi peluang pasar dan skema sertifikasi produk baru."
+   ],
+   [
+    "portfolio",
+    "R",
+    "Menganalisis portofolio lintas BU, peluang cross-selling, dan customer insight dari key account."
+   ],
+   [
+    "nbud",
+    "R",
+    "Menilai dan menginkubasi peluang di luar portofolio BU, termasuk People & Employment."
+   ],
+   [
+    "planner",
+    "C",
+    "Menyelaraskan peluang dengan rencana strategis dan target, serta menyediakan analisis pasar."
+   ],
+   [
+    "ric",
+    "C",
+    "Mengevaluasi kelayakan finansial dan kebutuhan investasi."
+   ],
+   [
+    "cms",
+    "C",
+    "Menilai kebutuhan akreditasi, perluasan ruang lingkup, dan risiko imparsialitas layanan baru."
+   ],
+   [
+    "legal",
+    "C",
+    "Menilai aspek perizinan dan regulasi layanan baru."
+   ],
+   [
+    "cis",
+    "C",
+    "Memberi masukan inovasi dan rancangan proses untuk layanan baru."
+   ],
+   [
+    "mkt",
+    "I",
+    "Menerima konsep layanan baru sebagai dasar perencanaan pemasaran."
+   ]
+  ],
+  "vc_mk": [
+   [
+    "mkt",
+    "A",
+    "Memiliki program pemasaran korporat: branding, kampanye, kanal digital, event, dan lead generation."
+   ],
+   [
+    "cs_sc",
+    "R",
+    "Menjalankan pemasaran langsung layanan sertifikasi dan mengolah lead menjadi peluang."
+   ],
+   [
+    "lab_sales",
+    "R",
+    "Menjalankan pemasaran langsung layanan laboratorium dan mengolah lead menjadi peluang."
+   ],
+   [
+    "is_bdm",
+    "R",
+    "Menjalankan pemasaran layanan inspeksi ke segmen industri sasaran."
+   ],
+   [
+    "pct_bd",
+    "R",
+    "Menjalankan pemasaran layanan sertifikasi produk."
+   ],
+   [
+    "PC_HEADS",
+    "C",
+    "Menyetujui pesan layanan, segmen prioritas, dan anggaran pemasaran BU."
+   ],
+   [
+    "portfolio",
+    "C",
+    "Menyediakan segmentasi pelanggan, data key account, dan sasaran cross-selling."
+   ],
+   [
+    "cms",
+    "C",
+    "Memastikan klaim layanan dan penggunaan logo akreditasi sesuai aturan akreditasi."
+   ],
+   [
+    "cis",
+    "C",
+    "Menyediakan materi keberlanjutan dan CSR untuk dikomunikasikan."
+   ],
+   [
+    "it",
+    "S",
+    "Menyediakan kanal digital dan integrasi lead ke data pelanggan terpusat."
+   ],
+   [
+    "ric",
+    "I",
+    "Memantau realisasi anggaran pemasaran."
+   ]
+  ],
+  "vc_sales": [
+   [
+    "PC_HEADS",
+    "A",
+    "Menyetujui penawaran dan kontrak sesuai matriks kewenangan BU."
+   ],
+   [
+    "cs_sc",
+    "R",
+    "Mengelola inquiry, penawaran, dan negosiasi layanan sertifikasi."
+   ],
+   [
+    "cs_bs",
+    "R",
+    "Meregistrasi permohonan, memeriksa kelengkapan, serta menyiapkan dokumen penawaran dan kontrak sertifikasi."
+   ],
+   [
+    "CS_SECTOR",
+    "R",
+    "Melakukan review teknis permohonan: ruang lingkup akreditasi, kode sektor, dan perhitungan man-day."
+   ],
+   [
+    "lab_sales",
+    "R",
+    "Mengelola inquiry, penawaran, dan kontrak pengujian serta kalibrasi."
+   ],
+   [
+    "LAB_BRANCH",
+    "R",
+    "Menangani permintaan pelanggan di wilayah cabang."
+   ],
+   [
+    "LAB_RO",
+    "R",
+    "Menjadi titik kontak pelanggan di wilayah dan menyalurkan permintaan penawaran.",
+    true
+   ],
+   [
+    "LAB_TEST",
+    "C",
+    "Mengonfirmasi kemampuan metode, ruang lingkup akreditasi, kapasitas, dan waktu penyelesaian."
+   ],
+   [
+    "lab_cal",
+    "C",
+    "Mengonfirmasi kemampuan dan ruang lingkup kalibrasi."
+   ],
+   [
+    "is_bdm",
+    "R",
+    "Menyiapkan penawaran dan dokumen tender inspeksi."
+   ],
+   [
+    "is_tech",
+    "C",
+    "Menelaah kelayakan teknis, metode, dan kebutuhan inspektor sebelum penawaran."
+   ],
+   [
+    "pct_bd",
+    "R",
+    "Menyiapkan penawaran sertifikasi produk."
+   ],
+   [
+    "pct_cert",
+    "C",
+    "Menelaah permohonan terhadap persyaratan skema."
+   ],
+   [
+    "pct_test",
+    "C",
+    "Mengonfirmasi kemampuan dan biaya pengujian produk."
+   ],
+   [
+    "ric",
+    "C",
+    "Memberi acuan biaya pokok (COGS) serta batas margin dan diskon."
+   ],
+   [
+    "legal",
+    "C",
+    "Menelaah kontrak nonstandar, klausul tanggung jawab, dan kerahasiaan."
+   ],
+   [
+    "cms",
+    "C",
+    "Menjadi rujukan bila contract review menyangkut ruang lingkup akreditasi atau risiko imparsialitas."
+   ],
+   [
+    "portfolio",
+    "C",
+    "Memberi masukan harga dan bundling untuk key account."
+   ],
+   [
+    "cf",
+    "C",
+    "Memberi informasi status piutang dan kelayakan kredit pelanggan."
+   ],
+   [
+    "it",
+    "S",
+    "Menyediakan Central Customer sebagai data pelanggan terpusat."
+   ],
+   [
+    "acc",
+    "I",
+    "Menerima data kontrak sebagai dasar penagihan."
+   ]
+  ],
+  "vc_del": [
+   [
+    "PC_HEADS",
+    "A",
+    "Bertanggung jawab atas mutu, ketepatan waktu, dan imparsialitas layanan di BU masing-masing."
+   ],
+   [
+    "CS_SECTOR",
+    "R",
+    "Menyusun program audit, menugaskan auditor, melaksanakan audit, dan melakukan tinjauan teknis."
+   ],
+   [
+    "cs_bs",
+    "R",
+    "Menjadwalkan audit, mengelola dokumen, dan menerbitkan sertifikat."
+   ],
+   [
+    "cs_train",
+    "R",
+    "Menyelenggarakan layanan pelatihan sertifikasi."
+   ],
+   [
+    "LAB_TEST",
+    "R",
+    "Melaksanakan pengujian, kontrol mutu, dan pengesahan hasil."
+   ],
+   [
+    "lab_cal",
+    "R",
+    "Melaksanakan kalibrasi dan menerbitkan sertifikat kalibrasi."
+   ],
+   [
+    "LAB_BRANCH",
+    "R",
+    "Melaksanakan pengujian di laboratorium cabang."
+   ],
+   [
+    "lab_train",
+    "R",
+    "Menyelenggarakan pelatihan laboratorium."
+   ],
+   [
+    "lab_los",
+    "S",
+    "Mendukung kelancaran operasional laboratorium lintas unit.",
+    true
+   ],
+   [
+    "LAB_RO",
+    "S",
+    "Mengoordinasikan sampel dan pelanggan di wilayah.",
+    true
+   ],
+   [
+    "IS_OPS",
+    "R",
+    "Melaksanakan inspeksi di lokasi sesuai sektor."
+   ],
+   [
+    "is_tech",
+    "R",
+    "Merencanakan inspeksi, menugaskan inspektor, dan meninjau laporan."
+   ],
+   [
+    "pct_cert",
+    "R",
+    "Melaksanakan evaluasi, tinjauan, keputusan, dan penerbitan sertifikat produk."
+   ],
+   [
+    "pct_test",
+    "R",
+    "Melaksanakan pengujian produk."
+   ],
+   [
+    "hr",
+    "S",
+    "Menyediakan personel kompeten serta rekaman kualifikasi auditor, inspektor, dan analis."
+   ],
+   [
+    "proc",
+    "S",
+    "Mengadakan reagen, bahan acuan, peralatan, subkontraktor, dan jasa kalibrasi eksternal."
+   ],
+   [
+    "ga",
+    "S",
+    "Mengatur perjalanan dinas, akomodasi, fasilitas, dan logistik sampel."
+   ],
+   [
+    "it",
+    "S",
+    "Menyediakan SIMCert, SIMLab, dan SIMCal beserta dukungan pengguna."
+   ],
+   [
+    "cms",
+    "C",
+    "Mengawasi kepatuhan melalui audit internal, witness, dan penanganan ketidaksesuaian."
+   ],
+   [
+    "gbac",
+    "C",
+    "Mengawasi imparsialitas keputusan sertifikasi."
+   ]
+  ],
+  "vc_bill": [
+   [
+    "PC_HEADS",
+    "A",
+    "Bertanggung jawab atas penyelesaian order, tertagihnya pendapatan, dan kepuasan pelanggan BU."
+   ],
+   [
+    "cs_bs",
+    "R",
+    "Menutup order sertifikasi, mengirim sertifikat, dan menyiapkan data penagihan."
+   ],
+   [
+    "lab_sales",
+    "R",
+    "Menyerahkan laporan hasil uji serta menindaklanjuti kepuasan dan repeat order."
+   ],
+   [
+    "is_bdm",
+    "R",
+    "Menindaklanjuti penyelesaian proyek dan peluang inspeksi ulang."
+   ],
+   [
+    "pct_bd",
+    "R",
+    "Menindaklanjuti penyelesaian sertifikasi dan peluang surveilen."
+   ],
+   [
+    "acc",
+    "R",
+    "Menerbitkan invoice dan mengakui pendapatan."
+   ],
+   [
+    "cf",
+    "R",
+    "Memantau pembayaran virtual account dan menagih piutang."
+   ],
+   [
+    "portfolio",
+    "R",
+    "Mengukur kepuasan dan retensi pelanggan serta mengolah customer insight."
+   ],
+   [
+    "cms",
+    "R",
+    "Menangani keluhan pelanggan dan tindakan korektif."
+   ],
+   [
+    "CS_SECTOR",
+    "C",
+    "Menyiapkan jadwal surveilen dan resertifikasi berikutnya."
+   ],
+   [
+    "gbac",
+    "C",
+    "Memutus banding pelanggan atas keputusan sertifikasi."
+   ],
+   [
+    "it",
+    "S",
+    "Menyediakan Central Invoicing dan data penagihan."
+   ],
+   [
+    "ric",
+    "I",
+    "Menerima data pendapatan dan margin per order."
+   ],
+   [
+    "mkt",
+    "I",
+    "Menerima customer insight untuk kampanye berikutnya."
+   ]
+  ]
+ },
+ "pc": {
+  "cs": [
+   [
+    [
+     "cs",
+     "A",
+     "Menyetujui penawaran dan kontrak sesuai kewenangan."
+    ],
+    [
+     "cs_sc",
+     "R",
+     "Menangani permohonan klien dan negosiasi komersial."
+    ],
+    [
+     "cs_bs",
+     "R",
+     "Meregistrasi permohonan, memeriksa kelengkapan dokumen, serta menerbitkan penawaran dan kontrak."
+    ],
+    [
+     "CS_SECTOR",
+     "R",
+     "Review teknis: ruang lingkup akreditasi, kode sektor, man-day, dan ketersediaan auditor kompeten."
+    ],
+    [
+     "ric",
+     "C",
+     "Memberi acuan biaya pokok dan margin."
+    ],
+    [
+     "legal",
+     "C",
+     "Menelaah kontrak nonstandar."
+    ],
+    [
+     "it",
+     "S",
+     "Menyediakan SIMCert dan Central Customer."
+    ]
+   ],
+   [
+    [
+     "cs",
+     "A",
+     "Memastikan program audit dan penugasan memenuhi persyaratan akreditasi."
+    ],
+    [
+     "CS_SECTOR",
+     "R",
+     "Menyusun program audit tiga tahunan dan menetapkan tim audit yang kompeten serta bebas konflik kepentingan."
+    ],
+    [
+     "cs_bs",
+     "R",
+     "Menjadwalkan audit dan mengonfirmasikannya ke klien."
+    ],
+    [
+     "hr",
+     "S",
+     "Menyediakan rekaman kompetensi dan kualifikasi auditor."
+    ],
+    [
+     "proc",
+     "S",
+     "Mengadakan jasa auditor eksternal bila diperlukan.",
+     true
+    ],
+    [
+     "ga",
+     "S",
+     "Mengatur perjalanan dinas dan akomodasi auditor."
+    ],
+    [
+     "cms",
+     "C",
+     "Menjadi rujukan aturan konflik kepentingan dan imparsialitas."
+    ]
+   ],
+   [
+    [
+     "cs",
+     "A",
+     "Bertanggung jawab atas mutu pelaksanaan audit."
+    ],
+    [
+     "CS_SECTOR",
+     "R",
+     "Auditor melaksanakan audit Stage 1 dan Stage 2, serta menyusun laporan dan temuan."
+    ],
+    [
+     "cs_bs",
+     "S",
+     "Mengelola dokumen dan administrasi audit."
+    ],
+    [
+     "ga",
+     "S",
+     "Mendukung logistik perjalanan."
+    ],
+    [
+     "it",
+     "S",
+     "Menyediakan SIMCert untuk pelaporan audit."
+    ]
+   ],
+   [
+    [
+     "cs",
+     "A",
+     "Memastikan keputusan diambil oleh personel berwenang yang tidak terlibat dalam audit."
+    ],
+    [
+     "CS_SECTOR",
+     "R",
+     "Reviewer teknis yang independen dari tim audit meninjau laporan dan memutuskan sertifikasi."
+    ],
+    [
+     "cms",
+     "C",
+     "Memantau kepatuhan proses tinjauan dan keputusan."
+    ],
+    [
+     "gbac",
+     "I",
+     "Menerima laporan untuk tinjauan imparsialitas berkala."
+    ]
+   ],
+   [
+    [
+     "cs",
+     "A",
+     "Mengesahkan penerbitan sertifikat."
+    ],
+    [
+     "cs_bs",
+     "R",
+     "Menerbitkan sertifikat dan memperbarui direktori klien tersertifikasi."
+    ],
+    [
+     "it",
+     "S",
+     "Menyediakan SIMCert untuk penerbitan dan registri sertifikat."
+    ],
+    [
+     "acc",
+     "I",
+     "Menerima pemicu penagihan."
+    ]
+   ],
+   [
+    [
+     "cs",
+     "A",
+     "Memutuskan pemeliharaan, penangguhan, atau pencabutan sertifikat."
+    ],
+    [
+     "CS_SECTOR",
+     "R",
+     "Melaksanakan audit surveilen dan resertifikasi."
+    ],
+    [
+     "cs_bs",
+     "R",
+     "Menjadwalkan surveilen dan mengingatkan klien."
+    ],
+    [
+     "cs_sc",
+     "R",
+     "Menjaga hubungan klien dan memastikan perpanjangan."
+    ],
+    [
+     "portfolio",
+     "C",
+     "Memberi data retensi dan risiko churn klien."
+    ],
+    [
+     "gbac",
+     "C",
+     "Memutus banding atas penangguhan atau pencabutan."
+    ]
+   ]
+  ],
+  "lab": [
+   [
+    [
+     "lab",
+     "A",
+     "Menyetujui penawaran dan kontrak sesuai kewenangan."
+    ],
+    [
+     "lab_sales",
+     "R",
+     "Mengelola inquiry, penawaran, tender, dan kontrak."
+    ],
+    [
+     "LAB_BRANCH",
+     "R",
+     "Menangani permintaan pelanggan di wilayah cabang."
+    ],
+    [
+     "LAB_RO",
+     "R",
+     "Menjadi titik kontak pelanggan di wilayah.",
+     true
+    ],
+    [
+     "LAB_TEST",
+     "C",
+     "Mengonfirmasi metode, ruang lingkup akreditasi, kapasitas, dan waktu penyelesaian."
+    ],
+    [
+     "lab_cal",
+     "C",
+     "Mengonfirmasi ruang lingkup dan kapasitas kalibrasi."
+    ],
+    [
+     "ric",
+     "C",
+     "Memberi acuan biaya pokok dan margin."
+    ],
+    [
+     "legal",
+     "C",
+     "Menelaah kontrak dan dokumen tender nonstandar."
+    ],
+    [
+     "it",
+     "S",
+     "Menyediakan SIMLab, SIMCal, dan Central Customer."
+    ]
+   ],
+   [
+    [
+     "lab",
+     "A",
+     "Memastikan penanganan sampel menjaga ketertelusuran dan integritas."
+    ],
+    [
+     "LAB_TEST",
+     "R",
+     "Memverifikasi kondisi dan kesesuaian sampel dengan permintaan uji."
+    ],
+    [
+     "LAB_BRANCH",
+     "R",
+     "Menerima dan meregistrasi sampel di cabang."
+    ],
+    [
+     "lab_los",
+     "S",
+     "Mendukung penerimaan, registrasi, dan distribusi sampel.",
+     true
+    ],
+    [
+     "LAB_RO",
+     "S",
+     "Mengumpulkan sampel dari pelanggan di wilayah.",
+     true
+    ],
+    [
+     "ga",
+     "S",
+     "Mendukung pengiriman dan logistik sampel."
+    ],
+    [
+     "it",
+     "S",
+     "Menyediakan registrasi dan pengodean sampel di SIMLab."
+    ]
+   ],
+   [
+    [
+     "lab",
+     "A",
+     "Bertanggung jawab atas validitas hasil dan ketepatan waktu."
+    ],
+    [
+     "LAB_TEST",
+     "R",
+     "Melaksanakan pengujian sesuai metode terverifikasi atau tervalidasi, termasuk kontrol mutu."
+    ],
+    [
+     "lab_cal",
+     "R",
+     "Melaksanakan kalibrasi dengan ketertelusuran pengukuran."
+    ],
+    [
+     "LAB_BRANCH",
+     "R",
+     "Melaksanakan pengujian sesuai ruang lingkup cabang."
+    ],
+    [
+     "hr",
+     "S",
+     "Menyediakan analis dan teknisi yang kompeten."
+    ],
+    [
+     "proc",
+     "S",
+     "Mengadakan reagen, bahan acuan, peralatan, dan jasa kalibrasi eksternal."
+    ],
+    [
+     "ga",
+     "S",
+     "Memelihara fasilitas laboratorium."
+    ],
+    [
+     "it",
+     "S",
+     "Menyediakan SIMLab dan SIMCal untuk pencatatan data uji."
+    ]
+   ],
+   [
+    [
+     "lab",
+     "A",
+     "Memastikan hanya hasil yang tervalidasi yang dilaporkan."
+    ],
+    [
+     "LAB_TEST",
+     "R",
+     "Memverifikasi data mentah dan meninjau hasil oleh personel berwenang."
+    ],
+    [
+     "lab_cal",
+     "R",
+     "Meninjau hasil kalibrasi dan ketidakpastian pengukuran."
+    ],
+    [
+     "LAB_BRANCH",
+     "R",
+     "Meninjau hasil pengujian cabang."
+    ],
+    [
+     "cms",
+     "C",
+     "Menangani pekerjaan tidak sesuai dan memantau validitas hasil (uji profisiensi, antarlaboratorium)."
+    ]
+   ],
+   [
+    [
+     "lab",
+     "A",
+     "Mengesahkan penerbitan laporan dan sertifikat."
+    ],
+    [
+     "LAB_TEST",
+     "R",
+     "Menyusun dan menandatangani laporan hasil uji."
+    ],
+    [
+     "lab_cal",
+     "R",
+     "Menerbitkan sertifikat kalibrasi."
+    ],
+    [
+     "LAB_BRANCH",
+     "R",
+     "Menerbitkan laporan hasil uji cabang."
+    ],
+    [
+     "lab_sales",
+     "R",
+     "Menyerahkan laporan kepada pelanggan."
+    ],
+    [
+     "it",
+     "S",
+     "Menyediakan penerbitan laporan di SIMLab dan SIMCal."
+    ],
+    [
+     "acc",
+     "I",
+     "Menerima pemicu penagihan."
+    ]
+   ],
+   [
+    [
+     "lab",
+     "A",
+     "Memastikan tindak lanjut pelanggan dan retensi sampel sesuai prosedur."
+    ],
+    [
+     "LAB_TEST",
+     "R",
+     "Menyimpan dan memusnahkan sampel sesuai masa retensi."
+    ],
+    [
+     "lab_sales",
+     "R",
+     "Menindaklanjuti kepuasan pelanggan, repeat order, dan pengingat kalibrasi ulang."
+    ],
+    [
+     "cms",
+     "C",
+     "Menangani keluhan pelanggan dan tindakan korektif."
+    ],
+    [
+     "portfolio",
+     "C",
+     "Mengolah data retensi dan kepuasan pelanggan."
+    ]
+   ]
+  ],
+  "is": [
+   [
+    [
+     "is",
+     "A",
+     "Menyetujui penawaran dan kontrak sesuai kewenangan."
+    ],
+    [
+     "is_bdm",
+     "R",
+     "Menangani permintaan, menyiapkan penawaran, dan mengikuti tender."
+    ],
+    [
+     "is_tech",
+     "C",
+     "Menelaah kelayakan teknis, metode, dan kebutuhan inspektor."
+    ],
+    [
+     "IS_OPS",
+     "C",
+     "Memberi estimasi durasi dan kebutuhan teknis sesuai sektor."
+    ],
+    [
+     "ric",
+     "C",
+     "Memberi acuan biaya pokok dan margin."
+    ],
+    [
+     "legal",
+     "C",
+     "Menelaah kontrak dan dokumen tender."
+    ]
+   ],
+   [
+    [
+     "is",
+     "A",
+     "Memastikan penugasan memenuhi persyaratan kompetensi dan independensi."
+    ],
+    [
+     "is_tech",
+     "R",
+     "Menyusun rencana inspeksi dan menugaskan inspektor yang kompeten serta independen."
+    ],
+    [
+     "IS_OPS",
+     "R",
+     "Menyiapkan tim dan peralatan inspeksi sesuai sektor."
+    ],
+    [
+     "hr",
+     "S",
+     "Menyediakan rekaman kompetensi dan kualifikasi inspektor."
+    ],
+    [
+     "ga",
+     "S",
+     "Mengatur perjalanan, akomodasi, dan logistik ke lokasi."
+    ],
+    [
+     "proc",
+     "S",
+     "Mengadakan peralatan atau subkontraktor bila diperlukan."
+    ]
+   ],
+   [
+    [
+     "is",
+     "A",
+     "Bertanggung jawab atas mutu dan keselamatan pelaksanaan inspeksi."
+    ],
+    [
+     "IS_OPS",
+     "R",
+     "Inspektor melaksanakan inspeksi di lokasi dan mencatat temuan."
+    ],
+    [
+     "cms",
+     "C",
+     "Menetapkan persyaratan K3L untuk pekerjaan lapangan."
+    ],
+    [
+     "ga",
+     "S",
+     "Mendukung logistik di lapangan."
+    ]
+   ],
+   [
+    [
+     "is",
+     "A",
+     "Memastikan hasil inspeksi ditinjau sebelum diterbitkan."
+    ],
+    [
+     "is_tech",
+     "R",
+     "Meninjau temuan, data, dan kesimpulan inspeksi."
+    ],
+    [
+     "IS_OPS",
+     "C",
+     "Mengklarifikasi temuan kepada reviewer."
+    ],
+    [
+     "cms",
+     "C",
+     "Menangani ketidaksesuaian proses inspeksi."
+    ]
+   ],
+   [
+    [
+     "is",
+     "A",
+     "Mengesahkan laporan atau sertifikat inspeksi."
+    ],
+    [
+     "is_tech",
+     "R",
+     "Menerbitkan laporan atau sertifikat, serta menyampaikan pelaporan ke regulator bila dipersyaratkan."
+    ],
+    [
+     "IS_OPS",
+     "S",
+     "Melengkapi data dan dokumen pendukung."
+    ],
+    [
+     "acc",
+     "I",
+     "Menerima pemicu penagihan."
+    ]
+   ],
+   [
+    [
+     "is",
+     "A",
+     "Memastikan jadwal inspeksi ulang dan hubungan pelanggan terjaga."
+    ],
+    [
+     "is_bdm",
+     "R",
+     "Menindaklanjuti jadwal inspeksi ulang dan peluang lanjutan."
+    ],
+    [
+     "is_tech",
+     "C",
+     "Menetapkan interval inspeksi ulang sesuai regulasi atau standar."
+    ],
+    [
+     "cms",
+     "C",
+     "Menangani keluhan pelanggan."
+    ],
+    [
+     "portfolio",
+     "C",
+     "Mengolah data retensi pelanggan."
+    ]
+   ]
+  ],
+  "pct": [
+   [
+    [
+     "pct",
+     "A",
+     "Menyetujui penawaran dan kontrak sesuai kewenangan."
+    ],
+    [
+     "pct_bd",
+     "R",
+     "Menangani permohonan dan menyiapkan penawaran."
+    ],
+    [
+     "pct_cert",
+     "R",
+     "Menelaah permohonan terhadap persyaratan skema."
+    ],
+    [
+     "pct_test",
+     "C",
+     "Mengonfirmasi kemampuan dan biaya pengujian produk."
+    ],
+    [
+     "ric",
+     "C",
+     "Memberi acuan biaya pokok dan margin."
+    ],
+    [
+     "legal",
+     "C",
+     "Menelaah kontrak sertifikasi."
+    ]
+   ],
+   [
+    [
+     "pct",
+     "A",
+     "Menyetujui rencana evaluasi."
+    ],
+    [
+     "pct_cert",
+     "R",
+     "Menyusun rencana evaluasi: pengambilan contoh, pengujian, dan audit pabrik."
+    ],
+    [
+     "pct_test",
+     "C",
+     "Merencanakan kebutuhan dan kapasitas pengujian."
+    ],
+    [
+     "hr",
+     "S",
+     "Menyediakan evaluator dan auditor yang kompeten."
+    ],
+    [
+     "ga",
+     "S",
+     "Mengatur perjalanan untuk audit pabrik."
+    ]
+   ],
+   [
+    [
+     "pct",
+     "A",
+     "Bertanggung jawab atas mutu evaluasi."
+    ],
+    [
+     "pct_test",
+     "R",
+     "Melaksanakan pengujian produk secara internal atau melalui laboratorium subkontrak."
+    ],
+    [
+     "pct_cert",
+     "R",
+     "Melaksanakan audit atau inspeksi pabrik."
+    ],
+    [
+     "proc",
+     "S",
+     "Mengadakan dan mengevaluasi laboratorium subkontrak."
+    ],
+    [
+     "ga",
+     "S",
+     "Mendukung logistik sampel dan perjalanan."
+    ]
+   ],
+   [
+    [
+     "pct",
+     "A",
+     "Memastikan tinjauan dilakukan oleh personel yang tidak terlibat dalam evaluasi."
+    ],
+    [
+     "pct_cert",
+     "R",
+     "Reviewer independen meninjau seluruh hasil evaluasi."
+    ],
+    [
+     "cms",
+     "C",
+     "Memantau kepatuhan proses tinjauan."
+    ]
+   ],
+   [
+    [
+     "pct",
+     "A",
+     "Mengesahkan keputusan sertifikasi."
+    ],
+    [
+     "pct_cert",
+     "R",
+     "Memutuskan sertifikasi, menerbitkan sertifikat, dan lisensi penggunaan tanda."
+    ],
+    [
+     "legal",
+     "C",
+     "Menelaah perjanjian lisensi penggunaan tanda."
+    ],
+    [
+     "gbac",
+     "I",
+     "Menerima laporan untuk tinjauan imparsialitas berkala."
+    ],
+    [
+     "acc",
+     "I",
+     "Menerima pemicu penagihan."
+    ]
+   ],
+   [
+    [
+     "pct",
+     "A",
+     "Memutuskan pemeliharaan, penangguhan, atau pencabutan sertifikat."
+    ],
+    [
+     "pct_cert",
+     "R",
+     "Melaksanakan surveilen dan mengendalikan penggunaan tanda."
+    ],
+    [
+     "pct_test",
+     "R",
+     "Melaksanakan pengujian ulang produk."
+    ],
+    [
+     "pct_bd",
+     "R",
+     "Menjaga hubungan pelanggan dan perpanjangan."
+    ],
+    [
+     "gbac",
+     "C",
+     "Memutus banding atas keputusan sertifikasi."
+    ]
+   ]
+  ]
+ }
+}

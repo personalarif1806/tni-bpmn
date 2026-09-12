@@ -1,0 +1,247 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+
+/* Design tokens — PRD section 11. */
+@theme {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* Brand and map palette */
+  --color-cobalt: #001ed2; /* primary TUV NORD — actions, links, active accent */
+  --color-navy: #06043b; /* process blocks, lane headers */
+  --color-cyan: #6fe3e1; /* unit boxes and activities */
+  --color-yellow: #fbe94a; /* category bands, decisions, highlight */
+  --color-teal: #3a9a9c; /* input lines, support, output */
+  --color-orange: #ff7a00; /* Accountable badge, highlight pulse */
+  --color-ink: #12123a;
+  --color-paper: #f5f6f8;
+  --color-line: #d9dce3;
+  --color-muted: #5b6075;
+
+  /* Hover shades — boxes change background only, never position (PRD 10) */
+  --color-cyan-hover: color-mix(in srgb, var(--color-cyan) 78%, white);
+  --color-paper-hover: color-mix(in srgb, var(--color-paper) 82%, var(--color-cyan));
+
+  /* PRD 8.8 asks for red backward flows; the brand palette has no red. */
+  --color-loop: #d0271d;
+
+  /*
+   * Orange text on white is 2.6:1, below the 4.5:1 PRD 12 requires, so small
+   * orange labels use this darker shade (5.1:1). The orange fill is unchanged.
+   */
+  --color-orange-ink: #b35200;
+
+  /* RASCI roles — A orange, R cobalt, S teal, C yellow (navy text), I grey */
+  --color-rasci-a: var(--color-orange);
+  --color-rasci-r: var(--color-cobalt);
+  --color-rasci-s: var(--color-teal);
+  --color-rasci-c: var(--color-yellow);
+  --color-rasci-i: var(--color-muted);
+
+  /* Type scale — PRD section 11 */
+  --text-badge: 11px;
+  --text-badge--line-height: 1.2;
+  --text-label: 12.5px;
+  --text-label--line-height: 1.3;
+  --text-table: 13px;
+  --text-table--line-height: 1.45;
+  --text-body: 14.5px;
+  --text-body--line-height: 1.5;
+  --text-title: 17px;
+  --text-title--line-height: 1.35;
+  --text-display: 24px;
+  --text-display--line-height: 1.25;
+
+  /* Inter is variable, so 650 is a real weight here */
+  --font-weight-demi: 650;
+}
+
+@layer components {
+  /* A foreignObject clips its content, so the focus ring is drawn inwards. */
+  .swimlane-node button:focus-visible {
+    outline-offset: -3px;
+  }
+
+  /*
+   * Confirmation layer — tints every box holding a role the process owners
+   * still have to confirm. The tint is an overlay so it reads the same over
+   * cyan, navy, paper and the translucent chips; the inset outline gives a
+   * shape cue as well, since colour must not carry meaning on its own.
+   */
+  .layer-confirmation [data-needs-confirmation="true"] {
+    outline: 2px solid var(--color-orange);
+    outline-offset: -2px;
+  }
+
+  .layer-confirmation [data-needs-confirmation="true"]::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-orange);
+    opacity: 0.22;
+    pointer-events: none;
+  }
+
+  /* Swimlane node hover — background only (PRD 10). */
+  .swimlane-node .swimlane-shape {
+    transition-property: fill;
+    transition-duration: var(--hover-duration);
+  }
+
+  .swimlane-node:hover .swimlane-shape-activity {
+    fill: var(--color-cyan-hover);
+  }
+
+  .swimlane-node:hover .swimlane-shape-decision {
+    fill: color-mix(in srgb, var(--color-yellow) 78%, white);
+  }
+
+  .swimlane-node:hover .swimlane-shape-terminal {
+    fill: color-mix(in srgb, var(--color-navy) 85%, white);
+  }
+
+  /*
+   * Focus mode — PRD 8.3 and 10. The map holds hundreds of elements, so dimming
+   * is one class on the map root driving a CSS transition; nothing here is
+   * animated per element from JavaScript.
+   */
+  .map-dim {
+    transition-property: opacity;
+    transition-duration: var(--focus-off-duration);
+    transition-timing-function: ease-out;
+  }
+
+  .focus-mode .map-dim {
+    transition-duration: var(--focus-on-duration);
+  }
+
+  .focus-mode .map-dim[data-involved="false"] {
+    opacity: 0.2;
+  }
+
+  /*
+   * PRD 8.3 fixes the dim at 0.2, which is below the 4.5:1 contrast PRD 12
+   * asks for. The dimming is a temporary spotlight, so rather than change the
+   * specified value, any dimmed box comes back to full strength as soon as the
+   * user points at it or tabs into it — the two ways its text gets read.
+   */
+  .focus-mode .map-dim[data-involved="false"]:hover,
+  .focus-mode .map-dim[data-involved="false"]:focus-within {
+    opacity: 1;
+  }
+}
+
+@layer base {
+  :root {
+    /* Header height is read by sticky offsets inside the page (PRD 8.1) */
+    --header-h: 56px;
+  }
+
+  html {
+    background-color: var(--color-paper);
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: 1.5;
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* PRD 12 — keyboard focus must always be visible */
+  :focus-visible {
+    outline: 3px solid var(--color-cobalt);
+    outline-offset: 2px;
+  }
+
+  /* Square corners everywhere by default — this follows the printed map style */
+  button {
+    font: inherit;
+    color: inherit;
+    border-radius: 0;
+  }
+}
+
+/*
+ * Print — PRD 14. A3 landscape, colours preserved, navigation chrome removed.
+ * The map and the swimlanes are scaled with `zoom` rather than `transform`
+ * because zoom shrinks the layout box too, so the page wraps the diagram
+ * instead of reserving its full on-screen width.
+ */
+@media print {
+  @page {
+    size: A3 landscape;
+    margin: 12mm;
+  }
+
+  :root {
+    --header-h: 0px;
+  }
+
+  *,
+  *::before,
+  *::after {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  html,
+  body {
+    background: white;
+  }
+
+  /* Repeat table headings, and never split a row across pages. */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  li,
+  dl {
+    break-inside: avoid;
+  }
+
+  /* Scroll containers have to open up or their content is clipped. */
+  .map-viewport,
+  [data-swimlane],
+  .overflow-x-auto,
+  .overflow-auto,
+  .overflow-y-auto {
+    overflow: visible !important;
+    max-height: none !important;
+  }
+
+  /* The JS zoom is overridden: one fixed scale that fits an A3 page. */
+  .map-sizer {
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .map-canvas {
+    transform: none !important;
+    zoom: 0.72;
+  }
+
+  /* The widest process is 2424px; 0.6 brings it inside the printable width. */
+  [data-swimlane] {
+    zoom: 0.6;
+  }
+
+  /*
+   * Focus mode is a screen affordance. On paper the dimmed boxes are just
+   * unreadable, so everything prints at full strength — the RASCI badges and
+   * the yellow stage outline still mark what was in focus.
+   */
+  .focus-mode .map-dim[data-involved="false"] {
+    opacity: 1 !important;
+  }
+
+  .print-break-before {
+    break-before: page;
+  }
+
+  .print-avoid-break {
+    break-inside: avoid;
+  }
+}

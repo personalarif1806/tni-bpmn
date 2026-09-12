@@ -1,0 +1,125 @@
+{
+ "cs_sc": {
+  "n": "Senior Commercial",
+  "pc": "cs"
+ },
+ "cs_ims": {
+  "n": "IMS CS",
+  "pc": "cs"
+ },
+ "cs_ens": {
+  "n": "Energy & Sustainability CS",
+  "pc": "cs"
+ },
+ "cs_health": {
+  "n": "Health CS",
+  "pc": "cs"
+ },
+ "cs_it": {
+  "n": "IT CS",
+  "pc": "cs"
+ },
+ "cs_auto": {
+  "n": "Automotive CS",
+  "pc": "cs"
+ },
+ "cs_agri": {
+  "n": "Agrifood CS",
+  "pc": "cs"
+ },
+ "cs_train": {
+  "n": "Training Services (CS)",
+  "s": "Training Services",
+  "pc": "cs"
+ },
+ "cs_bs": {
+  "n": "CS Business Support",
+  "pc": "cs"
+ },
+ "lab_sales": {
+  "n": "Sales (CTS Lab)",
+  "s": "CTS: Sales",
+  "pc": "lab"
+ },
+ "lab_chem": {
+  "n": "Chemical Lab (CTS)",
+  "s": "CTS: Chemical Lab",
+  "pc": "lab"
+ },
+ "lab_micro": {
+  "n": "Microbiology Lab (CTS)",
+  "s": "CTS: Microbiology Lab",
+  "pc": "lab"
+ },
+ "lab_pss": {
+  "n": "PSS Lab (CTS)",
+  "s": "CTS: PSS Lab",
+  "pc": "lab"
+ },
+ "lab_ncts": {
+  "n": "NCTS Lab",
+  "pc": "lab"
+ },
+ "lab_cal": {
+  "n": "Calibration Lab",
+  "pc": "lab"
+ },
+ "lab_brdm": {
+  "n": "BRDM",
+  "pc": "lab"
+ },
+ "lab_los": {
+  "n": "Lab Operation Support",
+  "pc": "lab"
+ },
+ "lab_sby": {
+  "n": "Surabaya Branch Lab",
+  "pc": "lab"
+ },
+ "lab_bdg": {
+  "n": "Bandung Branch Lab",
+  "pc": "lab"
+ },
+ "lab_mdn": {
+  "n": "Medan RO",
+  "pc": "lab"
+ },
+ "lab_smg": {
+  "n": "Semarang RO",
+  "pc": "lab"
+ },
+ "lab_train": {
+  "n": "Training Services (Lab)",
+  "s": "Training Services",
+  "pc": "lab"
+ },
+ "is_og": {
+  "n": "Oil & Gas",
+  "pc": "is"
+ },
+ "is_gen": {
+  "n": "General IS",
+  "pc": "is"
+ },
+ "is_tech": {
+  "n": "Tech. Operation",
+  "pc": "is"
+ },
+ "is_bdm": {
+  "n": "Business Dev. & Mktg",
+  "pc": "is"
+ },
+ "pct_cert": {
+  "n": "Product Certification",
+  "pc": "pct"
+ },
+ "pct_test": {
+  "n": "Product Testing",
+  "pc": "pct"
+ },
+ "pct_bd": {
+  "n": "Business Development (PCT)",
+  "s": "Business Development",
+  "pc": "pct"
+ }
+}

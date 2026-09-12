@@ -1,0 +1,211 @@
+{
+ "cust": {
+  "n": "Pelanggan",
+  "ext": 1
+ },
+ "reg": {
+  "n": "Regulator",
+  "t": "bila dipersyaratkan",
+  "ext": 1
+ },
+ "kan": {
+  "n": "KAN / pemilik skema / Group",
+  "ext": 1
+ },
+ "extaud": {
+  "n": "Auditor eksternal / DJP / Group",
+  "ext": 1
+ },
+ "boc": {
+  "n": "Board of Commissioners",
+  "t": "Dewan Komisaris"
+ },
+ "md": {
+  "n": "Managing Directors",
+  "t": "Direksi"
+ },
+ "sec": {
+  "n": "MD's Secretary",
+  "t": "General Support"
+ },
+ "hods": {
+  "n": "HoD BU & divisi",
+  "t": "Seluruh unit"
+ },
+ "planner": {
+  "n": "Corporate Planner",
+  "t": "Corporate Strategic Support"
+ },
+ "portfolio": {
+  "n": "Corporate Portfolio & Client Mgmt",
+  "t": "Corporate Strategic Support"
+ },
+ "nbud": {
+  "n": "New Business Unit Dev.",
+  "t": "Non Division Group"
+ },
+ "cis": {
+  "n": "Corporate Innovation & Sustainability",
+  "t": "SID"
+ },
+ "it": {
+  "n": "IT & Digitalization",
+  "t": "SID"
+ },
+ "cms": {
+  "n": "Corporate Management System",
+  "t": "SID"
+ },
+ "legal": {
+  "n": "Legal Adm. Support",
+  "t": "General Support"
+ },
+ "gbac": {
+  "n": "Governing Board & Appeals Committee",
+  "t": "Komite independen"
+ },
+ "cf": {
+  "n": "Corporate Finance",
+  "t": "F&A"
+ },
+ "acc": {
+  "n": "Accounting & Taxation",
+  "t": "F&A"
+ },
+ "ric": {
+  "n": "Revenue & Investment Controlling",
+  "t": "F&A"
+ },
+ "hr": {
+  "n": "Human Resources",
+  "t": "Human Capital"
+ },
+ "ga": {
+  "n": "General Affairs",
+  "t": "Human Capital"
+ },
+ "proc": {
+  "n": "Procurement",
+  "t": "General Support"
+ },
+ "mkt": {
+  "n": "Corporate Marketing & Communication",
+  "t": "Corporate Strategic Support"
+ },
+ "pchead": {
+  "n": "HoD profit center",
+  "t": "Per BU"
+ },
+ "bizbd": {
+  "n": "BD / Sales profit center",
+  "t": "Senior Commercial, Sales, BD"
+ },
+ "emp": {
+  "n": "Karyawan",
+  "t": "Seluruh unit"
+ },
+ "user": {
+  "n": "Unit pengguna",
+  "t": "Seluruh unit"
+ },
+ "steer": {
+  "n": "Steering digital",
+  "t": "HoD SID & Direksi"
+ },
+ "owner": {
+  "n": "Pemilik proses",
+  "t": "Unit terkait"
+ },
+ "req": {
+  "n": "Unit pemohon",
+  "t": "BU / fungsi"
+ },
+ "unit": {
+  "n": "BU / atasan langsung",
+  "t": "Unit terkait"
+ },
+ "ops": {
+  "n": "Admin & operasional profit center",
+  "t": "mis. CS Business Support"
+ },
+ "bu": {
+  "n": "Unit terkait",
+  "t": "Profit center / fungsi"
+ },
+ "indep": {
+  "n": "Personel independen",
+  "t": "Tidak terlibat dalam kasus"
+ },
+ "sales": {
+  "n": "Sales / Senior Commercial / BD",
+  "t": "Profit center"
+ },
+ "tech": {
+  "n": "Departemen teknis",
+  "t": "Profit center"
+ },
+ "supp": {
+  "n": "Legal & RIC",
+  "t": "Kasus nonstandar"
+ },
+ "cs_sc": {
+  "n": "Senior Commercial",
+  "t": "Certification Services"
+ },
+ "cs_bs": {
+  "n": "CS Business Support",
+  "t": "Certification Services"
+ },
+ "cs_aud": {
+  "n": "Departemen sektor CS: auditor",
+  "t": "IMS, E&S, Health, IT, Auto, Agrifood"
+ },
+ "cs_rev": {
+  "n": "Departemen sektor CS: reviewer & pengambil keputusan",
+  "t": "Independen dari tim audit"
+ },
+ "lab_sales": {
+  "n": "Sales CTS Lab, Branch Lab & RO",
+  "t": "Laboratory Services"
+ },
+ "lab_rcv": {
+  "n": "Penerimaan & registrasi sampel",
+  "t": "Laboratory Services"
+ },
+ "lab_anl": {
+  "n": "Analis & teknisi",
+  "t": "Chemical, Micro, PSS, NCTS, Calibration"
+ },
+ "lab_spv": {
+  "n": "Penyelia teknis & penandatangan",
+  "t": "Laboratory Services"
+ },
+ "is_bdm": {
+  "n": "Business Dev. & Mktg",
+  "t": "Inspection Services"
+ },
+ "is_tech": {
+  "n": "Tech. Operation",
+  "t": "Inspection Services"
+ },
+ "is_insp": {
+  "n": "Inspektor",
+  "t": "Oil & Gas / General IS"
+ },
+ "pct_bd": {
+  "n": "Business Development",
+  "t": "PCT Services"
+ },
+ "pct_eval": {
+  "n": "Product Certification: evaluator",
+  "t": "PCT Services"
+ },
+ "pct_test": {
+  "n": "Product Testing / lab subkontrak",
+  "t": "PCT Services"
+ },
+ "pct_dec": {
+  "n": "Product Certification: reviewer & pengambil keputusan",
+  "t": "Independen dari evaluasi"
+ }
+}

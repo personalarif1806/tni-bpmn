@@ -1,0 +1,466 @@
+{
+ "PC2L1": {
+  "cs": "C4.1",
+  "lab": "C4.2",
+  "is": "C4.3",
+  "pct": "C4.4"
+ },
+ "L12PC": {
+  "C4.1": "cs",
+  "C4.2": "lab",
+  "C4.3": "is",
+  "C4.4": "pct"
+ },
+ "VC2L1": {
+  "vc_bd": [
+   "C1"
+  ],
+  "vc_mk": [
+   "C2"
+  ],
+  "vc_sales": [
+   "C3"
+  ],
+  "vc_del": [
+   "C4.1",
+   "C4.2",
+   "C4.3",
+   "C4.4"
+  ],
+  "vc_bill": [
+   "C5"
+  ]
+ },
+ "L12VC": {
+  "C1": "vc_bd",
+  "C2": "vc_mk",
+  "C3": "vc_sales",
+  "C4.1": "vc_del",
+  "C4.2": "vc_del",
+  "C4.3": "vc_del",
+  "C4.4": "vc_del",
+  "C5": "vc_bill"
+ },
+ "STEP2L1": {
+  "cs": [
+   [
+    "b",
+    "c",
+    "d"
+   ],
+   [
+    "e"
+   ],
+   [
+    "f",
+    "g",
+    "y",
+    "h",
+    "i"
+   ],
+   [
+    "j",
+    "k"
+   ],
+   [
+    "l"
+   ],
+   [
+    "m"
+   ]
+  ],
+  "lab": [
+   [
+    "b"
+   ],
+   [
+    "c",
+    "d",
+    "e"
+   ],
+   [
+    "f",
+    "g"
+   ],
+   [
+    "h",
+    "x"
+   ],
+   [
+    "j",
+    "k"
+   ],
+   [
+    "l"
+   ]
+  ],
+  "is": [
+   [
+    "b"
+   ],
+   [
+    "c",
+    "d"
+   ],
+   [
+    "e",
+    "f",
+    "g",
+    "h"
+   ],
+   [
+    "i"
+   ],
+   [
+    "j",
+    "k"
+   ],
+   [
+    "l"
+   ]
+  ],
+  "pct": [
+   [
+    "b",
+    "c"
+   ],
+   [
+    "d"
+   ],
+   [
+    "e",
+    "f",
+    "g",
+    "y"
+   ],
+   [
+    "h"
+   ],
+   [
+    "i",
+    "j"
+   ],
+   [
+    "k"
+   ]
+  ]
+ },
+ "OWN": {
+  "planner": [
+   "M1"
+  ],
+  "portfolio": [
+   "M2"
+  ],
+  "nbud": [
+   "M2"
+  ],
+  "cis": [
+   "M3"
+  ],
+  "it": [
+   "M4"
+  ],
+  "cms": [
+   "G1",
+   "G2"
+  ],
+  "gbac": [
+   "G2"
+  ],
+  "legal": [
+   "G3"
+  ],
+  "acc": [
+   "S1"
+  ],
+  "proc": [
+   "S2"
+  ],
+  "hr": [
+   "S3"
+  ],
+  "ga": [
+   "S4"
+  ],
+  "mkt": [
+   "C2",
+   "S5"
+  ],
+  "cs": [
+   "C4.1"
+  ],
+  "lab": [
+   "C4.2"
+  ],
+  "is": [
+   "C4.3"
+  ],
+  "pct": [
+   "C4.4"
+  ]
+ },
+ "TAGS": {
+  "planner": [
+   "M1"
+  ],
+  "portfolio": [
+   "M2"
+  ],
+  "nbud": [
+   "M2"
+  ],
+  "cis": [
+   "M3"
+  ],
+  "it": [
+   "M4"
+  ],
+  "cms": [
+   "G1",
+   "G2"
+  ],
+  "gbac": [
+   "G2"
+  ],
+  "legal": [
+   "G3"
+  ],
+  "acc": [
+   "S1"
+  ],
+  "proc": [
+   "S2"
+  ],
+  "hr": [
+   "S3"
+  ],
+  "ga": [
+   "S4"
+  ],
+  "mkt": [
+   "C2",
+   "S5"
+  ],
+  "cs": [
+   "C4.1"
+  ],
+  "lab": [
+   "C4.2"
+  ],
+  "is": [
+   "C4.3"
+  ],
+  "pct": [
+   "C4.4"
+  ],
+  "ric": [
+   "S1"
+  ],
+  "cf": [
+   "S1"
+  ],
+  "md": [
+   "M1"
+  ],
+  "boc": [
+   "M1"
+  ],
+  "sec": [
+   "M1"
+  ]
+ },
+ "P2L0": {
+  "M1": [
+   "planner",
+   "md"
+  ],
+  "M2": [
+   "portfolio",
+   "nbud"
+  ],
+  "M3": [
+   "cis"
+  ],
+  "M4": [
+   "it"
+  ],
+  "G1": [
+   "cms"
+  ],
+  "G2": [
+   "cms",
+   "gbac"
+  ],
+  "G3": [
+   "legal"
+  ],
+  "S1": [
+   "acc",
+   "ric",
+   "cf"
+  ],
+  "S2": [
+   "proc"
+  ],
+  "S3": [
+   "hr"
+  ],
+  "S4": [
+   "ga"
+  ],
+  "S5": [
+   "mkt"
+  ]
+ },
+ "LANE2L0": {
+  "cust": {
+   "u": "cust"
+  },
+  "reg": {
+   "u": "reg"
+  },
+  "kan": {
+   "u": "reg"
+  },
+  "cs_sc": {
+   "d": "cs_sc"
+  },
+  "cs_bs": {
+   "d": "cs_bs"
+  },
+  "cs_aud": {
+   "u": "cs"
+  },
+  "cs_rev": {
+   "u": "cs"
+  },
+  "lab_sales": {
+   "d": "lab_sales"
+  },
+  "lab_rcv": {
+   "u": "lab"
+  },
+  "lab_anl": {
+   "u": "lab"
+  },
+  "lab_spv": {
+   "u": "lab"
+  },
+  "is_bdm": {
+   "d": "is_bdm"
+  },
+  "is_tech": {
+   "d": "is_tech"
+  },
+  "is_insp": {
+   "u": "is"
+  },
+  "pct_bd": {
+   "d": "pct_bd"
+  },
+  "pct_eval": {
+   "d": "pct_cert"
+  },
+  "pct_dec": {
+   "d": "pct_cert"
+  },
+  "pct_test": {
+   "d": "pct_test"
+  }
+ },
+ "DEPT2LANES": {
+  "cs_sc": [
+   "cs_sc"
+  ],
+  "cs_bs": [
+   "cs_bs"
+  ],
+  "cs_ims": [
+   "cs_aud",
+   "cs_rev"
+  ],
+  "cs_ens": [
+   "cs_aud",
+   "cs_rev"
+  ],
+  "cs_health": [
+   "cs_aud",
+   "cs_rev"
+  ],
+  "cs_it": [
+   "cs_aud",
+   "cs_rev"
+  ],
+  "cs_auto": [
+   "cs_aud",
+   "cs_rev"
+  ],
+  "cs_agri": [
+   "cs_aud",
+   "cs_rev"
+  ],
+  "lab_sales": [
+   "lab_sales"
+  ],
+  "lab_sby": [
+   "lab_sales",
+   "lab_anl"
+  ],
+  "lab_bdg": [
+   "lab_sales",
+   "lab_anl"
+  ],
+  "lab_mdn": [
+   "lab_sales"
+  ],
+  "lab_smg": [
+   "lab_sales"
+  ],
+  "lab_chem": [
+   "lab_anl",
+   "lab_spv"
+  ],
+  "lab_micro": [
+   "lab_anl",
+   "lab_spv"
+  ],
+  "lab_pss": [
+   "lab_anl",
+   "lab_spv"
+  ],
+  "lab_ncts": [
+   "lab_anl",
+   "lab_spv"
+  ],
+  "lab_cal": [
+   "lab_anl",
+   "lab_spv"
+  ],
+  "lab_los": [
+   "lab_rcv"
+  ],
+  "is_bdm": [
+   "is_bdm"
+  ],
+  "is_tech": [
+   "is_tech"
+  ],
+  "is_og": [
+   "is_insp"
+  ],
+  "is_gen": [
+   "is_insp"
+  ],
+  "pct_bd": [
+   "pct_bd"
+  ],
+  "pct_cert": [
+   "pct_eval",
+   "pct_dec"
+  ],
+  "pct_test": [
+   "pct_test"
+  ]
+ }
+}

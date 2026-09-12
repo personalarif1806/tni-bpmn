@@ -1,0 +1,150 @@
+{
+ "TOP_L": [
+  "planner",
+  "portfolio",
+  "nbud",
+  "cis",
+  "it"
+ ],
+ "TOP_R": [
+  "cms",
+  "legal",
+  "gbac"
+ ],
+ "BOTTOM": [
+  "cf",
+  "acc",
+  "ric",
+  "hr",
+  "ga",
+  "proc",
+  "sec",
+  "mkt"
+ ],
+ "VC": [
+  "vc_bd",
+  "vc_mk",
+  "vc_sales",
+  "vc_del",
+  "vc_bill"
+ ],
+ "VC_LINKS": [
+  "Market opportunity, new service / scheme concept, value proposition",
+  "Marketing program, campaign & marketing kit, lead pool, bidding support",
+  "Approved requirement, defined scope, contract / work order, COGS-based scope",
+  "Order handling, operation process, report & certificate issuance"
+ ],
+ "PCS": [
+  "cs",
+  "lab",
+  "is",
+  "pct"
+ ],
+ "EXT_L": [
+  [
+   "cust",
+   "Customer inquiry, request for TIC, market demand & industry need"
+  ],
+  [
+   "stake",
+   "Business direction, growth target, investment & performance expectation"
+  ],
+  [
+   "reg",
+   "Regulation, accreditation & scheme requirement, designation"
+  ]
+ ],
+ "EXT_R": [
+  [
+   "cust",
+   "Final report & certificate, service completion confirmation, invoice",
+   "Core Business Process"
+  ],
+  [
+   "stake",
+   "Performance & financial report, management review output",
+   "MD, Revenue & Investment Controlling, Corporate Planner"
+  ],
+  [
+   "reg",
+   "Accreditation compliance, regulatory reporting, certified client data",
+   "Corporate Management System, Legal, profit centers"
+  ],
+  [
+   "pub",
+   "Assurance & trust, compliance to standards, public safety & sustainability, PR & CSR",
+   "Core process, C. Marketing & Communication, Corporate Innovation & Sustainability"
+  ]
+ ],
+ "CATS": {
+  "gov": "Direction & Oversight",
+  "strat": "Strategy, Product Development & Transformation",
+  "qgov": "Performance Monitoring, Quality Control & Governance",
+  "vc": "Core Business Process: value chain",
+  "pc": "Core Business Process: profit center",
+  "sup": "Corporate & Business Support",
+  "ext": "External party"
+ },
+ "RAS": [
+  "A",
+  "R",
+  "S",
+  "C",
+  "I"
+ ],
+ "RAS_LBL": {
+  "A": "Accountable",
+  "R": "Responsible",
+  "S": "Support",
+  "C": "Consulted",
+  "I": "Informed"
+ },
+ "RAS_DESC": {
+  "A": "penanggung jawab akhir dan pemberi persetujuan",
+  "R": "pelaksana pekerjaan",
+  "S": "penyedia sumber daya, sistem, atau layanan pendukung",
+  "C": "dimintai masukan sebelum keputusan",
+  "I": "diberi informasi atas hasilnya"
+ },
+ "RANK": [
+  "md",
+  "PC_HEADS",
+  "cs",
+  "lab",
+  "is",
+  "pct",
+  "cs_sc",
+  "cs_bs",
+  "CS_SECTOR",
+  "cs_train",
+  "lab_sales",
+  "LAB_TEST",
+  "lab_cal",
+  "LAB_BRANCH",
+  "LAB_RO",
+  "lab_los",
+  "lab_train",
+  "is_bdm",
+  "is_tech",
+  "IS_OPS",
+  "pct_bd",
+  "pct_cert",
+  "pct_test",
+  "planner",
+  "portfolio",
+  "nbud",
+  "cis",
+  "it",
+  "cms",
+  "legal",
+  "gbac",
+  "cf",
+  "acc",
+  "ric",
+  "hr",
+  "ga",
+  "proc",
+  "sec",
+  "mkt"
+ ]
+}

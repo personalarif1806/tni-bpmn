@@ -1,0 +1,908 @@
+{
+ "boc": {
+  "name": "Board of Commissioners",
+  "cat": "gov",
+  "org": "Organ perusahaan (Dewan Komisaris)",
+  "role": "Mengawasi dan memberi nasihat kepada Direksi atas jalannya pengurusan perusahaan.",
+  "tasks": [
+   "Mengawasi kebijakan pengurusan dan jalannya perusahaan oleh Managing Directors.",
+   "Memberi nasihat serta persetujuan atas rencana kerja dan anggaran tahunan maupun aksi korporasi sesuai Anggaran Dasar.",
+   "Menelaah kinerja keuangan, pencapaian target, dan profil risiko perusahaan secara berkala.",
+   "Memastikan kepentingan pemegang saham (TÜV NORD Group) dan prinsip tata kelola perusahaan yang baik terjaga."
+  ],
+  "outputs": [
+   "Arahan dan persetujuan strategis",
+   "Evaluasi kinerja Direksi",
+   "Rekomendasi pengawasan"
+  ],
+  "links": [
+   "Managing Directors",
+   "TÜV NORD Group",
+   "Revenue & Investment Controlling",
+   "Corporate Planner"
+  ]
+ },
+ "md": {
+  "name": "Managing Directors",
+  "cat": "gov",
+  "org": "Direksi",
+  "role": "Menetapkan arah bisnis, memimpin seluruh BU dan fungsi pendukung, serta bertindak sebagai top management sistem manajemen.",
+  "tasks": [
+   "Menetapkan visi, strategi, target tahunan, dan alokasi sumber daya perusahaan.",
+   "Memimpin BU Certification, BU Industry, Business Partner, dan New Business Unit Development.",
+   "Menetapkan kebijakan mutu, K3L, dan komitmen imparsialitas, serta memimpin management review.",
+   "Menyetujui struktur organisasi, kebijakan, anggaran, investasi, dan kontrak strategis sesuai kewenangan.",
+   "Bertanggung jawab atas kinerja P&L, kepatuhan regulasi dan akreditasi, serta reputasi perusahaan.",
+   "Mewakili perusahaan kepada TÜV NORD Group, Board of Commissioners, regulator, dan mitra strategis."
+  ],
+  "outputs": [
+   "Business direction dan kebijakan",
+   "Anggaran, target, dan KPI yang disetujui",
+   "Keputusan management review"
+  ],
+  "links": [
+   "Board of Commissioners",
+   "Governing Board & Appeals Committee",
+   "Seluruh HoD",
+   "MD's Secretary"
+  ]
+ },
+ "planner": {
+  "name": "Corporate Planner",
+  "cat": "strat",
+  "tag": "CSS",
+  "org": "Corporate Strategic Support (Business Partner)",
+  "role": "Menerjemahkan arah Direksi menjadi rencana bisnis, target, dan KPI yang terukur.",
+  "flow": [
+   "Corporate strategy & business plan",
+   "Annual target & KPI",
+   "Performance monitoring direction"
+  ],
+  "tasks": [
+   "Menyusun rencana strategis jangka menengah dan rencana bisnis tahunan bersama BU dan divisi.",
+   "Menurunkan target perusahaan menjadi KPI per BU, divisi, dan departemen.",
+   "Mengoordinasikan siklus penyusunan anggaran bersama Finance & Accounting.",
+   "Melakukan analisis pasar, kompetitor, dan tren industri TIC sebagai dasar keputusan strategis.",
+   "Memantau pencapaian inisiatif strategis serta menyiapkan bahan rapat Direksi, BoC, dan management review."
+  ],
+  "outputs": [
+   "Corporate strategy dan business plan",
+   "Annual target dan KPI",
+   "Strategic performance report"
+  ],
+  "links": [
+   "Managing Directors",
+   "Revenue & Investment Controlling",
+   "Seluruh BU"
+  ]
+ },
+ "portfolio": {
+  "name": "Corporate Portfolio & Client Management",
+  "cat": "strat",
+  "tag": "CSS",
+  "org": "Corporate Strategic Support (Business Partner)",
+  "role": "Mengelola portofolio layanan lintas BU dan hubungan dengan klien strategis.",
+  "flow": [
+   "Service portfolio & pricing insight",
+   "Key account & cross-selling",
+   "Customer retention program"
+  ],
+  "sys": [
+   "Central Customer"
+  ],
+  "tasks": [
+   "Memetakan dan mengelola portofolio layanan lintas BU: katalog layanan, siklus hidup, dan kinerja per layanan.",
+   "Mengelola key account dan klien strategis lintas BU, termasuk peluang cross-selling dan bundling layanan.",
+   "Menjaga data pelanggan terpusat (golden record) sebagai satu sumber data bersama BU dan IT.",
+   "Menjalankan program retensi pelanggan serta analisis kepuasan dan churn.",
+   "Memberi masukan harga dan positioning layanan berdasarkan data profitabilitas dan pasar."
+  ],
+  "outputs": [
+   "Portfolio review",
+   "Key account plan",
+   "Customer insight dan program retensi"
+  ],
+  "links": [
+   "Sales / BD di setiap BU",
+   "Corporate Marketing & Communication",
+   "Revenue & Investment Controlling",
+   "IT & Digitalization"
+  ]
+ },
+ "nbud": {
+  "name": "New Business Unit Development",
+  "cat": "strat",
+  "tag": "NBUD",
+  "org": "Non Division Group, melapor langsung ke Managing Directors",
+  "role": "Menginkubasi bisnis baru hingga siap berdiri sebagai unit bisnis.",
+  "depts": [
+   "People & Emp.",
+   "Other New Business"
+  ],
+  "flow": [
+   "New business & market opportunity",
+   "Business case & pilot",
+   "New service launch"
+  ],
+  "tasks": [
+   "Mengidentifikasi dan menilai peluang bisnis, pasar, dan skema layanan baru di luar portofolio BU saat ini.",
+   "Menyusun business case dan studi kelayakan: pasar, investasi, risiko, serta kebutuhan akreditasi atau izin.",
+   "Mengembangkan dan menjalankan bisnis People & Employment serta pilot bisnis baru lainnya.",
+   "Menyiapkan persyaratan akreditasi, perizinan, dan sistem manajemen untuk layanan baru bersama Corporate Management System dan Legal.",
+   "Mengusulkan transisi bisnis yang sudah matang ke BU yang ada atau menjadi unit bisnis tersendiri."
+  ],
+  "outputs": [
+   "Business case",
+   "Pilot / peluncuran layanan baru",
+   "Sumber pendapatan baru"
+  ],
+  "links": [
+   "Managing Directors",
+   "Corporate Planner",
+   "Corporate Management System",
+   "Legal Administration Support"
+  ]
+ },
+ "cis": {
+  "name": "Corporate Innovation & Sustainability",
+  "cat": "strat",
+  "tag": "SID",
+  "org": "Divisi Systems, Innovation & Digitalization (Business Partner)",
+  "role": "Menggerakkan perbaikan berkelanjutan, standardisasi proses, dan program keberlanjutan.",
+  "flow": [
+   "Process improvement initiative",
+   "Standardization & optimization",
+   "Sustainability program"
+  ],
+  "tasks": [
+   "Mengelola program inovasi dan continuous improvement (suggestion system, QCC, Lean) di seluruh unit.",
+   "Memetakan, menstandarkan, dan mengoptimalkan proses bisnis bersama pemilik proses.",
+   "Mengukur dampak inisiatif perbaikan terhadap efisiensi, biaya, dan kualitas layanan.",
+   "Menyusun dan menjalankan program keberlanjutan (ESG) beserta pelaporannya ke Direksi dan Group.",
+   "Mengoordinasikan pelaksanaan CSR bersama Corporate Marketing & Communication."
+  ],
+  "outputs": [
+   "Improvement initiative",
+   "Proses terstandar (SOP dan process map)",
+   "Laporan keberlanjutan / ESG"
+  ],
+  "links": [
+   "Seluruh pemilik proses",
+   "Corporate Management System",
+   "IT & Digitalization",
+   "Corporate Marketing & Communication"
+  ]
+ },
+ "it": {
+  "name": "IT & Digitalization",
+  "cat": "strat",
+  "tag": "SID",
+  "org": "Divisi Systems, Innovation & Digitalization (Business Partner)",
+  "role": "Menyediakan sistem inti, otomasi alur kerja, data, dan infrastruktur TI yang aman.",
+  "flow": [
+   "Core system (SIM's) & application",
+   "Digital workflow & automation",
+   "Data, dashboard & IT security"
+  ],
+  "sys": [
+   "SIMCert",
+   "SIMLab",
+   "SIMCal",
+   "Central Customer",
+   "Central Invoicing"
+  ],
+  "tasks": [
+   "Mengembangkan dan memelihara core system operasional (SIMCert, SIMLab, SIMCal) serta platform bersama seperti Central Customer dan Central Invoicing.",
+   "Mendigitalkan dan mengotomasi alur kerja lintas unit: workflow, approval, dan integrasi antar sistem.",
+   "Menyediakan data, dashboard, dan laporan manajemen yang andal.",
+   "Mengelola infrastruktur, jaringan, perangkat, dan layanan helpdesk.",
+   "Menerapkan keamanan informasi, kontrol akses, dan penanganan insiden sesuai kebijakan TI Group (K-RL 550) dan UU PDP.",
+   "Menyusun dan mengawal roadmap transformasi digital sesuai prioritas bisnis."
+  ],
+  "outputs": [
+   "Core system dan aplikasi",
+   "Digital workflow dan otomasi",
+   "Dashboard dan laporan",
+   "Infrastruktur TI yang aman dan tersedia"
+  ],
+  "links": [
+   "Seluruh BU",
+   "Finance & Accounting",
+   "Human Capital",
+   "Corporate Innovation & Sustainability"
+  ]
+ },
+ "cms": {
+  "name": "Corporate Management System",
+  "cat": "qgov",
+  "tag": "SID",
+  "org": "Divisi Systems, Innovation & Digitalization (Business Partner)",
+  "role": "Memelihara sistem manajemen terintegrasi, akreditasi, serta kepatuhan mutu dan K3L.",
+  "flow": [
+   "Accreditation & scheme compliance",
+   "Internal audit & impartiality risk",
+   "Complaint, NC & corrective action"
+  ],
+  "tasks": [
+   "Memelihara sistem manajemen terintegrasi yang memenuhi ISO/IEC 17021-1, 17025, 17020, dan 17065 serta standar mutu dan K3L perusahaan.",
+   "Mengendalikan dokumen dan rekaman sistem manajemen: manual, prosedur, instruksi kerja, dan formulir.",
+   "Merencanakan dan melaksanakan audit internal, serta mengoordinasikan asesmen akreditasi KAN, pemilik skema, dan audit Group.",
+   "Memfasilitasi analisis risiko imparsialitas dan konflik kepentingan, termasuk dukungan administratif bagi Governing Board & Appeals Committee.",
+   "Mengelola keluhan pelanggan, ketidaksesuaian, dan tindakan korektif (CAPA) hingga terbukti efektif.",
+   "Menyiapkan masukan management review dan memantau tindak lanjutnya.",
+   "Mengawasi pengendalian kesehatan, keselamatan kerja, dan lingkungan (K3L)."
+  ],
+  "outputs": [
+   "Akreditasi dan skema terpelihara",
+   "Temuan audit internal",
+   "CAPA tertutup",
+   "Input management review"
+  ],
+  "links": [
+   "Seluruh profit center",
+   "Governing Board & Appeals Committee",
+   "Human Resources",
+   "Managing Directors"
+  ]
+ },
+ "legal": {
+  "name": "Legal Administration Support",
+  "cat": "qgov",
+  "tag": "GS",
+  "org": "General Support (Business Partner)",
+  "role": "Memastikan setiap perikatan, perizinan, dan kegiatan usaha memiliki dasar hukum yang sah.",
+  "flow": [
+   "Contract review & legal obligation",
+   "License & regulatory requirement",
+   "Legal risk register"
+  ],
+  "tasks": [
+   "Menelaah dan menyusun kontrak pelanggan, vendor, subkontraktor, dan kerja sama, termasuk klausul kerahasiaan dan batas tanggung jawab.",
+   "Mengelola perizinan usaha, penunjukan, dan registrasi lembaga pada kementerian atau lembaga teknis terkait.",
+   "Memantau perubahan regulasi dan menyampaikan dampaknya kepada unit terkait.",
+   "Mengelola dokumen korporasi (akta, anggaran dasar, dokumen RUPS) dan register kewajiban hukum.",
+   "Mendukung penanganan sengketa, klaim, dan somasi."
+  ],
+  "outputs": [
+   "Kontrak yang telah ditelaah",
+   "Izin dan penunjukan yang berlaku",
+   "Legal register"
+  ],
+  "links": [
+   "Sales / BD di setiap BU",
+   "Procurement",
+   "Corporate Management System",
+   "Managing Directors"
+  ]
+ },
+ "gbac": {
+  "name": "Governing Board & Appeals Committee",
+  "cat": "qgov",
+  "tag": "Komite independen",
+  "org": "Komite independen, garis koordinasi dengan Managing Directors",
+  "committee": true,
+  "role": "Menjaga imparsialitas lembaga penilaian kesesuaian dan memutus banding secara independen.",
+  "flow": [
+   "Impartiality safeguard",
+   "Appeal decision",
+   "Policy recommendation"
+  ],
+  "tasks": [
+   "Menelaah analisis risiko imparsialitas dan konflik kepentingan secara berkala, sebagai mekanisme perlindungan imparsialitas yang disyaratkan ISO/IEC 17021-1 dan 17065.",
+   "Memberi masukan atas kebijakan dan prinsip yang berkaitan dengan imparsialitas kegiatan sertifikasi, inspeksi, dan pengujian.",
+   "Memeriksa dan memutus banding pelanggan atas keputusan sertifikasi, secara independen dari personel yang terlibat dalam keputusan awal.",
+   "Memantau tindak lanjut keluhan yang berdampak pada kepercayaan publik.",
+   "Menjaga keterwakilan pihak berkepentingan secara seimbang tanpa dominasi satu kepentingan."
+  ],
+  "outputs": [
+   "Notulen tinjauan imparsialitas",
+   "Keputusan banding",
+   "Rekomendasi kebijakan"
+  ],
+  "links": [
+   "Managing Directors",
+   "Corporate Management System",
+   "Certification Services",
+   "PCT Services"
+  ]
+ },
+ "vc_bd": {
+  "name": "Business Development",
+  "cat": "vc",
+  "org": "Lintas unit",
+  "role": "Menemukan dan merumuskan peluang pasar serta layanan baru.",
+  "depts": [
+   "Business Dev. & Mktg (Inspection)",
+   "Business Development (PCT)",
+   "Corporate Portfolio & Client Management",
+   "New Business Unit Development"
+  ],
+  "tasks": [
+   "Mengidentifikasi peluang pasar, kebutuhan industri, dan regulasi baru yang membuka kebutuhan layanan TIC.",
+   "Merumuskan layanan atau skema baru beserta model bisnis dan value proposition.",
+   "Mengolah customer insight dari sales dan layanan purna jual menjadi peluang strategis."
+  ],
+  "outputs": [
+   "Market opportunity",
+   "Konsep layanan / skema baru",
+   "Value proposition"
+  ]
+ },
+ "vc_mk": {
+  "name": "Marketing",
+  "cat": "vc",
+  "org": "Lintas unit",
+  "role": "Membawa layanan ke pasar dan mengisi pipeline prospek.",
+  "depts": [
+   "Corporate Marketing & Communication",
+   "Business Dev. & Mktg (Inspection)",
+   "Business Development (PCT)"
+  ],
+  "tasks": [
+   "Menyusun program pemasaran dan kampanye per segmen dan layanan.",
+   "Menyediakan marketing kit, materi presentasi, serta dukungan bidding dan proposal.",
+   "Menghasilkan dan menyaring prospek ke dalam lead pool untuk tim sales."
+  ],
+  "outputs": [
+   "Marketing program",
+   "Lead pool",
+   "Dukungan bidding dan proposal"
+  ]
+ },
+ "vc_sales": {
+  "name": "Sales & Contract Review",
+  "cat": "vc",
+  "org": "Lintas unit",
+  "role": "Mengubah permintaan pelanggan menjadi kontrak atau work order yang dapat dilaksanakan.",
+  "depts": [
+   "Senior Commercial (Certification)",
+   "Sales (Laboratory)",
+   "Business Dev. & Mktg (Inspection)",
+   "Business Development (PCT)"
+  ],
+  "sys": [
+   "Central Customer"
+  ],
+  "tasks": [
+   "Menangani inquiry dan memahami kebutuhan pelanggan.",
+   "Melakukan contract review: kesesuaian ruang lingkup dengan akreditasi, kemampuan teknis, kapasitas, dan imparsialitas.",
+   "Menyusun penawaran berbasis biaya pokok (COGS) serta menegosiasikan kesepakatan komersial dan teknis.",
+   "Menerbitkan kontrak atau work order dan meneruskannya ke tim operasional.",
+   "Mencatat data pelanggan secara terpusat."
+  ],
+  "outputs": [
+   "Quotation",
+   "Contract / Work Order",
+   "Defined scope of service"
+  ]
+ },
+ "vc_del": {
+  "name": "Service Delivery (Core TIC Process)",
+  "cat": "vc",
+  "org": "Profit center",
+  "role": "Menjalankan layanan pengujian, kalibrasi, inspeksi, dan sertifikasi sesuai standar akreditasi.",
+  "depts": [
+   "Certification Services",
+   "Laboratory Services",
+   "Inspection Services",
+   "PCT Services"
+  ],
+  "sys": [
+   "SIMCert",
+   "SIMLab",
+   "SIMCal"
+  ],
+  "tasks": [
+   "Menjalankan proses inti TIC sesuai standar akreditasi masing-masing (lihat baris profit center).",
+   "Merencanakan sumber daya dan menugaskan personel yang kompeten untuk setiap order.",
+   "Menjaga validitas hasil, imparsialitas, dan kerahasiaan informasi pelanggan.",
+   "Menerbitkan laporan, sertifikat, atau hasil uji melalui SIM's."
+  ],
+  "outputs": [
+   "Laporan hasil uji / sertifikat kalibrasi",
+   "Laporan inspeksi",
+   "Sertifikat"
+  ]
+ },
+ "vc_bill": {
+  "name": "Billing, Closure & Customer Feedback",
+  "cat": "vc",
+  "org": "Lintas unit",
+  "role": "Menutup siklus layanan, menagih, dan menangkap umpan balik untuk siklus berikutnya.",
+  "depts": [
+   "CS Business Support dan admin BU",
+   "Accounting & Taxation",
+   "Corporate Finance",
+   "Corporate Portfolio & Client Management"
+  ],
+  "sys": [
+   "Central Invoicing"
+  ],
+  "tasks": [
+   "Mengonfirmasi penyelesaian layanan dan menyerahkan laporan atau sertifikat kepada pelanggan.",
+   "Menerbitkan invoice dan memantau pembayaran melalui virtual account.",
+   "Mengukur kepuasan pelanggan dan meneruskan keluhan ke proses penanganan keluhan.",
+   "Menutup order dan menjadwalkan layanan lanjutan: surveilen, resertifikasi, kalibrasi ulang, atau inspeksi ulang."
+  ],
+  "outputs": [
+   "Invoice dan pembayaran",
+   "Data kepuasan pelanggan",
+   "Peluang renewal"
+  ]
+ },
+ "cs": {
+  "name": "Certification Services",
+  "cat": "pc",
+  "std": "ISO/IEC 17021-1",
+  "bu": "BU Certification",
+  "org": "Divisi Certification Services, BU Certification",
+  "role": "Sertifikasi sistem manajemen dan layanan pelatihan.",
+  "sys": [
+   "SIMCert"
+  ],
+  "depts": [
+   "cs_sc",
+   "cs_ims",
+   "cs_ens",
+   "cs_health",
+   "cs_it",
+   "cs_auto",
+   "cs_agri",
+   "cs_train",
+   "cs_bs"
+  ],
+  "steps": [
+   "Application & contract review",
+   "Audit program & auditor assignment",
+   "Stage 1 & Stage 2 audit",
+   "Technical review & certification decision",
+   "Certificate issuance",
+   "Surveillance & recertification"
+  ],
+  "tasks": [
+   "Mencapai target pendapatan, margin, dan pertumbuhan BU Certification.",
+   "Menelaah permohonan, menghitung durasi audit (man-day), dan menyiapkan penawaran serta kontrak.",
+   "Menyusun program audit tiga tahunan dan menugaskan auditor yang kompeten serta bebas konflik kepentingan.",
+   "Melaksanakan audit Stage 1, Stage 2, surveilen, dan resertifikasi.",
+   "Memastikan tinjauan teknis dan keputusan sertifikasi dilakukan oleh personel yang tidak terlibat dalam audit.",
+   "Menerbitkan, memelihara, menangguhkan, atau mencabut sertifikat serta memperbarui direktori klien tersertifikasi.",
+   "Mengelola skema dan ruang lingkup akreditasi serta pool auditor internal dan freelance.",
+   "Menyelenggarakan layanan pelatihan dan menangani keluhan klien bersama CMS."
+  ],
+  "outputs": [
+   "Audit report",
+   "Sertifikat sistem manajemen",
+   "Program surveilen",
+   "Sertifikat pelatihan"
+  ]
+ },
+ "lab": {
+  "name": "Laboratory Services",
+  "cat": "pc",
+  "std": "ISO/IEC 17025",
+  "bu": "BU Industry",
+  "org": "Divisi Laboratory Services, BU Industry",
+  "role": "Pengujian dan kalibrasi di laboratorium pusat, cabang, dan representative office.",
+  "sys": [
+   "SIMLab",
+   "SIMCal"
+  ],
+  "depts": [
+   "lab_sales",
+   "lab_chem",
+   "lab_micro",
+   "lab_pss",
+   "lab_ncts",
+   "lab_cal",
+   "lab_brdm",
+   "lab_los",
+   "lab_sby",
+   "lab_bdg",
+   "lab_mdn",
+   "lab_smg",
+   "lab_train"
+  ],
+  "steps": [
+   "Request, quotation & contract review",
+   "Sampling / sample receipt & registration",
+   "Testing & calibration",
+   "Result review & validation",
+   "Report / certificate issuance",
+   "Sample retention & customer follow-up"
+  ],
+  "tasks": [
+   "Mencapai target pendapatan dan margin Laboratory Services di pusat, cabang, dan representative office.",
+   "Menelaah permintaan, tender, dan kontrak pengujian atau kalibrasi, termasuk kesesuaian metode dan kapasitas.",
+   "Mengelola pengambilan contoh, penerimaan, registrasi, dan penanganan sampel beserta ketertelusurannya.",
+   "Melaksanakan pengujian kimia, mikrobiologi, dan lainnya serta kalibrasi dengan metode yang terverifikasi atau tervalidasi.",
+   "Menjamin validitas hasil melalui kontrol mutu internal, uji profisiensi, dan perbandingan antarlaboratorium.",
+   "Memelihara, mengkalibrasi, dan menjaga ketertelusuran peralatan serta bahan acuan.",
+   "Meninjau, mengesahkan, dan menerbitkan laporan hasil uji serta sertifikat kalibrasi.",
+   "Mengelola pekerjaan tidak sesuai, keluhan, serta layanan pelatihan laboratorium."
+  ],
+  "outputs": [
+   "Laporan hasil uji / CoA",
+   "Sertifikat kalibrasi",
+   "Rekaman sampel dan data uji"
+  ]
+ },
+ "is": {
+  "name": "Inspection Services",
+  "cat": "pc",
+  "std": "ISO/IEC 17020",
+  "bu": "BU Industry",
+  "org": "Divisi Inspection Services, BU Industry",
+  "role": "Inspeksi pihak ketiga di sektor Oil & Gas dan sektor industri umum.",
+  "depts": [
+   "is_og",
+   "is_gen",
+   "is_tech",
+   "is_bdm"
+  ],
+  "steps": [
+   "Request & contract review",
+   "Inspection planning & inspector assignment",
+   "On-site inspection",
+   "Technical review of findings",
+   "Inspection report / certificate",
+   "Follow-up & re-inspection schedule"
+  ],
+  "tasks": [
+   "Mencapai target pendapatan dan margin Inspection Services.",
+   "Mengembangkan pasar serta menyiapkan penawaran dan tender melalui Business Dev. & Mktg.",
+   "Merencanakan inspeksi dan menugaskan inspektor yang kompeten serta independen.",
+   "Melaksanakan inspeksi di sektor Oil & Gas dan sektor umum sesuai standar, regulasi, dan spesifikasi pelanggan.",
+   "Mengendalikan aspek teknis melalui Tech. Operation: tinjauan laporan, metode inspeksi, dan kompetensi inspektor.",
+   "Menerbitkan laporan atau sertifikat inspeksi, dan menyampaikan pelaporan kepada regulator bila dipersyaratkan.",
+   "Mengelola jadwal inspeksi ulang, keluhan, dan hubungan pelanggan."
+  ],
+  "outputs": [
+   "Laporan inspeksi",
+   "Sertifikat inspeksi",
+   "Pelaporan ke regulator (bila dipersyaratkan)"
+  ]
+ },
+ "pct": {
+  "name": "PCT Services",
+  "cat": "pc",
+  "std": "ISO/IEC 17065",
+  "bu": "BU Industry",
+  "org": "Divisi PCT Services, BU Industry",
+  "role": "Sertifikasi produk, proses, dan jasa beserta pengujian produk pendukungnya.",
+  "depts": [
+   "pct_cert",
+   "pct_test",
+   "pct_bd"
+  ],
+  "steps": [
+   "Application & scheme review",
+   "Evaluation planning",
+   "Product testing & factory audit",
+   "Independent review",
+   "Certification decision & licensing",
+   "Surveillance"
+  ],
+  "tasks": [
+   "Mencapai target pendapatan dan margin PCT Services.",
+   "Menelaah permohonan sertifikasi produk, proses, atau jasa terhadap persyaratan skema.",
+   "Merencanakan dan melaksanakan evaluasi: pengambilan contoh, pengujian produk, dan audit pabrik.",
+   "Mengelola pengujian produk secara internal maupun melalui laboratorium subkontrak yang memenuhi syarat.",
+   "Memastikan tinjauan dan keputusan sertifikasi dilakukan oleh personel yang tidak terlibat dalam evaluasi.",
+   "Menerbitkan sertifikat dan lisensi penggunaan tanda, serta mengendalikan penggunaannya.",
+   "Melaksanakan surveilen dan menangani perubahan, penangguhan, atau pencabutan sertifikat.",
+   "Mengembangkan pasar dan skema baru melalui Business Development."
+  ],
+  "outputs": [
+   "Sertifikat produk",
+   "Lisensi penggunaan tanda",
+   "Laporan evaluasi"
+  ]
+ },
+ "cf": {
+  "name": "Corporate Finance",
+  "cat": "sup",
+  "tag": "F&A",
+  "org": "Divisi Finance & Accounting (Business Partner)",
+  "role": "Mengelola likuiditas, pembayaran, dan risiko keuangan perusahaan.",
+  "flow": [
+   "Cash flow management",
+   "Payment & disbursement control",
+   "Collection & financial risk"
+  ],
+  "sys": [
+   "Central Invoicing"
+  ],
+  "tasks": [
+   "Merencanakan dan memantau arus kas serta posisi likuiditas.",
+   "Mengendalikan pembayaran dan pencairan dana sesuai matriks otorisasi.",
+   "Mengelola hubungan perbankan, pendanaan, dan penempatan dana.",
+   "Memantau penagihan piutang bersama BU dan rekonsiliasi pembayaran virtual account.",
+   "Mengidentifikasi dan memitigasi risiko keuangan: likuiditas, kurs, dan kredit pelanggan."
+  ],
+  "outputs": [
+   "Laporan arus kas",
+   "Pembayaran dan pencairan dana",
+   "Status penagihan piutang"
+  ],
+  "links": [
+   "Accounting & Taxation",
+   "Seluruh BU",
+   "Procurement"
+  ]
+ },
+ "acc": {
+  "name": "Accounting & Taxation",
+  "cat": "sup",
+  "tag": "F&A",
+  "org": "Divisi Finance & Accounting (Business Partner)",
+  "role": "Menjamin pencatatan keuangan, penagihan, dan kewajiban pajak yang akurat dan tepat waktu.",
+  "flow": [
+   "Invoicing & revenue recognition",
+   "Financial reporting & closing",
+   "Tax compliance"
+  ],
+  "tasks": [
+   "Menerbitkan dan memverifikasi invoice berdasarkan pekerjaan yang selesai, serta mengakui pendapatan sesuai standar akuntansi.",
+   "Melaksanakan pencatatan transaksi, closing bulanan, dan penyusunan laporan keuangan lokal serta pelaporan Group.",
+   "Mengelola kewajiban perpajakan: PPh, PPN, e-Faktur, dan SPT.",
+   "Mengelola akuntansi aset tetap dan pengendalian biaya.",
+   "Mendukung audit eksternal dan pemeriksaan pajak."
+  ],
+  "outputs": [
+   "Laporan keuangan",
+   "Invoice",
+   "Kepatuhan pajak"
+  ],
+  "links": [
+   "Corporate Finance",
+   "Revenue & Investment Controlling",
+   "Admin BU"
+  ]
+ },
+ "ric": {
+  "name": "Revenue & Investment Controlling",
+  "cat": "sup",
+  "tag": "F&A",
+  "org": "Divisi Finance & Accounting (Business Partner)",
+  "role": "Mengawal pendapatan, margin, anggaran, dan investasi agar sesuai target.",
+  "flow": [
+   "Revenue monitoring & analysis",
+   "Margin & profitability control",
+   "Budget, forecast & CAPEX review"
+  ],
+  "tasks": [
+   "Memantau dan menganalisis pendapatan per BU, layanan, dan pelanggan terhadap target.",
+   "Mengendalikan margin dan profitabilitas, termasuk analisis biaya pokok layanan (COGS).",
+   "Menyusun analisis budget vs actual, forecast, dan laporan manajemen bulanan.",
+   "Mengevaluasi usulan investasi dan CAPEX (ROI, payback) serta memantau realisasinya.",
+   "Memberi rekomendasi pengendalian biaya dan perbaikan kinerja keuangan kepada Direksi dan BU."
+  ],
+  "outputs": [
+   "Management report bulanan",
+   "Forecast",
+   "Investment appraisal"
+  ],
+  "links": [
+   "Corporate Planner",
+   "Managing Directors",
+   "Seluruh BU"
+  ]
+ },
+ "hr": {
+  "name": "Human Resources",
+  "cat": "sup",
+  "tag": "HC",
+  "org": "Divisi Human Capital (Business Partner)",
+  "role": "Menyediakan personel yang kompeten dan mengelola siklus hidup karyawan.",
+  "flow": [
+   "Recruitment & workforce planning",
+   "Personnel competence & qualification",
+   "Payroll, performance & IR"
+  ],
+  "sys": [
+   "HRIS"
+  ],
+  "tasks": [
+   "Menyusun perencanaan tenaga kerja dan melaksanakan rekrutmen sesuai kebutuhan BU.",
+   "Mengelola kualifikasi, pelatihan, dan pemantauan kompetensi personel teknis (auditor, inspektor, analis, teknisi kalibrasi) bersama BU dan CMS sesuai persyaratan akreditasi.",
+   "Mengelola manajemen kinerja, KPI individu, remunerasi, dan penggajian.",
+   "Menjalankan pengembangan karyawan dan pengembangan organisasi.",
+   "Mengelola hubungan industrial, peraturan perusahaan, dan kepatuhan ketenagakerjaan termasuk BPJS."
+  ],
+  "outputs": [
+   "Personel yang kompeten",
+   "Rekaman kompetensi",
+   "Penggajian",
+   "Laporan SDM"
+  ],
+  "links": [
+   "Seluruh BU",
+   "Corporate Management System",
+   "Corporate Finance"
+  ]
+ },
+ "ga": {
+  "name": "General Affairs",
+  "cat": "sup",
+  "tag": "HC",
+  "org": "Divisi Human Capital (Business Partner)",
+  "role": "Menyediakan fasilitas, aset, dan dukungan logistik untuk kelancaran operasional.",
+  "flow": [
+   "Facility & office support",
+   "Asset & inventory management",
+   "Travel & logistic support"
+  ],
+  "tasks": [
+   "Mengelola gedung, kantor, dan fasilitas pendukung laboratorium di pusat dan cabang.",
+   "Mengelola aset dan inventaris umum, termasuk kendaraan operasional.",
+   "Mengatur perjalanan dinas, akomodasi, dan logistik auditor serta inspektor, termasuk pengiriman sampel.",
+   "Mengelola keamanan, kebersihan, dan administrasi operasional kantor.",
+   "Mendukung penerapan K3 fasilitas bersama CMS."
+  ],
+  "outputs": [
+   "Fasilitas dan kantor yang siap pakai",
+   "Register aset",
+   "Pengaturan perjalanan dan logistik"
+  ],
+  "links": [
+   "Seluruh BU",
+   "Procurement",
+   "Corporate Management System"
+  ]
+ },
+ "proc": {
+  "name": "Procurement",
+  "cat": "sup",
+  "tag": "GS",
+  "org": "General Support (Business Partner)",
+  "role": "Memastikan barang, jasa, dan subkontraktor tersedia tepat waktu dengan mutu dan biaya yang sesuai.",
+  "flow": [
+   "Approved vendor & subcontractor",
+   "Equipment, reagent & material supply",
+   "Contracted resources"
+  ],
+  "tasks": [
+   "Melaksanakan sourcing, negosiasi, dan pemilihan vendor sesuai kebijakan pengadaan.",
+   "Mengelola approved vendor list dan evaluasi kinerja vendor, termasuk penyedia eksternal yang memengaruhi hasil pengujian, inspeksi, dan sertifikasi.",
+   "Memproses permintaan pembelian menjadi PO atau kontrak, serta memantau pengirimannya.",
+   "Mengadakan peralatan uji, bahan kimia, reagen, bahan acuan, dan jasa kalibrasi eksternal sesuai spesifikasi teknis.",
+   "Mendorong efisiensi biaya pengadaan."
+  ],
+  "outputs": [
+   "Approved vendor list",
+   "PO / kontrak pengadaan",
+   "Pasokan tepat waktu"
+  ],
+  "links": [
+   "Laboratory Services",
+   "Legal Administration Support",
+   "Corporate Finance",
+   "General Affairs"
+  ]
+ },
+ "sec": {
+  "name": "MD's Secretary",
+  "cat": "sup",
+  "tag": "GS",
+  "org": "General Support (Business Partner)",
+  "role": "Mendukung kelancaran kerja Direksi dan tindak lanjut keputusannya.",
+  "flow": [
+   "Executive agenda & correspondence",
+   "Meeting & minutes management",
+   "Directive follow-up"
+  ],
+  "tasks": [
+   "Mengelola agenda, korespondensi, dan dokumen Direksi.",
+   "Menyiapkan rapat Direksi, BoC, dan management review, termasuk notulen.",
+   "Memantau tindak lanjut instruksi dan keputusan Direksi ke unit terkait.",
+   "Mengelola protokol tamu dan korespondensi eksternal atas nama Direksi."
+  ],
+  "outputs": [
+   "Agenda eksekutif",
+   "Notulen dan action log",
+   "Korespondensi"
+  ],
+  "links": [
+   "Managing Directors",
+   "Board of Commissioners",
+   "Seluruh HoD"
+  ]
+ },
+ "mkt": {
+  "name": "Corporate Marketing & Communication",
+  "cat": "sup",
+  "tag": "CSS",
+  "org": "Corporate Strategic Support (Business Partner)",
+  "role": "Membangun merek, menghasilkan prospek, dan menjaga reputasi perusahaan.",
+  "flow": [
+   "Corporate branding",
+   "Campaign & marketing kit",
+   "Lead generation & PR"
+  ],
+  "tasks": [
+   "Menjaga corporate branding sesuai pedoman merek TÜV NORD.",
+   "Merancang program pemasaran dan kampanye bersama BU, serta menyediakan marketing kit dan materi penawaran.",
+   "Mengelola kanal digital (website, media sosial) dan mengisi lead pool untuk tim sales.",
+   "Menyelenggarakan event, seminar, dan pameran.",
+   "Mengelola public relation, komunikasi eksternal dan internal, serta komunikasi CSR."
+  ],
+  "outputs": [
+   "Brand asset",
+   "Kampanye dan marketing kit",
+   "Lead pool",
+   "Publikasi dan komunikasi internal"
+  ],
+  "links": [
+   "Sales / BD di setiap BU",
+   "Corporate Portfolio & Client Management",
+   "Corporate Innovation & Sustainability"
+  ]
+ },
+ "cust": {
+  "name": "Customer",
+  "cat": "ext",
+  "sub": "Industri, pemerintah, individu",
+  "org": "Pihak eksternal",
+  "role": "Pengguna layanan pengujian, kalibrasi, inspeksi, dan sertifikasi.",
+  "gives": [
+   "Customer inquiry dan permintaan layanan TIC",
+   "Kebutuhan pasar dan industri",
+   "Sampel, akses lokasi, dan dokumen untuk penilaian",
+   "Umpan balik, keluhan, dan banding"
+  ],
+  "receives": [
+   "Laporan hasil uji, sertifikat kalibrasi, laporan inspeksi, dan sertifikat",
+   "Konfirmasi penyelesaian layanan dan invoice",
+   "Jadwal surveilen, resertifikasi, atau kalibrasi ulang"
+  ]
+ },
+ "stake": {
+  "name": "Stakeholder",
+  "cat": "ext",
+  "sub": "TÜV NORD Group & pemegang saham",
+  "org": "Pihak eksternal",
+  "role": "Pemilik dan induk usaha yang menetapkan ekspektasi kinerja.",
+  "gives": [
+   "Arah bisnis dan target pertumbuhan",
+   "Ekspektasi investasi dan kinerja",
+   "Kebijakan dan standar Group"
+  ],
+  "receives": [
+   "Laporan kinerja keuangan dan KPI",
+   "Hasil management review dan laporan kepatuhan",
+   "Usulan investasi"
+  ]
+ },
+ "reg": {
+  "name": "Regulator & Accreditation Body",
+  "cat": "ext",
+  "sub": "KAN, kementerian / lembaga teknis, pemilik skema",
+  "org": "Pihak eksternal",
+  "role": "Penetap regulasi, akreditasi, dan penunjukan lembaga penilaian kesesuaian.",
+  "gives": [
+   "Regulasi dan persyaratan teknis",
+   "Persyaratan akreditasi dan skema",
+   "Penunjukan dan perizinan lembaga"
+  ],
+  "receives": [
+   "Bukti pemenuhan akreditasi (asesmen dan surveilen)",
+   "Pelaporan kegiatan sesuai regulasi",
+   "Data sertifikat dan klien tersertifikasi"
+  ]
+ },
+ "pub": {
+  "name": "Public / Society",
+  "cat": "ext",
+  "sub": "Masyarakat",
+  "org": "Pihak eksternal",
+  "role": "Penerima manfaat akhir dari layanan penilaian kesesuaian.",
+  "gives": [
+   "Ekspektasi atas keselamatan, mutu produk, dan keberlanjutan"
+  ],
+  "receives": [
+   "Jaminan dan kepercayaan atas produk, proses, dan sistem yang tersertifikasi",
+   "Kepatuhan terhadap standar, keselamatan publik, dan keberlanjutan",
+   "Public relation dan program CSR"
+  ]
+ }
+}

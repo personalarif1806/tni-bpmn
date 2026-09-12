@@ -1,0 +1,58 @@
+{
+ "PC_HEADS": {
+  "n": "HoD profit center",
+  "sub": "Certification, Laboratory, Inspection, PCT Services (masing-masing untuk BU-nya)",
+  "ids": [
+   "cs",
+   "lab",
+   "is",
+   "pct"
+  ]
+ },
+ "CS_SECTOR": {
+  "n": "Departemen sektor CS",
+  "sub": "IMS, Energy & Sustainability, Health, IT, Automotive, Agrifood CS",
+  "ids": [
+   "cs_ims",
+   "cs_ens",
+   "cs_health",
+   "cs_it",
+   "cs_auto",
+   "cs_agri"
+  ]
+ },
+ "LAB_TEST": {
+  "n": "Lab pengujian",
+  "sub": "Chemical, Microbiology, PSS Lab (CTS) dan NCTS Lab",
+  "ids": [
+   "lab_chem",
+   "lab_micro",
+   "lab_pss",
+   "lab_ncts"
+  ]
+ },
+ "LAB_BRANCH": {
+  "n": "Branch Lab",
+  "sub": "Surabaya dan Bandung",
+  "ids": [
+   "lab_sby",
+   "lab_bdg"
+  ]
+ },
+ "LAB_RO": {
+  "n": "Representative Office",
+  "sub": "Medan dan Semarang",
+  "ids": [
+   "lab_mdn",
+   "lab_smg"
+  ]
+ },
+ "IS_OPS": {
+  "n": "Departemen operasi inspeksi",
+  "sub": "Oil & Gas dan General IS",
+  "ids": [
+   "is_og",
+   "is_gen"
+  ]
+ }
+}
