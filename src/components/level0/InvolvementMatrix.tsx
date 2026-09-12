@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import { Download, Loader2 } from "lucide-react";
 import { RasciBadge } from "@/components/shared/RasciBadge";
 import { layout } from "@/data";
 import { useMotionConfig } from "@/hooks/useMotionConfig";
@@ -9,6 +10,7 @@ import {
   type MatrixCell,
   type MatrixColumn,
 } from "@/lib/matrix";
+import { exportMatrixWorkbook } from "@/lib/matrix-export";
 
 /**
  * Involvement matrix — PRD 8.5. One tab per scope, RASCI badges in the cells,
@@ -20,15 +22,29 @@ export function InvolvementMatrix({
   onOpenStage: (stageId: string) => void;
 }) {
   const [scopeId, setScopeId] = useState(MATRIX_SCOPES[0].id);
+  const [exportState, setExportState] = useState<"idle" | "working" | "failed">(
+    "idle",
+  );
   const { duration, ease } = useMotionConfig();
   const { scope, groups } = useMemo(() => buildMatrix(scopeId), [scopeId]);
+
+  const runExport = async () => {
+    setExportState("working");
+    try {
+      await exportMatrixWorkbook();
+      setExportState("idle");
+    } catch {
+      setExportState("failed");
+    }
+  };
 
   const columnTitle = (column: MatrixColumn) =>
     column.index ? `${column.index}. ${column.title}` : column.title;
 
   return (
     <div className="flex flex-col gap-3">
-      <div role="tablist" aria-label="Lingkup matriks" className="flex flex-wrap">
+      <div className="flex flex-wrap items-end justify-between gap-2">
+        <div role="tablist" aria-label="Lingkup matriks" className="flex flex-wrap">
         {MATRIX_SCOPES.map((tab) => {
           const isActive = tab.id === scopeId;
           return (
@@ -54,9 +70,34 @@ export function InvolvementMatrix({
                   transition={{ duration: duration.tabContent, ease: ease.out }}
                 />
               ) : null}
-            </button>
-          );
-        })}
+              </button>
+            );
+          })}
+        </div>
+
+        <div className="flex flex-col items-end gap-1">
+          <button
+            type="button"
+            onClick={runExport}
+            disabled={exportState === "working"}
+            className="flex h-8 items-center gap-1.5 border border-line bg-white px-2.5 text-label font-medium text-ink transition-colors hover:bg-paper disabled:cursor-progress disabled:text-muted"
+            style={{ transitionDuration: "var(--hover-duration)" }}
+          >
+            {exportState === "working" ? (
+              <Loader2 size={14} aria-hidden="true" className="animate-spin text-muted" />
+            ) : (
+              <Download size={14} aria-hidden="true" className="text-muted" />
+            )}
+            Ekspor XLSX
+          </button>
+          <p aria-live="polite" className="text-badge text-muted">
+            {exportState === "working"
+              ? "Menyiapkan berkas…"
+              : exportState === "failed"
+                ? "Ekspor gagal, coba lagi."
+                : "5 sheet, satu per lingkup"}
+          </p>
+        </div>
       </div>
 
       <AnimatePresence mode="wait" initial={false}>

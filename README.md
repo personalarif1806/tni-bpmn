@@ -159,6 +159,31 @@ Flags come straight from the data: adding `true` as the fourth element of an
 involvement row in `l0-stage-involvement.json` is all it takes to light up a
 box. Nothing about which boxes are flagged is written in the components.
 
+## Exporting the matrix
+
+The involvement matrix has an **Ekspor XLSX** button that produces a workbook
+with **one sheet per scope** — Value chain, Certification, Laboratory,
+Inspection, PCT. Units run down the rows (with their category in the first
+column, so the grouping survives sorting and filtering), stages across the
+columns, and each cell holds the RASCI letter. The full role description rides
+along as a **cell comment**, including the "perlu dikonfirmasi" note where the
+role is still awaiting sign-off.
+
+Rows match what the matrix shows on screen: only units with a role somewhere in
+that scope.
+
+SheetJS is installed from the vendor's own CDN rather than npm, because the npm
+`xlsx` package is pinned at 0.18.5 and carries an advisory in its parser:
+
+```json
+"xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+```
+
+It is loaded with a dynamic `import()` so Vite splits it into its own chunk
+(~160KB gzipped). The initial bundle is unaffected — the library only arrives
+when someone presses the button, which keeps the app inside the <300KB budget in
+PRD 15.
+
 ## Search
 
 The header carries a search box (from 1200px up) that filters across **unit

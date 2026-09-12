@@ -1,5 +1,5 @@
 import { useCallback, useMemo, useRef } from "react";
-import { useSearchParams } from "react-router";
+import { useLocation, useNavigate, useSearchParams } from "react-router";
 import { BadgeAlert, ListChecks, Printer, Table2 } from "lucide-react";
 import { DetailPanel } from "@/components/level0/DetailPanel";
 import { InvolvementMatrix } from "@/components/level0/InvolvementMatrix";
@@ -39,25 +39,26 @@ export function Level0Page() {
   );
 
   const { target, open } = useDetailPanel();
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   // The layer is URL state so a process owner can share the flagged view.
   // Toggling replaces the entry rather than stacking one per click.
   const confirmationLayer = searchParams.get("layer") === "confirmation";
   const toggleConfirmationLayer = useCallback(() => {
-    setSearchParams(
-      (current) => {
-        const next = new URLSearchParams(current);
-        if (next.get("layer") === "confirmation") {
-          next.delete("layer");
-        } else {
-          next.set("layer", "confirmation");
-        }
-        return next;
-      },
-      { replace: true, preventScrollReset: true },
-    );
-  }, [setSearchParams]);
+    const next = new URLSearchParams(location.search);
+    if (next.get("layer") === "confirmation") {
+      next.delete("layer");
+    } else {
+      next.set("layer", "confirmation");
+    }
+    const query = next.toString();
+    navigate(`${location.pathname}${query ? `?${query}` : ""}`, {
+      replace: true,
+      preventScrollReset: true,
+    });
+  }, [location.pathname, location.search, navigate]);
   const focus = useStageFocus(target?.kind === "stage" ? target.id : null);
   const { cssDuration, ease, scrollBehavior } = useMotionConfig();
 
@@ -134,7 +135,7 @@ export function Level0Page() {
           transitionTimingFunction: `cubic-bezier(${ease.panel.join(",")})`,
         }}
       >
-        <div ref={mapRef} className={SECTION_OFFSET}>
+        <div ref={mapRef} className={SECTION_OFFSET} data-debug-layer={String(confirmationLayer)} data-debug-search={searchParams.toString()}>
           <ProcessMap
             model={mapModel}
             zoom={zoom}
