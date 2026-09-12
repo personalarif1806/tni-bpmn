@@ -132,11 +132,22 @@ Three rules worth knowing before you change anything:
 2. **No component writes an animation duration.** Every timing comes from
    `useMotionConfig()`, which collapses to zero when the reader has asked for
    reduced motion. `src/lib/motion.ts` is the single source of those numbers.
-3. **The map is never fitted to exactly the viewport width.** `MAP_FIT_GUTTER`
-   leaves 20px of slack, because a canvas fitted to the exact width summons the
-   viewport's own scrollbar, which narrows the viewport, which changes the fit —
-   a ResizeObserver loop that re-renders forever and silently freezes the router.
-   Keep the gutter wider than a scrollbar.
+3. **Nothing that scrolls is ever measured to decide the map's zoom.** A scroll
+   container loses width to its own scrollbar, so measuring one to compute
+   fit-to-width closes a loop: scrollbar appears, width drops, zoom shrinks,
+   content shrinks, scrollbar goes away, repeat — every frame. `useZoomToFit`
+   therefore measures `measureRef`, the non-scrolling wrapper. Two rules follow
+   from it, and both are load-bearing:
+
+   - `MAP_FIT_GUTTER` leaves 20px of slack so the canvas never raises a
+     scrollbar of its own. Keep it wider than a scrollbar.
+   - `mapSizerSize()` rounds **up**. `scale()` paints the canvas at a fractional
+     size, and a box rounded down is a sub-pixel smaller than its contents —
+     which is a real overflow, and a 15px scrollbar on Windows.
+
+   None of this shows up on macOS, where scrollbars float above the content and
+   take no layout space. Test width-sensitive changes at 1536px, which is what
+   a 1920px Windows screen reports at its default 125% scaling.
 
 ## Confirmation status layer
 

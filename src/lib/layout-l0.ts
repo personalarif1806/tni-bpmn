@@ -27,6 +27,26 @@ export const CANVAS_WIDTH = 2040;
  * never be the thing that summons the viewport's scrollbar.
  */
 export const MAP_FIT_GUTTER = 20;
+
+/**
+ * The box that holds the scaled canvas, in laid-out pixels.
+ *
+ * Rounded up on both axes, never down. `transform: scale()` paints the canvas
+ * at exactly `size * zoom`, which is almost always fractional; a box rounded
+ * down is a sub-pixel smaller than the thing inside it, and a sub-pixel is a
+ * real scrollable overflow. Where scrollbars take layout space that overflow
+ * becomes a 15px scrollbar, and a scrollbar inside the map is what fit-to-width
+ * must never see — see the note on `useZoomToFit`.
+ */
+export function mapSizerSize(
+  canvasHeight: number,
+  zoom: number,
+): { width: number; height: number } {
+  return {
+    width: Math.ceil(CANVAS_WIDTH * zoom),
+    height: Math.ceil(canvasHeight * zoom),
+  };
+}
 const CANVAS_PADDING = 24;
 const CONTENT_WIDTH = CANVAS_WIDTH - CANVAS_PADDING * 2;
 

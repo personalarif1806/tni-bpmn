@@ -1,5 +1,6 @@
 import { describe, expect, test } from "vitest";
 import { layout, units } from "@/data";
+import { ZOOM_MAX, ZOOM_MIN } from "@/lib/zoom";
 import {
   CANVAS_WIDTH,
   CENTER_OFFSET,
@@ -7,6 +8,7 @@ import {
   CORE_INNER_WIDTH,
   EXTERNAL_COLUMN_WIDTH,
   MAP_FIT_GUTTER,
+  mapSizerSize,
   TOP_LEFT_WIDTH,
   TOP_RIGHT_WIDTH,
   VC_ARROW_WIDTH,
@@ -152,6 +154,32 @@ describe("fit-to-width gutter", () => {
     for (const viewport of [1440, 1600, 1920, 2560]) {
       const zoom = (viewport - MAP_FIT_GUTTER) / CANVAS_WIDTH;
       expect(Math.floor(CANVAS_WIDTH * zoom)).toBeLessThan(viewport);
+    }
+  });
+});
+
+describe("map sizer rounding", () => {
+  /* The real Level 0 canvas is a little over 1500px tall unscaled. */
+  const CANVAS_HEIGHT = 1539;
+
+  test("is never smaller than the canvas painted inside it", () => {
+    // A box rounded down is a sub-pixel shorter than the scaled canvas, and
+    // that sub-pixel is a scrollable overflow. On a platform whose scrollbars
+    // take layout space it becomes a 15px scrollbar inside the map, which
+    // narrows the very width fit-to-width measured — the flicker loop.
+    for (let zoom = ZOOM_MIN; zoom <= ZOOM_MAX; zoom += 0.0007) {
+      const { width, height } = mapSizerSize(CANVAS_HEIGHT, zoom);
+      expect(width).toBeGreaterThanOrEqual(CANVAS_WIDTH * zoom);
+      expect(height).toBeGreaterThanOrEqual(CANVAS_HEIGHT * zoom);
+    }
+  });
+
+  test("a fitted map still fits the viewport it was fitted to", () => {
+    // Rounding up must not undo the gutter: 1536px is 1920 at the 125% display
+    // scaling most Windows laptops ship with, and is where this loop was found.
+    for (const viewport of [1280, 1366, 1440, 1512, 1536, 1600, 1920, 2560]) {
+      const zoom = (viewport - MAP_FIT_GUTTER) / CANVAS_WIDTH;
+      expect(mapSizerSize(CANVAS_HEIGHT, zoom).width).toBeLessThan(viewport);
     }
   });
 });

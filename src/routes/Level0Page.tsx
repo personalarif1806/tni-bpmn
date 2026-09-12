@@ -28,20 +28,23 @@ const SECTION_OFFSET = "scroll-mt-[calc(var(--header-h)+1rem)]";
 
 /** Level 0 — the map, the involvement matrix and the catalogue (PRD 8.2–8.6). */
 export function Level0Page() {
-  const viewportRef = useRef<HTMLDivElement>(null);
+  const measureRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<HTMLDivElement>(null);
   const matrixRef = useRef<HTMLElement>(null);
   const catalogRef = useRef<HTMLElement>(null);
 
   /*
-   * Fit to a hair less than the full width. Fitting to exactly the viewport
-   * width sits on a knife edge: the fitted canvas triggers the viewport's own
-   * scrollbar, which narrows the viewport, which changes the fit — a
-   * ResizeObserver loop that re-renders forever. The gutter costs ~1% of map
-   * size and removes the cycle.
+   * Fit-to-width measures `measureRef`, the wrapper around the map's scroll
+   * container — never the scroll container itself. Anything that scrolls can
+   * lose width to its own scrollbar, and that width is the input to the zoom
+   * that decides whether the scrollbar is needed at all.
+   *
+   * The gutter is the second guard: the map is fitted to slightly less than
+   * the full width so the canvas is never the thing that raises a scrollbar.
+   * It costs ~1% of map size.
    */
   const { zoom, animated, setZoom, fitToWidth } = useZoomToFit(
-    viewportRef,
+    measureRef,
     CANVAS_WIDTH,
     MAP_FIT_GUTTER,
   );
@@ -147,7 +150,7 @@ export function Level0Page() {
             model={mapModel}
             zoom={zoom}
             animated={animated}
-            viewportRef={viewportRef}
+            measureRef={measureRef}
           />
         </div>
 

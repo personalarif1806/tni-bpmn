@@ -19,9 +19,14 @@ export interface ZoomState {
 /**
  * Map zoom: fit to the viewport width on load, and keep re-fitting on resize
  * until the user zooms manually (PRD 8.2).
+ *
+ * `measureRef` must point at an element that does not scroll. Measuring the
+ * scroll container itself closes a loop: its scrollbar subtracts from the
+ * clientWidth that decides the zoom, the new zoom resizes the content, and the
+ * scrollbar that started it comes and goes every frame.
  */
 export function useZoomToFit(
-  viewportRef: RefObject<HTMLElement | null>,
+  measureRef: RefObject<HTMLElement | null>,
   contentWidth: number,
   gutter = 0,
 ): ZoomState {
@@ -30,14 +35,14 @@ export function useZoomToFit(
   const isManual = useRef(false);
 
   const computeFit = useCallback(() => {
-    const viewport = viewportRef.current;
-    if (!viewport) return 1;
-    return clampZoom((viewport.clientWidth - gutter) / contentWidth);
-  }, [contentWidth, gutter, viewportRef]);
+    const element = measureRef.current;
+    if (!element) return 1;
+    return clampZoom((element.clientWidth - gutter) / contentWidth);
+  }, [contentWidth, gutter, measureRef]);
 
   useLayoutEffect(() => {
-    const viewport = viewportRef.current;
-    if (!viewport) return;
+    const element = measureRef.current;
+    if (!element) return;
 
     const refit = () => {
       if (isManual.current) return;
@@ -47,9 +52,9 @@ export function useZoomToFit(
 
     refit();
     const observer = new ResizeObserver(refit);
-    observer.observe(viewport);
+    observer.observe(element);
     return () => observer.disconnect();
-  }, [computeFit, viewportRef]);
+  }, [computeFit, measureRef]);
 
   const setZoom = useCallback((next: number) => {
     isManual.current = true;
