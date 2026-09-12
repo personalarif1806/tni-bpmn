@@ -87,7 +87,10 @@ export function DetailDrawer({
         style={{
           top: isFullWidth ? 0 : "var(--header-h)",
           bottom: 0,
-          width: isFullWidth ? "100vw" : PANEL_WIDTH,
+          // Pinning both edges rather than using 100vw: the page reserves a
+          // scrollbar gutter, so 100vw is wider than the usable viewport.
+          left: isFullWidth ? 0 : undefined,
+          width: isFullWidth ? undefined : PANEL_WIDTH,
         }}
       >
         <header className="flex items-start gap-2 border-b border-line px-4 py-3">

@@ -21,6 +21,12 @@ import { stageDetails, unitTags } from "@/lib/crosslinks";
 /* ---------------------------------------------------------------- Geometry */
 
 export const CANVAS_WIDTH = 2040;
+
+/**
+ * Slack left when fitting the map to the viewport, so the fitted canvas can
+ * never be the thing that summons the viewport's scrollbar.
+ */
+export const MAP_FIT_GUTTER = 20;
 const CANVAS_PADDING = 24;
 const CONTENT_WIDTH = CANVAS_WIDTH - CANVAS_PADDING * 2;
 

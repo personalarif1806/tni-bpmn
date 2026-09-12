@@ -138,6 +138,15 @@
 
   html {
     background-color: var(--color-paper);
+
+    /*
+     * Always reserve the scrollbar gutter. Without it, content that grows the
+     * page past the viewport height makes the scrollbar appear, which narrows
+     * the map viewport by ~15px, which makes fit-to-width choose a smaller
+     * zoom, which shortens the page, which hides the scrollbar again — a
+     * ResizeObserver loop that re-renders forever and starves everything else.
+     */
+    scrollbar-gutter: stable;
   }
 
   body {

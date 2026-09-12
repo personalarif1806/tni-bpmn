@@ -1,5 +1,5 @@
 import { useCallback, useMemo, useRef } from "react";
-import { useLocation, useNavigate, useSearchParams } from "react-router";
+import { useSearchParams } from "react-router";
 import { BadgeAlert, ListChecks, Printer, Table2 } from "lucide-react";
 import { DetailPanel } from "@/components/level0/DetailPanel";
 import { InvolvementMatrix } from "@/components/level0/InvolvementMatrix";
@@ -19,7 +19,7 @@ import { useMotionConfig } from "@/hooks/useMotionConfig";
 import { useStageFocus } from "@/hooks/useStageFocus";
 import { useZoomToFit } from "@/hooks/useZoomToFit";
 import { confirmationIndex } from "@/data";
-import { CANVAS_WIDTH, mapModel } from "@/lib/layout-l0";
+import { CANVAS_WIDTH, MAP_FIT_GUTTER, mapModel } from "@/lib/layout-l0";
 import { PANEL_SHRINK_QUERY, PANEL_WIDTH } from "@/lib/panel";
 import { scrollToSection } from "@/lib/scroll";
 
@@ -33,32 +33,39 @@ export function Level0Page() {
   const matrixRef = useRef<HTMLElement>(null);
   const catalogRef = useRef<HTMLElement>(null);
 
+  /*
+   * Fit to a hair less than the full width. Fitting to exactly the viewport
+   * width sits on a knife edge: the fitted canvas triggers the viewport's own
+   * scrollbar, which narrows the viewport, which changes the fit — a
+   * ResizeObserver loop that re-renders forever. The gutter costs ~1% of map
+   * size and removes the cycle.
+   */
   const { zoom, animated, setZoom, fitToWidth } = useZoomToFit(
     viewportRef,
     CANVAS_WIDTH,
+    MAP_FIT_GUTTER,
   );
 
   const { target, open } = useDetailPanel();
-  const [searchParams] = useSearchParams();
-  const navigate = useNavigate();
-  const location = useLocation();
+  const [searchParams, setSearchParams] = useSearchParams();
 
   // The layer is URL state so a process owner can share the flagged view.
   // Toggling replaces the entry rather than stacking one per click.
   const confirmationLayer = searchParams.get("layer") === "confirmation";
   const toggleConfirmationLayer = useCallback(() => {
-    const next = new URLSearchParams(location.search);
-    if (next.get("layer") === "confirmation") {
-      next.delete("layer");
-    } else {
-      next.set("layer", "confirmation");
-    }
-    const query = next.toString();
-    navigate(`${location.pathname}${query ? `?${query}` : ""}`, {
-      replace: true,
-      preventScrollReset: true,
-    });
-  }, [location.pathname, location.search, navigate]);
+    setSearchParams(
+      (current) => {
+        const next = new URLSearchParams(current);
+        if (next.get("layer") === "confirmation") {
+          next.delete("layer");
+        } else {
+          next.set("layer", "confirmation");
+        }
+        return next;
+      },
+      { replace: true, preventScrollReset: true },
+    );
+  }, [setSearchParams]);
   const focus = useStageFocus(target?.kind === "stage" ? target.id : null);
   const { cssDuration, ease, scrollBehavior } = useMotionConfig();
 
@@ -135,7 +142,7 @@ export function Level0Page() {
           transitionTimingFunction: `cubic-bezier(${ease.panel.join(",")})`,
         }}
       >
-        <div ref={mapRef} className={SECTION_OFFSET} data-debug-layer={String(confirmationLayer)} data-debug-search={searchParams.toString()}>
+        <div ref={mapRef} className={SECTION_OFFSET}>
           <ProcessMap
             model={mapModel}
             zoom={zoom}

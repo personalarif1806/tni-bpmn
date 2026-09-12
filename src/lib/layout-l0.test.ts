@@ -6,6 +6,7 @@ import {
   CENTER_WIDTH,
   CORE_INNER_WIDTH,
   EXTERNAL_COLUMN_WIDTH,
+  MAP_FIT_GUTTER,
   TOP_LEFT_WIDTH,
   TOP_RIGHT_WIDTH,
   VC_ARROW_WIDTH,
@@ -135,5 +136,22 @@ describe("model", () => {
     expect(
       model.external.left.every((entry) => entry.source === undefined),
     ).toBe(true);
+  });
+});
+
+describe("fit-to-width gutter", () => {
+  test("the map is fitted to less than the full viewport width", () => {
+    // Fitting to exactly the viewport width lets the fitted canvas summon the
+    // viewport's own scrollbar, which changes the width, which changes the fit
+    // — a ResizeObserver loop. The gutter has to be wider than a scrollbar.
+    expect(MAP_FIT_GUTTER).toBeGreaterThanOrEqual(16);
+    expect(MAP_FIT_GUTTER).toBeLessThan(CANVAS_WIDTH * 0.02);
+  });
+
+  test("a fitted map stays inside the viewport at common widths", () => {
+    for (const viewport of [1440, 1600, 1920, 2560]) {
+      const zoom = (viewport - MAP_FIT_GUTTER) / CANVAS_WIDTH;
+      expect(Math.floor(CANVAS_WIDTH * zoom)).toBeLessThan(viewport);
+    }
   });
 });

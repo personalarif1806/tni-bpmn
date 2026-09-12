@@ -124,7 +124,7 @@ src/
   routes/      Level0Page, Level1Page, Level1ProcessPage
 ```
 
-Two rules worth knowing before you change anything:
+Three rules worth knowing before you change anything:
 
 1. **Shareable state lives in the URL.** Active level, open panel, highlighted
    steps, origin context and print mode are all search params. Browser Back
@@ -132,6 +132,11 @@ Two rules worth knowing before you change anything:
 2. **No component writes an animation duration.** Every timing comes from
    `useMotionConfig()`, which collapses to zero when the reader has asked for
    reduced motion. `src/lib/motion.ts` is the single source of those numbers.
+3. **The map is never fitted to exactly the viewport width.** `MAP_FIT_GUTTER`
+   leaves 20px of slack, because a canvas fitted to the exact width summons the
+   viewport's own scrollbar, which narrows the viewport, which changes the fit —
+   a ResizeObserver loop that re-renders forever and silently freezes the router.
+   Keep the gutter wider than a scrollbar.
 
 ## Confirmation status layer
 
