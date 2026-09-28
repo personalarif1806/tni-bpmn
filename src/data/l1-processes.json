@@ -197,8 +197,8 @@
   "id": "M2",
   "g": "M",
   "name": "Portfolio & New Business Development",
-  "l0": "Corporate Portfolio & Client Management, New Business Unit Development",
-  "owner": "Corporate Portfolio & Client Management (portofolio BU) dan New Business Unit Development (bisnis baru)",
+  "l0": "Corporate Portfolio & Client Management",
+  "owner": "Corporate Portfolio & Client Management",
   "purpose": "Menyaring, mengkaji, dan meluncurkan layanan atau bisnis baru secara terkendali, termasuk kesiapan akreditasi dan perizinannya.",
   "kpi": [
    "Jumlah layanan baru diluncurkan per tahun",
@@ -218,7 +218,6 @@
   "lanes": [
    "bizbd",
    "portfolio",
-   "nbud",
    "ric",
    "cms",
    "legal",
@@ -252,7 +251,7 @@
     "c": 2,
     "y": "d",
     "t": "Dalam portofolio BU?",
-    "d": "Menentukan apakah peluang dikembangkan oleh BU yang ada atau oleh New Business Unit Development.",
+    "d": "Menentukan apakah peluang dikembangkan oleh BU yang ada atau oleh Corporate Portfolio & Client Management.",
     "o": "Penetapan pengembang",
     "n": [
      [
@@ -278,7 +277,7 @@
    },
    {
     "k": "e",
-    "l": "nbud",
+    "l": "portfolio",
     "c": 3,
     "t": "Kajian bisnis baru",
     "d": "Mengkaji peluang di luar portofolio BU, termasuk People & Employment.",
@@ -375,7 +374,7 @@
     "l": "bizbd",
     "c": 8,
     "t": "Pilot & peluncuran layanan",
-    "d": "BU atau NBUD menjalankan pilot bersama pelanggan terpilih, lalu meluncurkan layanan bersama Marketing.",
+    "d": "BU atau Corporate Portfolio & Client Management menjalankan pilot bersama pelanggan terpilih, lalu meluncurkan layanan bersama Marketing.",
     "o": "Layanan diluncurkan",
     "n": [
      "m"

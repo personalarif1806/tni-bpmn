@@ -60,3 +60,11 @@ if (process.argv.includes("--count")) {
   const from = Number(process.argv[3] ?? 0), to = Number(process.argv[4] ?? missing.length);
   writeFileSync("/dev/stdout", JSON.stringify(missing.slice(from, to), null, 1) + "\n");
 }
+
+/* `--orphans` lists dictionary entries nothing references any more. */
+if (process.argv.includes("--orphans")) {
+  const live = new Set([...ui, ...content]);
+  const orphans = Object.keys(dict).filter((k) => !live.has(k));
+  console.log(JSON.stringify(orphans, null, 1));
+  console.log(`orphans=${orphans.length}`);
+}

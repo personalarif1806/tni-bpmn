@@ -259,9 +259,9 @@
   "en": "BU / function",
   "id": "BU / fungsi"
  },
- "BU atau NBUD menjalankan pilot bersama pelanggan terpilih, lalu meluncurkan layanan bersama Marketing.": {
-  "en": "The BU or NBUD runs a pilot with selected customers, then launches the service together with Marketing.",
-  "id": "BU atau NBUD menjalankan pilot bersama pelanggan terpilih, lalu meluncurkan layanan bersama Marketing."
+ "BU atau Corporate Portfolio & Client Management menjalankan pilot bersama pelanggan terpilih, lalu meluncurkan layanan bersama Marketing.": {
+  "en": "The BU or Corporate Portfolio & Client Management runs a pilot with selected customers, then launches the service together with Marketing.",
+  "id": "BU atau Corporate Portfolio & Client Management menjalankan pilot bersama pelanggan terpilih, lalu meluncurkan layanan bersama Marketing."
  },
  "BU mengkaji ukuran pasar, kebutuhan teknis, kompetensi, dan peralatan.": {
   "en": "The BU appraises market size, technical requirements, competence, and equipment.",
@@ -442,10 +442,6 @@
  "Business case": {
   "en": "Business case",
   "id": "Business case"
- },
- "Business case & pilot": {
-  "en": "Business case & pilot",
-  "id": "Business case & pilot"
  },
  "Business direction dan kebijakan": {
   "en": "Business direction and policy",
@@ -714,14 +710,6 @@
  "Corporate Portfolio & Client Management": {
   "en": "Corporate Portfolio & Client Management",
   "id": "Corporate Portfolio & Client Management"
- },
- "Corporate Portfolio & Client Management (portofolio BU) dan New Business Unit Development (bisnis baru)": {
-  "en": "Corporate Portfolio & Client Management (BU portfolio) and New Business Unit Development (new business)",
-  "id": "Corporate Portfolio & Client Management (portofolio BU) dan New Business Unit Development (bisnis baru)"
- },
- "Corporate Portfolio & Client Management, New Business Unit Development": {
-  "en": "Corporate Portfolio & Client Management, New Business Unit Development",
-  "id": "Corporate Portfolio & Client Management, New Business Unit Development"
  },
  "Corporate Portfolio & Client Mgmt": {
   "en": "Corporate Portfolio & Client Mgmt",
@@ -2803,9 +2791,9 @@
   "en": "Owns the corporate marketing programme: branding, campaigns, digital channels, events, and lead generation.",
   "id": "Memiliki program pemasaran korporat: branding, kampanye, kanal digital, event, dan lead generation."
  },
- "Memimpin BU Certification, BU Industry, Business Partner, dan New Business Unit Development.": {
-  "en": "Leads BU Certification, BU Industry, Business Partner, and New Business Unit Development.",
-  "id": "Memimpin BU Certification, BU Industry, Business Partner, dan New Business Unit Development."
+ "Memimpin BU Certification, BU Industry, dan Business Partner.": {
+  "en": "Leads BU Certification, BU Industry, and Business Partner.",
+  "id": "Memimpin BU Certification, BU Industry, dan Business Partner."
  },
  "Memisahkan keluhan atas layanan dari banding atas keputusan (sertifikasi / inspeksi).": {
   "en": "Separates complaints about the service from appeals against a decision (certification / inspection).",
@@ -3123,9 +3111,9 @@
   "en": "Finds market opportunities and priority accounts, then shapes a value proposition ready to take to market.",
   "id": "Menemukan peluang pasar dan akun prioritas, lalu merumuskan value proposition yang siap dipasarkan."
  },
- "Menentukan apakah peluang dikembangkan oleh BU yang ada atau oleh New Business Unit Development.": {
-  "en": "Decides whether the opportunity is developed by an existing BU or by New Business Unit Development.",
-  "id": "Menentukan apakah peluang dikembangkan oleh BU yang ada atau oleh New Business Unit Development."
+ "Menentukan apakah peluang dikembangkan oleh BU yang ada atau oleh Corporate Portfolio & Client Management.": {
+  "en": "Decides whether the opportunity is developed by an existing BU or by Corporate Portfolio & Client Management.",
+  "id": "Menentukan apakah peluang dikembangkan oleh BU yang ada atau oleh Corporate Portfolio & Client Management."
  },
  "Menentukan pengambilan contoh, pengujian, dan audit pabrik.": {
   "en": "Determines the sampling, testing, and factory audit.",
@@ -3351,9 +3339,9 @@
   "en": "Analyses the market, competitors, regulations, and the current year's performance per BU.",
   "id": "Menganalisis pasar, kompetitor, regulasi, dan kinerja tahun berjalan per BU."
  },
- "Menganalisis portofolio lintas BU, peluang cross-selling, dan customer insight dari key account.": {
-  "en": "Analyses the cross-BU portfolio, cross-selling opportunities, and customer insight from key accounts.",
-  "id": "Menganalisis portofolio lintas BU, peluang cross-selling, dan customer insight dari key account."
+ "Menganalisis portofolio lintas BU, peluang cross-selling, dan customer insight dari key account, serta menilai dan menginkubasi peluang di luar portofolio BU, termasuk People & Employment.": {
+  "en": "Analyses the cross-BU portfolio, cross-selling opportunities, and customer insight from key accounts, and assesses and incubates opportunities beyond the BU portfolio, including People & Employment.",
+  "id": "Menganalisis portofolio lintas BU, peluang cross-selling, dan customer insight dari key account, serta menilai dan menginkubasi peluang di luar portofolio BU, termasuk People & Employment."
  },
  "Menganalisis varians per BU, layanan, dan pusat biaya.": {
   "en": "Analyses variances by BU, service, and cost centre.",
@@ -3543,10 +3531,6 @@
   "en": "Develops and maintains the operational core systems (SIMCert, SIMLab, SIMCal) and shared platforms such as Central Customer and Central Invoicing.",
   "id": "Mengembangkan dan memelihara core system operasional (SIMCert, SIMLab, SIMCal) serta platform bersama seperti Central Customer dan Central Invoicing."
  },
- "Mengembangkan dan menjalankan bisnis People & Employment serta pilot bisnis baru lainnya.": {
-  "en": "Develops and runs the People & Employment business and other new business pilots.",
-  "id": "Mengembangkan dan menjalankan bisnis People & Employment serta pilot bisnis baru lainnya."
- },
  "Mengembangkan pasar dan skema baru melalui Business Development.": {
   "en": "Develops the market and new schemes through Business Development.",
   "id": "Mengembangkan pasar dan skema baru melalui Business Development."
@@ -3627,10 +3611,6 @@
   "en": "Identifies and mitigates financial risk: liquidity, foreign exchange, and customer credit.",
   "id": "Mengidentifikasi dan memitigasi risiko keuangan: likuiditas, kurs, dan kredit pelanggan."
  },
- "Mengidentifikasi dan menilai peluang bisnis, pasar, dan skema layanan baru di luar portofolio BU saat ini.": {
-  "en": "Identifies and assesses new business, market, and service scheme opportunities beyond the current BU portfolio.",
-  "id": "Mengidentifikasi dan menilai peluang bisnis, pasar, dan skema layanan baru di luar portofolio BU saat ini."
- },
  "Mengidentifikasi izin, penunjukan, dan kewajiban regulasi yang diperlukan.": {
   "en": "Identifies the licences, designations, and regulatory obligations required.",
   "id": "Mengidentifikasi izin, penunjukan, dan kewajiban regulasi yang diperlukan."
@@ -3646,10 +3626,6 @@
  "Mengidentifikasi peluang pasar, kebutuhan industri, dan regulasi baru yang membuka kebutuhan layanan TIC.": {
   "en": "Identifies market opportunities, industry needs, and new regulations that create demand for TIC services.",
   "id": "Mengidentifikasi peluang pasar, kebutuhan industri, dan regulasi baru yang membuka kebutuhan layanan TIC."
- },
- "Menginkubasi bisnis baru hingga siap berdiri sebagai unit bisnis.": {
-  "en": "Incubates new businesses until they are ready to stand as their own business unit.",
-  "id": "Menginkubasi bisnis baru hingga siap berdiri sebagai unit bisnis."
  },
  "Mengirim pengingat dan menagih bersama BU sesuai tahapan penagihan.": {
   "en": "Sends reminders and collects together with the BU through the collection stages.",
@@ -3771,10 +3747,6 @@
   "en": "Collects samples from customers in the region.",
   "id": "Mengumpulkan sampel dari pelanggan di wilayah."
  },
- "Mengusulkan transisi bisnis yang sudah matang ke BU yang ada atau menjadi unit bisnis tersendiri.": {
-  "en": "Proposes the transition of mature businesses into an existing BU or into a business unit of their own.",
-  "id": "Mengusulkan transisi bisnis yang sudah matang ke BU yang ada atau menjadi unit bisnis tersendiri."
- },
  "Menilai apakah akar masalah telah tertangani dan tidak berulang.": {
   "en": "Assesses whether the root cause has been addressed and does not recur.",
   "id": "Menilai apakah akar masalah telah tertangani dan tidak berulang."
@@ -3795,9 +3767,9 @@
   "en": "Assesses the licensing and regulatory aspects of new services.",
   "id": "Menilai aspek perizinan dan regulasi layanan baru."
  },
- "Menilai dan menginkubasi peluang di luar portofolio BU, termasuk People & Employment.": {
-  "en": "Assesses and incubates opportunities outside the BU portfolio, including People & Employment.",
-  "id": "Menilai dan menginkubasi peluang di luar portofolio BU, termasuk People & Employment."
+ "Menilai dan menginkubasi peluang bisnis di luar portofolio BU yang ada, termasuk People & Employment, hingga siap dijalankan.": {
+  "en": "Assesses and incubates business opportunities beyond the existing BU portfolio, including People & Employment, until they are ready to run.",
+  "id": "Menilai dan menginkubasi peluang bisnis di luar portofolio BU yang ada, termasuk People & Employment, hingga siap dijalankan."
  },
  "Menilai hasil pelatihan dan witness terhadap matriks kompetensi.": {
   "en": "Assesses the training and witness results against the competence matrix.",
@@ -4275,10 +4247,6 @@
   "en": "Prepares product certification quotations.",
   "id": "Menyiapkan penawaran sertifikasi produk."
  },
- "Menyiapkan persyaratan akreditasi, perizinan, dan sistem manajemen untuk layanan baru bersama Corporate Management System dan Legal.": {
-  "en": "Prepares accreditation, licensing, and management system requirements for new services together with Corporate Management System and Legal.",
-  "id": "Menyiapkan persyaratan akreditasi, perizinan, dan sistem manajemen untuk layanan baru bersama Corporate Management System dan Legal."
- },
  "Menyiapkan prosedur & akreditasi": {
   "en": "Prepare procedures & accreditation",
   "id": "Menyiapkan prosedur & akreditasi"
@@ -4318,10 +4286,6 @@
  "Menyusun business case": {
   "en": "Build the business case",
   "id": "Menyusun business case"
- },
- "Menyusun business case dan studi kelayakan: pasar, investasi, risiko, serta kebutuhan akreditasi atau izin.": {
-  "en": "Builds the business case and feasibility study: market, investment, risk, and accreditation or licensing needs.",
-  "id": "Menyusun business case dan studi kelayakan: pasar, investasi, risiko, serta kebutuhan akreditasi atau izin."
  },
  "Menyusun dan menandatangani laporan hasil uji.": {
   "en": "Prepares and signs the test report.",
@@ -4499,10 +4463,6 @@
   "en": "Fit to screen",
   "id": "Muat layar"
  },
- "NBUD": {
-  "en": "NBUD",
-  "id": "NBUD"
- },
  "Nama proses": {
   "en": "Process name",
   "id": "Nama proses"
@@ -4515,22 +4475,6 @@
   "en": "Negotiation with the counterparty",
   "id": "Negosiasi dengan pihak lawan"
  },
- "New Business Unit Dev.": {
-  "en": "New Business Unit Dev.",
-  "id": "New Business Unit Dev."
- },
- "New Business Unit Development": {
-  "en": "New Business Unit Development",
-  "id": "New Business Unit Development"
- },
- "New business & market opportunity": {
-  "en": "New business & market opportunity",
-  "id": "Bisnis baru & peluang pasar"
- },
- "New service launch": {
-  "en": "New service launch",
-  "id": "Peluncuran layanan baru"
- },
  "Nilai penghematan / dampak terukur": {
   "en": "Value of savings / measured impact",
   "id": "Nilai penghematan / dampak terukur"
@@ -4542,14 +4486,6 @@
  "Nomor": {
   "en": "No.",
   "id": "Nomor"
- },
- "Non Division Group": {
-  "en": "Non Division Group",
-  "id": "Non Division Group"
- },
- "Non Division Group, melapor langsung ke Managing Directors": {
-  "en": "Non Division Group, reporting directly to the Managing Directors",
-  "id": "Non Division Group, melapor langsung ke Managing Directors"
  },
  "Nonstandar?": {
   "en": "Non-standard?",
@@ -5214,10 +5150,6 @@
  "Pilot & peluncuran layanan": {
   "en": "Pilot & service launch",
   "id": "Pilot & peluncuran layanan"
- },
- "Pilot / peluncuran layanan baru": {
-  "en": "Pilot / new service launch",
-  "id": "Pilot / peluncuran layanan baru"
  },
  "Pipeline peluang": {
   "en": "Opportunity pipeline",
@@ -5962,10 +5894,6 @@
  "Strategy, Product Development & Transformation": {
   "en": "Strategy, Product Development & Transformation",
   "id": "Strategi, Pengembangan Produk & Transformasi"
- },
- "Sumber pendapatan baru": {
-  "en": "New revenue streams",
-  "id": "Sumber pendapatan baru"
  },
  "Support": {
   "en": "Support",

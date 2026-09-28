@@ -29,7 +29,7 @@
   "role": "Menetapkan arah bisnis, memimpin seluruh BU dan fungsi pendukung, serta bertindak sebagai top management sistem manajemen.",
   "tasks": [
    "Menetapkan visi, strategi, target tahunan, dan alokasi sumber daya perusahaan.",
-   "Memimpin BU Certification, BU Industry, Business Partner, dan New Business Unit Development.",
+   "Memimpin BU Certification, BU Industry, dan Business Partner.",
    "Menetapkan kebijakan mutu, K3L, dan komitmen imparsialitas, serta memimpin management review.",
    "Menyetujui struktur organisasi, kebijakan, anggaran, investasi, dan kontrak strategis sesuai kewenangan.",
    "Bertanggung jawab atas kinerja P&L, kepatuhan regulasi dan akreditasi, serta reputasi perusahaan.",
@@ -95,7 +95,8 @@
    "Mengelola key account dan klien strategis lintas BU, termasuk peluang cross-selling dan bundling layanan.",
    "Menjaga data pelanggan terpusat (golden record) sebagai satu sumber data bersama BU dan IT.",
    "Menjalankan program retensi pelanggan serta analisis kepuasan dan churn.",
-   "Memberi masukan harga dan positioning layanan berdasarkan data profitabilitas dan pasar."
+   "Memberi masukan harga dan positioning layanan berdasarkan data profitabilitas dan pasar.",
+   "Menilai dan menginkubasi peluang bisnis di luar portofolio BU yang ada, termasuk People & Employment, hingga siap dijalankan."
   ],
   "outputs": [
    "Portfolio review",
@@ -107,40 +108,6 @@
    "Corporate Marketing & Communication",
    "Revenue & Investment Controlling",
    "IT & Digitalization"
-  ]
- },
- "nbud": {
-  "name": "New Business Unit Development",
-  "cat": "strat",
-  "tag": "NBUD",
-  "org": "Non Division Group, melapor langsung ke Managing Directors",
-  "role": "Menginkubasi bisnis baru hingga siap berdiri sebagai unit bisnis.",
-  "depts": [
-   "People & Emp.",
-   "Other New Business"
-  ],
-  "flow": [
-   "New business & market opportunity",
-   "Business case & pilot",
-   "New service launch"
-  ],
-  "tasks": [
-   "Mengidentifikasi dan menilai peluang bisnis, pasar, dan skema layanan baru di luar portofolio BU saat ini.",
-   "Menyusun business case dan studi kelayakan: pasar, investasi, risiko, serta kebutuhan akreditasi atau izin.",
-   "Mengembangkan dan menjalankan bisnis People & Employment serta pilot bisnis baru lainnya.",
-   "Menyiapkan persyaratan akreditasi, perizinan, dan sistem manajemen untuk layanan baru bersama Corporate Management System dan Legal.",
-   "Mengusulkan transisi bisnis yang sudah matang ke BU yang ada atau menjadi unit bisnis tersendiri."
-  ],
-  "outputs": [
-   "Business case",
-   "Pilot / peluncuran layanan baru",
-   "Sumber pendapatan baru"
-  ],
-  "links": [
-   "Managing Directors",
-   "Corporate Planner",
-   "Corporate Management System",
-   "Legal Administration Support"
   ]
  },
  "cis": {
@@ -314,8 +281,7 @@
   "depts": [
    "Business Dev. & Mktg (Inspection)",
    "Business Development (PCT)",
-   "Corporate Portfolio & Client Management",
-   "New Business Unit Development"
+   "Corporate Portfolio & Client Management"
   ],
   "tasks": [
    "Mengidentifikasi peluang pasar, kebutuhan industri, dan regulasi baru yang membuka kebutuhan layanan TIC.",
@@ -810,7 +776,7 @@
  },
  "mkt": {
   "name": "Corporate Marketing & Communication",
-  "cat": "sup",
+  "cat": "strat",
   "tag": "CSS",
   "org": "Corporate Strategic Support (Business Partner)",
   "role": "Membangun merek, menghasilkan prospek, dan menjaga reputasi perusahaan.",

@@ -152,9 +152,6 @@
   "portfolio": [
    "M2"
   ],
-  "nbud": [
-   "M2"
-  ],
   "cis": [
    "M3"
   ],
@@ -205,9 +202,6 @@
    "M1"
   ],
   "portfolio": [
-   "M2"
-  ],
-  "nbud": [
    "M2"
   ],
   "cis": [
@@ -276,8 +270,7 @@
    "md"
   ],
   "M2": [
-   "portfolio",
-   "nbud"
+   "portfolio"
   ],
   "M3": [
    "cis"

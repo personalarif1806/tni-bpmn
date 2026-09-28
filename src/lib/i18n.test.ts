@@ -134,6 +134,20 @@ describe("translation completeness", () => {
   });
 
   /*
+   * A dictionary that keeps entries for strings nobody renders drifts: the next
+   * person cannot tell which wording is live. Deleting a unit should delete its
+   * sentences with it.
+   */
+  test("no entry is left behind after the string it translated is gone", () => {
+    const live = new Set([...uiStrings(), ...contentStrings()]);
+    const orphans = Object.keys(DICTIONARY).filter((source) => !live.has(source));
+    expect(
+      orphans,
+      `Entri tanpa pemakai — jalankan: node scripts/i18n-todo.mjs all --orphans\n${orphans.slice(0, 15).join("\n")}`,
+    ).toEqual([]);
+  });
+
+  /*
    * Some department names are also Level 1 lane names, so they do reach the
    * dictionary. What must never happen is one of them being rewritten: an
    * entry for a department name has to be the same string on both sides.
