@@ -16,6 +16,7 @@ import {
   mapSizerSize,
   type MapModel,
 } from "@/lib/layout-l0";
+import { t } from "@/lib/i18n";
 
 const CANVAS_PADDING = 24;
 const CONTENT_WIDTH = CANVAS_WIDTH - CANVAS_PADDING * 2;
@@ -63,7 +64,7 @@ export function ProcessMap({
     <div ref={measureRef} className="map-measure border-y border-line bg-white">
       <div
         role="region"
-        aria-label="Kanvas peta proses Level 0"
+        aria-label={t("Kanvas peta proses Level 0")}
         tabIndex={0}
         className="map-viewport overflow-auto"
       >
@@ -103,7 +104,7 @@ export function ProcessMap({
                 <ExternalColumn
                   entries={model.external.left}
                   side="left"
-                  caption="Masukan dari pihak eksternal"
+                  caption={t("Masukan dari pihak eksternal")}
                 />
 
                 <div className="bg-navy" style={{ width: CENTER_WIDTH }}>
@@ -130,7 +131,7 @@ export function ProcessMap({
                 <ExternalColumn
                   entries={model.external.right}
                   side="right"
-                  caption="Keluaran ke pihak eksternal"
+                  caption={t("Keluaran ke pihak eksternal")}
                 />
               </div>
 

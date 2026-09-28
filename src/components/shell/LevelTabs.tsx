@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router";
 import { motion } from "motion/react";
 import { LEVELS, levelFromPathname } from "@/lib/levels";
 import { useMotionConfig } from "@/hooks/useMotionConfig";
+import { t } from "@/lib/i18n";
 
 /**
  * Level 0 / Level 1 switch. These are real links, so browser back works and a
@@ -13,7 +14,7 @@ export function LevelTabs() {
   const { duration, ease } = useMotionConfig();
 
   return (
-    <nav aria-label="Tingkat peta proses" className="flex h-full items-stretch">
+    <nav aria-label={t("Tingkat peta proses")} className="flex h-full items-stretch">
       {LEVELS.map((level) => {
         const isActive = level.id === activeLevel;
         return (

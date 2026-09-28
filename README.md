@@ -124,7 +124,7 @@ src/
   routes/      Level0Page, Level1Page, Level1ProcessPage
 ```
 
-Three rules worth knowing before you change anything:
+Four rules worth knowing before you change anything:
 
 1. **Shareable state lives in the URL.** Active level, open panel, highlighted
    steps, origin context and print mode are all search params. Browser Back
@@ -148,6 +148,52 @@ Three rules worth knowing before you change anything:
    None of this shows up on macOS, where scrollbars float above the content and
    take no layout space. Test width-sensitive changes at 1536px, which is what
    a 1920px Windows screen reports at its default 125% scaling.
+4. **Every string a reader can see goes through `t()`.** Wrapping is not a
+   style preference: `npm test` scans for `t("…")` calls and walks the shipped
+   JSON, and fails if any of it lacks an entry in `translations.json`. A
+   sentence written straight into JSX is invisible to that scan and is exactly
+   how one language leaks into the other.
+
+## Language
+
+The header carries an **ID / EN** switch. Indonesian is the default; the choice
+lands in the URL (`?lang=en`) so a shared link opens in the language its sender
+was reading, and is remembered per browser.
+
+Switching reloads the page. That is deliberate — `src/data` builds its indexes
+once at import time, so a language that could change mid-session would mean
+rebuilding every index on the fly or threading a language through every
+component that reads the catalogue. A reload is the only option that cannot
+leave half a page in the other language.
+
+```
+src/lib/i18n.ts          the active language, the switch, and t()
+src/data/translations.json   source string → { id, en }
+src/data/localize.ts     applies the dictionary to the JSON, once, at import
+scripts/i18n-fields.mjs  which fields are translated and which are not
+scripts/i18n-todo.mjs    prints whatever still needs an entry
+src/lib/i18n.test.ts     fails the build if anything is missing
+```
+
+Both sides of each pair are stored, not just the English, because the source
+data was never uniformly Indonesian: the map's flow labels shipped in English
+("Corporate strategy & business plan") while the outputs beside them shipped in
+Indonesian. A one-way dictionary could only have fixed one of those.
+
+**What is never translated**, because a map that renamed these would disagree
+with the documents it describes: unit and department names, ISO/IEC standard
+numbers, business units, system names (SIMCert, SIMLab, SIMCal), and process
+names and codes. `Board of Commissioners` reads the same in both languages on
+purpose. `scripts/i18n-fields.mjs` is where that line is drawn — change it
+there and the test follows.
+
+Adding a string:
+
+```bash
+# wrap it at the call site, then
+node scripts/i18n-todo.mjs all      # what is still missing
+node scripts/i18n-todo.mjs all --count
+```
 
 ## Confirmation status layer
 

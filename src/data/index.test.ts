@@ -64,7 +64,7 @@ describe("stageIndex", () => {
     expect(stage?.kind).toBe("pc");
     expect(stage?.pcId).toBe("lab");
     expect(stage?.stepIndex).toBe(2);
-    expect(stage?.title).toBe("Sampling / sample receipt & registration");
+    expect(stage?.title).toBe(getUnit("lab")?.steps?.[1]);
   });
 
   test("keeps unit groups intact for display and expands their members", () => {

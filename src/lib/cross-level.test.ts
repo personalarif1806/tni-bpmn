@@ -11,6 +11,7 @@ import {
   stageJumpTargets,
   stepKeysInLanes,
 } from "./cross-level";
+import { getUnit } from "@/data";
 
 describe("origin parameter", () => {
   test("round-trips through the URL", () => {
@@ -39,7 +40,7 @@ describe("origin parameter", () => {
     });
     expect(originLabel({ kind: "stage", id: "lab_2" })).toEqual({
       code: "Langkah 2",
-      title: "Sampling / sample receipt & registration · Laboratory Services",
+      title: `${getUnit("lab")?.steps?.[1]} · ${getUnit("lab")?.name}`,
     });
     expect(originLabel({ kind: "dept", id: "lab_chem" })?.title).toBe(
       "Chemical Lab (CTS)",

@@ -6,6 +6,7 @@ import {
   TOP_RIGHT_CENTER,
   type MapBox,
 } from "@/lib/layout-l0";
+import { t } from "@/lib/i18n";
 
 /**
  * Governance strip — PRD 8.2 step 1. Two navy boxes joined by a dotted
@@ -43,7 +44,7 @@ export function GovernanceStrip({
       </div>
 
       <p className="mt-1 text-center text-badge text-muted">
-        Garis koordinasi, bukan garis komando
+        {t("Garis koordinasi, bukan garis komando")}
       </p>
 
       <svg

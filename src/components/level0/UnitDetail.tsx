@@ -13,6 +13,7 @@ import {
 } from "@/data";
 import { useDetailPanel } from "@/hooks/useDetailPanel";
 import { ProcessLinks } from "@/components/level0/ProcessLinks";
+import { t } from "@/lib/i18n";
 
 /** Unit panel — PRD 8.4: what a unit does and where it appears in the core process. */
 export function UnitDetail({ unitId }: { unitId: string }) {
@@ -21,14 +22,14 @@ export function UnitDetail({ unitId }: { unitId: string }) {
   const stages = participantStages(unitId);
 
   if (!unit) {
-    return <p className="text-table text-muted">Unit tidak ditemukan.</p>;
+    return <p className="text-table text-muted">{t("Unit tidak ditemukan.")}</p>;
   }
 
   const facts: (readonly [string, string])[] = [
-    ["Induk organisasi", unit.org],
-    ...(unit.std ? ([["Standar", unit.std]] as const) : []),
-    ...(unit.bu ? ([["Business unit", unit.bu]] as const) : []),
-    ...(unit.sys?.length ? ([["Sistem", unit.sys.join(", ")]] as const) : []),
+    [t("Induk organisasi"), unit.org],
+    ...(unit.std ? ([[t("Standar"), unit.std]] as const) : []),
+    ...(unit.bu ? ([[t("Business unit"), unit.bu]] as const) : []),
+    ...(unit.sys?.length ? ([[t("Sistem"), unit.sys.join(", ")]] as const) : []),
   ];
 
   // Profit centers list department ids; value-chain stages list plain names.
@@ -42,13 +43,13 @@ export function UnitDetail({ unitId }: { unitId: string }) {
       <PanelFacts entries={facts} />
 
       {unit.tasks?.length ? (
-        <PanelSection title="Tugas dan tanggung jawab" count={unit.tasks.length}>
+        <PanelSection title={t("Tugas dan tanggung jawab")} count={unit.tasks.length}>
           <PanelList items={unit.tasks} />
         </PanelSection>
       ) : null}
 
       {unit.steps?.length ? (
-        <PanelSection title="Alur proses inti">
+        <PanelSection title={t("Alur proses inti")}>
           <ol className="flex flex-col gap-1 text-table">
             {unit.steps.map((step, index) => (
               <li key={step} className="flex gap-2">
@@ -61,25 +62,25 @@ export function UnitDetail({ unitId }: { unitId: string }) {
       ) : null}
 
       {unit.outputs?.length ? (
-        <PanelSection title="Output utama">
+        <PanelSection title={t("Output utama")}>
           <PanelList items={unit.outputs} />
         </PanelSection>
       ) : null}
 
       {unit.gives?.length ? (
-        <PanelSection title="Memberi ke perusahaan">
+        <PanelSection title={t("Memberi ke perusahaan")}>
           <PanelList items={unit.gives} />
         </PanelSection>
       ) : null}
 
       {unit.receives?.length ? (
-        <PanelSection title="Menerima dari perusahaan">
+        <PanelSection title={t("Menerima dari perusahaan")}>
           <PanelList items={unit.receives} />
         </PanelSection>
       ) : null}
 
       {departmentIds.length > 0 ? (
-        <PanelSection title="Departemen" count={departmentIds.length}>
+        <PanelSection title={t("Departemen")} count={departmentIds.length}>
           <ul className="flex flex-wrap gap-1.5">
             {departmentIds.map((departmentId) => (
               <li key={departmentId}>
@@ -98,13 +99,13 @@ export function UnitDetail({ unitId }: { unitId: string }) {
       ) : null}
 
       {departmentNames.length > 0 ? (
-        <PanelSection title="Pelaksana">
+        <PanelSection title={t("Pelaksana")}>
           <PanelList items={departmentNames} />
         </PanelSection>
       ) : null}
 
       {stages.length > 0 ? (
-        <PanelSection title="Peran pada tahapan core process" count={stages.length}>
+        <PanelSection title={t("Peran pada tahapan core process")} count={stages.length}>
           <ul className="flex flex-col gap-2">
             {stages.map((entry) => (
               <li key={`${entry.stageId}-${entry.role}`} className="flex gap-2">
@@ -120,7 +121,7 @@ export function UnitDetail({ unitId }: { unitId: string }) {
                   <p className="text-table text-ink/85">{entry.description}</p>
                   {entry.viaGroupName ? (
                     <p className="text-badge text-muted">
-                      Sebagai bagian dari {entry.viaGroupName}
+                      {t("Sebagai bagian dari")} {entry.viaGroupName}
                     </p>
                   ) : null}
                 </div>
@@ -133,7 +134,7 @@ export function UnitDetail({ unitId }: { unitId: string }) {
       <ProcessLinks origin={{ kind: "unit", id: unitId }} />
 
       {unit.links?.length ? (
-        <PanelSection title="Interaksi utama">
+        <PanelSection title={t("Interaksi utama")}>
           <PanelList items={unit.links} />
         </PanelSection>
       ) : null}

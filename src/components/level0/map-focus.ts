@@ -1,6 +1,7 @@
 import { createContext, use } from "react";
 import type { PanelKind } from "@/hooks/useDetailPanel";
 import type { StageFocus } from "@/hooks/useStageFocus";
+import { t } from "@/lib/i18n";
 
 export interface MapInteraction {
   focus: StageFocus;
@@ -57,4 +58,4 @@ export function confirmationProps(needsConfirmation: boolean): {
 }
 
 /** Suffix appended to a box's label so the tint is not colour-only. */
-export const CONFIRMATION_LABEL = "perlu dikonfirmasi";
+export const CONFIRMATION_LABEL = t("perlu dikonfirmasi");

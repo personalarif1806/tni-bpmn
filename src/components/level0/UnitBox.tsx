@@ -7,6 +7,7 @@ import {
 import { participantNeedsConfirmation } from "@/data";
 import { FocusBadge } from "@/components/level0/FocusMarkers";
 import type { MapBox } from "@/lib/layout-l0";
+import { t } from "@/lib/i18n";
 
 /**
  * One box on the map. Every box is a real button; clicking opens the unit panel
@@ -58,7 +59,7 @@ export function UnitBox({
         aria-pressed={isOpen}
         aria-label={`${box.name}${description ? ` (${description})` : ""}${
           confirmationLayer && needsConfirmation ? ` — ${CONFIRMATION_LABEL}` : ""
-        } — lihat detail unit`}
+        } — ${t("lihat detail unit")}`}
         className={`flex h-full w-full flex-col gap-1 px-2 py-1.5 text-left transition-colors ${surface} ${border}`}
         style={{ transitionDuration: "var(--hover-duration)" }}
       >

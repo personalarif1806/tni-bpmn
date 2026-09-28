@@ -3,6 +3,7 @@ import { getProcess } from "@/data";
 import type { Process } from "@/data/types";
 import type { SwimlaneLayout } from "@/lib/layout-l1";
 import { GROUP_ACCENT } from "@/lib/process-groups";
+import { t } from "@/lib/i18n";
 
 /** Info card — PRD 8.8. Trigger and outcome are read off the diagram's own nodes. */
 export function ProcessInfoCard({
@@ -18,10 +19,10 @@ export function ProcessInfoCard({
     .map((step) => step.t);
 
   const facts: { label: string; value: React.ReactNode }[] = [
-    { label: "Pemilik proses", value: process.owner },
-    { label: "Pemicu", value: trigger ?? "—" },
+    { label: t("Pemilik proses"), value: process.owner },
+    { label: t("Pemicu"), value: trigger ?? "—" },
     {
-      label: "Hasil akhir",
+      label: t("Hasil akhir"),
       value: outcomes.length > 0 ? outcomes.join(" · ") : "—",
     },
     {
@@ -34,17 +35,17 @@ export function ProcessInfoCard({
         </ul>
       ),
     },
-    { label: "Sistem", value: process.sys.join(", ") || "—" },
-    { label: "Acuan", value: process.ref },
+    { label: t("Sistem"), value: process.sys.join(", ") || "—" },
+    { label: t("Acuan"), value: process.ref },
     {
-      label: "Unit terlibat",
+      label: t("Unit terlibat"),
       value: layout.lanes.map((lane) => lane.name).join(" · "),
     },
   ];
 
   return (
     <section
-      aria-label="Informasi proses"
+      aria-label={t("Informasi proses")}
       className="border border-line bg-white"
     >
       <dl className="grid gap-x-6 gap-y-3 p-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -58,7 +59,7 @@ export function ProcessInfoCard({
         {process.rel.length > 0 ? (
           <div className="flex flex-col gap-1">
             <dt className="text-badge font-medium text-muted">
-              Proses terkait
+              {t("Proses terkait")}
             </dt>
             <dd className="flex flex-wrap gap-1.5">
               {process.rel.map((relatedId) => {
@@ -89,7 +90,7 @@ export function ProcessInfoCard({
 
       {process.note ? (
         <p className="border-t border-line bg-yellow/10 px-4 py-2 text-badge text-muted">
-          Catatan: {process.note}
+          {t("Catatan")}: {process.note}
         </p>
       ) : null}
     </section>

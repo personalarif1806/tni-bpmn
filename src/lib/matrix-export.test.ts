@@ -7,6 +7,7 @@ import {
   createWorkbook,
   exportFileName,
 } from "./matrix-export";
+import { getUnit } from "@/data";
 
 const sheets = buildExportWorkbook();
 
@@ -33,14 +34,10 @@ describe("workbook shape", () => {
     const header = lab.rows[0].map((cell) => cell.value);
 
     expect(header.slice(0, 2)).toEqual(["Kelompok", "Unit"]);
-    expect(header.slice(2)).toEqual([
-      "1. Request, quotation & contract review",
-      "2. Sampling / sample receipt & registration",
-      "3. Testing & calibration",
-      "4. Result review & validation",
-      "5. Report / certificate issuance",
-      "6. Sample retention & customer follow-up",
-    ]);
+    /* Numbered from the profit center's own step list, in the active language. */
+    expect(header.slice(2)).toEqual(
+      getUnit("lab")?.steps?.map((step, index) => `${index + 1}. ${step}`),
+    );
     expect(lab.columnWidths).toHaveLength(header.length);
   });
 
@@ -168,7 +165,7 @@ describe("the written file", () => {
     const rows = XLSX.utils.sheet_to_json<string[]>(sheet, { header: 1 });
 
     expect(rows[0][1]).toBe("Unit");
-    expect(rows[0][3]).toBe("2. Sampling / sample receipt & registration");
+    expect(rows[0][3]).toBe(`2. ${getUnit("lab")?.steps?.[1]}`);
     expect(rows[1][0]).toBe("Profit center");
     expect(rows[1][1]).toBe("Laboratory Services");
     expect(rows[1][2]).toBe("A");

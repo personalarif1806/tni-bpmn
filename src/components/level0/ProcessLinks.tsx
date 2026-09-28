@@ -7,6 +7,7 @@ import {
   type UnitProcesses,
 } from "@/lib/crosslinks";
 import { level1Url, stepKeysInLanes, type Origin } from "@/lib/cross-level";
+import { t } from "@/lib/i18n";
 
 /**
  * "Proses di Level 1" for a unit or department panel — PRD 8.4 and 9. Split
@@ -40,10 +41,10 @@ export function ProcessLinks({ origin }: { origin: Origin }) {
   if (owned.length === 0 && involved.length === 0) return null;
 
   return (
-    <PanelSection title="Proses di Level 1" count={owned.length + involved.length}>
+    <PanelSection title={t("Proses di Level 1")} count={owned.length + involved.length}>
       {owned.length > 0 ? (
         <div className="flex flex-col gap-1.5">
-          <h4 className="text-badge font-medium text-muted">Pemilik proses</h4>
+          <h4 className="text-badge font-medium text-muted">{t("Pemilik proses")}</h4>
           {owned.map((entry) => (
             <ProcessLink
               key={entry.processId}
@@ -51,7 +52,7 @@ export function ProcessLinks({ origin }: { origin: Origin }) {
               to={linkFor(entry.processId, entry.laneIds)}
               note={
                 entry.laneIds.length > 0
-                  ? `Lajur: ${laneNames(entry.laneIds)}`
+                  ? `${t("Lajur")}: ${laneNames(entry.laneIds)}`
                   : undefined
               }
             />
@@ -62,14 +63,14 @@ export function ProcessLinks({ origin }: { origin: Origin }) {
       {involved.length > 0 ? (
         <div className="flex flex-col gap-1.5">
           <h4 className="text-badge font-medium text-muted">
-            Terlibat sebagai pelaksana
+            {t("Terlibat sebagai pelaksana")}
           </h4>
           {involved.map((entry) => (
             <ProcessLink
               key={entry.processId}
               processId={entry.processId}
               to={linkFor(entry.processId, entry.laneIds)}
-              note={`Lajur: ${laneNames(entry.laneIds)}`}
+              note={`${t("Lajur")}: ${laneNames(entry.laneIds)}`}
             />
           ))}
         </div>

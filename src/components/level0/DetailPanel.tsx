@@ -20,6 +20,7 @@ import {
   stageJumpTargets,
   type Origin,
 } from "@/lib/cross-level";
+import { t } from "@/lib/i18n";
 
 /** Is the event coming from somewhere that owns the arrow keys itself? */
 function isTypingTarget(target: EventTarget | null): boolean {
@@ -156,7 +157,7 @@ function StageStepButton({
 }) {
   const stage = stageId ? getStage(stageId) : undefined;
   const Icon = direction === "prev" ? ChevronLeft : ChevronRight;
-  const label = direction === "prev" ? "Tahapan sebelumnya" : "Tahapan berikutnya";
+  const label = direction === "prev" ? t("Tahapan sebelumnya") : t("Tahapan berikutnya");
 
   return (
     <button
@@ -181,8 +182,8 @@ function buildPanel(target: { kind: string; id: string }) {
     const profitCenter = stage.pcId ? getUnit(stage.pcId) : undefined;
     const eyebrow =
       stage.kind === "vc"
-        ? "Tahapan value chain"
-        : `Langkah ${stage.stepIndex} · ${profitCenter?.name ?? stage.pcId}`;
+        ? t("Tahapan value chain")
+        : `${t("Langkah")} ${stage.stepIndex} · ${profitCenter?.name ?? stage.pcId}`;
 
     return { eyebrow, title: stage.title, content: <StageDetail stage={stage} /> };
   }
@@ -202,7 +203,7 @@ function buildPanel(target: { kind: string; id: string }) {
   if (!department) return null;
 
   return {
-    eyebrow: "Departemen",
+    eyebrow: t("Departemen"),
     title: department.n,
     content: <DepartmentDetail departmentId={target.id} />,
   };

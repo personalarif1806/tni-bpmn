@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router";
 import { listProcessGroups } from "@/data";
+import { t } from "@/lib/i18n";
 
 /** The sidebar's stand-in below 900px — a dropdown in the toolbar (PRD 8.8). */
 export function ProcessSelect({ activeId }: { activeId: string }) {
@@ -7,7 +8,7 @@ export function ProcessSelect({ activeId }: { activeId: string }) {
 
   return (
     <label className="flex items-center">
-      <span className="sr-only">Pilih proses</span>
+      <span className="sr-only">{t("Pilih proses")}</span>
       <select
         value={activeId}
         onChange={(event) => navigate(`/level-1/${event.target.value}`)}
@@ -15,7 +16,7 @@ export function ProcessSelect({ activeId }: { activeId: string }) {
       >
         {activeId === "" ? (
           <option value="" disabled>
-            Pilih proses
+            {t("Pilih proses")}
           </option>
         ) : null}
         {listProcessGroups().map((group) => (

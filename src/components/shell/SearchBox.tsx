@@ -7,6 +7,7 @@ import {
   type SearchKind,
   type SearchResult,
 } from "@/lib/search";
+import { t } from "@/lib/i18n";
 
 const KIND_ACCENT: Record<SearchKind, string> = {
   unit: "bg-cyan text-navy",
@@ -145,8 +146,8 @@ export function SearchBox() {
         aria-controls="search-listbox"
         aria-activedescendant={activeId}
         aria-autocomplete="list"
-        aria-label="Cari unit, departemen, proses, atau langkah"
-        placeholder="Cari unit, proses, langkah…"
+        aria-label={t("Cari unit, departemen, proses, atau langkah")}
+        placeholder={t("Cari unit, proses, langkah…")}
         value={query}
         onChange={(event) => {
           setQuery(event.target.value);
@@ -163,7 +164,7 @@ export function SearchBox() {
           ref={listRef}
           id="search-listbox"
           role="listbox"
-          aria-label="Hasil pencarian"
+          aria-label={t("Hasil pencarian")}
           className="absolute top-full left-0 z-40 mt-1 max-h-[70vh] w-[30rem] max-w-[85vw] overflow-y-auto border border-line bg-white shadow-[0_8px_24px_rgba(18,18,58,0.16)]"
         >
           {groups.map((group) => (

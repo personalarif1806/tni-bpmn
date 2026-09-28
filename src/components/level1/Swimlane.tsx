@@ -6,6 +6,7 @@ import {
   LANE_HEIGHT,
   type SwimlaneLayout,
 } from "@/lib/layout-l1";
+import { t } from "@/lib/i18n";
 
 /**
  * The swimlane diagram — PRD 8.8. The lane header column is HTML pinned with
@@ -43,7 +44,7 @@ export function Swimlane({
           width={layout.width}
           height={layout.height}
           role="group"
-          aria-label={`Diagram swimlane dengan ${layout.lanes.length} lajur dan ${layout.nodes.length} langkah`}
+          aria-label={`${t("Diagram swimlane dengan")} ${layout.lanes.length} ${t("lajur dan")} ${layout.nodes.length} ${t("langkah")}`}
         >
           <EdgeMarkers />
 

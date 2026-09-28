@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import { listProcessGroups } from "@/data";
 import type { Process, ProcessGroupId } from "@/data/types";
 import { GROUP_ACCENT, chainStages } from "@/lib/process-groups";
+import { t } from "@/lib/i18n";
 
 function ProcessBlock({ process }: { process: Process }) {
   return (
@@ -63,7 +64,7 @@ export function ProcessArchitecture() {
               <span className="tabular-nums">{group.id}</span>
               <span>{group.group.n}</span>
               <span className="text-badge font-normal text-muted">
-                {group.processes.length} proses
+                {group.processes.length} {t("proses")}
               </span>
             </h2>
 
@@ -101,20 +102,20 @@ export function ProcessIndexTable() {
   return (
     <div className="overflow-x-auto border border-line bg-white">
       <table className="w-full border-collapse text-table">
-        <caption className="sr-only">Daftar 20 proses Level 1</caption>
+        <caption className="sr-only">{t("Daftar 20 proses Level 1")}</caption>
         <thead>
           <tr className="border-b border-line">
             <th scope="col" className="w-20 px-3 py-2 text-left font-demi">
-              Kode
+              {t("Kode")}
             </th>
             <th scope="col" className="w-72 px-3 py-2 text-left font-demi">
-              Nama proses
+              {t("Nama proses")}
             </th>
             <th scope="col" className="w-60 px-3 py-2 text-left font-demi">
-              Pemilik proses
+              {t("Pemilik proses")}
             </th>
             <th scope="col" className="px-3 py-2 text-left font-demi">
-              Tujuan
+              {t("Tujuan")}
             </th>
           </tr>
         </thead>

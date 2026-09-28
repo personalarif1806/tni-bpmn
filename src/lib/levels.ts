@@ -1,5 +1,8 @@
 /** The two levels of the process map, and how they map onto routes. */
 
+import { t } from "@/lib/i18n";
+
+
 export type LevelId = "level-0" | "level-1";
 
 export interface LevelDefinition {
@@ -16,13 +19,13 @@ export const LEVELS: readonly LevelDefinition[] = [
   {
     id: "level-0",
     label: "Level 0",
-    caption: "Peta proses perusahaan",
+    caption: t("Peta proses perusahaan"),
     path: "/level-0",
   },
   {
     id: "level-1",
     label: "Level 1",
-    caption: "Swimlane per proses",
+    caption: t("Swimlane per proses"),
     path: "/level-1",
   },
 ] as const;

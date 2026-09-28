@@ -7,6 +7,7 @@
  */
 import { departments, getLane, getUnit, processes, units } from "@/data";
 import { level0Url, level1Url } from "@/lib/cross-level";
+import { t } from "@/lib/i18n";
 
 export type SearchKind = "unit" | "dept" | "process" | "step";
 
@@ -29,10 +30,10 @@ export interface SearchGroup {
 }
 
 const GROUP_LABEL: Record<SearchKind, string> = {
-  unit: "Unit",
-  dept: "Departemen",
-  process: "Proses Level 1",
-  step: "Langkah Level 1",
+  unit: t("Unit"),
+  dept: t("Departemen"),
+  process: t("Proses Level 1"),
+  step: t("Langkah Level 1"),
 };
 
 const GROUP_ORDER: SearchKind[] = ["unit", "dept", "process", "step"];

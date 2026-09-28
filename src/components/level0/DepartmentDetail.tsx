@@ -6,6 +6,7 @@ import { RasciBadge } from "@/components/shared/RasciBadge";
 import { getDepartment, getStage, getUnit, participantStages } from "@/data";
 import { useDetailPanel } from "@/hooks/useDetailPanel";
 import { ProcessLinks } from "@/components/level0/ProcessLinks";
+import { t } from "@/lib/i18n";
 
 /** Department panel — PRD 8.4: parent profit center and the stages it works in. */
 export function DepartmentDetail({ departmentId }: { departmentId: string }) {
@@ -14,7 +15,7 @@ export function DepartmentDetail({ departmentId }: { departmentId: string }) {
   const stages = participantStages(departmentId);
 
   if (!department) {
-    return <p className="text-table text-muted">Departemen tidak ditemukan.</p>;
+    return <p className="text-table text-muted">{t("Departemen tidak ditemukan.")}</p>;
   }
 
   const profitCenter = getUnit(department.pc);
@@ -35,16 +36,16 @@ export function DepartmentDetail({ departmentId }: { departmentId: string }) {
     <>
       <PanelFacts
         entries={[
-          ["Profit center", profitCenterLink],
+          [t("Profit center"), profitCenterLink],
           ...(profitCenter?.std
-            ? ([["Standar", profitCenter.std]] as const)
+            ? ([[t("Standar"), profitCenter.std]] as const)
             : []),
-          ...(profitCenter?.bu ? ([["Business unit", profitCenter.bu]] as const) : []),
+          ...(profitCenter?.bu ? ([[t("Business unit"), profitCenter.bu]] as const) : []),
         ]}
       />
 
       {stages.length > 0 ? (
-        <PanelSection title="Tahapan yang melibatkan departemen ini" count={stages.length}>
+        <PanelSection title={t("Tahapan yang melibatkan departemen ini")} count={stages.length}>
           <ul className="flex flex-col gap-2">
             {stages.map((entry) => (
               <li key={`${entry.stageId}-${entry.role}`} className="flex gap-2">
@@ -60,7 +61,7 @@ export function DepartmentDetail({ departmentId }: { departmentId: string }) {
                   <p className="text-table text-ink/85">{entry.description}</p>
                   {entry.viaGroupName ? (
                     <p className="text-badge text-muted">
-                      Sebagai bagian dari {entry.viaGroupName}
+                      {t("Sebagai bagian dari")} {entry.viaGroupName}
                     </p>
                   ) : null}
                 </div>
@@ -69,7 +70,7 @@ export function DepartmentDetail({ departmentId }: { departmentId: string }) {
           </ul>
         </PanelSection>
       ) : (
-        <PanelSection title="Tahapan yang melibatkan departemen ini">
+        <PanelSection title={t("Tahapan yang melibatkan departemen ini")}>
           <p className="border-l-2 border-orange bg-orange/10 px-3 py-2 text-table text-ink">
             {department.n} belum dipetakan ke tahapan mana pun pada peta Level 0.
             Pemetaan peran departemen ini masih menunggu konfirmasi pemilik

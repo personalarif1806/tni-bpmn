@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import { layout, shortName, units } from "@/data";
 import type { UnitCategory } from "@/data/types";
 import { unitTags } from "@/lib/crosslinks";
+import { t } from "@/lib/i18n";
 
 const CATEGORY_ORDER = Object.keys(layout.CATS) as UnitCategory[];
 
@@ -26,21 +27,21 @@ export function ResponsibilityCatalog({
     <div className="overflow-x-auto border border-line">
       <table className="w-full border-collapse text-table">
         <caption className="sr-only">
-          Katalog tugas dan tanggung jawab setiap unit Level 0
+          {t("Katalog tugas dan tanggung jawab setiap unit Level 0")}
         </caption>
         <thead>
           <tr className="border-b border-line bg-white">
             <th scope="col" className="w-[19rem] px-3 py-2 text-left font-demi">
-              Unit
+              {t("Unit")}
             </th>
             <th scope="col" className="w-[17rem] px-3 py-2 text-left font-demi">
-              Peran dalam proses
+              {t("Peran dalam proses")}
             </th>
             <th scope="col" className="px-3 py-2 text-left font-demi">
-              Tugas dan tanggung jawab
+              {t("Tugas dan tanggung jawab")}
             </th>
             <th scope="col" className="w-[15rem] px-3 py-2 text-left font-demi">
-              Output utama
+              {t("Output utama")}
             </th>
           </tr>
         </thead>
@@ -84,7 +85,7 @@ export function ResponsibilityCatalog({
                     ) : null}
                     {unit.sys?.length ? (
                       <span className="block text-badge text-muted">
-                        Sistem: {unit.sys.join(", ")}
+                        {t("Sistem")}: {unit.sys.join(", ")}
                       </span>
                     ) : null}
 

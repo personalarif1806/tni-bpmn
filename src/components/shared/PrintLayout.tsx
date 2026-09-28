@@ -8,6 +8,7 @@ import { Swimlane } from "@/components/level1/Swimlane";
 import { processes } from "@/data";
 import { buildSwimlaneLayout } from "@/lib/layout-l1";
 import { GROUP_ACCENT } from "@/lib/process-groups";
+import { t } from "@/lib/i18n";
 
 const EMPTY = new Set<string>();
 const noop = () => {};
@@ -21,7 +22,7 @@ export function PrintAllProcesses() {
     <div className="hidden print:block">
       <section>
         <h1 className="text-display font-demi">
-          Arsitektur proses Level 1 — PT TÜV NORD Indonesia
+          {t("Arsitektur proses Level 1 — PT TÜV NORD Indonesia")}
         </h1>
         <div className="mt-4">
           <ProcessArchitecture />

@@ -14,6 +14,7 @@ import {
   valueChainStageCenter,
   type MapModel,
 } from "@/lib/layout-l0";
+import { t } from "@/lib/i18n";
 
 /**
  * Value chain — PRD 8.2 step 3: five stages joined by labelled yellow arrows,
@@ -50,11 +51,11 @@ export function ValueChain({
                 type="button"
                 onClick={() => select("stage", stage.stageId)}
                 aria-pressed={focus.stageId === stage.stageId}
-                aria-label={`Tahapan ${stage.name}${
+                aria-label={`${t("Tahapan")} ${stage.name}${
                   confirmationLayer && stageNeedsConfirmation(stage.stageId)
                     ? ` — ${CONFIRMATION_LABEL}`
                     : ""
-                } — lihat unit yang terlibat`}
+                } — ${t("lihat unit yang terlibat")}`}
                 className="flex h-full w-full flex-col gap-1 bg-cyan px-2 py-2 text-left text-navy transition-colors hover:bg-cyan-hover"
                 style={{ transitionDuration: "var(--hover-duration)" }}
               >

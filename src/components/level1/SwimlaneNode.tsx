@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { useMotionConfig } from "@/hooks/useMotionConfig";
 import type { SwimlaneNode as NodeModel } from "@/lib/layout-l1";
+import { t } from "@/lib/i18n";
 
 /**
  * One swimlane node — PRD 8.8. The shape is drawn in SVG; a transparent button
@@ -37,12 +38,12 @@ export function SwimlaneNode({
 
   const kindLabel =
     step.y === "s"
-      ? "Pemicu"
+      ? t("Pemicu")
       : step.y === "e"
-        ? "Hasil akhir"
+        ? t("Hasil akhir")
         : step.y === "d"
-          ? "Keputusan"
-          : "Aktivitas";
+          ? t("Keputusan")
+          : t("Aktivitas");
 
   return (
     <g className="swimlane-node" opacity={dimmed ? 0.3 : 1}>
@@ -100,7 +101,7 @@ export function SwimlaneNode({
           type="button"
           onClick={() => onSelect(node.key)}
           aria-pressed={selected}
-          aria-label={`${node.number ? `${node.number}, ` : ""}${kindLabel}: ${step.t}, pelaksana ${laneName}`}
+          aria-label={`${node.number ? `${node.number}, ` : ""}${kindLabel}: ${step.t}, ${t("pelaksana")} ${laneName}`}
           className={`flex h-full w-full flex-col items-center justify-center gap-0.5 px-1 text-center leading-tight ${
             shape === "terminal" ? "text-white" : "text-navy"
           }`}

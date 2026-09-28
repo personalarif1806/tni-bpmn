@@ -1,9 +1,14 @@
 /**
- * The shipped JSON, typed once.
+ * The shipped JSON, typed once and put into the reader's language.
  *
  * JSON modules are inferred structurally (string where the model says union),
  * so each file is asserted to its declared type here, in one place. Runtime
  * validation in `validate.ts` is what actually backs these assertions.
+ *
+ * The translation pass sits here because this is the last point where the data
+ * is still the shipped shape: everything after it — the indexes, the layout
+ * models, every component — reads one language and never learns there is
+ * another.
  */
 import crosslinksJson from "./crosslinks.json";
 import departmentsJson from "./l0-departments.json";
@@ -14,6 +19,15 @@ import unitsJson from "./l0-units.json";
 import groupsJson from "./l1-groups.json";
 import lanesJson from "./l1-lanes.json";
 import processesJson from "./l1-processes.json";
+import {
+  localizeInvolvement,
+  localizeLanes,
+  localizeLayout,
+  localizeProcessGroups,
+  localizeProcesses,
+  localizeUnitGroups,
+  localizeUnits,
+} from "./localize";
 import type {
   CrosslinkData,
   Department,
@@ -32,14 +46,20 @@ function shaped<T>(json: unknown): T {
   return json as T;
 }
 
-export const rawUnits = shaped<Record<string, Unit>>(unitsJson);
+export const rawUnits = localizeUnits(shaped<Record<string, Unit>>(unitsJson));
+/** Department names are official in both languages — nothing to translate. */
 export const rawDepartments = shaped<Record<string, Department>>(departmentsJson);
-export const rawUnitGroups = shaped<Record<string, UnitGroup>>(unitGroupsJson);
-export const rawLayout = shaped<LayoutData>(layoutJson);
-export const rawStageInvolvement =
-  shaped<StageInvolvementData>(stageInvolvementJson);
-export const rawLanes = shaped<Record<string, Lane>>(lanesJson);
-export const rawProcesses = shaped<Process[]>(processesJson);
-export const rawProcessGroups =
-  shaped<Record<ProcessGroupId, ProcessGroup>>(groupsJson);
+export const rawUnitGroups = localizeUnitGroups(
+  shaped<Record<string, UnitGroup>>(unitGroupsJson),
+);
+export const rawLayout = localizeLayout(shaped<LayoutData>(layoutJson));
+export const rawStageInvolvement = localizeInvolvement(
+  shaped<StageInvolvementData>(stageInvolvementJson),
+);
+export const rawLanes = localizeLanes(shaped<Record<string, Lane>>(lanesJson));
+export const rawProcesses = localizeProcesses(shaped<Process[]>(processesJson));
+export const rawProcessGroups = localizeProcessGroups(
+  shaped<Record<ProcessGroupId, ProcessGroup>>(groupsJson),
+);
+/** Crosslinks are ids only. */
 export const rawCrosslinks = shaped<CrosslinkData>(crosslinksJson);

@@ -3,11 +3,12 @@ import type { Process } from "@/data/types";
 import { getL0StepRef } from "@/lib/crosslinks";
 import { level0Url, type Origin } from "@/lib/cross-level";
 import type { SwimlaneLayout } from "@/lib/layout-l1";
+import { t } from "@/lib/i18n";
 
 const KIND_LABEL: Record<string, string> = {
-  s: "Pemicu",
-  d: "Keputusan",
-  e: "Hasil akhir",
+  s: t("Pemicu"),
+  d: t("Keputusan"),
+  e: t("Hasil akhir"),
 };
 
 /**
@@ -37,27 +38,27 @@ export function StepTable({
     <div className="overflow-x-auto border border-line bg-white">
       <table className="w-full border-collapse text-table">
         <caption className="sr-only">
-          Uraian langkah proses {process.id} {process.name}
+          {t("Uraian langkah proses")} {process.id} {process.name}
         </caption>
         <thead>
           <tr className="border-b border-line">
             <th scope="col" className="w-24 px-3 py-2 text-left font-demi">
-              Nomor
+              {t("Nomor")}
             </th>
             <th scope="col" className="w-56 px-3 py-2 text-left font-demi">
-              Aktivitas
+              {t("Aktivitas")}
             </th>
             <th scope="col" className="w-44 px-3 py-2 text-left font-demi">
-              Pelaksana
+              {t("Pelaksana")}
             </th>
             <th scope="col" className="px-3 py-2 text-left font-demi">
-              Uraian
+              {t("Uraian")}
             </th>
             <th scope="col" className="w-52 px-3 py-2 text-left font-demi">
-              Output / rekaman
+              {t("Output / rekaman")}
             </th>
             <th scope="col" className="w-48 px-3 py-2 text-left font-demi">
-              Di Level 0
+              {t("Di Level 0")}
             </th>
           </tr>
         </thead>
@@ -86,7 +87,7 @@ export function StepTable({
                     type="button"
                     onClick={() => onSelect(step.k)}
                     aria-pressed={isSelected}
-                    aria-label={`Sorot langkah ${step.t} pada diagram`}
+                    aria-label={`${t("Sorot langkah")} ${step.t} ${t("pada diagram")}`}
                     className="text-left font-demi text-cobalt tabular-nums hover:underline"
                   >
                     {process.num[step.k] ?? KIND_LABEL[step.y ?? ""] ?? "—"}

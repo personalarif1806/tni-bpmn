@@ -14,6 +14,7 @@ import {
   PC_STEPS_WIDTH,
   type ProfitCenterLaneModel,
 } from "@/lib/layout-l0";
+import { t } from "@/lib/i18n";
 
 /**
  * One profit-center lane — PRD 8.2 step 3: header box, six numbered steps, and
@@ -32,7 +33,7 @@ export function ProfitCenterLane({ lane }: { lane: ProfitCenterLaneModel }) {
 
   return (
     <section
-      aria-label={`Lajur ${lane.name}`}
+      aria-label={`${t("Lajur")} ${lane.name}`}
       className="flex gap-4 border-t border-white/15 py-3 first:border-t-0"
     >
       <div
@@ -45,7 +46,7 @@ export function ProfitCenterLane({ lane }: { lane: ProfitCenterLaneModel }) {
           type="button"
           onClick={() => select("unit", lane.unitId)}
           aria-pressed={selected?.kind === "unit" && selected.id === lane.unitId}
-          aria-label={`${lane.name}${lane.std ? `, ${lane.std}` : ""}${confirmationSuffix(headerNeedsConfirmation)} — lihat detail unit`}
+          aria-label={`${lane.name}${lane.std ? `, ${lane.std}` : ""}${confirmationSuffix(headerNeedsConfirmation)} — ${t("lihat detail unit")}`}
           className="flex h-full w-full flex-col gap-1 bg-cyan px-2.5 py-2 text-left text-navy transition-colors hover:bg-cyan-hover"
           style={{ transitionDuration: "var(--hover-duration)" }}
         >
@@ -87,7 +88,7 @@ export function ProfitCenterLane({ lane }: { lane: ProfitCenterLaneModel }) {
                   type="button"
                   onClick={() => select("stage", step.stageId)}
                   aria-pressed={isOpen}
-                  aria-label={`Langkah ${step.index}, ${step.title}, ${lane.name}${confirmationSuffix(stepNeedsConfirmation)} — lihat unit yang terlibat`}
+                  aria-label={`${t("Langkah")} ${step.index}, ${step.title}, ${lane.name}${confirmationSuffix(stepNeedsConfirmation)} — ${t("lihat unit yang terlibat")}`}
                   className="flex h-full w-full flex-col gap-1 border border-line bg-paper px-2 py-1.5 text-left text-ink transition-colors hover:bg-paper-hover"
                   style={{ transitionDuration: "var(--hover-duration)" }}
                 >
@@ -127,7 +128,7 @@ export function ProfitCenterLane({ lane }: { lane: ProfitCenterLaneModel }) {
                   aria-pressed={
                     selected?.kind === "dept" && selected.id === chip.id
                   }
-                  aria-label={`Departemen ${chip.label}, ${lane.name}${confirmationSuffix(chipNeedsConfirmation)} — lihat detail departemen`}
+                  aria-label={`${t("Departemen")} ${chip.label}, ${lane.name}${confirmationSuffix(chipNeedsConfirmation)} — ${t("lihat detail departemen")}`}
                   className="flex items-center gap-1 border border-white/25 bg-white/10 px-1.5 py-0.5 text-badge text-white transition-colors hover:bg-white/20"
                   style={{ transitionDuration: "var(--hover-duration)" }}
                 >

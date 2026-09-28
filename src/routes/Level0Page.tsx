@@ -22,6 +22,7 @@ import { confirmationIndex } from "@/data";
 import { CANVAS_WIDTH, MAP_FIT_GUTTER, mapModel } from "@/lib/layout-l0";
 import { PANEL_SHRINK_QUERY, PANEL_WIDTH } from "@/lib/panel";
 import { scrollToSection } from "@/lib/scroll";
+import { t } from "@/lib/i18n";
 
 /** Sections clear the sticky header when scrolled to. */
 const SECTION_OFFSET = "scroll-mt-[calc(var(--header-h)+1rem)]";
@@ -97,7 +98,7 @@ export function Level0Page() {
   return (
     <MapInteractionProvider value={interaction}>
       <h1 className="sr-only">
-        Peta proses bisnis Level 0 — PT TÜV NORD Indonesia
+        {t("Peta proses bisnis Level 0 — PT TÜV NORD Indonesia")}
       </h1>
 
       <ToolbarSlot>
@@ -106,27 +107,27 @@ export function Level0Page() {
         <ToolbarGroup>
           <ToolbarButton
             icon={<Table2 size={14} />}
-            label="Matriks"
-            title="Matriks keterlibatan"
+            label={t("Matriks")}
+            title={t("Matriks keterlibatan")}
             onClick={() => scrollToSection(matrixRef.current, scrollBehavior)}
           />
           <ToolbarButton
             icon={<ListChecks size={14} />}
-            label="Katalog"
-            title="Katalog tugas & tanggung jawab"
+            label={t("Katalog")}
+            title={t("Katalog tugas & tanggung jawab")}
             onClick={() => scrollToSection(catalogRef.current, scrollBehavior)}
           />
           <ToolbarButton
             icon={<BadgeAlert size={14} />}
-            label="Status konfirmasi"
-            title={`Tandai ${flaggedCount} kotak yang memuat peran belum dikonfirmasi`}
+            label={t("Status konfirmasi")}
+            title={`${t("Tandai")} ${flaggedCount} ${t("kotak yang memuat peran belum dikonfirmasi")}`}
             pressed={confirmationLayer}
             onClick={toggleConfirmationLayer}
           />
           <ToolbarButton
             icon={<Printer size={14} />}
-            label="Cetak"
-            title="Cetak halaman ini"
+            label={t("Cetak")}
+            title={t("Cetak halaman ini")}
             onClick={() => window.print()}
           />
         </ToolbarGroup>
@@ -161,11 +162,12 @@ export function Level0Page() {
           className={`px-4 pt-8 pb-4 ${SECTION_OFFSET}`}
         >
           <h2 id="matriks-title" className="text-title font-demi">
-            Matriks keterlibatan
+            {t("Matriks keterlibatan")}
           </h2>
           <p className="mt-1 mb-3 max-w-3xl text-table text-muted">
-            Peran setiap unit pada tahapan inti. Klik sel atau judul kolom untuk
-            membuka tahapan tersebut di peta.
+            {t(
+              "Peran setiap unit pada tahapan inti. Klik sel atau judul kolom untuk membuka tahapan tersebut di peta.",
+            )}
           </p>
           <InvolvementMatrix onOpenStage={openStageOnMap} />
         </section>
@@ -177,10 +179,10 @@ export function Level0Page() {
           className={`px-4 pt-8 pb-12 ${SECTION_OFFSET}`}
         >
           <h2 id="katalog-title" className="text-title font-demi">
-            Katalog tugas &amp; tanggung jawab
+            {t("Katalog tugas & tanggung jawab")}
           </h2>
           <p className="mt-1 mb-3 max-w-3xl text-table text-muted">
-            Seluruh unit Level 0 beserta peran, tugas, dan output utamanya.
+            {t("Seluruh unit Level 0 beserta peran, tugas, dan output utamanya.")}
           </p>
           <ResponsibilityCatalog onOpenUnit={(unitId) => open("unit", unitId)} />
         </section>

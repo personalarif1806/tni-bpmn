@@ -8,6 +8,7 @@
  */
 import { layout } from "@/data";
 import { MATRIX_SCOPES, buildMatrix } from "@/lib/matrix";
+import { t } from "@/lib/i18n";
 
 export interface ExportCell {
   /** The RASCI letter, or "" where the unit has no role at this stage. */
@@ -25,7 +26,7 @@ export interface ExportSheet {
   columnWidths: number[];
 }
 
-const HEADERS = ["Kelompok", "Unit"];
+const HEADERS = [t("Kelompok"), t("Unit")];
 
 /** Excel rejects these in a sheet name, and caps the name at 31 characters. */
 function sheetName(label: string): string {
@@ -60,7 +61,7 @@ export function buildExportWorkbook(): ExportSheet[] {
 
             const roleName = layout.RAS_LBL[cell.role];
             const flag = cell.needsConfirmation
-              ? "\n\nPeran ini masih perlu dikonfirmasi pemilik proses."
+              ? t("\n\nPeran ini masih perlu dikonfirmasi pemilik proses.")
               : "";
 
             return {
@@ -108,7 +109,7 @@ export function createWorkbook(XLSX: SheetJS) {
         const address = XLSX.utils.encode_cell({ r: rowIndex, c: columnIndex });
         const target = worksheet[address];
         if (!target) return;
-        target.c = [{ a: "Peta Proses Bisnis", t: cell.comment }];
+        target.c = [{ a: t("Peta Proses Bisnis"), t: cell.comment }];
       });
     });
 

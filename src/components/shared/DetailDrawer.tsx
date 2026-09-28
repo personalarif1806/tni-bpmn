@@ -8,6 +8,7 @@ import {
   PANEL_SHRINK_QUERY,
   PANEL_WIDTH,
 } from "@/lib/panel";
+import { t } from "@/lib/i18n";
 
 /**
  * The detail panel — PRD 8.4. One drawer, three content variants. It is a
@@ -110,7 +111,7 @@ export function DetailDrawer({
             ref={closeRef}
             type="button"
             onClick={onClose}
-            aria-label="Tutup panel detail"
+            aria-label={t("Tutup panel detail")}
             className="flex h-8 w-8 shrink-0 items-center justify-center border border-line text-muted transition-colors hover:bg-paper"
             style={{ transitionDuration: "var(--hover-duration)" }}
           >

@@ -6,6 +6,7 @@
  */
 import { getDepartment, getProcess, getStage, getUnit } from "@/data";
 import { stageDetails } from "@/lib/crosslinks";
+import { t } from "@/lib/i18n";
 
 export type OriginKind = "stage" | "unit" | "dept" | "process";
 
@@ -44,7 +45,7 @@ export function originLabel(origin: Origin): { code?: string; title: string } | 
     if (!stage) return null;
     const profitCenter = stage.pcId ? getUnit(stage.pcId) : undefined;
     return {
-      code: stage.kind === "pc" ? `Langkah ${stage.stepIndex}` : undefined,
+      code: stage.kind === "pc" ? `${t("Langkah")} ${stage.stepIndex}` : undefined,
       title: profitCenter ? `${stage.title} · ${profitCenter.name}` : stage.title,
     };
   }

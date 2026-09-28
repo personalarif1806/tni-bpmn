@@ -9,6 +9,7 @@ import {
   stepToL0,
   unitToProcesses,
 } from "./crosslinks";
+import { getUnit } from "@/data";
 
 describe("stage → Level 1", () => {
   test("a lane step resolves to its process and step numbers", () => {
@@ -49,7 +50,7 @@ describe("stepToL0", () => {
     expect(ref?.stageId).toBe("lab_2");
     expect(ref?.profitCenterId).toBe("lab");
     expect(ref?.stepIndex).toBe(2);
-    expect(ref?.title).toBe("Sampling / sample receipt & registration");
+    expect(ref?.title).toBe(getUnit("lab")?.steps?.[1]);
   });
 
   test("covers every key listed in STEP2L1 and nothing else", () => {

@@ -11,6 +11,7 @@ import {
   type MatrixColumn,
 } from "@/lib/matrix";
 import { exportMatrixWorkbook } from "@/lib/matrix-export";
+import { t } from "@/lib/i18n";
 
 /**
  * Involvement matrix — PRD 8.5. One tab per scope, RASCI badges in the cells,
@@ -44,7 +45,7 @@ export function InvolvementMatrix({
   return (
     <div className="flex flex-col gap-3">
       <div className="flex flex-wrap items-end justify-between gap-2">
-        <div role="tablist" aria-label="Lingkup matriks" className="flex flex-wrap">
+        <div role="tablist" aria-label={t("Lingkup matriks")} className="flex flex-wrap">
         {MATRIX_SCOPES.map((tab) => {
           const isActive = tab.id === scopeId;
           return (
@@ -88,14 +89,14 @@ export function InvolvementMatrix({
             ) : (
               <Download size={14} aria-hidden="true" className="text-muted" />
             )}
-            Ekspor XLSX
+            {t("Ekspor XLSX")}
           </button>
           <p aria-live="polite" className="text-badge text-muted">
             {exportState === "working"
-              ? "Menyiapkan berkas…"
+              ? t("Menyiapkan berkas…")
               : exportState === "failed"
-                ? "Ekspor gagal, coba lagi."
-                : "5 sheet, satu per lingkup"}
+                ? t("Ekspor gagal, coba lagi.")
+                : t("5 sheet, satu per lingkup")}
           </p>
         </div>
       </div>
@@ -125,7 +126,7 @@ export function InvolvementMatrix({
         >
           <table className="w-full border-collapse text-table">
             <caption className="sr-only">
-              Matriks keterlibatan unit pada tahapan {scope.label}
+              {t("Matriks keterlibatan unit pada tahapan")} {scope.label}
             </caption>
             <thead>
               <tr>
@@ -149,14 +150,14 @@ export function InvolvementMatrix({
                     >
                       {column.index ? (
                         <span className="text-badge text-muted tabular-nums">
-                          Langkah {column.index}
+                          {t("Langkah")} {column.index}
                         </span>
                       ) : null}
                       <span className="text-label leading-tight font-demi text-ink">
                         {column.title}
                       </span>
                       <span className="text-badge text-cobalt">
-                        Buka di peta
+                        {t("Buka di peta")}
                       </span>
                     </button>
                   </th>
@@ -227,7 +228,9 @@ function Cell({
     return (
       <td className="border-r border-b border-line px-2 py-1.5 text-center text-muted last:border-r-0">
         <span aria-hidden="true">·</span>
-        <span className="sr-only">{unitName} — {stageName} — tidak terlibat</span>
+        <span className="sr-only">
+          {unitName} — {stageName} — {t("tidak terlibat")}
+        </span>
       </td>
     );
   }

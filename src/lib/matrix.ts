@@ -16,6 +16,7 @@ import {
   units,
 } from "@/data";
 import type { InvolvementKind, RasciRole } from "@/data/types";
+import { t } from "@/lib/i18n";
 
 export interface MatrixColumn {
   stageId: string;
@@ -94,7 +95,7 @@ function rowLabel(rowId: string): { name: string; sub?: string } {
 export const MATRIX_SCOPES: MatrixScope[] = [
   {
     id: "vc",
-    label: "Value chain",
+    label: t("Value chain"),
     columns: layout.VC.map((stageId) => ({
       stageId,
       title: getUnit(stageId)?.name ?? stageId,

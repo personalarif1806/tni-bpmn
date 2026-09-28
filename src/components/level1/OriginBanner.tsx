@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { ReturnLink } from "@/components/shared/CrossLevelLink";
 import { useMotionConfig } from "@/hooks/useMotionConfig";
 import { originLabel, originUrl, type Origin } from "@/lib/cross-level";
+import { t } from "@/lib/i18n";
 
 /**
  * Origin banner — PRD 9 and 10. Shown when a process was opened from Level 0;
@@ -27,7 +28,7 @@ export function OriginBanner({
     >
       <div className="flex flex-wrap items-center gap-x-3 gap-y-2 border-l-4 border-yellow bg-yellow/15 px-3 py-2">
         <p className="text-table text-ink">
-          Dibuka dari Level 0:{" "}
+          {t("Dibuka dari Level 0:")}{" "}
           <span className="font-demi">
             {label.code ? `${label.code} · ` : ""}
             {label.title}
@@ -35,7 +36,7 @@ export function OriginBanner({
         </p>
         <ReturnLink
           to={originUrl(origin, { kind: "process", id: processId })}
-          label="Kembali ke Level 0"
+          label={t("Kembali ke Level 0")}
         />
       </div>
     </motion.div>

@@ -4,6 +4,7 @@ import {
   EXTERNAL_COLUMN_WIDTH,
   type ExternalEntry,
 } from "@/lib/layout-l0";
+import { t } from "@/lib/i18n";
 
 /**
  * External parties flanking the core process — PRD 8.2 step 5. Inputs on the
@@ -41,7 +42,7 @@ export function ExternalColumn({
           <button
             type="button"
             onClick={() => select("unit", entry.unitId)}
-            aria-label={`${entry.name} — lihat detail pihak eksternal`}
+            aria-label={`${entry.name} — ${t("lihat detail pihak eksternal")}`}
             className="flex flex-col gap-1 border border-teal bg-white px-2 py-1.5 text-left transition-colors hover:bg-paper"
             style={{ transitionDuration: "var(--hover-duration)" }}
           >
@@ -58,7 +59,7 @@ export function ExternalColumn({
             </span>
             {entry.source ? (
               <span className="text-badge leading-tight text-muted">
-                Dari: {entry.source}
+                {t("Dari")}: {entry.source}
               </span>
             ) : null}
           </button>

@@ -5,6 +5,7 @@ import type { Process } from "@/data/types";
 import { processOrigin } from "@/lib/crosslinks";
 import { level0Url } from "@/lib/cross-level";
 import { GROUP_ACCENT } from "@/lib/process-groups";
+import { t } from "@/lib/i18n";
 
 /** Process header — PRD 8.8: code chip, breadcrumb, title, purpose, origin row. */
 export function ProcessHeader({ process }: { process: Process }) {
@@ -17,7 +18,7 @@ export function ProcessHeader({ process }: { process: Process }) {
       ? [
           {
             to: level0Url({ kind: "stage", id: origin.stageId }, { from: back }),
-            label: "Tahapan value chain",
+            label: t("Tahapan value chain"),
           },
         ]
       : []),
@@ -29,7 +30,7 @@ export function ProcessHeader({ process }: { process: Process }) {
 
   return (
     <header className="flex flex-col gap-3">
-      <nav aria-label="Posisi pada Level 0">
+      <nav aria-label={t("Posisi pada Level 0")}>
         <ol className="flex flex-wrap items-center gap-1 text-badge text-muted">
           <li>Level 0</li>
           {breadcrumb.map((crumb) => (
@@ -55,7 +56,7 @@ export function ProcessHeader({ process }: { process: Process }) {
       {originLinks.length > 0 ? (
         <div className="flex flex-wrap items-center gap-2 print:hidden">
           <span className="text-badge font-medium text-muted">
-            Posisi di Level 0
+            {t("Posisi di Level 0")}
           </span>
           {originLinks.map((link) => (
             <Link

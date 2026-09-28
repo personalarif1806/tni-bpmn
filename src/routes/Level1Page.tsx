@@ -11,6 +11,7 @@ import {
   ToolbarGroup,
   ToolbarSlot,
 } from "@/components/shell/Toolbar";
+import { t } from "@/lib/i18n";
 
 /** Level 1 — process architecture overview (PRD 8.7). */
 export function Level1Page() {
@@ -23,14 +24,14 @@ export function Level1Page() {
           <ProcessSelect activeId="" />
           <ToolbarButton
             icon={<Printer size={14} />}
-            label="Cetak"
-            title="Cetak halaman ini"
+            label={t("Cetak")}
+            title={t("Cetak halaman ini")}
             onClick={printPage}
           />
           <ToolbarButton
             icon={<PrinterIcon size={14} />}
-            label="Cetak semua"
-            title="Cetak semua proses"
+            label={t("Cetak semua")}
+            title={t("Cetak semua proses")}
             onClick={startPrintAll}
           />
         </ToolbarGroup>
@@ -45,12 +46,12 @@ export function Level1Page() {
       >
         <header className="flex flex-col gap-2">
           <h1 className="text-display leading-tight font-demi">
-            Arsitektur proses Level 1
+            {t("Arsitektur proses Level 1")}
           </h1>
           <p className="max-w-3xl text-body text-muted">
-            Dua puluh proses end-to-end dalam empat kelompok. Core Business
-            Process digambar sebagai rantai, dengan empat lajur profit center
-            berjalan paralel pada tahap C4.
+            {t(
+              "Dua puluh proses end-to-end dalam empat kelompok. Core Business Process digambar sebagai rantai, dengan empat lajur profit center berjalan paralel pada tahap C4.",
+            )}
           </p>
         </header>
 
@@ -58,7 +59,7 @@ export function Level1Page() {
 
         <section aria-labelledby="index-title" className="flex flex-col gap-2">
           <h2 id="index-title" className="text-title font-demi">
-            Daftar proses
+            {t("Daftar proses")}
           </h2>
           <ProcessIndexTable />
         </section>

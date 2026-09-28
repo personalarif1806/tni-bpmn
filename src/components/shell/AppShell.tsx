@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { Outlet, useLocation } from "react-router";
 import { AnimatePresence, motion } from "motion/react";
+import { LanguageToggle } from "@/components/shell/LanguageToggle";
 import { LevelTabs } from "@/components/shell/LevelTabs";
 import { SearchBox } from "@/components/shell/SearchBox";
 import { ToolbarContainerProvider } from "@/components/shell/Toolbar";
 import { useMotionConfig } from "@/hooks/useMotionConfig";
 import { levelFromPathname } from "@/lib/levels";
+import { t } from "@/lib/i18n";
 
 /**
  * Application frame: sticky white header with the title, the level switch, and
@@ -31,14 +33,14 @@ export function AppShell() {
         href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:border focus:border-cobalt focus:bg-white focus:px-3 focus:py-2 focus:text-label focus:font-medium"
       >
-        Lewati ke konten utama
+        {t("Lewati ke konten utama")}
       </a>
 
       <header className="sticky top-0 z-30 border-b border-line bg-white max-[899px]:static print:hidden">
         <div className="flex h-(--header-h) items-stretch gap-2 pr-3 pl-4 md:gap-4">
           <div className="flex min-w-0 flex-col justify-center">
             <span className="truncate text-title font-demi tracking-tight">
-              Peta Proses Bisnis
+              {t("Peta Proses Bisnis")}
             </span>
             <span className="truncate text-label text-muted">
               PT TÜV NORD Indonesia
@@ -57,6 +59,12 @@ export function AppShell() {
             ref={setToolbar}
             className="ml-auto flex min-w-0 items-center gap-1.5 overflow-x-auto"
           />
+
+          {/* Outside the toolbar slot: the language switch belongs to the app,
+              not to whichever level happens to be open. */}
+          <div className="flex shrink-0 items-center self-center">
+            <LanguageToggle />
+          </div>
         </div>
       </header>
 

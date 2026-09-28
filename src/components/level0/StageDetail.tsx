@@ -9,6 +9,7 @@ import { useDetailPanel } from "@/hooks/useDetailPanel";
 import { ProcessLink } from "@/components/shared/CrossLevelLink";
 import { PanelSection } from "@/components/shared/PanelSection";
 import { stageJumpTargets } from "@/lib/cross-level";
+import { t } from "@/lib/i18n";
 
 /** Stage panel — PRD 8.4: who is involved in one stage, grouped A → R → S → C → I. */
 export function StageDetail({ stage }: { stage: Stage }) {
@@ -71,7 +72,7 @@ export function StageDetail({ stage }: { stage: Stage }) {
 
   return (
     <>
-      <section aria-label="Ringkasan peran" className="flex flex-wrap gap-3">
+      <section aria-label={t("Ringkasan peran")} className="flex flex-wrap gap-3">
         {layout.RAS.map((role) => {
           const total = stage.involvement.filter(
             (row) => row.role === role,
@@ -106,12 +107,12 @@ export function StageDetail({ stage }: { stage: Stage }) {
       ))}
 
       {jumpTargets.length > 0 ? (
-        <PanelSection title="Detail di Level 1" count={jumpTargets.length}>
+        <PanelSection title={t("Detail di Level 1")} count={jumpTargets.length}>
           {jumpTargets.map((target) => (
             <div key={target.processId} className="flex flex-col gap-1">
               {target.numbers.length > 0 ? (
                 <p className="text-badge text-muted">
-                  Langkah{" "}
+                  {t("Langkah")}{" "}
                   <span className="font-medium text-ink">
                     {target.numbers.join(", ")}
                   </span>
@@ -122,7 +123,7 @@ export function StageDetail({ stage }: { stage: Stage }) {
                 to={target.href}
                 note={
                   target.numbers.length === 0
-                    ? "Seluruh proses merinci tahapan ini"
+                    ? t("Seluruh proses merinci tahapan ini")
                     : undefined
                 }
               />
@@ -132,8 +133,9 @@ export function StageDetail({ stage }: { stage: Stage }) {
       ) : null}
 
       <DraftNote>
-        Pembagian peran RASCI pada tahapan ini masih draft dan menunggu
-        validasi pemilik proses.
+        {t(
+          "Pembagian peran RASCI pada tahapan ini masih draft dan menunggu validasi pemilik proses.",
+        )}
       </DraftNote>
     </>
   );

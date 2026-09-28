@@ -21,6 +21,7 @@ import { useMotionConfig } from "@/hooks/useMotionConfig";
 import { parseOrigin, parseSteps } from "@/lib/cross-level";
 import { LANE_HEADER_WIDTH, buildSwimlaneLayout } from "@/lib/layout-l1";
 import { isOutsideViewport } from "@/lib/scroll";
+import { t } from "@/lib/i18n";
 
 const SIDEBAR_QUERY = "(min-width: 900px)";
 
@@ -105,18 +106,18 @@ export function Level1ProcessPage() {
           style={{ transitionDuration: "var(--hover-duration)" }}
         >
           <Network size={14} aria-hidden="true" className="text-muted" />
-          <span className="hidden sm:inline">Arsitektur</span>
+          <span className="hidden sm:inline">{t("Arsitektur")}</span>
         </Link>
         <ToolbarButton
           icon={<Printer size={14} />}
-          label="Cetak"
-          title="Cetak halaman ini"
+          label={t("Cetak")}
+          title={t("Cetak halaman ini")}
           onClick={printPage}
         />
         <ToolbarButton
           icon={<PrinterIcon size={14} />}
-          label="Cetak semua"
-          title="Cetak semua proses"
+          label={t("Cetak semua")}
+          title={t("Cetak semua proses")}
           onClick={startPrintAll}
         />
       </ToolbarGroup>
@@ -128,15 +129,16 @@ export function Level1ProcessPage() {
       <>
         {toolbar}
         <div className="mx-auto max-w-3xl px-4 py-12">
-          <h1 className="text-title font-demi">Proses tidak ditemukan</h1>
+          <h1 className="text-title font-demi">{t("Proses tidak ditemukan")}</h1>
           <p className="mt-2 text-body text-muted">
-            Kode proses “{processId}” tidak ada dalam daftar 20 proses Level 1.
+            {t("Kode proses")} “{processId}”{" "}
+            {t("tidak ada dalam daftar 20 proses Level 1.")}
           </p>
           <Link
             to="/level-1"
             className="mt-4 inline-block text-body text-cobalt hover:underline"
           >
-            Lihat arsitektur proses
+            {t("Lihat arsitektur proses")}
           </Link>
         </div>
       </>
@@ -164,7 +166,7 @@ export function Level1ProcessPage() {
 
           <section aria-labelledby="swimlane-title" className="flex flex-col gap-2">
             <h2 id="swimlane-title" className="text-title font-demi">
-              Alur proses
+              {t("Alur proses")}
             </h2>
             <Swimlane
               layout={layout}
@@ -177,7 +179,7 @@ export function Level1ProcessPage() {
 
           <section aria-labelledby="steps-title" className="flex flex-col gap-2">
             <h2 id="steps-title" className="text-title font-demi">
-              Uraian langkah
+              {t("Uraian langkah")}
             </h2>
             <div ref={tableRef}>
               <StepTable

@@ -1,6 +1,7 @@
 import { NavLink } from "react-router";
 import { listProcessGroups } from "@/data";
 import { GROUP_ACCENT } from "@/lib/process-groups";
+import { t } from "@/lib/i18n";
 
 /**
  * Sidebar listing all 20 processes, grouped M / G / C / S (PRD 8.8).
@@ -9,7 +10,7 @@ import { GROUP_ACCENT } from "@/lib/process-groups";
 export function ProcessSidebar({ activeId }: { activeId?: string }) {
   return (
     <nav
-      aria-label="Daftar proses Level 1"
+      aria-label={t("Daftar proses Level 1")}
       className="w-64 shrink-0 border-r border-line bg-white print:hidden"
     >
       <div className="sticky top-(--header-h) max-h-[calc(100dvh-var(--header-h))] overflow-y-auto py-3">

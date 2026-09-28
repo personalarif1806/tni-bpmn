@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { t } from "@/lib/i18n";
 
 /** A titled block inside the detail panel. */
 export function PanelSection({
@@ -73,7 +74,7 @@ export function DraftNote({ children }: { children: ReactNode }) {
 export function ConfirmationBadge() {
   return (
     <span className="w-fit border border-orange px-1.5 py-0.5 text-badge font-medium text-orange-ink">
-      Peran perlu dikonfirmasi
+      {t("Peran perlu dikonfirmasi")}
     </span>
   );
 }
