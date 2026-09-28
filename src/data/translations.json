@@ -91,6 +91,10 @@
   "en": "Analysts & technicians",
   "id": "Analis & teknisi"
  },
+ "Analisis Kebutuhan & Pengembangan Sistem": {
+  "en": "Requirements Analysis & System Development",
+  "id": "Analisis Kebutuhan & Pengembangan Sistem"
+ },
  "Analisis akar masalah & CAPA": {
   "en": "Root cause analysis & CAPA",
   "id": "Analisis akar masalah & CAPA"
@@ -271,6 +275,14 @@
   "en": "The BU explains the cause of the variance and its action plan.",
   "id": "BU menjelaskan penyebab varians dan rencana tindakan."
  },
+ "Backlog": {
+  "en": "Backlog",
+  "id": "Backlog"
+ },
+ "Backlog demand": {
+  "en": "Demand backlog",
+  "id": "Backlog demand"
+ },
  "Badan akreditasi menutup temuan dan memutuskan kelanjutan akreditasi.": {
   "en": "The accreditation body closes the findings and decides on the continuation of accreditation.",
   "id": "Badan akreditasi menutup temuan dan memutuskan kelanjutan akreditasi."
@@ -278,6 +290,14 @@
  "Banding": {
   "en": "Appeal",
   "id": "Banding"
+ },
+ "Basis pengetahuan": {
+  "en": "Knowledge base",
+  "id": "Basis pengetahuan"
+ },
+ "Batas waktu tanggap dan waktu selesai yang disepakati untuk tiap tingkat prioritas.": {
+  "en": "The agreed response and resolution times for each priority level.",
+  "id": "Batas waktu tanggap dan waktu selesai yang disepakati untuk tiap tingkat prioritas."
  },
  "Bekerja & penilaian kinerja": {
   "en": "Work & performance appraisal",
@@ -287,6 +307,10 @@
   "en": "Not yet",
   "id": "Belum"
  },
+ "Belum ada proses yang dirinci sampai Level 2.": {
+  "en": "No process has been detailed down to Level 2 yet.",
+  "id": "Belum ada proses yang dirinci sampai Level 2."
+ },
  "Bentuk dan warna": {
   "en": "Shape and colour",
   "id": "Bentuk dan warna"
@@ -294,6 +318,14 @@
  "Berita acara UAT": {
   "en": "UAT sign-off record",
   "id": "Berita acara UAT"
+ },
+ "Berita acara migrasi data": {
+  "en": "Data migration record",
+  "id": "Berita acara migrasi data"
+ },
+ "Berita acara tinjauan hak akses": {
+  "en": "Access rights review record",
+  "id": "Berita acara tinjauan hak akses"
  },
  "Berkas pemeriksaan": {
   "en": "Examination file",
@@ -331,9 +363,17 @@
   "en": "Cost per lead",
   "id": "Biaya per lead"
  },
+ "Bila batas waktu tanggap terlampaui atau diperlukan keahlian lain, IT mengeskalasi ke jenjang berikutnya atau ke vendor.": {
+  "en": "Where the response time is exceeded or other expertise is needed, IT escalates to the next level or to the vendor.",
+  "id": "Bila batas waktu tanggap terlampaui atau diperlukan keahlian lain, IT mengeskalasi ke jenjang berikutnya atau ke vendor."
+ },
  "Bila perlu, IT mengotomasi atau mengubah sistem untuk mendukung perbaikan.": {
   "en": "Where needed, IT automates or changes systems to support the improvement.",
   "id": "Bila perlu, IT mengotomasi atau mengubah sistem untuk mendukung perbaikan."
+ },
+ "Bila rilis tidak memenuhi kriteria penerimaan, IT menjalankan rencana pemulihan dan melaporkannya kepada Steering digital.": {
+  "en": "If the release does not meet the acceptance criteria, IT executes the rollback plan and reports it to Digital steering.",
+  "id": "Bila rilis tidak memenuhi kriteria penerimaan, IT menjalankan rencana pemulihan dan melaporkannya kepada Steering digital."
  },
  "Billing, Closure & Customer Feedback": {
   "en": "Billing, Closure & Customer Feedback",
@@ -479,6 +519,10 @@
   "en": "CSS",
   "id": "CSS"
  },
+ "Cadangan": {
+  "en": "Backup",
+  "id": "Cadangan"
+ },
  "Campaign & marketing kit": {
   "en": "Campaign & marketing kit",
   "id": "Kampanye & marketing kit"
@@ -511,9 +555,17 @@
   "en": "Note",
   "id": "Catatan"
  },
+ "Catatan eskalasi": {
+  "en": "Escalation record",
+  "id": "Catatan eskalasi"
+ },
  "Catatan inspeksi": {
   "en": "Inspection records",
   "id": "Catatan inspeksi"
+ },
+ "Catatan otomatis tentang siapa mengubah apa dan kapan.": {
+  "en": "An automatic record of who changed what, and when.",
+  "id": "Catatan otomatis tentang siapa mengubah apa dan kapan."
  },
  "Catatan penagihan": {
   "en": "Collection record",
@@ -522,6 +574,18 @@
  "Catatan penerimaan": {
   "en": "Receipt record",
   "id": "Catatan penerimaan"
+ },
+ "Catatan rilis": {
+  "en": "Release record",
+  "id": "Catatan rilis"
+ },
+ "Catatan temuan UAT": {
+  "en": "UAT findings record",
+  "id": "Catatan temuan UAT"
+ },
+ "Catatan uji internal": {
+  "en": "Internal test record",
+  "id": "Catatan uji internal"
  },
  "Cek klaim & logo akreditasi": {
   "en": "Check claims & accreditation logos",
@@ -759,6 +823,18 @@
   "en": "Index of the 20 Level 1 processes",
   "id": "Daftar 20 proses Level 1"
  },
+ "Daftar demand yang diterima tetapi belum dijadwalkan.": {
+  "en": "The list of accepted demands that are not yet scheduled.",
+  "id": "Daftar demand yang diterima tetapi belum dijadwalkan."
+ },
+ "Daftar hadir pelatihan": {
+  "en": "Training attendance list",
+  "id": "Daftar hadir pelatihan"
+ },
+ "Daftar inisiatif yang disepakati untuk dikerjakan pada periode berjalan beserta urutannya.": {
+  "en": "The agreed list of initiatives to be delivered in the current period, in order.",
+  "id": "Daftar inisiatif yang disepakati untuk dikerjakan pada periode berjalan beserta urutannya."
+ },
  "Daftar izin": {
   "en": "Licence list",
   "id": "Daftar izin"
@@ -811,9 +887,21 @@
   "en": "Defined scope of service",
   "id": "Ruang lingkup layanan yang ditetapkan"
  },
+ "Definisi": {
+  "en": "Definitions",
+  "id": "Definisi"
+ },
  "Delivery confirmation": {
   "en": "Delivery confirmation",
   "id": "Konfirmasi penyerahan"
+ },
+ "Demand": {
+  "en": "Demand",
+  "id": "Demand"
+ },
+ "Demand pengembangan": {
+  "en": "Development demand",
+  "id": "Demand pengembangan"
  },
  "Departemen": {
   "en": "Department",
@@ -943,9 +1031,21 @@
   "en": "Approved by the HoD?",
   "id": "Disetujui HoD?"
  },
+ "Disetujui oleh": {
+  "en": "Approved by",
+  "id": "Disetujui oleh"
+ },
  "Diskon di atas batas atau klausul kontrak di luar template.": {
   "en": "Discount above the limit, or contract clauses outside the template.",
   "id": "Diskon di atas batas atau klausul kontrak di luar template."
+ },
+ "Disusun oleh": {
+  "en": "Prepared by",
+  "id": "Disusun oleh"
+ },
+ "Ditinjau oleh": {
+  "en": "Reviewed by",
+  "id": "Ditinjau oleh"
  },
  "Ditunda / ditolak": {
   "en": "Deferred / rejected",
@@ -978,6 +1078,22 @@
  "Divisi Systems, Innovation & Digitalization (Business Partner)": {
   "en": "Systems, Innovation & Digitalization Division (Business Partner)",
   "id": "Divisi Systems, Innovation & Digitalization (Business Partner)"
+ },
+ "Dokumen persetujuan pengguna yang menjadi dasar rilis ke produksi.": {
+  "en": "The user sign-off document on which release to production rests.",
+  "id": "Dokumen persetujuan pengguna yang menjadi dasar rilis ke produksi."
+ },
+ "Dokumen terkendali yang merinci langkah Level 1 menjadi instruksi kerja. Satu prosedur menaungi satu kegiatan utuh, bukan satu kotak diagram, dan setiap langkah proses dirinci tepat oleh satu prosedur.": {
+  "en": "The controlled documents that break Level 1 steps down into work instructions. One procedure covers a whole activity rather than a single diagram box, and every step of a process is detailed by exactly one of them.",
+  "id": "Dokumen terkendali yang merinci langkah Level 1 menjadi instruksi kerja. Satu prosedur menaungi satu kegiatan utuh, bukan satu kotak diagram, dan setiap langkah proses dirinci tepat oleh satu prosedur."
+ },
+ "Dokumen terkendali yang merinci langkah di atas menjadi instruksi kerja.": {
+  "en": "The controlled documents that break the steps above down into work instructions.",
+  "id": "Dokumen terkendali yang merinci langkah di atas menjadi instruksi kerja."
+ },
+ "Dokumen yang menetapkan alur proses, aturan bisnis, peran pengguna, dan keluaran sistem.": {
+  "en": "The document that sets out the process flow, business rules, user roles, and system outputs.",
+  "id": "Dokumen yang menetapkan alur proses, aturan bisnis, peran pengguna, dan keluaran sistem."
  },
  "Draft RKAP & KPI": {
   "en": "Draft annual plan & KPIs",
@@ -1046,6 +1162,10 @@
  "Equipment, reagent & material supply": {
   "en": "Equipment, reagent & material supply",
   "id": "Pasokan peralatan, reagen & bahan"
+ },
+ "Eskalasi": {
+  "en": "Escalation",
+  "id": "Eskalasi"
  },
  "Evaluasi & persetujuan vendor": {
   "en": "Vendor evaluation & approval",
@@ -1139,9 +1259,17 @@
   "en": "Idea form",
   "id": "Formulir ide"
  },
+ "Forum keputusan yang terdiri atas HoD SID dan Direksi.": {
+  "en": "The decision forum made up of the HoD SID and the Board of Directors.",
+  "id": "Forum keputusan yang terdiri atas HoD SID dan Direksi."
+ },
  "GS": {
   "en": "GS",
   "id": "GS"
+ },
+ "Gangguan tidak terencana yang menurunkan atau menghentikan layanan TI.": {
+  "en": "An unplanned interruption that degrades or stops an IT service.",
+  "id": "Gangguan tidak terencana yang menurunkan atau menghentikan layanan TI."
  },
  "Garis koordinasi": {
   "en": "Coordination line",
@@ -1170,6 +1298,10 @@
  "HC": {
   "en": "HC",
   "id": "HC"
+ },
+ "Hak akses": {
+  "en": "Access rights",
+  "id": "Hak akses"
  },
  "Hasil & data QC": {
   "en": "Results & QC data",
@@ -1218,6 +1350,10 @@
  "Headcount disetujui": {
   "en": "Headcount approved",
   "id": "Headcount disetujui"
+ },
+ "Helpdesk memverifikasi kelengkapan informasi; tiket yang belum jelas dikembalikan kepada pengguna untuk dilengkapi.": {
+  "en": "The helpdesk checks that the information is complete; an unclear ticket goes back to the user to be completed.",
+  "id": "Helpdesk memverifikasi kelengkapan informasi; tiket yang belum jelas dikembalikan kepada pengguna untuk dilengkapi."
  },
  "Hit rate penawaran": {
   "en": "Quotation hit rate",
@@ -1303,6 +1439,10 @@
   "en": "ISO/IEC 17021-1, 17025, 17020, 17065; KAN requirements",
   "id": "ISO/IEC 17021-1, 17025, 17020, 17065; persyaratan KAN"
  },
+ "ISO/IEC 17021-1:2015 klausul 8.4 (kerahasiaan)": {
+  "en": "ISO/IEC 17021-1:2015 clause 8.4 (confidentiality)",
+  "id": "ISO/IEC 17021-1:2015 klausul 8.4 (kerahasiaan)"
+ },
  "ISO/IEC 17021-1:2015 klausul 9; IAF MD 5 (durasi audit); persyaratan KAN dan pemilik skema": {
   "en": "ISO/IEC 17021-1:2015 clause 9; IAF MD 5 (audit duration); KAN and scheme owner requirements",
   "id": "ISO/IEC 17021-1:2015 klausul 9; IAF MD 5 (durasi audit); persyaratan KAN dan pemilik skema"
@@ -1310,6 +1450,14 @@
  "ISO/IEC 17025 (7.1), 17021-1 (9.1), 17020 (7.1), 17065 (7.1–7.2)": {
   "en": "ISO/IEC 17025 (7.1), 17021-1 (9.1), 17020 (7.1), 17065 (7.1–7.2)",
   "id": "ISO/IEC 17025 (7.1), 17021-1 (9.1), 17020 (7.1), 17065 (7.1–7.2)"
+ },
+ "ISO/IEC 17025:2017 klausul 7.11": {
+  "en": "ISO/IEC 17025:2017 clause 7.11",
+  "id": "ISO/IEC 17025:2017 klausul 7.11"
+ },
+ "ISO/IEC 17025:2017 klausul 7.11 (pengendalian data dan manajemen informasi)": {
+  "en": "ISO/IEC 17025:2017 clause 7.11 (control of data and information management)",
+  "id": "ISO/IEC 17025:2017 klausul 7.11 (pengendalian data dan manajemen informasi)"
  },
  "ISO/IEC 17025:2017 klausul 7.1–7.11; Lab CTS Cikarang terakreditasi KAN LP-411 (pengujian) dan LK-109 (kalibrasi)": {
   "en": "ISO/IEC 17025:2017 clauses 7.1–7.11; CTS Cikarang Lab accredited by KAN as LP-411 (testing) and LK-109 (calibration)",
@@ -1323,9 +1471,97 @@
   "en": "IT & Digitalization",
   "id": "IT & Digitalization"
  },
+ "IT bersama unit pengguna menyusun spesifikasi fungsional: alur proses, aturan bisnis, peran, dan keluaran.": {
+  "en": "IT and the user unit together prepare the functional specification: process flow, business rules, roles, and outputs.",
+  "id": "IT bersama unit pengguna menyusun spesifikasi fungsional: alur proses, aturan bisnis, peran, dan keluaran."
+ },
+ "IT dan unit pengguna menyelenggarakan pelatihan serta menyerahkan panduan pengguna.": {
+  "en": "IT and the user unit run the training and hand over the user guide.",
+  "id": "IT dan unit pengguna menyelenggarakan pelatihan serta menyerahkan panduan pengguna."
+ },
+ "IT melakukan diagnosis awal dan menerapkan workaround bila tersedia agar pekerjaan pengguna dapat berjalan.": {
+  "en": "IT makes an initial diagnosis and applies a workaround where one exists, so the user can carry on working.",
+  "id": "IT melakukan diagnosis awal dan menerapkan workaround bila tersedia agar pekerjaan pengguna dapat berjalan."
+ },
+ "IT melakukan uji internal dan menutup temuan sebelum solusi diserahkan untuk pengujian penerimaan.": {
+  "en": "IT runs internal testing and closes the findings before the solution goes for acceptance testing.",
+  "id": "IT melakukan uji internal dan menutup temuan sebelum solusi diserahkan untuk pengujian penerimaan."
+ },
+ "IT memantau ketersediaan, kinerja, dan kapasitas sistem inti setiap hari kerja.": {
+  "en": "IT monitors the availability, performance, and capacity of the core systems every working day.",
+  "id": "IT memantau ketersediaan, kinerja, dan kapasitas sistem inti setiap hari kerja."
+ },
+ "IT membangun atau mengonfigurasi solusi di lingkungan pengembangan, terpisah dari produksi.": {
+  "en": "IT builds or configures the solution in the development environment, separate from production.",
+  "id": "IT membangun atau mengonfigurasi solusi di lingkungan pengembangan, terpisah dari produksi."
+ },
+ "IT memigrasikan data dan memverifikasi kelengkapan serta kecocokan jumlah rekaman sebelum dan sesudah migrasi.": {
+  "en": "IT migrates the data and verifies completeness and that record counts match before and after migration.",
+  "id": "IT memigrasikan data dan memverifikasi kelengkapan serta kecocokan jumlah rekaman sebelum dan sesudah migrasi."
+ },
+ "IT memperbaiki akar masalah dan menguji bahwa layanan kembali berfungsi.": {
+  "en": "IT fixes the root cause and tests that the service works again.",
+  "id": "IT memperbaiki akar masalah dan menguji bahwa layanan kembali berfungsi."
+ },
+ "IT memperbarui roadmap dan backlog, lalu menyampaikan hasilnya kepada unit pengusul.": {
+  "en": "IT updates the roadmap and backlog, then reports the outcome to the requesting unit.",
+  "id": "IT memperbarui roadmap dan backlog, lalu menyampaikan hasilnya kepada unit pengusul."
+ },
+ "IT menangani insiden keamanan informasi: pembendungan, pemulihan layanan, dan analisis akar masalah.": {
+  "en": "IT handles the information security incident: containment, service recovery, and root cause analysis.",
+  "id": "IT menangani insiden keamanan informasi: pembendungan, pemulihan layanan, dan analisis akar masalah."
+ },
+ "IT menerapkan kontrol keamanan: autentikasi, otorisasi berbasis peran, jejak audit, dan pelindungan data pribadi.": {
+  "en": "IT applies the security controls: authentication, role-based authorisation, audit trail, and personal data protection.",
+  "id": "IT menerapkan kontrol keamanan: autentikasi, otorisasi berbasis peran, jejak audit, dan pelindungan data pribadi."
+ },
+ "IT menetapkan prioritas tiket dari dampak dan urgensi sesuai matriks prioritas layanan.": {
+  "en": "IT sets the ticket priority from impact and urgency using the service priority matrix.",
+  "id": "IT menetapkan prioritas tiket dari dampak dan urgensi sesuai matriks prioritas layanan."
+ },
  "IT mengklasifikasikan permintaan menjadi insiden/layanan atau pengembangan.": {
   "en": "IT classifies the request as an incident/service or as development.",
   "id": "IT mengklasifikasikan permintaan menjadi insiden/layanan atau pengembangan."
+ },
+ "IT mengklasifikasikan tiket menjadi insiden, permintaan layanan, atau demand pengembangan.": {
+  "en": "IT classifies the ticket as an incident, a service request, or a development demand.",
+  "id": "IT mengklasifikasikan tiket menjadi insiden, permintaan layanan, atau demand pengembangan."
+ },
+ "IT meninjau hak akses pengguna sekurang-kurangnya setahun sekali dan mencabut akses yang tidak lagi diperlukan.": {
+  "en": "IT reviews user access rights at least once a year and revokes access that is no longer needed.",
+  "id": "IT meninjau hak akses pengguna sekurang-kurangnya setahun sekali dan mencabut akses yang tidak lagi diperlukan."
+ },
+ "IT menjalankan pencadangan sesuai jadwal dan menguji pemulihannya secara berkala.": {
+  "en": "IT runs backups to schedule and tests restoration periodically.",
+  "id": "IT menjalankan pencadangan sesuai jadwal dan menguji pemulihannya secara berkala."
+ },
+ "IT menutup tiket dan mencatat solusinya ke basis pengetahuan agar kasus serupa lebih cepat tertangani.": {
+  "en": "IT closes the ticket and records the solution in the knowledge base so similar cases are resolved faster.",
+  "id": "IT menutup tiket dan mencatat solusinya ke basis pengetahuan agar kasus serupa lebih cepat tertangani."
+ },
+ "IT menyiapkan lingkungan dan skenario UAT berdasarkan spesifikasi yang telah disetujui.": {
+  "en": "IT prepares the UAT environment and scenarios from the approved specification.",
+  "id": "IT menyiapkan lingkungan dan skenario UAT berdasarkan spesifikasi yang telah disetujui."
+ },
+ "IT menyusun laporan layanan TI bulanan: uptime, pencapaian SLA, insiden, dan status pencadangan.": {
+  "en": "IT prepares the monthly IT service report: uptime, SLA achievement, incidents, and backup status.",
+  "id": "IT menyusun laporan layanan TI bulanan: uptime, pencapaian SLA, insiden, dan status pencadangan."
+ },
+ "IT menyusun rancangan data dan rancangan integrasi dengan sistem lain.": {
+  "en": "IT prepares the data design and the design for integration with other systems.",
+  "id": "IT menyusun rancangan data dan rancangan integrasi dengan sistem lain."
+ },
+ "IT menyusun rencana rilis: jadwal, dampak terhadap layanan, penanggung jawab, dan rencana pemulihan.": {
+  "en": "IT draws up the release plan: schedule, service impact, who is responsible, and the rollback plan.",
+  "id": "IT menyusun rencana rilis: jadwal, dampak terhadap layanan, penanggung jawab, dan rencana pemulihan."
+ },
+ "IT merangkum demand: masalah yang dipecahkan, manfaat yang diharapkan, perkiraan usaha, dan ketergantungannya.": {
+  "en": "IT summarises the demand: the problem solved, the expected benefit, the effort estimate, and its dependencies.",
+  "id": "IT merangkum demand: masalah yang dipecahkan, manfaat yang diharapkan, perkiraan usaha, dan ketergantungannya."
+ },
+ "IT merilis ke produksi dan memantau stabilitas selama periode pengawasan yang ditetapkan.": {
+  "en": "IT releases to production and monitors stability through the defined watch period.",
+  "id": "IT merilis ke produksi dan memantau stabilitas selama periode pengawasan yang ditetapkan."
  },
  "Ide / peluang layanan baru": {
   "en": "New service idea / opportunity",
@@ -1403,6 +1639,10 @@
   "en": "Inquiry recorded",
   "id": "Inquiry tercatat"
  },
+ "Insiden": {
+  "en": "Incident",
+  "id": "Insiden"
+ },
  "Insiden / layanan": {
   "en": "Incident / service",
   "id": "Insiden / layanan"
@@ -1410,6 +1650,26 @@
  "Insiden K3 di lapangan (target nol)": {
   "en": "Field HSE incidents (target zero)",
   "id": "Insiden K3 di lapangan (target nol)"
+ },
+ "Insiden dan permintaan layanan diteruskan ke PR-IT-02; demand pengembangan diteruskan ke PR-IT-03.": {
+  "en": "Incidents and service requests pass to PR-IT-02; development demands pass to PR-IT-03.",
+  "id": "Insiden dan permintaan layanan diteruskan ke PR-IT-02; demand pengembangan diteruskan ke PR-IT-03."
+ },
+ "Insiden dan permintaan layanan pada sistem inti (SIMCert, SIMLab, SIMCal), platform bersama, infrastruktur jaringan, dan perangkat pengguna.": {
+  "en": "Incidents and service requests on the core systems (SIMCert, SIMLab, SIMCal), the shared platforms, the network infrastructure, and user devices.",
+  "id": "Insiden dan permintaan layanan pada sistem inti (SIMCert, SIMLab, SIMCal), platform bersama, infrastruktur jaringan, dan perangkat pengguna."
+ },
+ "Insiden keamanan informasi": {
+  "en": "Information security incident",
+  "id": "Insiden keamanan informasi"
+ },
+ "Insiden yang berdampak pada kerahasiaan, keutuhan, atau ketersediaan data ditangani pula melalui PR-IT-06.": {
+  "en": "An incident affecting the confidentiality, integrity, or availability of data is also handled through PR-IT-06.",
+  "id": "Insiden yang berdampak pada kerahasiaan, keutuhan, atau ketersediaan data ditangani pula melalui PR-IT-06."
+ },
+ "Insiden yang melibatkan data pribadi dilaporkan sesuai UU Pelindungan Data Pribadi, berkoordinasi dengan Legal Administration Support.": {
+  "en": "An incident involving personal data is reported as the Personal Data Protection Act requires, in coordination with Legal Administration Support.",
+  "id": "Insiden yang melibatkan data pribadi dilaporkan sesuai UU Pelindungan Data Pribadi, berkoordinasi dengan Legal Administration Support."
  },
  "Insight report": {
   "en": "Insight report",
@@ -1450,6 +1710,10 @@
  "Inspektor melaksanakan inspeksi di lokasi dan mencatat temuan.": {
   "en": "Inspectors carry out the inspection on site and record the findings.",
   "id": "Inspektor melaksanakan inspeksi di lokasi dan mencatat temuan."
+ },
+ "Instruksi kerja": {
+  "en": "Work instructions",
+  "id": "Instruksi kerja"
  },
  "Interaksi utama": {
   "en": "Key interactions",
@@ -1510,6 +1774,10 @@
  "Jaminan dan kepercayaan atas produk, proses, dan sistem yang tersertifikasi": {
   "en": "Assurance and trust in certified products, processes, and systems",
   "id": "Jaminan dan kepercayaan atas produk, proses, dan sistem yang tersertifikasi"
+ },
+ "Jejak audit": {
+  "en": "Audit trail",
+  "id": "Jejak audit"
  },
  "Jenis garis": {
   "en": "Line type",
@@ -1639,6 +1907,10 @@
   "en": "Group IT policy (K-RL 550), Personal Data Protection Act",
   "id": "Kebijakan TI Group (K-RL 550), UU PDP"
  },
+ "Kebijakan TI TÜV NORD Group (K-RL 550)": {
+  "en": "TÜV NORD Group IT policy (K-RL 550)",
+  "id": "Kebijakan TI TÜV NORD Group (K-RL 550)"
+ },
  "Kebijakan TÜV NORD Group, Anggaran Dasar perusahaan": {
   "en": "TÜV NORD Group policy, the company's Articles of Association",
   "id": "Kebijakan TÜV NORD Group, Anggaran Dasar perusahaan"
@@ -1686,6 +1958,14 @@
  "Kebutuhan terpenuhi": {
   "en": "Requirement met",
   "id": "Kebutuhan terpenuhi"
+ },
+ "Kegiatan": {
+  "en": "Activity",
+  "id": "Kegiatan"
+ },
+ "Kejadian yang mengancam kerahasiaan, keutuhan, atau ketersediaan informasi.": {
+  "en": "An event that threatens the confidentiality, integrity, or availability of information.",
+  "id": "Kejadian yang mengancam kerahasiaan, keutuhan, atau ketersediaan informasi."
  },
  "Kelompok": {
   "en": "Group",
@@ -1775,6 +2055,10 @@
   "en": "Customer decision",
   "id": "Keputusan pelanggan"
  },
+ "Keputusan roadmap": {
+  "en": "Roadmap decision",
+  "id": "Keputusan roadmap"
+ },
  "Keputusan sertifikasi": {
   "en": "Certification decision",
   "id": "Keputusan sertifikasi"
@@ -1798,6 +2082,10 @@
  "Ketersediaan sistem inti (uptime SIM's)": {
   "en": "Core system availability (SIM's uptime)",
   "id": "Ketersediaan sistem inti (uptime SIM's)"
+ },
+ "Kewenangan seorang pengguna atas data dan fungsi tertentu di dalam sistem.": {
+  "en": "What a given user is permitted to do with particular data and functions in a system.",
+  "id": "Kewenangan seorang pengguna atas data dan fungsi tertentu di dalam sistem."
  },
  "Key account & cross-selling": {
   "en": "Key account & cross-selling",
@@ -1835,6 +2123,10 @@
   "en": "Level 1 code",
   "id": "Kode Level 1"
  },
+ "Kode prosedur": {
+  "en": "Procedure code",
+  "id": "Kode prosedur"
+ },
  "Kode proses": {
   "en": "Process code",
   "id": "Kode proses"
@@ -1866,6 +2158,10 @@
  "Konfirmasi penerimaan keluhan dalam batas waktu": {
   "en": "Complaint receipt acknowledged within the time limit",
   "id": "Konfirmasi penerimaan keluhan dalam batas waktu"
+ },
+ "Konfirmasi pengguna": {
+  "en": "User confirmation",
+  "id": "Konfirmasi pengguna"
  },
  "Konfirmasi penyelesaian & data penagihan": {
   "en": "Completion confirmation & invoicing data",
@@ -2003,9 +2299,17 @@
   "en": "Level 1 step",
   "id": "Langkah Level 1"
  },
+ "Langkah Level 1 yang dirinci": {
+  "en": "Level 1 steps this details",
+  "id": "Langkah Level 1 yang dirinci"
+ },
  "Langkah lajur profit center": {
   "en": "Profit center lane step",
   "id": "Langkah lajur profit center"
+ },
+ "Langkah mengembalikan sistem ke kondisi sebelum rilis bila rilis gagal.": {
+  "en": "The steps that return the system to its pre-release state if a release fails.",
+  "id": "Langkah mengembalikan sistem ke kondisi sebelum rilis bila rilis gagal."
  },
  "Laporan / sertifikat inspeksi": {
   "en": "Inspection report / certificate",
@@ -2051,6 +2355,10 @@
   "en": "Impact report",
   "id": "Laporan dampak"
  },
+ "Laporan disampaikan kepada Steering digital sebagai masukan tinjauan.": {
+  "en": "The report goes to Digital steering as an input to its review.",
+  "id": "Laporan disampaikan kepada Steering digital sebagai masukan tinjauan."
+ },
  "Laporan evaluasi": {
   "en": "Evaluation report",
   "id": "Laporan evaluasi"
@@ -2066,6 +2374,14 @@
  "Laporan hasil uji, sertifikat kalibrasi, laporan inspeksi, dan sertifikat": {
   "en": "Test reports, calibration certificates, inspection reports, and certificates",
   "id": "Laporan hasil uji, sertifikat kalibrasi, laporan inspeksi, dan sertifikat"
+ },
+ "Laporan insiden": {
+  "en": "Incident report",
+  "id": "Laporan insiden"
+ },
+ "Laporan insiden keamanan informasi": {
+  "en": "Information security incident report",
+  "id": "Laporan insiden keamanan informasi"
  },
  "Laporan inspeksi": {
   "en": "Inspection report",
@@ -2099,6 +2415,10 @@
   "en": "IT service report",
   "id": "Laporan layanan TI"
  },
+ "Laporan layanan TI bulanan": {
+  "en": "Monthly IT service report",
+  "id": "Laporan layanan TI bulanan"
+ },
  "Laporan manajemen & forecast": {
   "en": "Management report & forecast",
   "id": "Laporan manajemen & forecast"
@@ -2106,6 +2426,14 @@
  "Laporan media monitoring": {
   "en": "Media monitoring report",
   "id": "Laporan media monitoring"
+ },
+ "Laporan penanganan insiden": {
+  "en": "Incident handling report",
+  "id": "Laporan penanganan insiden"
+ },
+ "Laporan pencapaian SLA bulanan": {
+  "en": "Monthly SLA achievement report",
+  "id": "Laporan pencapaian SLA bulanan"
  },
  "Laporan realisasi vs target": {
   "en": "Actual versus target report",
@@ -2227,6 +2555,18 @@
   "en": "View the process architecture",
   "id": "Lihat arsitektur proses"
  },
+ "Lihat daftar prosedur": {
+  "en": "View the procedure index",
+  "id": "Lihat daftar prosedur"
+ },
+ "Lingkungan pengembangan": {
+  "en": "Development environment",
+  "id": "Lingkungan pengembangan"
+ },
+ "Lingkungan terpisah dari produksi, tempat solusi dibangun dan diuji.": {
+  "en": "An environment separate from production, where the solution is built and tested.",
+  "id": "Lingkungan terpisah dari produksi, tempat solusi dibangun dan diuji."
+ },
  "Lingkup matriks": {
   "en": "Matrix scope",
   "id": "Lingkup matriks"
@@ -2238,6 +2578,22 @@
  "Lisensi penggunaan tanda": {
   "en": "Mark licence",
   "id": "Lisensi penggunaan tanda"
+ },
+ "Log cadangan": {
+  "en": "Backup log",
+  "id": "Log cadangan"
+ },
+ "Log cadangan dan catatan uji pemulihan": {
+  "en": "Backup log and restore test record",
+  "id": "Log cadangan dan catatan uji pemulihan"
+ },
+ "Log klasifikasi tiket": {
+  "en": "Ticket classification log",
+  "id": "Log klasifikasi tiket"
+ },
+ "Log pemantauan": {
+  "en": "Monitoring log",
+  "id": "Log pemantauan"
  },
  "Log retensi": {
   "en": "Retention log",
@@ -2346,6 +2702,10 @@
  "Materi CSR & keberlanjutan": {
   "en": "CSR & sustainability material",
   "id": "Materi CSR & keberlanjutan"
+ },
+ "Materi pelatihan dan daftar hadir": {
+  "en": "Training material and attendance list",
+  "id": "Materi pelatihan dan daftar hadir"
  },
  "Materi terverifikasi": {
   "en": "Material verified",
@@ -2555,6 +2915,10 @@
   "en": "Ensures the re-inspection schedule and the customer relationship are maintained.",
   "id": "Memastikan jadwal inspeksi ulang dan hubungan pelanggan terjaga."
  },
+ "Memastikan kapasitas pengembangan yang terbatas dialokasikan ke inisiatif dengan nilai bisnis tertinggi.": {
+  "en": "To ensure limited development capacity goes to the initiatives with the highest business value.",
+  "id": "Memastikan kapasitas pengembangan yang terbatas dialokasikan ke inisiatif dengan nilai bisnis tertinggi."
+ },
  "Memastikan kepentingan pemegang saham (TÜV NORD Group) dan prinsip tata kelola perusahaan yang baik terjaga.": {
   "en": "Ensures shareholder interests (TÜV NORD Group) and good corporate governance principles are upheld.",
   "id": "Memastikan kepentingan pemegang saham (TÜV NORD Group) dan prinsip tata kelola perusahaan yang baik terjaga."
@@ -2599,9 +2963,17 @@
   "en": "Ensures the audit programme and assignments meet accreditation requirements.",
   "id": "Memastikan program audit dan penugasan memenuhi persyaratan akreditasi."
  },
+ "Memastikan setiap gangguan dan kebutuhan sistem tercatat, terklasifikasi, dan tersalurkan ke jalur penanganan yang tepat sejak awal.": {
+  "en": "To ensure every system fault and requirement is recorded, classified, and routed to the right handling path from the outset.",
+  "id": "Memastikan setiap gangguan dan kebutuhan sistem tercatat, terklasifikasi, dan tersalurkan ke jalur penanganan yang tepat sejak awal."
+ },
  "Memastikan setiap perikatan, perizinan, dan kegiatan usaha memiliki dasar hukum yang sah.": {
   "en": "Ensures every engagement, licence, and business activity rests on a valid legal basis.",
   "id": "Memastikan setiap perikatan, perizinan, dan kegiatan usaha memiliki dasar hukum yang sah."
+ },
+ "Memastikan solusi diterima pengguna, dirilis secara terkendali, dan datanya berpindah dengan utuh.": {
+  "en": "To ensure the solution is accepted by users, released under control, and that its data moves across intact.",
+  "id": "Memastikan solusi diterima pengguna, dirilis secara terkendali, dan datanya berpindah dengan utuh."
  },
  "Memastikan tindak lanjut pelanggan dan retensi sampel sesuai prosedur.": {
   "en": "Ensures customer follow-up and sample retention follow procedure.",
@@ -2811,6 +3183,10 @@
   "en": "Turns purchase requests into POs or contracts and tracks delivery.",
   "id": "Memproses permintaan pembelian menjadi PO atau kontrak, serta memantau pengirimannya."
  },
+ "Memulihkan layanan secepat mungkin dan menyelesaikan permintaan layanan dalam batas waktu yang dijanjikan.": {
+  "en": "To restore service as quickly as possible and to close service requests within the time promised.",
+  "id": "Memulihkan layanan secepat mungkin dan menyelesaikan permintaan layanan dalam batas waktu yang dijanjikan."
+ },
  "Memutus banding": {
   "en": "Decide the appeal",
   "id": "Memutus banding"
@@ -2835,9 +3211,17 @@
   "en": "Decides on maintaining, suspending, or withdrawing the certificate.",
   "id": "Memutuskan pemeliharaan, penangguhan, atau pencabutan sertifikat."
  },
+ "Memutuskan prioritas dan menyetujui roadmap.": {
+  "en": "Decides priorities and approves the roadmap.",
+  "id": "Memutuskan prioritas dan menyetujui roadmap."
+ },
  "Memutuskan sertifikasi, menerbitkan sertifikat, dan lisensi penggunaan tanda.": {
   "en": "Decides on certification and issues the certificate and the mark licence.",
   "id": "Memutuskan sertifikasi, menerbitkan sertifikat, dan lisensi penggunaan tanda."
+ },
+ "Memverifikasi bahwa layanan telah pulih sebelum tiket ditutup.": {
+  "en": "Verifies that service has been restored before the ticket is closed.",
+  "id": "Memverifikasi bahwa layanan telah pulih sebelum tiket ditutup."
  },
  "Memverifikasi barang atau jasa; untuk reagen, bahan acuan, peralatan, dan jasa kalibrasi dilakukan verifikasi teknis sebelum digunakan.": {
   "en": "Verifies the goods or services; reagents, reference materials, equipment, and calibration services are technically verified before use.",
@@ -3223,6 +3607,10 @@
   "en": "Receives the new service concept as the basis for marketing planning.",
   "id": "Menerima konsep layanan baru sebagai dasar perencanaan pemasaran."
  },
+ "Menerima laporan layanan TI sebagai masukan tinjauan manajemen.": {
+  "en": "Receives the IT service report as an input to management review.",
+  "id": "Menerima laporan layanan TI sebagai masukan tinjauan manajemen."
+ },
  "Menerima laporan untuk tinjauan imparsialitas berkala.": {
   "en": "Receives reports for the periodic impartiality review.",
   "id": "Menerima laporan untuk tinjauan imparsialitas berkala."
@@ -3238,6 +3626,10 @@
  "Menerjemahkan arahan Direksi dan Group menjadi RKAP, KPI, dan siklus pemantauan kinerja yang berjalan setiap bulan.": {
   "en": "Translates Board and Group direction into the annual plan and budget, KPIs, and a monthly performance monitoring cycle.",
   "id": "Menerjemahkan arahan Direksi dan Group menjadi RKAP, KPI, dan siklus pemantauan kinerja yang berjalan setiap bulan."
+ },
+ "Menerjemahkan kebutuhan bisnis menjadi solusi yang benar, aman, dan dapat dipelihara.": {
+  "en": "To turn business requirements into a solution that is correct, secure, and maintainable.",
+  "id": "Menerjemahkan kebutuhan bisnis menjadi solusi yang benar, aman, dan dapat dipelihara."
  },
  "Menetapkan arah bisnis, memimpin seluruh BU dan fungsi pendukung, serta bertindak sebagai top management sistem manajemen.": {
   "en": "Sets the business direction, leads all BUs and support functions, and acts as top management of the management system.",
@@ -3270,6 +3662,10 @@
  "Menetapkan prioritas pengembangan layanan di BU masing-masing dan mengusulkan layanan atau skema baru.": {
   "en": "Sets service development priorities within its own BU and proposes new services or schemes.",
   "id": "Menetapkan prioritas pengembangan layanan di BU masing-masing dan mengusulkan layanan atau skema baru."
+ },
+ "Menetapkan prioritas, menangani, mengeskalasi bila perlu, dan menutup tiket.": {
+  "en": "Sets the priority, handles the ticket, escalates where needed, and closes it.",
+  "id": "Menetapkan prioritas, menangani, mengeskalasi bila perlu, dan menutup tiket."
  },
  "Menetapkan visi, strategi, target tahunan, dan alokasi sumber daya perusahaan.": {
   "en": "Sets the company's vision, strategy, annual targets, and resource allocation.",
@@ -3334,6 +3730,10 @@
  "Mengajukan tiket / demand": {
   "en": "Raise a ticket / demand",
   "id": "Mengajukan tiket / demand"
+ },
+ "Mengajukan tiket dengan informasi yang lengkap dan melengkapinya bila diminta.": {
+  "en": "Raises tickets with complete information and supplies anything further that is asked for.",
+  "id": "Mengajukan tiket dengan informasi yang lengkap dan melengkapinya bila diminta."
  },
  "Menganalisis pasar, kompetitor, regulasi, dan kinerja tahun berjalan per BU.": {
   "en": "Analyses the market, competitors, regulations, and the current year's performance per BU.",
@@ -3699,6 +4099,10 @@
   "en": "Coordinates the budgeting cycle together with Finance & Accounting.",
   "id": "Mengoordinasikan siklus penyusunan anggaran bersama Finance & Accounting."
  },
+ "Mengoperasikan, memantau, mencadangkan, dan mengamankan sistem serta menangani insiden keamanan.": {
+  "en": "Operates, monitors, backs up, and secures the systems, and handles security incidents.",
+  "id": "Mengoperasikan, memantau, mencadangkan, dan mengamankan sistem serta menangani insiden keamanan."
+ },
  "Mengubah ide perbaikan dari seluruh karyawan menjadi perbaikan terukur yang distandarkan ke dalam SOP.": {
   "en": "Turns improvement ideas from across the workforce into measurable improvements standardised into SOPs.",
   "id": "Mengubah ide perbaikan dari seluruh karyawan menjadi perbaikan terukur yang distandarkan ke dalam SOP."
@@ -3911,6 +4315,10 @@
   "en": "Safeguards the impartiality of the conformity assessment body and decides appeals independently.",
   "id": "Menjaga imparsialitas lembaga penilaian kesesuaian dan memutus banding secara independen."
  },
+ "Menjaga kerahasiaan kredensial dan melaporkan dugaan insiden keamanan tanpa menunda.": {
+  "en": "Keeps credentials confidential and reports suspected security incidents without delay.",
+  "id": "Menjaga kerahasiaan kredensial dan melaporkan dugaan insiden keamanan tanpa menunda."
+ },
  "Menjaga keterwakilan pihak berkepentingan secara seimbang tanpa dominasi satu kepentingan.": {
   "en": "Maintains a balanced representation of interested parties, with no single interest dominating.",
   "id": "Menjaga keterwakilan pihak berkepentingan secara seimbang tanpa dominasi satu kepentingan."
@@ -3923,9 +4331,17 @@
   "en": "Keeps the management system and accreditations effective through document control, audits, CAPA, and management review.",
   "id": "Menjaga sistem manajemen dan akreditasi tetap efektif melalui pengendalian dokumen, audit, CAPA, dan management review."
  },
+ "Menjaga sistem tetap tersedia, data terlindungi, dan penyimpangan terdeteksi sebelum berdampak pada layanan pelanggan.": {
+  "en": "To keep systems available, data protected, and deviations detected before they reach customer service.",
+  "id": "Menjaga sistem tetap tersedia, data terlindungi, dan penyimpangan terdeteksi sebelum berdampak pada layanan pelanggan."
+ },
  "Menjaga validitas hasil, imparsialitas, dan kerahasiaan informasi pelanggan.": {
   "en": "Safeguards the validity of results, impartiality, and the confidentiality of customer information.",
   "id": "Menjaga validitas hasil, imparsialitas, dan kerahasiaan informasi pelanggan."
+ },
+ "Menjalankan UAT, menandatangani berita acara, dan mengikuti pelatihan.": {
+  "en": "Runs the UAT, signs the sign-off record, and attends the training.",
+  "id": "Menjalankan UAT, menandatangani berita acara, dan mengikuti pelatihan."
  },
  "Menjalankan inspeksi pihak ketiga yang kompeten, aman, dan independen hingga laporan terbit dan jadwal inspeksi ulang terpantau.": {
   "en": "Delivers competent, safe, and independent third-party inspection through to report issue and re-inspection scheduling.",
@@ -4027,6 +4443,10 @@
   "en": "Submits the results to the relevant authority where regulation requires it.",
   "id": "Menyampaikan hasil ke instansi terkait bila dipersyaratkan regulasi."
  },
+ "Menyampaikan nilai bisnis dan dampak bila inisiatif tidak dikerjakan.": {
+  "en": "States the business value and the consequence of not delivering the initiative.",
+  "id": "Menyampaikan nilai bisnis dan dampak bila inisiatif tidak dikerjakan."
+ },
  "Menyaring lead berdasarkan kecocokan segmen dan minat.": {
   "en": "Screens leads by segment fit and interest.",
   "id": "Menyaring lead berdasarkan kecocokan segmen dan minat."
@@ -4106,6 +4526,10 @@
  "Menyediakan kanal digital dan integrasi lead ke data pelanggan terpusat.": {
   "en": "Provides digital channels and integrates leads into the central customer data.",
   "id": "Menyediakan kanal digital dan integrasi lead ke data pelanggan terpusat."
+ },
+ "Menyediakan kebutuhan bisnis dan menyetujui spesifikasi sebelum pembangunan dimulai.": {
+  "en": "Supplies the business requirements and approves the specification before building starts.",
+  "id": "Menyediakan kebutuhan bisnis dan menyetujui spesifikasi sebelum pembangunan dimulai."
  },
  "Menyediakan marketing kit, materi presentasi, serta dukungan bidding dan proposal.": {
   "en": "Provides marketing kits, presentation material, and bidding and proposal support.",
@@ -4259,6 +4683,14 @@
   "en": "Prepares Board, BoC, and management review meetings, including the minutes.",
   "id": "Menyiapkan rapat Direksi, BoC, dan management review, termasuk notulen."
  },
+ "Menyiapkan ringkasan demand, perkiraan usaha, dan ketergantungan antar inisiatif.": {
+  "en": "Prepares the demand summary, the effort estimate, and the dependencies between initiatives.",
+  "id": "Menyiapkan ringkasan demand, perkiraan usaha, dan ketergantungan antar inisiatif."
+ },
+ "Menyiapkan skenario UAT, merilis, memigrasikan data, dan menyelenggarakan pelatihan.": {
+  "en": "Prepares the UAT scenarios, releases, migrates the data, and runs the training.",
+  "id": "Menyiapkan skenario UAT, merilis, memigrasikan data, dan menyelenggarakan pelatihan."
+ },
  "Menyiapkan tim dan peralatan inspeksi sesuai sektor.": {
   "en": "Prepares the inspection team and equipment for the sector.",
   "id": "Menyiapkan tim dan peralatan inspeksi sesuai sektor."
@@ -4375,6 +4807,10 @@
   "en": "Sets the campaign's objectives, channels, message, schedule, and budget.",
   "id": "Menyusun sasaran, kanal, pesan, jadwal, dan anggaran kampanye."
  },
+ "Menyusun spesifikasi dan rancangan, membangun solusi, dan menerapkan kontrol keamanan.": {
+  "en": "Prepares the specification and design, builds the solution, and applies the security controls.",
+  "id": "Menyusun spesifikasi dan rancangan, membangun solusi, dan menerapkan kontrol keamanan."
+ },
  "Menyusun spesifikasi fungsional, alur proses, dan rancangan data.": {
   "en": "Prepares the functional specification, process flow, and data design.",
   "id": "Menyusun spesifikasi fungsional, alur proses, dan rancangan data."
@@ -4402,6 +4838,10 @@
  "Meregistrasi permohonan, memeriksa kelengkapan, serta menyiapkan dokumen penawaran dan kontrak sertifikasi.": {
   "en": "Registers applications, checks completeness, and prepares certification quotation and contract documents.",
   "id": "Meregistrasi permohonan, memeriksa kelengkapan, serta menyiapkan dokumen penawaran dan kontrak sertifikasi."
+ },
+ "Meregistrasi, memverifikasi kelengkapan, dan mengklasifikasikan setiap tiket yang masuk.": {
+  "en": "Registers, checks the completeness of, and classifies every incoming ticket.",
+  "id": "Meregistrasi, memverifikasi kelengkapan, dan mengklasifikasikan setiap tiket yang masuk."
  },
  "Merencanakan dan melaksanakan audit internal, serta mengoordinasikan asesmen akreditasi KAN, pemilik skema, dan audit Group.": {
   "en": "Plans and carries out internal audits, and coordinates KAN accreditation assessments, scheme owner assessments, and Group audits.",
@@ -4483,9 +4923,17 @@
   "en": "Value of the new opportunity pipeline",
   "id": "Nilai pipeline peluang baru"
  },
+ "No.": {
+  "en": "No.",
+  "id": "No."
+ },
  "Nomor": {
   "en": "No.",
   "id": "Nomor"
+ },
+ "Nomor dokumen": {
+  "en": "Document number",
+  "id": "Nomor dokumen"
  },
  "Nonstandar?": {
   "en": "Non-standard?",
@@ -4507,6 +4955,10 @@
   "en": "Minutes & action item tracking",
   "id": "Notulen & pemantauan action item"
  },
+ "Notulen Steering digital": {
+  "en": "Digital steering minutes",
+  "id": "Notulen Steering digital"
+ },
  "Notulen dan action log": {
   "en": "Minutes and action log",
   "id": "Notulen dan action log"
@@ -4514,6 +4966,10 @@
  "Notulen tinjauan imparsialitas": {
   "en": "Impartiality review minutes",
   "id": "Notulen tinjauan imparsialitas"
+ },
+ "Notulen tinjauan roadmap": {
+  "en": "Roadmap review minutes",
+  "id": "Notulen tinjauan roadmap"
  },
  "Offboarding": {
   "en": "Offboarding",
@@ -4534,6 +4990,14 @@
  "Onboarding & kontrak kerja": {
   "en": "Onboarding & employment contract",
   "id": "Onboarding & kontrak kerja"
+ },
+ "Operasi harian sistem inti dan infrastruktur, pengelolaan hak akses, pencadangan data, serta penanganan insiden keamanan informasi.": {
+  "en": "Day-to-day operation of the core systems and infrastructure, access rights management, data backup, and information security incident handling.",
+  "id": "Operasi harian sistem inti dan infrastruktur, pengelolaan hak akses, pencadangan data, serta penanganan insiden keamanan informasi."
+ },
+ "Operasi, Keamanan Informasi & Pemantauan": {
+  "en": "Operations, Information Security & Monitoring",
+  "id": "Operasi, Keamanan Informasi & Pemantauan"
  },
  "Operasi, keamanan & monitoring": {
   "en": "Operation, security & monitoring",
@@ -4771,6 +5235,10 @@
   "en": "The process owner analyses the root cause and defines corrective actions.",
   "id": "Pemilik proses menganalisis akar masalah dan menetapkan tindakan korektif."
  },
+ "Pemindahan solusi dari lingkungan pengembangan ke produksi.": {
+  "en": "Moving the solution from the development environment into production.",
+  "id": "Pemindahan solusi dari lingkungan pengembangan ke produksi."
+ },
  "Penagihan bersama BU": {
   "en": "Collection together with the BU",
   "id": "Penagihan bersama BU"
@@ -4779,6 +5247,10 @@
   "en": "The authorised signatory issues the test report or calibration certificate.",
   "id": "Penandatangan berwenang menerbitkan laporan hasil uji atau sertifikat kalibrasi."
  },
+ "Penanganan Insiden & Permintaan Layanan": {
+  "en": "Incident & Service Request Handling",
+  "id": "Penanganan Insiden & Permintaan Layanan"
+ },
  "Penanganan insiden & layanan": {
   "en": "Incident & service handling",
   "id": "Penanganan insiden & layanan"
@@ -4786,6 +5258,10 @@
  "Penawaran & kontrak": {
   "en": "Quotation & contract",
   "id": "Penawaran & kontrak"
+ },
+ "Pencabutan akses karyawan yang berhenti dilakukan pada hari kerja terakhir, terhubung dengan proses offboarding pada S3.": {
+  "en": "Access for a departing employee is revoked on their last working day, linked to the offboarding process in S3.",
+  "id": "Pencabutan akses karyawan yang berhenti dilakukan pada hari kerja terakhir, terhubung dengan proses offboarding pada S3."
  },
  "Pencatatan & verifikasi transaksi": {
   "en": "Transaction recording & verification",
@@ -4819,6 +5295,14 @@
   "en": "Procurement of services / spare parts",
   "id": "Pengadaan jasa / suku cadang"
  },
+ "Pengajuan & Klasifikasi Permintaan TI": {
+  "en": "Raising & Classifying IT Requests",
+  "id": "Pengajuan & Klasifikasi Permintaan TI"
+ },
+ "Pengalihan penanganan ke jenjang keahlian yang lebih tinggi atau ke vendor.": {
+  "en": "Handing the case to a higher level of expertise or to a vendor.",
+  "id": "Pengalihan penanganan ke jenjang keahlian yang lebih tinggi atau ke vendor."
+ },
  "Pengaturan perjalanan dan logistik": {
   "en": "Travel and logistics arrangements",
   "id": "Pengaturan perjalanan dan logistik"
@@ -4830,6 +5314,10 @@
  "Pengembangan & konfigurasi": {
   "en": "Development & configuration",
   "id": "Pengembangan & konfigurasi"
+ },
+ "Pengembangan dan konfigurasi sistem inti serta platform bersama, baik dikerjakan sendiri maupun oleh vendor.": {
+  "en": "Development and configuration of the core systems and shared platforms, whether built in-house or by a vendor.",
+  "id": "Pengembangan dan konfigurasi sistem inti serta platform bersama, baik dikerjakan sendiri maupun oleh vendor."
  },
  "Pengendalian dokumen": {
   "en": "Document control",
@@ -4847,6 +5335,22 @@
   "en": "User of testing, calibration, inspection, and certification services.",
   "id": "Pengguna layanan pengujian, kalibrasi, inspeksi, dan sertifikasi."
  },
+ "Pengguna melampirkan tangkapan layar, pesan galat, atau berkas pendukung bila tersedia.": {
+  "en": "The user attaches screenshots, error messages, or supporting files where available.",
+  "id": "Pengguna melampirkan tangkapan layar, pesan galat, atau berkas pendukung bila tersedia."
+ },
+ "Pengguna melaporkan dugaan insiden keamanan informasi melalui helpdesk tanpa menunda.": {
+  "en": "Users report suspected information security incidents through the helpdesk without delay.",
+  "id": "Pengguna melaporkan dugaan insiden keamanan informasi melalui helpdesk tanpa menunda."
+ },
+ "Pengguna membuka tiket di helpdesk dengan menyebut sistem, gejala, waktu kejadian, dan dampak terhadap pekerjaan.": {
+  "en": "The user opens a helpdesk ticket stating the system, the symptom, when it occurred, and the impact on their work.",
+  "id": "Pengguna membuka tiket di helpdesk dengan menyebut sistem, gejala, waktu kejadian, dan dampak terhadap pekerjaan."
+ },
+ "Pengguna memverifikasi pemulihan layanan pada pekerjaannya sendiri.": {
+  "en": "The user verifies the restored service against their own work.",
+  "id": "Pengguna memverifikasi pemulihan layanan pada pekerjaannya sendiri."
+ },
  "Pengguna mengajukan tiket insiden, permintaan layanan, atau demand pengembangan.": {
   "en": "The user raises an incident ticket, a service request, or a development demand.",
   "id": "Pengguna mengajukan tiket insiden, permintaan layanan, atau demand pengembangan."
@@ -4863,9 +5367,17 @@
   "en": "Testing / calibration",
   "id": "Pengujian / kalibrasi"
  },
+ "Pengujian Penerimaan, Rilis & Migrasi Data": {
+  "en": "Acceptance Testing, Release & Data Migration",
+  "id": "Pengujian Penerimaan, Rilis & Migrasi Data"
+ },
  "Pengujian dan kalibrasi di laboratorium pusat, cabang, dan representative office.": {
   "en": "Testing and calibration at the central laboratory, branches, and representative offices.",
   "id": "Pengujian dan kalibrasi di laboratorium pusat, cabang, dan representative office."
+ },
+ "Pengujian penerimaan pengguna, rilis ke produksi, migrasi data, serta pelatihan dan pendampingan adopsi.": {
+  "en": "User acceptance testing, release to production, data migration, and training and adoption support.",
+  "id": "Pengujian penerimaan pengguna, rilis ke produksi, migrasi data, serta pelatihan dan pendampingan adopsi."
  },
  "Pengujian produk": {
   "en": "Product testing",
@@ -4882,6 +5394,10 @@
  "Penilaian kinerja": {
   "en": "Performance appraisal",
   "id": "Penilaian kinerja"
+ },
+ "Penilaian steering": {
+  "en": "Steering assessment",
+  "id": "Penilaian steering"
  },
  "Penjajakan akun strategis": {
   "en": "Strategic account outreach",
@@ -4902,6 +5418,10 @@
  "Penyelarasan dengan strategi": {
   "en": "Alignment with the strategy",
   "id": "Penyelarasan dengan strategi"
+ },
+ "Penyelesaian sementara yang memulihkan layanan sebelum akar masalah tertangani.": {
+  "en": "A temporary fix that restores service before the root cause is addressed.",
+  "id": "Penyelesaian sementara yang memulihkan layanan sebelum akar masalah tertangani."
  },
  "Penyelesaian tiket sesuai SLA": {
   "en": "Tickets resolved within SLA",
@@ -5003,13 +5523,29 @@
   "en": "Board approval needed?",
   "id": "Perlu persetujuan Direksi?"
  },
+ "Permintaan baku yang sudah ada prosedurnya, misalnya pembuatan akun atau pemulihan kata sandi.": {
+  "en": "A standard request with an established procedure, such as creating an account or resetting a password.",
+  "id": "Permintaan baku yang sudah ada prosedurnya, misalnya pembuatan akun atau pemulihan kata sandi."
+ },
+ "Permintaan fitur atau sistem baru yang memerlukan analisis dan kapasitas pengembangan.": {
+  "en": "A request for a new feature or system that requires analysis and development capacity.",
+  "id": "Permintaan fitur atau sistem baru yang memerlukan analisis dan kapasitas pengembangan."
+ },
  "Permintaan inspeksi": {
   "en": "Inspection request",
   "id": "Permintaan inspeksi"
  },
+ "Permintaan layanan": {
+  "en": "Service request",
+  "id": "Permintaan layanan"
+ },
  "Permintaan layanan GA selesai sesuai SLA": {
   "en": "GA service requests closed within SLA",
   "id": "Permintaan layanan GA selesai sesuai SLA"
+ },
+ "Permintaan pengembangan yang telah diklasifikasikan pada PR-IT-01.": {
+  "en": "A development request already classified under PR-IT-01.",
+  "id": "Permintaan pengembangan yang telah diklasifikasikan pada PR-IT-01."
  },
  "Permintaan rekrutmen": {
   "en": "Recruitment request",
@@ -5071,6 +5607,10 @@
   "en": "Percentage of roadmap projects completed on time",
   "id": "Persentase proyek roadmap selesai tepat waktu"
  },
+ "Persentase waktu sistem tersedia dan dapat dipakai dalam satu periode.": {
+  "en": "The percentage of a period during which the system is available and usable.",
+  "id": "Persentase waktu sistem tersedia dan dapat dipakai dalam satu periode."
+ },
  "Persetujuan & penandatanganan": {
   "en": "Approval & signature",
   "id": "Persetujuan & penandatanganan"
@@ -5082,6 +5622,10 @@
  "Persetujuan headcount": {
   "en": "Headcount approval",
   "id": "Persetujuan headcount"
+ },
+ "Persetujuan spesifikasi": {
+  "en": "Specification approval",
+  "id": "Persetujuan spesifikasi"
  },
  "Persiapan & briefing K3": {
   "en": "Preparation & HSE briefing",
@@ -5114,6 +5658,10 @@
  "Persyaratan akreditasi dan skema": {
   "en": "Accreditation and scheme requirements",
   "id": "Persyaratan akreditasi dan skema"
+ },
+ "Perubahan pada sistem yang menopang kegiatan penilaian kesesuaian diberitahukan kepada Corporate Management System.": {
+  "en": "Changes to systems that underpin conformity assessment activities are notified to Corporate Management System.",
+  "id": "Perubahan pada sistem yang menopang kegiatan penilaian kesesuaian diberitahukan kepada Corporate Management System."
  },
  "Perubahan sistem": {
   "en": "System change",
@@ -5179,9 +5727,25 @@
   "en": "Position on Level 0",
   "id": "Posisi pada Level 0"
  },
+ "Posisi prosedur": {
+  "en": "Procedure position",
+  "id": "Posisi prosedur"
+ },
  "Post-launch review": {
   "en": "Post-launch review",
   "id": "Tinjauan pasca-peluncuran"
+ },
+ "Prioritas": {
+  "en": "Priority",
+  "id": "Prioritas"
+ },
+ "Prioritas tiket": {
+  "en": "Ticket priority",
+  "id": "Prioritas tiket"
+ },
+ "Prioritisasi & Tata Kelola Roadmap TI": {
+  "en": "IT Roadmap Prioritisation & Governance",
+  "id": "Prioritisasi & Tata Kelola Roadmap TI"
  },
  "Prioritisasi dalam roadmap": {
   "en": "Prioritise into the roadmap",
@@ -5251,6 +5815,22 @@
   "en": "Procedures & accreditation application",
   "id": "Prosedur & pengajuan akreditasi"
  },
+ "Prosedur Level 2": {
+  "en": "Level 2 procedures",
+  "id": "Prosedur Level 2"
+ },
+ "Prosedur lain dalam proses ini": {
+  "en": "Other procedures in this process",
+  "id": "Prosedur lain dalam proses ini"
+ },
+ "Prosedur terkendali": {
+  "en": "Controlled procedures",
+  "id": "Prosedur terkendali"
+ },
+ "Prosedur tidak ditemukan": {
+  "en": "Procedure not found",
+  "id": "Prosedur tidak ditemukan"
+ },
  "Proses Level 1": {
   "en": "Level 1 process",
   "id": "Proses Level 1"
@@ -5258,6 +5838,10 @@
  "Proses di Level 1": {
   "en": "Processes at Level 1",
   "id": "Proses di Level 1"
+ },
+ "Proses induk": {
+  "en": "Parent process",
+  "id": "Proses induk"
  },
  "Proses keluhan (G2)": {
   "en": "Complaint process (G2)",
@@ -5303,6 +5887,10 @@
   "en": "Quotation approved",
   "id": "Quotation disetujui"
  },
+ "RKAP dan prioritas strategis (M1)": {
+  "en": "Annual plan and strategic priorities (M1)",
+  "id": "RKAP dan prioritas strategis (M1)"
+ },
  "RKAP disetujui": {
   "en": "Annual plan approved",
   "id": "RKAP disetujui"
@@ -5310,6 +5898,10 @@
  "RKAP disetujui sebelum tahun anggaran dimulai": {
   "en": "Annual plan and budget approved before the financial year starts",
   "id": "RKAP disetujui sebelum tahun anggaran dimulai"
+ },
+ "Rancangan data": {
+  "en": "Data design",
+  "id": "Rancangan data"
  },
  "Rasio cross-selling lintas BU": {
   "en": "Cross-BU cross-selling ratio",
@@ -5378,6 +5970,14 @@
  "Regulator": {
   "en": "Regulator",
   "id": "Regulator"
+ },
+ "Rekaman": {
+  "en": "Records",
+  "id": "Rekaman"
+ },
+ "Rekaman elektronik satu permintaan di sistem helpdesk, dengan nomor unik dan riwayat penanganan.": {
+  "en": "The electronic record of one request in the helpdesk system, with a unique number and its handling history.",
+  "id": "Rekaman elektronik satu permintaan di sistem helpdesk, dengan nomor unik dan riwayat penanganan."
  },
  "Rekaman kompetensi": {
   "en": "Competence records",
@@ -5451,6 +6051,14 @@
   "en": "Inspection plan & assignment",
   "id": "Rencana inspeksi & penugasan"
  },
+ "Rencana pemulihan": {
+  "en": "Rollback plan",
+  "id": "Rencana pemulihan"
+ },
+ "Rencana rilis": {
+  "en": "Release plan",
+  "id": "Rencana rilis"
+ },
  "Report / certificate issuance": {
   "en": "Report / certificate issuance",
   "id": "Penerbitan laporan / sertifikat"
@@ -5490,6 +6098,10 @@
  "Retur / klaim vendor": {
   "en": "Return / vendor claim",
   "id": "Retur / klaim vendor"
+ },
+ "Rev.": {
+  "en": "Rev.",
+  "id": "Rev."
  },
  "Revenue & Investment Controlling": {
   "en": "Revenue & Investment Controlling",
@@ -5559,6 +6171,10 @@
   "en": "Revise",
   "id": "Revisi"
  },
+ "Revisi dokumen": {
+  "en": "Revision",
+  "id": "Revisi dokumen"
+ },
  "Reward & knowledge sharing": {
   "en": "Reward & knowledge sharing",
   "id": "Penghargaan & berbagi pengetahuan"
@@ -5567,17 +6183,45 @@
   "en": "Release",
   "id": "Rilis"
  },
+ "Ringkasan demand": {
+  "en": "Demand summary",
+  "id": "Ringkasan demand"
+ },
  "Ringkasan peran": {
   "en": "Role summary",
   "id": "Ringkasan peran"
+ },
+ "Roadmap": {
+  "en": "Roadmap",
+  "id": "Roadmap"
  },
  "Roadmap & backlog": {
   "en": "Roadmap & backlog",
   "id": "Roadmap & backlog"
  },
+ "Roadmap TI": {
+  "en": "IT roadmap",
+  "id": "Roadmap TI"
+ },
+ "Roadmap ditinjau ulang bersama Steering sekurang-kurangnya setiap triwulan.": {
+  "en": "The roadmap is reviewed with Steering at least quarterly.",
+  "id": "Roadmap ditinjau ulang bersama Steering sekurang-kurangnya setiap triwulan."
+ },
+ "Ruang lingkup": {
+  "en": "Scope",
+  "id": "Ruang lingkup"
+ },
  "SID": {
   "en": "SID",
   "id": "SID"
+ },
+ "SLA": {
+  "en": "SLA",
+  "id": "SLA"
+ },
+ "SLA layanan TI internal": {
+  "en": "Internal IT service SLA",
+  "id": "SLA layanan TI internal"
  },
  "SOP revisi": {
   "en": "Revised SOP",
@@ -5610,6 +6254,10 @@
  "Sales CTS Lab, Branch Lab & RO": {
   "en": "Sales CTS Lab, Branch Lab & RO",
   "id": "Sales CTS Lab, Branch Lab & RO"
+ },
+ "Salinan data yang disimpan terpisah agar dapat dipulihkan bila data utama rusak atau hilang.": {
+  "en": "A copy of data kept separately so it can be restored if the primary data is damaged or lost.",
+  "id": "Salinan data yang disimpan terpisah agar dapat dipulihkan bila data utama rusak atau hilang."
  },
  "Sampel & formulir": {
   "en": "Sample & form",
@@ -5651,9 +6299,17 @@
   "en": "All HoDs",
   "id": "Seluruh HoD"
  },
+ "Seluruh demand pengembangan sistem dan perubahan besar. Tidak mencakup perbaikan kecil yang selesai melalui PR-IT-02.": {
+  "en": "All system development demands and major changes. Excludes minor fixes that are closed through PR-IT-02.",
+  "id": "Seluruh demand pengembangan sistem dan perubahan besar. Tidak mencakup perbaikan kecil yang selesai melalui PR-IT-02."
+ },
  "Seluruh pemilik proses": {
   "en": "All process owners",
   "id": "Seluruh pemilik proses"
+ },
+ "Seluruh permintaan TI dari semua unit: insiden, permintaan layanan, dan demand pengembangan. Tidak mencakup pengadaan perangkat keras dan jasa, yang berjalan melalui S2.": {
+  "en": "All IT requests from every unit: incidents, service requests, and development demands. Excludes the procurement of hardware and services, which runs through S2.",
+  "id": "Seluruh permintaan TI dari semua unit: insiden, permintaan layanan, dan demand pengembangan. Tidak mencakup pengadaan perangkat keras dan jasa, yang berjalan melalui S2."
  },
  "Seluruh profit center": {
   "en": "All profit centers",
@@ -5819,6 +6475,10 @@
   "en": "System maintained & accreditation continues",
   "id": "Sistem terpelihara & akreditasi berlanjut"
  },
+ "Skenario UAT": {
+  "en": "UAT scenarios",
+  "id": "Skenario UAT"
+ },
  "Sorot langkah": {
   "en": "Highlight step",
   "id": "Sorot langkah"
@@ -5834,6 +6494,14 @@
  "Spesifikasi / PRD": {
   "en": "Specification / PRD",
   "id": "Spesifikasi / PRD"
+ },
+ "Spesifikasi fungsional": {
+  "en": "Functional specification",
+  "id": "Spesifikasi fungsional"
+ },
+ "Spesifikasi fungsional disetujui": {
+  "en": "Approved functional specification",
+  "id": "Spesifikasi fungsional disetujui"
  },
  "Stage 1 & Stage 2 audit": {
   "en": "Stage 1 & Stage 2 audit",
@@ -5879,6 +6547,14 @@
   "en": "Digital steering",
   "id": "Steering digital"
  },
+ "Steering digital menilai nilai bisnis, urgensi, risiko, dan kapasitas tim yang tersedia.": {
+  "en": "Digital steering assesses business value, urgency, risk, and the team capacity available.",
+  "id": "Steering digital menilai nilai bisnis, urgensi, risiko, dan kapasitas tim yang tersedia."
+ },
+ "Steering memutuskan: masuk roadmap periode berjalan, masuk backlog, atau ditolak dengan alasan.": {
+  "en": "Steering decides: onto the current roadmap, into the backlog, or rejected with reasons.",
+  "id": "Steering memutuskan: masuk roadmap periode berjalan, masuk backlog, atau ditolak dengan alasan."
+ },
  "Steering menilai nilai bisnis, urgensi, dan kapasitas, lalu memasukkan ke roadmap.": {
   "en": "Steering assesses business value, urgency, and capacity, then places it on the roadmap.",
   "id": "Steering menilai nilai bisnis, urgensi, dan kapasitas, lalu memasukkan ke roadmap."
@@ -5894,6 +6570,10 @@
  "Strategy, Product Development & Transformation": {
   "en": "Strategy, Product Development & Transformation",
   "id": "Strategi, Pengembangan Produk & Transformasi"
+ },
+ "Struktur data, hubungan antar entitas, dan integrasi antar sistem.": {
+  "en": "Data structures, the relationships between entities, and integration between systems.",
+  "id": "Struktur data, hubungan antar entitas, dan integrasi antar sistem."
  },
  "Support": {
   "en": "Support",
@@ -5959,6 +6639,14 @@
   "en": "Mark",
   "id": "Tandai"
  },
+ "Tanggal berlaku": {
+  "en": "Effective date",
+  "id": "Tanggal berlaku"
+ },
+ "Tanggung jawab": {
+  "en": "Responsibilities",
+  "id": "Tanggung jawab"
+ },
  "Target & tindakan terpantau": {
   "en": "Targets & actions under control",
   "id": "Target & tindakan terpantau"
@@ -6003,6 +6691,10 @@
   "en": "Findings from surveillance of mark use",
   "id": "Temuan surveilen penggunaan tanda"
  },
+ "Temuan yang menghambat diperbaiki IT, lalu diuji ulang oleh pengguna.": {
+  "en": "Blocking findings are fixed by IT and retested by the users.",
+  "id": "Temuan yang menghambat diperbaiki IT, lalu diuji ulang oleh pengguna."
+ },
  "Terlibat sebagai pelaksana": {
   "en": "Involved as a performer",
   "id": "Terlibat sebagai pelaksana"
@@ -6019,17 +6711,37 @@
   "en": "Not involved in the case",
   "id": "Tidak terlibat dalam kasus"
  },
+ "Tiket": {
+  "en": "Ticket",
+  "id": "Tiket"
+ },
  "Tiket / demand request": {
   "en": "Ticket / demand request",
   "id": "Tiket / demand request"
+ },
+ "Tiket helpdesk": {
+  "en": "Helpdesk tickets",
+  "id": "Tiket helpdesk"
  },
  "Tiket selesai": {
   "en": "Ticket closed",
   "id": "Tiket selesai"
  },
+ "Tiket terdaftar": {
+  "en": "Ticket registered",
+  "id": "Tiket terdaftar"
+ },
+ "Tiket tertutup": {
+  "en": "Closed ticket",
+  "id": "Tiket tertutup"
+ },
  "Tim sales menghubungi lead dan mengubahnya menjadi peluang.": {
   "en": "The sales team contacts the lead and converts it into an opportunity.",
   "id": "Tim sales menghubungi lead dan mengubahnya menjadi peluang."
+ },
+ "Tingkat penanganan yang ditetapkan dari perpaduan dampak dan urgensi.": {
+  "en": "The handling level set by combining impact and urgency.",
+  "id": "Tingkat penanganan yang ditetapkan dari perpaduan dampak dan urgensi."
  },
  "Tingkat peta proses": {
   "en": "Process map level",
@@ -6087,9 +6799,17 @@
   "en": "TÜV NORD Group & shareholders",
   "id": "TÜV NORD Group & pemegang saham"
  },
+ "UAT": {
+  "en": "UAT",
+  "id": "UAT"
+ },
  "UAT diterima?": {
   "en": "UAT accepted?",
   "id": "UAT diterima?"
+ },
+ "UU Pelindungan Data Pribadi": {
+  "en": "Personal Data Protection Act",
+  "id": "UU Pelindungan Data Pribadi"
  },
  "Uji kelayakan finansial": {
   "en": "Financial feasibility test",
@@ -6127,6 +6847,22 @@
   "en": "Requesting unit",
   "id": "Unit pengguna"
  },
+ "Unit pengguna menandatangani berita acara UAT sebagai dasar rilis.": {
+  "en": "The user unit signs the UAT record as the basis for release.",
+  "id": "Unit pengguna menandatangani berita acara UAT sebagai dasar rilis."
+ },
+ "Unit pengguna menelaah dan menyetujui spesifikasi sebelum pembangunan dimulai.": {
+  "en": "The user unit reviews and approves the specification before building starts.",
+  "id": "Unit pengguna menelaah dan menyetujui spesifikasi sebelum pembangunan dimulai."
+ },
+ "Unit pengguna menjalankan UAT dan mencatat temuan beserta tingkat keparahannya.": {
+  "en": "The user unit runs the UAT and records the findings with their severity.",
+  "id": "Unit pengguna menjalankan UAT dan mencatat temuan beserta tingkat keparahannya."
+ },
+ "Unit pengusul menyampaikan nilai bisnis dan konsekuensi bila demand tidak dikerjakan.": {
+  "en": "The requesting unit states the business value and the consequence of not delivering the demand.",
+  "id": "Unit pengusul menyampaikan nilai bisnis dan konsekuensi bila demand tidak dikerjakan."
+ },
  "Unit pengusul menyampaikan tujuan, audiens, dan pesan utama.": {
   "en": "The requesting unit states the objective, the audience, and the key message.",
   "id": "Unit pengusul menyampaikan tujuan, audiens, dan pesan utama."
@@ -6155,6 +6891,10 @@
   "en": "Update the service catalogue & price list",
   "id": "Update katalog layanan & harga"
  },
+ "Uptime": {
+  "en": "Uptime",
+  "id": "Uptime"
+ },
  "Uraian": {
   "en": "Description",
   "id": "Uraian"
@@ -6166,6 +6906,10 @@
  "Uraian langkah proses": {
   "en": "Step descriptions for process",
   "id": "Uraian langkah proses"
+ },
+ "User Acceptance Test — pengujian oleh pengguna terhadap skenario bisnis nyata.": {
+  "en": "User Acceptance Test — testing by users against real business scenarios.",
+  "id": "User Acceptance Test — pengujian oleh pengguna terhadap skenario bisnis nyata."
  },
  "Usulan investasi": {
   "en": "Investment proposals",
@@ -6259,6 +7003,10 @@
   "en": "Work order",
   "id": "Work order"
  },
+ "Workaround": {
+  "en": "Workaround",
+  "id": "Workaround"
+ },
  "Ya": {
   "en": "Yes",
   "id": "Ya"
@@ -6275,6 +7023,10 @@
   "en": "consulted before a decision is made",
   "id": "dimintai masukan sebelum keputusan"
  },
+ "instruksi kerja": {
+  "en": "work instructions",
+  "id": "instruksi kerja"
+ },
  "kotak yang memuat peran belum dikonfirmasi": {
   "en": "boxes containing unconfirmed roles",
   "id": "kotak yang memuat peran belum dikonfirmasi"
@@ -6286,6 +7038,10 @@
  "langkah": {
   "en": "steps",
   "id": "langkah"
+ },
+ "langkah dirinci": {
+  "en": "steps detailed",
+  "id": "langkah dirinci"
  },
  "lihat detail departemen": {
   "en": "view department detail",
@@ -6338,6 +7094,10 @@
  "tidak ada dalam daftar 20 proses Level 1.": {
   "en": "is not among the 20 Level 1 processes.",
   "id": "tidak ada dalam daftar 20 proses Level 1."
+ },
+ "tidak ada dalam daftar prosedur Level 2.": {
+  "en": "is not among the Level 2 procedures.",
+  "id": "tidak ada dalam daftar prosedur Level 2."
  },
  "tidak terlibat": {
   "en": "not involved",

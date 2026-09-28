@@ -1,9 +1,9 @@
-/** The two levels of the process map, and how they map onto routes. */
+/** The levels of the process map, and how they map onto routes. */
 
 import { t } from "@/lib/i18n";
 
 
-export type LevelId = "level-0" | "level-1";
+export type LevelId = "level-0" | "level-1" | "level-2";
 
 export interface LevelDefinition {
   id: LevelId;
@@ -28,6 +28,12 @@ export const LEVELS: readonly LevelDefinition[] = [
     caption: t("Swimlane per proses"),
     path: "/level-1",
   },
+  {
+    id: "level-2",
+    label: "Level 2",
+    caption: t("Prosedur terkendali"),
+    path: "/level-2",
+  },
 ] as const;
 
 /**
@@ -35,5 +41,7 @@ export const LEVELS: readonly LevelDefinition[] = [
  * moving between two Level 1 processes does not re-trigger it.
  */
 export function levelFromPathname(pathname: string): LevelId {
-  return pathname.startsWith("/level-1") ? "level-1" : "level-0";
+  if (pathname.startsWith("/level-2")) return "level-2";
+  if (pathname.startsWith("/level-1")) return "level-1";
+  return "level-0";
 }

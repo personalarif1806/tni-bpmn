@@ -50,6 +50,14 @@ for (const p of read("l1-processes.json")) {
   }
 }
 
+for (const proc of Object.values(read("l2-procedures.json"))) {
+  add(proc.n); add(proc.purpose); add(proc.scope);
+  for (const [term, meaning] of proc.defs) { add(term); add(meaning); }
+  for (const [, duty] of proc.resp) add(duty);
+  for (const line of proc.wi) { add(line.t); add(line.o); }
+  all(proc.records); all(proc.refs);
+}
+
 const which = process.argv[2] ?? "all";
 const pool = which === "ui" ? [...ui] : which === "content" ? [...content] : [...ui, ...content];
 const missing = [...new Set(pool)].filter((s) => !(s in dict));

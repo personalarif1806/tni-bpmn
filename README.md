@@ -154,6 +154,35 @@ Four rules worth knowing before you change anything:
    sentence written straight into JSX is invisible to that scan and is exactly
    how one language leaks into the other.
 
+## Level 2 — controlled procedures
+
+Level 1 answers *what happens and who does it*. Level 2 answers *how*: each
+procedure is the controlled document behind a run of Level 1 steps, rendered as
+the document itself — control block, numbered sections, work instruction table,
+records, references.
+
+Only **M4 Digital & IT Service Management** is detailed so far, into six
+procedures (`PR-IT-01` … `PR-IT-06`). The rest of the machinery is general; a
+process gets a Level 2 by adding entries to `l2-procedures.json` and nothing
+else. `ProcedureList` renders nothing for a process that has none, so the
+Level 1 pages of the other nineteen are unchanged.
+
+```
+src/data/l2-procedures.json          the procedures
+src/components/level2/ProcedureDocument.tsx   the document render
+src/routes/Level2Page.tsx            the index, grouped by process
+src/routes/Level2ProcedurePage.tsx   one procedure
+```
+
+A procedure covers a coherent activity, not a single diagram box, so one
+procedure usually details several steps. The rule the validator enforces is
+**coverage**: once a process has procedures at all, every one of its steps must
+be detailed by exactly one of them. A step claimed twice means two documents
+own the same work; a step claimed by none is a gap an assessor finds before we
+do. `validate.ts` also checks that document numbers are unique, that effective
+dates are ISO dates, and that every lane a procedure names really is a lane of
+its parent process.
+
 ## Language
 
 The header carries an **ID / EN** switch. Indonesian is the default; the choice

@@ -8,6 +8,7 @@ import unitsJson from "@/data/l0-units.json";
 import groupsJson from "@/data/l1-groups.json";
 import lanesJson from "@/data/l1-lanes.json";
 import processesJson from "@/data/l1-processes.json";
+import proceduresJson from "@/data/l2-procedures.json";
 
 /**
  * The guarantee behind the language switch: every string that can reach the
@@ -107,6 +108,23 @@ function contentStrings(): string[] {
         if (Array.isArray(next)) add(next[1]);
       }
     }
+  }
+
+  for (const procedure of Object.values(
+    proceduresJson as Record<string, Record<string, unknown>>,
+  )) {
+    for (const key of ["n", "purpose", "scope"]) add(procedure[key]);
+    for (const [term, meaning] of procedure.defs as [string, string][]) {
+      add(term);
+      add(meaning);
+    }
+    for (const [, duty] of procedure.resp as [string, string][]) add(duty);
+    for (const line of procedure.wi as Record<string, unknown>[]) {
+      add(line.t);
+      add(line.o);
+    }
+    addAll(procedure.records);
+    addAll(procedure.refs);
   }
 
   return [...found];

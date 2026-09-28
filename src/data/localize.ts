@@ -15,6 +15,7 @@
  */
 import type {
   Department,
+  Procedure,
   Involvement,
   Lane,
   LayoutData,
@@ -154,6 +155,29 @@ export function localizeProcesses(processes: Process[]): Process[] {
       steps: process.steps.map(localizeStep),
     }),
   );
+}
+
+/**
+ * Procedures are prose end to end, apart from the document number, the revision
+ * and the effective date. The signature block names units, which keep their
+ * official spelling, so only the words around them move.
+ */
+export function localizeProcedures(
+  procedures: Record<string, Procedure>,
+): Record<string, Procedure> {
+  return mapValues(procedures, (procedure) => ({
+    ...procedure,
+    n: t(procedure.n),
+    purpose: t(procedure.purpose),
+    scope: t(procedure.scope),
+    defs: procedure.defs.map(([term, meaning]) => [t(term), t(meaning)]),
+    resp: procedure.resp.map(([laneId, duty]) => [laneId, t(duty)]),
+    wi: procedure.wi.map((line) =>
+      defined({ ...line, t: t(line.t), o: maybe(line.o) }),
+    ),
+    records: procedure.records.map(t),
+    refs: procedure.refs.map(t),
+  }));
 }
 
 /** Departments are official names in both languages, so they pass through. */

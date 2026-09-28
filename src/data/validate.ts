@@ -9,6 +9,7 @@ import {
   rawDepartments,
   rawLanes,
   rawLayout,
+  rawProcedures,
   rawProcesses,
   rawStageInvolvement,
   rawUnitGroups,
@@ -16,6 +17,7 @@ import {
 } from "./raw";
 import type {
   CrosslinkData,
+  Procedure,
   Department,
   Involvement,
   Lane,
@@ -36,6 +38,7 @@ export interface DataSet {
   stageInvolvement: StageInvolvementData;
   lanes: Record<string, Lane>;
   processes: Process[];
+  procedures: Record<string, Procedure>;
   crosslinks: CrosslinkData;
 }
 
@@ -48,6 +51,7 @@ export const shippedData: DataSet = {
   stageInvolvement: rawStageInvolvement,
   lanes: rawLanes,
   processes: rawProcesses,
+  procedures: rawProcedures,
   crosslinks: rawCrosslinks,
 };
 
@@ -401,12 +405,101 @@ function checkCrosslinks(data: DataSet, issues: DataIssue[]): void {
   }
 }
 
+/**
+ * Level 2 procedures. The rule that matters is coverage: once a process has
+ * procedures at all, every one of its steps must be detailed by exactly one of
+ * them. A step covered twice means two documents claim the same work; a step
+ * covered by none is a gap an assessor will find before we do.
+ */
+function checkProcedures(data: DataSet, issues: DataIssue[]): void {
+  const scope = "l2-procedures.json";
+  const processById = new Map(data.processes.map((process) => [process.id, process]));
+  const documentNumbers = new Map<string, string>();
+  /** Process id → step key → the procedures claiming it. */
+  const claims = new Map<string, Map<string, string[]>>();
+
+  for (const [procedureId, procedure] of Object.entries(data.procedures)) {
+    const where = `${scope} · ${procedureId}`;
+    const process = processById.get(procedure.p);
+
+    if (!process) {
+      issues.push({ scope: where, message: `unknown process "${procedure.p}"` });
+      continue;
+    }
+
+    const seen = documentNumbers.get(procedure.doc);
+    if (seen) {
+      issues.push({
+        scope: where,
+        message: `document number "${procedure.doc}" is already used by ${seen}`,
+      });
+    } else {
+      documentNumbers.set(procedure.doc, procedureId);
+    }
+
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(procedure.eff)) {
+      issues.push({
+        scope: where,
+        message: `effective date "${procedure.eff}" is not ISO YYYY-MM-DD`,
+      });
+    }
+
+    const stepKeys = new Set(process.steps.map((step) => step.k));
+    const byStep = claims.get(procedure.p) ?? new Map<string, string[]>();
+    claims.set(procedure.p, byStep);
+
+    for (const stepKey of procedure.steps) {
+      if (!stepKeys.has(stepKey)) {
+        issues.push({ scope: where, message: `unknown step "${stepKey}"` });
+        continue;
+      }
+      byStep.set(stepKey, [...(byStep.get(stepKey) ?? []), procedureId]);
+    }
+
+    const laneIds = new Set(process.lanes);
+    for (const [laneId] of procedure.resp) {
+      if (!laneIds.has(laneId)) {
+        issues.push({ scope: `${where} · resp`, message: `lane "${laneId}" is not in ${procedure.p}` });
+      }
+    }
+    for (const line of procedure.wi) {
+      if (!laneIds.has(line.l)) {
+        issues.push({
+          scope: `${where} · wi ${line.no}`,
+          message: `lane "${line.l}" is not in ${procedure.p}`,
+        });
+      }
+    }
+  }
+
+  for (const [processId, byStep] of claims) {
+    const process = processById.get(processId);
+    if (!process) continue;
+
+    for (const step of process.steps) {
+      const claimants = byStep.get(step.k) ?? [];
+      if (claimants.length === 0) {
+        issues.push({
+          scope: `${scope} · ${processId}`,
+          message: `step "${step.k}" is detailed by no procedure`,
+        });
+      } else if (claimants.length > 1) {
+        issues.push({
+          scope: `${scope} · ${processId}`,
+          message: `step "${step.k}" is claimed by ${claimants.join(" and ")}`,
+        });
+      }
+    }
+  }
+}
+
 /** Every structural problem in the shipped data, in reporting order. */
 export function collectDataIssues(data: DataSet = shippedData): DataIssue[] {
   const issues: DataIssue[] = [];
   checkProcesses(data, issues);
   checkLevel0(data, issues);
   checkCrosslinks(data, issues);
+  checkProcedures(data, issues);
   return issues;
 }
 

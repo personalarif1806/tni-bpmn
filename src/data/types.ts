@@ -187,6 +187,56 @@ export interface ProcessGroup {
   l0: string;
 }
 
+/* ------------------------------------------------------------------ Level 2 */
+
+/** One numbered line of a procedure's work instructions. */
+export interface WorkInstruction {
+  /** `1`, `2`, `3` — the number as written, not derived. */
+  no: string;
+  /** What is done. */
+  t: string;
+  /** Lane id of the performer, resolvable in `l1-lanes.json`. */
+  l: string;
+  /** Output or record this line produces, where it produces one. */
+  o?: string;
+}
+
+/**
+ * A Level 2 procedure — the controlled document behind a run of Level 1 steps
+ * (PRD 4, "Level 2: prosedur detail per langkah").
+ *
+ * A procedure covers a coherent activity rather than a single diagram box, so
+ * one procedure usually details several steps. Every step of a process that has
+ * procedures must be covered by exactly one of them; `validate.ts` enforces it.
+ */
+export interface Procedure {
+  /** Parent Level 1 process id. */
+  p: string;
+  /** Controlled document number, e.g. `PR-IT-01`. */
+  doc: string;
+  /** Title. */
+  n: string;
+  /** Revision as written on the document, e.g. `00`. */
+  rev: string;
+  /** Effective date, ISO `YYYY-MM-DD`. */
+  eff: string;
+  /** Level 1 step keys this procedure details, in step order. */
+  steps: string[];
+  purpose: string;
+  scope: string;
+  /** Term → definition. */
+  defs: [string, string][];
+  /** Lane id → what that performer is responsible for. */
+  resp: [string, string][];
+  wi: WorkInstruction[];
+  /** Records the procedure leaves behind. */
+  records: string[];
+  /** Standards, policies and regulations the procedure answers to. */
+  refs: string[];
+  /** The document control block. */
+  sign: { prep: string; rev: string; app: string };
+}
+
 /* ------------------------------------------------------------- Cross-links */
 
 /** Which Level 0 element a Level 1 lane belongs to: a unit or a department. */

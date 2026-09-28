@@ -11,6 +11,7 @@ import {
   rawDepartments,
   rawLanes,
   rawLayout,
+  rawProcedures,
   rawProcessGroups,
   rawProcesses,
   rawStageInvolvement,
@@ -19,6 +20,7 @@ import {
 } from "./raw";
 import type {
   Department,
+  Procedure,
   Involvement,
   Lane,
   Process,
@@ -360,6 +362,58 @@ export function stageNeedsConfirmation(stageId: string): boolean {
 /** Is this unit or department named by a role that is still to be confirmed? */
 export function participantNeedsConfirmation(participantId: string): boolean {
   return confirmationIndex.participants.has(participantId);
+}
+
+/* ---------------------------------------------------------------- Level 2 */
+
+/** The controlled procedures behind Level 1 steps, keyed by procedure id. */
+export const procedures: Record<string, Procedure> = rawProcedures;
+
+/** Procedure ids in document-number order, which is also reading order. */
+const procedureOrder: string[] = Object.keys(procedures).sort((a, b) =>
+  procedures[a].doc.localeCompare(procedures[b].doc),
+);
+
+export function getProcedure(procedureId: string): Procedure | undefined {
+  return procedures[procedureId];
+}
+
+/** Every procedure, in reading order. */
+export function listProcedures(): { id: string; procedure: Procedure }[] {
+  return procedureOrder.map((id) => ({ id, procedure: procedures[id] }));
+}
+
+/** The procedures detailing one Level 1 process, in reading order. */
+export function proceduresForProcess(
+  processId: string,
+): { id: string; procedure: Procedure }[] {
+  return listProcedures().filter(({ procedure }) => procedure.p === processId);
+}
+
+/**
+ * Process id → step key → the procedure detailing that step. Built once;
+ * `validate.ts` has already guaranteed that no step is claimed twice.
+ */
+const procedureByStep: Record<string, Record<string, string>> = {};
+for (const [procedureId, procedure] of Object.entries(procedures)) {
+  const byStep = (procedureByStep[procedure.p] ??= {});
+  for (const stepKey of procedure.steps) byStep[stepKey] = procedureId;
+}
+
+/** Which procedure details this step, if the process has procedures at all. */
+export function procedureForStep(
+  processId: string,
+  stepKey: string,
+): { id: string; procedure: Procedure } | undefined {
+  const procedureId = procedureByStep[processId]?.[stepKey];
+  if (!procedureId) return undefined;
+  return { id: procedureId, procedure: procedures[procedureId] };
+}
+
+/** Level 1 processes that have been detailed down to Level 2, in order. */
+export function processesWithProcedures(): Process[] {
+  const ids = new Set(Object.values(procedures).map((procedure) => procedure.p));
+  return processes.filter((process) => ids.has(process.id));
 }
 
 /* -------------------------------------------------------------- Validation */

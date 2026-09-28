@@ -6,6 +6,7 @@ import { ProcessHeader } from "@/components/level1/ProcessHeader";
 import { ProcessInfoCard } from "@/components/level1/ProcessInfoCard";
 import { ProcessSidebar } from "@/components/level1/ProcessSidebar";
 import { StepTable } from "@/components/level1/StepTable";
+import { ProcedureList } from "@/components/level2/ProcedureList";
 import { Swimlane } from "@/components/level1/Swimlane";
 import { ProcessSelect } from "@/components/level1/ProcessSelect";
 import { PrintAllProcesses } from "@/components/shared/PrintLayout";
@@ -192,6 +193,8 @@ export function Level1ProcessPage() {
               />
             </div>
           </section>
+
+          <ProcedureList processId={process.id} />
         </div>
       </div>
     </>

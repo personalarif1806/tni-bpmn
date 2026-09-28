@@ -21,6 +21,12 @@ export const LANG_PARAM = "lang";
 
 const STORAGE_KEY = "tni-bpmn.lang";
 
+/** BCP-47 tag for `Intl` formatting — dates, numbers, collation. */
+export const LOCALE: Record<Lang, string> = {
+  id: "id-ID",
+  en: "en-GB",
+};
+
 export const LANG_LABELS: Record<Lang, { short: string; full: string }> = {
   id: { short: "ID", full: "Bahasa Indonesia" },
   en: { short: "EN", full: "English" },

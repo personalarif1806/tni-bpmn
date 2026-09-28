@@ -19,10 +19,12 @@ import unitsJson from "./l0-units.json";
 import groupsJson from "./l1-groups.json";
 import lanesJson from "./l1-lanes.json";
 import processesJson from "./l1-processes.json";
+import proceduresJson from "./l2-procedures.json";
 import {
   localizeInvolvement,
   localizeLanes,
   localizeLayout,
+  localizeProcedures,
   localizeProcessGroups,
   localizeProcesses,
   localizeUnitGroups,
@@ -30,6 +32,7 @@ import {
 } from "./localize";
 import type {
   CrosslinkData,
+  Procedure,
   Department,
   Lane,
   LayoutData,
@@ -60,6 +63,9 @@ export const rawLanes = localizeLanes(shaped<Record<string, Lane>>(lanesJson));
 export const rawProcesses = localizeProcesses(shaped<Process[]>(processesJson));
 export const rawProcessGroups = localizeProcessGroups(
   shaped<Record<ProcessGroupId, ProcessGroup>>(groupsJson),
+);
+export const rawProcedures = localizeProcedures(
+  shaped<Record<string, Procedure>>(proceduresJson),
 );
 /** Crosslinks are ids only. */
 export const rawCrosslinks = shaped<CrosslinkData>(crosslinksJson);

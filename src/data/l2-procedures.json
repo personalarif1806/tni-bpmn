@@ -1,0 +1,603 @@
+{
+ "M4-P1": {
+  "p": "M4",
+  "doc": "PR-IT-01",
+  "n": "Pengajuan & Klasifikasi Permintaan TI",
+  "rev": "00",
+  "eff": "2026-10-01",
+  "steps": [
+   "a",
+   "b",
+   "c"
+  ],
+  "purpose": "Memastikan setiap gangguan dan kebutuhan sistem tercatat, terklasifikasi, dan tersalurkan ke jalur penanganan yang tepat sejak awal.",
+  "scope": "Seluruh permintaan TI dari semua unit: insiden, permintaan layanan, dan demand pengembangan. Tidak mencakup pengadaan perangkat keras dan jasa, yang berjalan melalui S2.",
+  "defs": [
+   [
+    "Insiden",
+    "Gangguan tidak terencana yang menurunkan atau menghentikan layanan TI."
+   ],
+   [
+    "Permintaan layanan",
+    "Permintaan baku yang sudah ada prosedurnya, misalnya pembuatan akun atau pemulihan kata sandi."
+   ],
+   [
+    "Demand pengembangan",
+    "Permintaan fitur atau sistem baru yang memerlukan analisis dan kapasitas pengembangan."
+   ],
+   [
+    "Tiket",
+    "Rekaman elektronik satu permintaan di sistem helpdesk, dengan nomor unik dan riwayat penanganan."
+   ]
+  ],
+  "resp": [
+   [
+    "user",
+    "Mengajukan tiket dengan informasi yang lengkap dan melengkapinya bila diminta."
+   ],
+   [
+    "it",
+    "Meregistrasi, memverifikasi kelengkapan, dan mengklasifikasikan setiap tiket yang masuk."
+   ]
+  ],
+  "wi": [
+   {
+    "no": "1",
+    "t": "Pengguna membuka tiket di helpdesk dengan menyebut sistem, gejala, waktu kejadian, dan dampak terhadap pekerjaan.",
+    "l": "user",
+    "o": "Tiket terdaftar"
+   },
+   {
+    "no": "2",
+    "t": "Pengguna melampirkan tangkapan layar, pesan galat, atau berkas pendukung bila tersedia.",
+    "l": "user"
+   },
+   {
+    "no": "3",
+    "t": "Helpdesk memverifikasi kelengkapan informasi; tiket yang belum jelas dikembalikan kepada pengguna untuk dilengkapi.",
+    "l": "it"
+   },
+   {
+    "no": "4",
+    "t": "IT mengklasifikasikan tiket menjadi insiden, permintaan layanan, atau demand pengembangan.",
+    "l": "it",
+    "o": "Klasifikasi tiket"
+   },
+   {
+    "no": "5",
+    "t": "Insiden dan permintaan layanan diteruskan ke PR-IT-02; demand pengembangan diteruskan ke PR-IT-03.",
+    "l": "it"
+   }
+  ],
+  "records": [
+   "Tiket helpdesk",
+   "Log klasifikasi tiket"
+  ],
+  "refs": [
+   "Kebijakan TI TÜV NORD Group (K-RL 550)",
+   "SLA layanan TI internal"
+  ],
+  "sign": {
+   "prep": "IT & Digitalization",
+   "rev": "Corporate Management System",
+   "app": "Managing Directors"
+  }
+ },
+ "M4-P2": {
+  "p": "M4",
+  "doc": "PR-IT-02",
+  "n": "Penanganan Insiden & Permintaan Layanan",
+  "rev": "00",
+  "eff": "2026-10-01",
+  "steps": [
+   "d",
+   "y"
+  ],
+  "purpose": "Memulihkan layanan secepat mungkin dan menyelesaikan permintaan layanan dalam batas waktu yang dijanjikan.",
+  "scope": "Insiden dan permintaan layanan pada sistem inti (SIMCert, SIMLab, SIMCal), platform bersama, infrastruktur jaringan, dan perangkat pengguna.",
+  "defs": [
+   [
+    "Prioritas",
+    "Tingkat penanganan yang ditetapkan dari perpaduan dampak dan urgensi."
+   ],
+   [
+    "SLA",
+    "Batas waktu tanggap dan waktu selesai yang disepakati untuk tiap tingkat prioritas."
+   ],
+   [
+    "Eskalasi",
+    "Pengalihan penanganan ke jenjang keahlian yang lebih tinggi atau ke vendor."
+   ],
+   [
+    "Workaround",
+    "Penyelesaian sementara yang memulihkan layanan sebelum akar masalah tertangani."
+   ]
+  ],
+  "resp": [
+   [
+    "it",
+    "Menetapkan prioritas, menangani, mengeskalasi bila perlu, dan menutup tiket."
+   ],
+   [
+    "user",
+    "Memverifikasi bahwa layanan telah pulih sebelum tiket ditutup."
+   ]
+  ],
+  "wi": [
+   {
+    "no": "1",
+    "t": "IT menetapkan prioritas tiket dari dampak dan urgensi sesuai matriks prioritas layanan.",
+    "l": "it",
+    "o": "Prioritas tiket"
+   },
+   {
+    "no": "2",
+    "t": "IT melakukan diagnosis awal dan menerapkan workaround bila tersedia agar pekerjaan pengguna dapat berjalan.",
+    "l": "it"
+   },
+   {
+    "no": "3",
+    "t": "Bila batas waktu tanggap terlampaui atau diperlukan keahlian lain, IT mengeskalasi ke jenjang berikutnya atau ke vendor.",
+    "l": "it",
+    "o": "Catatan eskalasi"
+   },
+   {
+    "no": "4",
+    "t": "IT memperbaiki akar masalah dan menguji bahwa layanan kembali berfungsi.",
+    "l": "it"
+   },
+   {
+    "no": "5",
+    "t": "Pengguna memverifikasi pemulihan layanan pada pekerjaannya sendiri.",
+    "l": "user",
+    "o": "Konfirmasi pengguna"
+   },
+   {
+    "no": "6",
+    "t": "IT menutup tiket dan mencatat solusinya ke basis pengetahuan agar kasus serupa lebih cepat tertangani.",
+    "l": "it",
+    "o": "Tiket tertutup"
+   },
+   {
+    "no": "7",
+    "t": "Insiden yang berdampak pada kerahasiaan, keutuhan, atau ketersediaan data ditangani pula melalui PR-IT-06.",
+    "l": "it"
+   }
+  ],
+  "records": [
+   "Tiket tertutup",
+   "Laporan pencapaian SLA bulanan",
+   "Basis pengetahuan"
+  ],
+  "refs": [
+   "Kebijakan TI TÜV NORD Group (K-RL 550)",
+   "SLA layanan TI internal",
+   "UU Pelindungan Data Pribadi"
+  ],
+  "sign": {
+   "prep": "IT & Digitalization",
+   "rev": "Corporate Management System",
+   "app": "Managing Directors"
+  }
+ },
+ "M4-P3": {
+  "p": "M4",
+  "doc": "PR-IT-03",
+  "n": "Prioritisasi & Tata Kelola Roadmap TI",
+  "rev": "00",
+  "eff": "2026-10-01",
+  "steps": [
+   "e"
+  ],
+  "purpose": "Memastikan kapasitas pengembangan yang terbatas dialokasikan ke inisiatif dengan nilai bisnis tertinggi.",
+  "scope": "Seluruh demand pengembangan sistem dan perubahan besar. Tidak mencakup perbaikan kecil yang selesai melalui PR-IT-02.",
+  "defs": [
+   [
+    "Demand",
+    "Permintaan pengembangan yang telah diklasifikasikan pada PR-IT-01."
+   ],
+   [
+    "Roadmap",
+    "Daftar inisiatif yang disepakati untuk dikerjakan pada periode berjalan beserta urutannya."
+   ],
+   [
+    "Backlog",
+    "Daftar demand yang diterima tetapi belum dijadwalkan."
+   ],
+   [
+    "Steering digital",
+    "Forum keputusan yang terdiri atas HoD SID dan Direksi."
+   ]
+  ],
+  "resp": [
+   [
+    "it",
+    "Menyiapkan ringkasan demand, perkiraan usaha, dan ketergantungan antar inisiatif."
+   ],
+   [
+    "user",
+    "Menyampaikan nilai bisnis dan dampak bila inisiatif tidak dikerjakan."
+   ],
+   [
+    "steer",
+    "Memutuskan prioritas dan menyetujui roadmap."
+   ]
+  ],
+  "wi": [
+   {
+    "no": "1",
+    "t": "IT merangkum demand: masalah yang dipecahkan, manfaat yang diharapkan, perkiraan usaha, dan ketergantungannya.",
+    "l": "it",
+    "o": "Ringkasan demand"
+   },
+   {
+    "no": "2",
+    "t": "Unit pengusul menyampaikan nilai bisnis dan konsekuensi bila demand tidak dikerjakan.",
+    "l": "user"
+   },
+   {
+    "no": "3",
+    "t": "Steering digital menilai nilai bisnis, urgensi, risiko, dan kapasitas tim yang tersedia.",
+    "l": "steer",
+    "o": "Penilaian steering"
+   },
+   {
+    "no": "4",
+    "t": "Steering memutuskan: masuk roadmap periode berjalan, masuk backlog, atau ditolak dengan alasan.",
+    "l": "steer",
+    "o": "Keputusan roadmap"
+   },
+   {
+    "no": "5",
+    "t": "IT memperbarui roadmap dan backlog, lalu menyampaikan hasilnya kepada unit pengusul.",
+    "l": "it",
+    "o": "Roadmap TI"
+   },
+   {
+    "no": "6",
+    "t": "Roadmap ditinjau ulang bersama Steering sekurang-kurangnya setiap triwulan.",
+    "l": "steer",
+    "o": "Notulen tinjauan roadmap"
+   }
+  ],
+  "records": [
+   "Roadmap TI",
+   "Backlog demand",
+   "Notulen Steering digital"
+  ],
+  "refs": [
+   "RKAP dan prioritas strategis (M1)",
+   "Kebijakan TI TÜV NORD Group (K-RL 550)"
+  ],
+  "sign": {
+   "prep": "IT & Digitalization",
+   "rev": "Corporate Management System",
+   "app": "Managing Directors"
+  }
+ },
+ "M4-P4": {
+  "p": "M4",
+  "doc": "PR-IT-04",
+  "n": "Analisis Kebutuhan & Pengembangan Sistem",
+  "rev": "00",
+  "eff": "2026-10-01",
+  "steps": [
+   "f",
+   "g"
+  ],
+  "purpose": "Menerjemahkan kebutuhan bisnis menjadi solusi yang benar, aman, dan dapat dipelihara.",
+  "scope": "Pengembangan dan konfigurasi sistem inti serta platform bersama, baik dikerjakan sendiri maupun oleh vendor.",
+  "defs": [
+   [
+    "Spesifikasi fungsional",
+    "Dokumen yang menetapkan alur proses, aturan bisnis, peran pengguna, dan keluaran sistem."
+   ],
+   [
+    "Rancangan data",
+    "Struktur data, hubungan antar entitas, dan integrasi antar sistem."
+   ],
+   [
+    "Lingkungan pengembangan",
+    "Lingkungan terpisah dari produksi, tempat solusi dibangun dan diuji."
+   ],
+   [
+    "Jejak audit",
+    "Catatan otomatis tentang siapa mengubah apa dan kapan."
+   ]
+  ],
+  "resp": [
+   [
+    "it",
+    "Menyusun spesifikasi dan rancangan, membangun solusi, dan menerapkan kontrol keamanan."
+   ],
+   [
+    "user",
+    "Menyediakan kebutuhan bisnis dan menyetujui spesifikasi sebelum pembangunan dimulai."
+   ]
+  ],
+  "wi": [
+   {
+    "no": "1",
+    "t": "IT bersama unit pengguna menyusun spesifikasi fungsional: alur proses, aturan bisnis, peran, dan keluaran.",
+    "l": "it",
+    "o": "Spesifikasi fungsional"
+   },
+   {
+    "no": "2",
+    "t": "Unit pengguna menelaah dan menyetujui spesifikasi sebelum pembangunan dimulai.",
+    "l": "user",
+    "o": "Persetujuan spesifikasi"
+   },
+   {
+    "no": "3",
+    "t": "IT menyusun rancangan data dan rancangan integrasi dengan sistem lain.",
+    "l": "it",
+    "o": "Rancangan data"
+   },
+   {
+    "no": "4",
+    "t": "IT membangun atau mengonfigurasi solusi di lingkungan pengembangan, terpisah dari produksi.",
+    "l": "it"
+   },
+   {
+    "no": "5",
+    "t": "IT menerapkan kontrol keamanan: autentikasi, otorisasi berbasis peran, jejak audit, dan pelindungan data pribadi.",
+    "l": "it"
+   },
+   {
+    "no": "6",
+    "t": "IT melakukan uji internal dan menutup temuan sebelum solusi diserahkan untuk pengujian penerimaan.",
+    "l": "it",
+    "o": "Catatan uji internal"
+   },
+   {
+    "no": "7",
+    "t": "Perubahan pada sistem yang menopang kegiatan penilaian kesesuaian diberitahukan kepada Corporate Management System.",
+    "l": "it"
+   }
+  ],
+  "records": [
+   "Spesifikasi fungsional disetujui",
+   "Rancangan data",
+   "Catatan uji internal"
+  ],
+  "refs": [
+   "Kebijakan TI TÜV NORD Group (K-RL 550)",
+   "UU Pelindungan Data Pribadi",
+   "ISO/IEC 17025:2017 klausul 7.11 (pengendalian data dan manajemen informasi)"
+  ],
+  "sign": {
+   "prep": "IT & Digitalization",
+   "rev": "Corporate Management System",
+   "app": "Managing Directors"
+  }
+ },
+ "M4-P5": {
+  "p": "M4",
+  "doc": "PR-IT-05",
+  "n": "Pengujian Penerimaan, Rilis & Migrasi Data",
+  "rev": "00",
+  "eff": "2026-10-01",
+  "steps": [
+   "h",
+   "i",
+   "j"
+  ],
+  "purpose": "Memastikan solusi diterima pengguna, dirilis secara terkendali, dan datanya berpindah dengan utuh.",
+  "scope": "Pengujian penerimaan pengguna, rilis ke produksi, migrasi data, serta pelatihan dan pendampingan adopsi.",
+  "defs": [
+   [
+    "UAT",
+    "User Acceptance Test — pengujian oleh pengguna terhadap skenario bisnis nyata."
+   ],
+   [
+    "Berita acara UAT",
+    "Dokumen persetujuan pengguna yang menjadi dasar rilis ke produksi."
+   ],
+   [
+    "Rilis",
+    "Pemindahan solusi dari lingkungan pengembangan ke produksi."
+   ],
+   [
+    "Rencana pemulihan",
+    "Langkah mengembalikan sistem ke kondisi sebelum rilis bila rilis gagal."
+   ]
+  ],
+  "resp": [
+   [
+    "it",
+    "Menyiapkan skenario UAT, merilis, memigrasikan data, dan menyelenggarakan pelatihan."
+   ],
+   [
+    "user",
+    "Menjalankan UAT, menandatangani berita acara, dan mengikuti pelatihan."
+   ]
+  ],
+  "wi": [
+   {
+    "no": "1",
+    "t": "IT menyiapkan lingkungan dan skenario UAT berdasarkan spesifikasi yang telah disetujui.",
+    "l": "it",
+    "o": "Skenario UAT"
+   },
+   {
+    "no": "2",
+    "t": "Unit pengguna menjalankan UAT dan mencatat temuan beserta tingkat keparahannya.",
+    "l": "user",
+    "o": "Catatan temuan UAT"
+   },
+   {
+    "no": "3",
+    "t": "Temuan yang menghambat diperbaiki IT, lalu diuji ulang oleh pengguna.",
+    "l": "it"
+   },
+   {
+    "no": "4",
+    "t": "Unit pengguna menandatangani berita acara UAT sebagai dasar rilis.",
+    "l": "user",
+    "o": "Berita acara UAT"
+   },
+   {
+    "no": "5",
+    "t": "IT menyusun rencana rilis: jadwal, dampak terhadap layanan, penanggung jawab, dan rencana pemulihan.",
+    "l": "it",
+    "o": "Rencana rilis"
+   },
+   {
+    "no": "6",
+    "t": "IT memigrasikan data dan memverifikasi kelengkapan serta kecocokan jumlah rekaman sebelum dan sesudah migrasi.",
+    "l": "it",
+    "o": "Berita acara migrasi data"
+   },
+   {
+    "no": "7",
+    "t": "IT merilis ke produksi dan memantau stabilitas selama periode pengawasan yang ditetapkan.",
+    "l": "it",
+    "o": "Catatan rilis"
+   },
+   {
+    "no": "8",
+    "t": "IT dan unit pengguna menyelenggarakan pelatihan serta menyerahkan panduan pengguna.",
+    "l": "it",
+    "o": "Materi pelatihan dan daftar hadir"
+   },
+   {
+    "no": "9",
+    "t": "Bila rilis tidak memenuhi kriteria penerimaan, IT menjalankan rencana pemulihan dan melaporkannya kepada Steering digital.",
+    "l": "it"
+   }
+  ],
+  "records": [
+   "Berita acara UAT",
+   "Berita acara migrasi data",
+   "Catatan rilis",
+   "Daftar hadir pelatihan"
+  ],
+  "refs": [
+   "Kebijakan TI TÜV NORD Group (K-RL 550)",
+   "UU Pelindungan Data Pribadi",
+   "ISO/IEC 17025:2017 klausul 7.11"
+  ],
+  "sign": {
+   "prep": "IT & Digitalization",
+   "rev": "Corporate Management System",
+   "app": "Managing Directors"
+  }
+ },
+ "M4-P6": {
+  "p": "M4",
+  "doc": "PR-IT-06",
+  "n": "Operasi, Keamanan Informasi & Pemantauan",
+  "rev": "00",
+  "eff": "2026-10-01",
+  "steps": [
+   "k",
+   "z"
+  ],
+  "purpose": "Menjaga sistem tetap tersedia, data terlindungi, dan penyimpangan terdeteksi sebelum berdampak pada layanan pelanggan.",
+  "scope": "Operasi harian sistem inti dan infrastruktur, pengelolaan hak akses, pencadangan data, serta penanganan insiden keamanan informasi.",
+  "defs": [
+   [
+    "Uptime",
+    "Persentase waktu sistem tersedia dan dapat dipakai dalam satu periode."
+   ],
+   [
+    "Cadangan",
+    "Salinan data yang disimpan terpisah agar dapat dipulihkan bila data utama rusak atau hilang."
+   ],
+   [
+    "Hak akses",
+    "Kewenangan seorang pengguna atas data dan fungsi tertentu di dalam sistem."
+   ],
+   [
+    "Insiden keamanan informasi",
+    "Kejadian yang mengancam kerahasiaan, keutuhan, atau ketersediaan informasi."
+   ]
+  ],
+  "resp": [
+   [
+    "it",
+    "Mengoperasikan, memantau, mencadangkan, dan mengamankan sistem serta menangani insiden keamanan."
+   ],
+   [
+    "user",
+    "Menjaga kerahasiaan kredensial dan melaporkan dugaan insiden keamanan tanpa menunda."
+   ],
+   [
+    "steer",
+    "Menerima laporan layanan TI sebagai masukan tinjauan manajemen."
+   ]
+  ],
+  "wi": [
+   {
+    "no": "1",
+    "t": "IT memantau ketersediaan, kinerja, dan kapasitas sistem inti setiap hari kerja.",
+    "l": "it",
+    "o": "Log pemantauan"
+   },
+   {
+    "no": "2",
+    "t": "IT menjalankan pencadangan sesuai jadwal dan menguji pemulihannya secara berkala.",
+    "l": "it",
+    "o": "Log cadangan dan catatan uji pemulihan"
+   },
+   {
+    "no": "3",
+    "t": "IT meninjau hak akses pengguna sekurang-kurangnya setahun sekali dan mencabut akses yang tidak lagi diperlukan.",
+    "l": "it",
+    "o": "Berita acara tinjauan hak akses"
+   },
+   {
+    "no": "4",
+    "t": "Pencabutan akses karyawan yang berhenti dilakukan pada hari kerja terakhir, terhubung dengan proses offboarding pada S3.",
+    "l": "it"
+   },
+   {
+    "no": "5",
+    "t": "Pengguna melaporkan dugaan insiden keamanan informasi melalui helpdesk tanpa menunda.",
+    "l": "user",
+    "o": "Laporan insiden"
+   },
+   {
+    "no": "6",
+    "t": "IT menangani insiden keamanan informasi: pembendungan, pemulihan layanan, dan analisis akar masalah.",
+    "l": "it",
+    "o": "Laporan penanganan insiden"
+   },
+   {
+    "no": "7",
+    "t": "Insiden yang melibatkan data pribadi dilaporkan sesuai UU Pelindungan Data Pribadi, berkoordinasi dengan Legal Administration Support.",
+    "l": "it"
+   },
+   {
+    "no": "8",
+    "t": "IT menyusun laporan layanan TI bulanan: uptime, pencapaian SLA, insiden, dan status pencadangan.",
+    "l": "it",
+    "o": "Laporan layanan TI bulanan"
+   },
+   {
+    "no": "9",
+    "t": "Laporan disampaikan kepada Steering digital sebagai masukan tinjauan.",
+    "l": "steer"
+   }
+  ],
+  "records": [
+   "Log pemantauan",
+   "Log cadangan",
+   "Berita acara tinjauan hak akses",
+   "Laporan insiden keamanan informasi",
+   "Laporan layanan TI bulanan"
+  ],
+  "refs": [
+   "Kebijakan TI TÜV NORD Group (K-RL 550)",
+   "UU Pelindungan Data Pribadi",
+   "ISO/IEC 17025:2017 klausul 7.11",
+   "ISO/IEC 17021-1:2015 klausul 8.4 (kerahasiaan)"
+  ],
+  "sign": {
+   "prep": "IT & Digitalization",
+   "rev": "Corporate Management System",
+   "app": "Managing Directors"
+  }
+ }
+}
