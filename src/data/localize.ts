@@ -159,8 +159,8 @@ export function localizeProcesses(processes: Process[]): Process[] {
 
 /**
  * Procedures are prose end to end, apart from the document number, the revision
- * and the effective date. The signature block names units, which keep their
- * official spelling, so only the words around them move.
+ * numbers and dates, and the signature roles, which keep their official English
+ * spelling.
  */
 export function localizeProcedures(
   procedures: Record<string, Procedure>,
@@ -177,6 +177,7 @@ export function localizeProcedures(
     ),
     records: procedure.records.map(t),
     refs: procedure.refs.map(t),
+    revs: procedure.revs.map((entry) => ({ ...entry, note: t(entry.note) })),
   }));
 }
 

@@ -122,6 +122,7 @@ describe("unitToProcesses", () => {
       "G1",
       "G2",
       "M2",
+      "M4.2",
       "S3",
       "S4",
     ]);

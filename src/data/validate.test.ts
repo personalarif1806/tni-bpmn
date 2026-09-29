@@ -175,3 +175,60 @@ describe("assertDataValid", () => {
     expect(() => assertDataValid(data)).toThrow(/C8/);
   });
 });
+
+describe("procedure document control (PCR-TNID-01)", () => {
+  const first = (data: DataSet) => Object.values(data.procedures)[0]!;
+
+  test("catches a number the Document Control Procedure would not issue", () => {
+    const data = broken((copy) => {
+      first(copy).doc = "PR-IT-01";
+    });
+
+    expect(messages(data)).toContain('"PR-IT-01" is not a procedure number');
+  });
+
+  test("catches a form number used as a procedure number", () => {
+    const data = broken((copy) => {
+      first(copy).doc = "FIT-TNI-01A";
+    });
+
+    expect(messages(data)).toContain("is not a procedure number");
+  });
+
+  test("catches a one-digit revision", () => {
+    const data = broken((copy) => {
+      first(copy).rev = "0";
+      first(copy).revs[0]!.rev = "0";
+    });
+
+    expect(messages(data)).toContain('revision "0" is not two digits');
+  });
+
+  test("catches a header revision the revision notes do not reach", () => {
+    const data = broken((copy) => {
+      first(copy).rev = "01";
+    });
+
+    expect(messages(data)).toContain('last revision note is "00"');
+  });
+
+  test("catches revision notes out of order", () => {
+    const data = broken((copy) => {
+      const procedure = first(copy);
+      procedure.revs = [
+        { ...procedure.revs[0]!, rev: "01" },
+        { ...procedure.revs[0]!, rev: "00" },
+      ];
+    });
+
+    expect(messages(data)).toContain('revision "00" does not follow "01"');
+  });
+
+  test("catches a current revision dated differently from the header", () => {
+    const data = broken((copy) => {
+      first(copy).revs[0]!.date = "2026-01-01";
+    });
+
+    expect(messages(data)).toContain("is dated 2026-01-01 but published");
+  });
+});

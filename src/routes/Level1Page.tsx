@@ -50,7 +50,7 @@ export function Level1Page() {
           </h1>
           <p className="max-w-3xl text-body text-muted">
             {t(
-              "Dua puluh proses end-to-end dalam empat kelompok. Core Business Process digambar sebagai rantai, dengan empat lajur profit center berjalan paralel pada tahap C4.",
+              "Dua puluh lima proses end-to-end dalam empat kelompok. Core Business Process digambar sebagai rantai, dengan empat lajur profit center berjalan paralel pada tahap C4; IT & Digitalization dirinci menjadi enam subproses M4.",
             )}
           </p>
         </header>

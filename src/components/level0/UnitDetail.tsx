@@ -13,6 +13,7 @@ import {
 } from "@/data";
 import { useDetailPanel } from "@/hooks/useDetailPanel";
 import { ProcessLinks } from "@/components/level0/ProcessLinks";
+import { ClauseSection } from "@/components/shared/ClauseSection";
 import { t } from "@/lib/i18n";
 
 /** Unit panel — PRD 8.4: what a unit does and where it appears in the core process. */
@@ -130,6 +131,8 @@ export function UnitDetail({ unitId }: { unitId: string }) {
           </ul>
         </PanelSection>
       ) : null}
+
+      <ClauseSection elementId={unitId} />
 
       <ProcessLinks origin={{ kind: "unit", id: unitId }} />
 

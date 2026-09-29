@@ -33,7 +33,8 @@
    "Menetapkan kebijakan mutu, K3L, dan komitmen imparsialitas, serta memimpin management review.",
    "Menyetujui struktur organisasi, kebijakan, anggaran, investasi, dan kontrak strategis sesuai kewenangan.",
    "Bertanggung jawab atas kinerja P&L, kepatuhan regulasi dan akreditasi, serta reputasi perusahaan.",
-   "Mewakili perusahaan kepada TÜV NORD Group, Board of Commissioners, regulator, dan mitra strategis."
+   "Mewakili perusahaan kepada TÜV NORD Group, Board of Commissioners, regulator, dan mitra strategis.",
+   "Menetapkan kebijakan keamanan informasi serta sasaran mutu, lingkungan, dan keamanan informasi, dan memastikan sumber daya sistem manajemen tersedia."
   ],
   "outputs": [
    "Business direction dan kebijakan",
@@ -63,7 +64,8 @@
    "Menurunkan target perusahaan menjadi KPI per BU, divisi, dan departemen.",
    "Mengoordinasikan siklus penyusunan anggaran bersama Finance & Accounting.",
    "Melakukan analisis pasar, kompetitor, dan tren industri TIC sebagai dasar keputusan strategis.",
-   "Memantau pencapaian inisiatif strategis serta menyiapkan bahan rapat Direksi, BoC, dan management review."
+   "Memantau pencapaian inisiatif strategis serta menyiapkan bahan rapat Direksi, BoC, dan management review.",
+   "Menganalisis isu internal dan eksternal serta kebutuhan pihak berkepentingan sebagai konteks sistem manajemen mutu, lingkungan, dan keamanan informasi."
   ],
   "outputs": [
    "Corporate strategy dan business plan",
@@ -126,7 +128,8 @@
    "Memetakan, menstandarkan, dan mengoptimalkan proses bisnis bersama pemilik proses.",
    "Mengukur dampak inisiatif perbaikan terhadap efisiensi, biaya, dan kualitas layanan.",
    "Menyusun dan menjalankan program keberlanjutan (ESG) beserta pelaporannya ke Direksi dan Group.",
-   "Mengoordinasikan pelaksanaan CSR bersama Corporate Marketing & Communication."
+   "Mengoordinasikan pelaksanaan CSR bersama Corporate Marketing & Communication.",
+   "Memelihara pengetahuan organisasi: pelajaran dari perbaikan, praktik terbaik, dan basis pengetahuan proses."
   ],
   "outputs": [
    "Improvement initiative",
@@ -164,13 +167,15 @@
    "Menyediakan data, dashboard, dan laporan manajemen yang andal.",
    "Mengelola infrastruktur, jaringan, perangkat, dan layanan helpdesk.",
    "Menerapkan keamanan informasi, kontrol akses, dan penanganan insiden sesuai kebijakan TI Group (K-RL 550) dan UU PDP.",
-   "Menyusun dan mengawal roadmap transformasi digital sesuai prioritas bisnis."
+   "Menyusun dan mengawal roadmap transformasi digital sesuai prioritas bisnis.",
+   "Menjalankan sistem manajemen keamanan informasi: ruang lingkup, penilaian risiko, Statement of Applicability, serta kesiapan TIK untuk kelangsungan bisnis."
   ],
   "outputs": [
    "Core system dan aplikasi",
    "Digital workflow dan otomasi",
    "Dashboard dan laporan",
-   "Infrastruktur TI yang aman dan tersedia"
+   "Infrastruktur TI yang aman dan tersedia",
+   "Statement of Applicability (SoA)"
   ],
   "links": [
    "Seluruh BU",
@@ -197,13 +202,17 @@
    "Memfasilitasi analisis risiko imparsialitas dan konflik kepentingan, termasuk dukungan administratif bagi Governing Board & Appeals Committee.",
    "Mengelola keluhan pelanggan, ketidaksesuaian, dan tindakan korektif (CAPA) hingga terbukti efektif.",
    "Menyiapkan masukan management review dan memantau tindak lanjutnya.",
-   "Mengawasi pengendalian kesehatan, keselamatan kerja, dan lingkungan (K3L)."
+   "Mengawasi pengendalian kesehatan, keselamatan kerja, dan lingkungan (K3L).",
+   "Menetapkan ruang lingkup sistem manajemen terintegrasi (mutu, lingkungan, keamanan informasi) dan memelihara register risiko dan peluang.",
+   "Mengidentifikasi aspek dan dampak lingkungan penting serta mengevaluasi pemenuhan kewajiban penaatan secara berkala.",
+   "Mengoordinasikan kesiapsiagaan dan tanggap darurat, termasuk simulasi berkala bersama General Affairs."
   ],
   "outputs": [
    "Akreditasi dan skema terpelihara",
    "Temuan audit internal",
    "CAPA tertutup",
-   "Input management review"
+   "Input management review",
+   "Register risiko & aspek lingkungan"
   ],
   "links": [
    "Seluruh profit center",
@@ -228,7 +237,8 @@
    "Mengelola perizinan usaha, penunjukan, dan registrasi lembaga pada kementerian atau lembaga teknis terkait.",
    "Memantau perubahan regulasi dan menyampaikan dampaknya kepada unit terkait.",
    "Mengelola dokumen korporasi (akta, anggaran dasar, dokumen RUPS) dan register kewajiban hukum.",
-   "Mendukung penanganan sengketa, klaim, dan somasi."
+   "Mendukung penanganan sengketa, klaim, dan somasi.",
+   "Memantau kewajiban penaatan lingkungan dan pelindungan data pribadi (UU PDP) dalam legal register."
   ],
   "outputs": [
    "Kontrak yang telah ditelaah",
@@ -362,7 +372,8 @@
    "Menjalankan proses inti TIC sesuai standar akreditasi masing-masing (lihat baris profit center).",
    "Merencanakan sumber daya dan menugaskan personel yang kompeten untuk setiap order.",
    "Menjaga validitas hasil, imparsialitas, dan kerahasiaan informasi pelanggan.",
-   "Menerbitkan laporan, sertifikat, atau hasil uji melalui SIM's."
+   "Menerbitkan laporan, sertifikat, atau hasil uji melalui SIM's.",
+   "Memastikan peralatan uji dan ukur terkalibrasi serta tertelusur, dan menjaga identifikasi serta keamanan sampel dan properti pelanggan."
   ],
   "outputs": [
    "Laporan hasil uji / sertifikat kalibrasi",
@@ -673,7 +684,8 @@
    "Mengelola kualifikasi, pelatihan, dan pemantauan kompetensi personel teknis (auditor, inspektor, analis, teknisi kalibrasi) bersama BU dan CMS sesuai persyaratan akreditasi.",
    "Mengelola manajemen kinerja, KPI individu, remunerasi, dan penggajian.",
    "Menjalankan pengembangan karyawan dan pengembangan organisasi.",
-   "Mengelola hubungan industrial, peraturan perusahaan, dan kepatuhan ketenagakerjaan termasuk BPJS."
+   "Mengelola hubungan industrial, peraturan perusahaan, dan kepatuhan ketenagakerjaan termasuk BPJS.",
+   "Melaksanakan penyaringan calon karyawan, perjanjian kerahasiaan, program kepedulian mutu, lingkungan, dan keamanan informasi, serta pencabutan akses karyawan keluar bersama IT."
   ],
   "outputs": [
    "Personel yang kompeten",
@@ -703,7 +715,9 @@
    "Mengelola aset dan inventaris umum, termasuk kendaraan operasional.",
    "Mengatur perjalanan dinas, akomodasi, dan logistik auditor serta inspektor, termasuk pengiriman sampel.",
    "Mengelola keamanan, kebersihan, dan administrasi operasional kantor.",
-   "Mendukung penerapan K3 fasilitas bersama CMS."
+   "Mendukung penerapan K3 fasilitas bersama CMS.",
+   "Mengelola limbah (termasuk limbah B3 laboratorium dan e-waste), energi, dan air untuk mengendalikan dampak lingkungan fasilitas.",
+   "Menjaga keamanan fisik gedung dan area terbatas serta kesiapan sarana tanggap darurat."
   ],
   "outputs": [
    "Fasilitas dan kantor yang siap pakai",
@@ -732,7 +746,8 @@
    "Mengelola approved vendor list dan evaluasi kinerja vendor, termasuk penyedia eksternal yang memengaruhi hasil pengujian, inspeksi, dan sertifikasi.",
    "Memproses permintaan pembelian menjadi PO atau kontrak, serta memantau pengirimannya.",
    "Mengadakan peralatan uji, bahan kimia, reagen, bahan acuan, dan jasa kalibrasi eksternal sesuai spesifikasi teknis.",
-   "Mendorong efisiensi biaya pengadaan."
+   "Mendorong efisiensi biaya pengadaan.",
+   "Menetapkan persyaratan mutu, lingkungan, dan keamanan informasi dalam kontrak pemasok, termasuk perjanjian kerahasiaan dan pemrosesan data."
   ],
   "outputs": [
    "Approved vendor list",

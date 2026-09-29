@@ -203,5 +203,29 @@
  "pct_dec": {
   "n": "Product Certification: reviewer & pengambil keputusan",
   "t": "Independen dari evaluasi"
+ },
+ "itsd": {
+  "n": "Service desk TI",
+  "t": "IT & Digitalization"
+ },
+ "itdev": {
+  "n": "Tim aplikasi & integrasi",
+  "t": "IT & Digitalization"
+ },
+ "itops": {
+  "n": "Tim infrastruktur & jaringan",
+  "t": "IT & Digitalization"
+ },
+ "itdata": {
+  "n": "Tim data & BI",
+  "t": "IT & Digitalization"
+ },
+ "isec": {
+  "n": "Fungsi keamanan informasi",
+  "t": "IT & Digitalization"
+ },
+ "vendor": {
+  "n": "Vendor / penyedia layanan TI",
+  "ext": 1
  }
 }

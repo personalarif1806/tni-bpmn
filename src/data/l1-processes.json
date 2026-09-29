@@ -443,8 +443,9 @@
   ],
   "ref": "Program suggestion system dan QCC perusahaan",
   "rel": [
-   "M4",
-   "G1"
+   "G1",
+   "M4.2",
+   "M4.6"
   ],
   "note": "Siklus pelaporan keberlanjutan (ESG) juga dikelola Corporate Innovation & Sustainability dan dapat dirinci pada Level 2.",
   "lanes": [
@@ -601,97 +602,290 @@
   }
  },
  {
-  "id": "M4",
+  "id": "M4.1",
   "g": "M",
-  "name": "Digital & IT Service Management",
+  "name": "Core System & Shared Platform Management",
   "l0": "IT & Digitalization",
   "owner": "IT & Digitalization",
-  "purpose": "Mengelola permintaan layanan TI dan pengembangan sistem dari pengajuan sampai operasi yang aman.",
+  "purpose": "Mengelola perubahan dan pemeliharaan core system operasional (SIMCert, SIMLab, SIMCal) serta platform bersama (Central Customer, Central Invoicing) secara terkendali dan aman, dari permintaan sampai operasi.",
   "kpi": [
-   "Penyelesaian tiket sesuai SLA",
-   "Ketersediaan sistem inti (uptime SIM's)",
-   "Persentase proyek roadmap selesai tepat waktu"
+   "Permintaan perubahan selesai sesuai jadwal yang disetujui",
+   "Rilis tanpa insiden mayor pasca-rilis",
+   "Ketersediaan sistem inti (uptime SIM's)"
   ],
   "sys": [
-   "Helpdesk / ticketing",
    "SIMCert, SIMLab, SIMCal",
-   "Central Customer, Central Invoicing"
+   "Central Customer, Central Invoicing",
+   "Helpdesk / ticketing"
   ],
-  "ref": "Kebijakan TI Group (K-RL 550), UU PDP",
+  "ref": "ISO 9001:2015 8.3 & 8.5.6; ISO/IEC 27001:2022 A.8.25–A.8.33; PCR-TNID-01 §6.9",
   "rel": [
-   "M3"
+   "M4.2",
+   "M4.4",
+   "M4.5",
+   "M4.6"
   ],
+  "note": "Lane Service desk TI, Tim aplikasi & integrasi, Tim infrastruktur & jaringan, Tim data & BI, dan Fungsi keamanan informasi adalah peran fungsional di dalam IT & Digitalization; pembagiannya perlu dikonfirmasi terhadap struktur tim IT.",
   "lanes": [
-   "user",
-   "it",
-   "steer"
+   "owner",
+   "itdev",
+   "isec",
+   "it"
   ],
   "steps": [
    {
     "k": "a",
-    "l": "user",
+    "l": "owner",
     "c": 0,
     "y": "s",
-    "t": "Kebutuhan / masalah sistem",
+    "t": "Kebutuhan perubahan sistem",
     "n": [
      "b"
     ]
    },
    {
     "k": "b",
-    "l": "user",
+    "l": "owner",
     "c": 1,
-    "t": "Mengajukan tiket / demand",
-    "d": "Pengguna mengajukan tiket insiden, permintaan layanan, atau demand pengembangan.",
-    "o": "Tiket / demand request",
+    "t": "Mengajukan permintaan perubahan",
+    "d": "Pemilik sistem mengajukan permintaan perubahan atau fitur baru pada SIMCert, SIMLab, SIMCal, Central Customer, atau Central Invoicing melalui tiket.",
+    "o": "Permintaan perubahan (RFC)",
     "n": [
      "c"
     ]
    },
    {
     "k": "c",
-    "l": "it",
+    "l": "itdev",
     "c": 2,
-    "y": "d",
-    "t": "Jenis permintaan?",
-    "d": "IT mengklasifikasikan permintaan menjadi insiden/layanan atau pengembangan.",
-    "o": "Klasifikasi tiket",
+    "t": "Analisis kebutuhan & dampak",
+    "d": "Menyusun spesifikasi fungsional serta dampak ke data, integrasi, dan dokumen terkendali, beserta estimasi usaha.",
+    "o": "Spesifikasi kebutuhan",
     "n": [
-     [
-      "d",
-      "Insiden / layanan"
-     ],
-     [
-      "e",
-      "Pengembangan"
-     ]
+     "d"
     ]
    },
    {
     "k": "d",
-    "l": "it",
+    "l": "isec",
     "c": 3,
-    "t": "Penanganan insiden & layanan",
-    "d": "Menangani tiket sesuai prioritas dan SLA, termasuk eskalasi.",
-    "o": "Tiket selesai",
+    "t": "Kajian keamanan & privasi",
+    "d": "Menilai klasifikasi data, kebutuhan kontrol akses, dan pemrosesan data pribadi (security & privacy by design).",
+    "o": "Catatan kajian keamanan",
     "n": [
-     "y"
+     "e"
     ]
    },
    {
-    "k": "y",
-    "l": "user",
+    "k": "e",
+    "l": "it",
     "c": 4,
+    "y": "d",
+    "t": "Perubahan disetujui?",
+    "d": "IT & Digitalization menilai prioritas, risiko, dan kapasitas; perubahan besar diteruskan ke roadmap (M4.6).",
+    "o": "Keputusan perubahan",
+    "n": [
+     [
+      "f",
+      "Ya"
+     ],
+     [
+      "x",
+      "Tidak"
+     ]
+    ]
+   },
+   {
+    "k": "x",
+    "l": "it",
+    "c": 5,
     "y": "e",
-    "t": "Layanan pulih"
+    "t": "Permintaan ditutup"
+   },
+   {
+    "k": "f",
+    "l": "itdev",
+    "c": 5,
+    "t": "Desain & pengembangan aman",
+    "d": "Membangun di lingkungan pengembangan terpisah mengikuti standar secure coding dan peninjauan kode.",
+    "o": "Build & catatan code review",
+    "n": [
+     "g"
+    ]
+   },
+   {
+    "k": "g",
+    "l": "itdev",
+    "c": 6,
+    "t": "Pengujian sistem & keamanan",
+    "d": "Uji fungsi, regresi, dan keamanan di lingkungan uji dengan data uji yang dianonimkan.",
+    "o": "Laporan uji",
+    "n": [
+     "h"
+    ]
+   },
+   {
+    "k": "h",
+    "l": "owner",
+    "c": 7,
+    "y": "d",
+    "t": "UAT & validasi diterima?",
+    "d": "Pemilik sistem menguji skenario bisnis dan memvalidasi input, logika, dan output sesuai PCR-TNID-01 §6.9.",
+    "o": "Berita acara UAT & validasi",
+    "n": [
+     [
+      "i",
+      "Ya"
+     ],
+     [
+      "f",
+      "Perbaikan"
+     ]
+    ]
+   },
+   {
+    "k": "i",
+    "l": "it",
+    "c": 8,
+    "t": "Persetujuan rilis",
+    "d": "Menyetujui jadwal rilis, rencana rollback, dan komunikasi kepada pengguna.",
+    "o": "Persetujuan rilis",
+    "n": [
+     "j"
+    ]
+   },
+   {
+    "k": "j",
+    "l": "itdev",
+    "c": 9,
+    "t": "Rilis ke produksi",
+    "d": "Deploy terkendali, migrasi data bila perlu, dan pembaruan dokumentasi sistem.",
+    "o": "Catatan rilis",
+    "n": [
+     "k"
+    ]
+   },
+   {
+    "k": "k",
+    "l": "itdev",
+    "c": 10,
+    "t": "Pemantauan pasca-rilis & pemeliharaan",
+    "d": "Memantau kinerja dan galat pasca-rilis, memperbaiki bug, dan menjalankan pemeliharaan rutin.",
+    "o": "Log pemeliharaan",
+    "n": [
+     "z"
+    ]
+   },
+   {
+    "k": "z",
+    "l": "itdev",
+    "c": 11,
+    "y": "e",
+    "t": "Sistem berjalan sesuai kebutuhan"
+   }
+  ],
+  "num": {
+   "b": "M4.1-01",
+   "c": "M4.1-02",
+   "d": "M4.1-03",
+   "e": "M4.1-04",
+   "f": "M4.1-05",
+   "g": "M4.1-06",
+   "h": "M4.1-07",
+   "i": "M4.1-08",
+   "j": "M4.1-09",
+   "k": "M4.1-10"
+  }
+ },
+ {
+  "id": "M4.2",
+  "g": "M",
+  "name": "Workflow Digitalization & Integration",
+  "l0": "IT & Digitalization",
+  "owner": "IT & Digitalization",
+  "purpose": "Mendigitalkan dan mengotomasi alur kerja lintas unit, termasuk approval dan integrasi antarsistem, dengan dokumen terkendali yang ikut diperbarui dan sistem yang tervalidasi sebelum dipakai.",
+  "kpi": [
+   "Jumlah alur kerja manual yang didigitalkan",
+   "Penurunan waktu siklus proses",
+   "Pengurangan formulir kertas"
+  ],
+  "sys": [
+   "Workflow / approval platform",
+   "Integration (API)",
+   "SIMCert, SIMLab, SIMCal"
+  ],
+  "ref": "ISO 9001:2015 4.4 & 7.5; ISO 14001:2015 6.1.2; ISO/IEC 27001:2022 A.8.26; PCR-TNID-01",
+  "rel": [
+   "M4.1",
+   "M4.6",
+   "G1",
+   "M3"
+  ],
+  "note": "Lane Service desk TI, Tim aplikasi & integrasi, Tim infrastruktur & jaringan, Tim data & BI, dan Fungsi keamanan informasi adalah peran fungsional di dalam IT & Digitalization; pembagiannya perlu dikonfirmasi terhadap struktur tim IT.",
+  "lanes": [
+   "owner",
+   "itdev",
+   "cms",
+   "it"
+  ],
+  "steps": [
+   {
+    "k": "a",
+    "l": "owner",
+    "c": 0,
+    "y": "s",
+    "t": "Alur kerja manual / terputus",
+    "n": [
+     "b"
+    ]
+   },
+   {
+    "k": "b",
+    "l": "owner",
+    "c": 1,
+    "t": "Mengusulkan digitalisasi alur kerja",
+    "d": "Pemilik proses mengusulkan alur kerja, approval, atau integrasi yang akan didigitalkan beserta manfaat yang diharapkan.",
+    "o": "Usulan digitalisasi",
+    "n": [
+     "c"
+    ]
+   },
+   {
+    "k": "c",
+    "l": "itdev",
+    "c": 2,
+    "t": "Pemetaan proses as-is & to-be",
+    "d": "Bersama pemilik proses memetakan alur saat ini dan rancangan alur digital, termasuk titik approval dan data yang dipertukarkan.",
+    "o": "Peta proses as-is / to-be",
+    "n": [
+     "d"
+    ]
+   },
+   {
+    "k": "d",
+    "l": "cms",
+    "c": 3,
+    "y": "d",
+    "t": "Mengubah dokumen terkendali?",
+    "d": "CMS memeriksa apakah rancangan mengubah prosedur, formulir, atau rekaman terkendali.",
+    "n": [
+     [
+      "e",
+      "Ya"
+     ],
+     [
+      "f",
+      "Tidak"
+     ]
+    ]
    },
    {
     "k": "e",
-    "l": "steer",
-    "c": 3,
-    "t": "Prioritisasi dalam roadmap",
-    "d": "Steering menilai nilai bisnis, urgensi, dan kapasitas, lalu memasukkan ke roadmap.",
-    "o": "Roadmap & backlog",
+    "l": "cms",
+    "c": 4,
+    "t": "Revisi dokumen terkendali",
+    "d": "Memproses usulan perubahan prosedur dan formulir sesuai PCR-TNID-01; formulir kertas yang digantikan dicatat untuk ditarik.",
+    "o": "Draft revisi dokumen",
     "n": [
      "f"
     ]
@@ -699,33 +893,33 @@
    {
     "k": "f",
     "l": "it",
-    "c": 4,
-    "t": "Analisis kebutuhan & desain",
-    "d": "Menyusun spesifikasi fungsional, alur proses, dan rancangan data.",
-    "o": "Spesifikasi / PRD",
+    "c": 5,
+    "t": "Persetujuan desain solusi",
+    "d": "Menyetujui desain solusi, platform, dan kebutuhan integrasi sesuai arsitektur dan prioritas.",
+    "o": "Desain solusi disetujui",
     "n": [
      "g"
     ]
    },
    {
     "k": "g",
-    "l": "it",
-    "c": 5,
-    "t": "Pengembangan & konfigurasi",
-    "d": "Membangun atau mengonfigurasi solusi sesuai spesifikasi dan standar keamanan.",
-    "o": "Build",
+    "l": "itdev",
+    "c": 6,
+    "t": "Konfigurasi workflow & integrasi",
+    "d": "Mengonfigurasi alur, aturan approval, notifikasi, dan antarmuka integrasi (API) dengan autentikasi dan log yang memadai.",
+    "o": "Workflow terkonfigurasi",
     "n": [
      "h"
     ]
    },
    {
     "k": "h",
-    "l": "user",
-    "c": 6,
+    "l": "owner",
+    "c": 7,
     "y": "d",
-    "t": "UAT diterima?",
-    "d": "Pengguna menguji solusi terhadap skenario bisnis.",
-    "o": "Berita acara UAT",
+    "t": "Validasi sistem lolos?",
+    "d": "Membandingkan hasil workflow dengan alur atau perhitungan manual sesuai PCR-TNID-01 §6.9.",
+    "o": "Rekaman validasi sistem",
     "n": [
      [
       "i",
@@ -739,33 +933,819 @@
    },
    {
     "k": "i",
-    "l": "it",
-    "c": 7,
-    "t": "Deploy & migrasi data",
-    "d": "Merilis ke produksi dan memigrasikan data yang diperlukan.",
-    "o": "Rilis",
+    "l": "itdev",
+    "c": 8,
+    "t": "Go-live & penghentian alur lama",
+    "d": "Mengaktifkan workflow di produksi serta menonaktifkan formulir kertas atau alur lama.",
+    "o": "Catatan go-live",
     "n": [
      "j"
     ]
    },
    {
     "k": "j",
-    "l": "user",
-    "c": 8,
-    "t": "Pelatihan & adopsi",
-    "d": "Pengguna dilatih dan mulai memakai sistem baru.",
-    "o": "Pengguna terlatih",
+    "l": "cms",
+    "c": 9,
+    "t": "Publikasi dokumen & sosialisasi",
+    "d": "Menerbitkan revisi dokumen terkendali dan menyosialisasikan alur baru kepada pengguna.",
+    "o": "Dokumen terbit & daftar hadir",
     "n": [
      "k"
     ]
    },
    {
     "k": "k",
+    "l": "owner",
+    "c": 10,
+    "t": "Evaluasi manfaat",
+    "d": "Mengukur waktu siklus, penggunaan kertas, dan kepatuhan alur setelah go-live.",
+    "o": "Laporan evaluasi manfaat",
+    "n": [
+     "z"
+    ]
+   },
+   {
+    "k": "z",
+    "l": "owner",
+    "c": 11,
+    "y": "e",
+    "t": "Alur kerja digital berjalan"
+   }
+  ],
+  "num": {
+   "b": "M4.2-01",
+   "c": "M4.2-02",
+   "d": "M4.2-03",
+   "e": "M4.2-04",
+   "f": "M4.2-05",
+   "g": "M4.2-06",
+   "h": "M4.2-07",
+   "i": "M4.2-08",
+   "j": "M4.2-09",
+   "k": "M4.2-10"
+  }
+ },
+ {
+  "id": "M4.3",
+  "g": "M",
+  "name": "Data, Dashboard & Management Reporting",
+  "l0": "IT & Digitalization",
+  "owner": "IT & Digitalization",
+  "purpose": "Menyediakan data, dashboard, dan laporan manajemen yang andal, dengan definisi KPI yang disepakati, kualitas data yang terpantau, dan akses sesuai klasifikasi informasi.",
+  "kpi": [
+   "Dashboard tervalidasi sebelum terbit",
+   "Temuan kualitas data yang ditutup tepat waktu",
+   "Refresh data sesuai jadwal"
+  ],
+  "sys": [
+   "BI / dashboard platform",
+   "SIMCert, SIMLab, SIMCal",
+   "Central Customer, Central Invoicing"
+  ],
+  "ref": "ISO 9001:2015 9.1.3 & 9.3; ISO 14001:2015 9.1; ISO/IEC 27001:2022 A.5.12; PCR-TNID-01 §6.9",
+  "rel": [
+   "M1",
+   "G1",
+   "M4.1"
+  ],
+  "note": "Lane Service desk TI, Tim aplikasi & integrasi, Tim infrastruktur & jaringan, Tim data & BI, dan Fungsi keamanan informasi adalah peran fungsional di dalam IT & Digitalization; pembagiannya perlu dikonfirmasi terhadap struktur tim IT.",
+  "lanes": [
+   "owner",
+   "itdata",
+   "md"
+  ],
+  "steps": [
+   {
+    "k": "a",
+    "l": "owner",
+    "c": 0,
+    "y": "s",
+    "t": "Kebutuhan data / laporan",
+    "n": [
+     "b"
+    ]
+   },
+   {
+    "k": "b",
+    "l": "owner",
+    "c": 1,
+    "t": "Mengajukan kebutuhan laporan",
+    "d": "Pengguna menjelaskan keputusan yang didukung, KPI, definisi, dan frekuensi laporan.",
+    "o": "Permintaan laporan",
+    "n": [
+     "c"
+    ]
+   },
+   {
+    "k": "c",
+    "l": "itdata",
+    "c": 2,
+    "t": "Definisi KPI & sumber data",
+    "d": "Menyepakati definisi KPI, rumus, sumber data, dan pemilik data, lalu mencatatnya di kamus data.",
+    "o": "Kamus data & definisi KPI",
+    "n": [
+     "d"
+    ]
+   },
+   {
+    "k": "d",
+    "l": "owner",
+    "c": 3,
+    "t": "Penetapan pemilik & klasifikasi data",
+    "d": "Pemilik data menetapkan klasifikasi informasi dan siapa yang berhak mengakses.",
+    "o": "Klasifikasi & hak akses data",
+    "n": [
+     "e"
+    ]
+   },
+   {
+    "k": "e",
+    "l": "itdata",
+    "c": 4,
+    "t": "Integrasi & pemeriksaan kualitas data",
+    "d": "Membangun alur data dari SIM's dan Central Invoicing dengan aturan kualitas: kelengkapan, keunikan, dan ketepatan waktu.",
+    "o": "Laporan kualitas data",
+    "n": [
+     "f"
+    ]
+   },
+   {
+    "k": "f",
+    "l": "itdata",
+    "c": 5,
+    "y": "d",
+    "t": "Kualitas data memadai?",
+    "n": [
+     [
+      "g",
+      "Ya"
+     ],
+     [
+      "x",
+      "Tidak"
+     ]
+    ]
+   },
+   {
+    "k": "x",
+    "l": "owner",
+    "c": 5,
+    "t": "Perbaikan data di sumber",
+    "d": "Pemilik data memperbaiki data di sistem sumber; perbaikan tidak dilakukan di dashboard.",
+    "o": "Log perbaikan data",
+    "n": [
+     "e"
+    ]
+   },
+   {
+    "k": "g",
+    "l": "itdata",
+    "c": 6,
+    "t": "Pembuatan dashboard / laporan",
+    "d": "Membangun dashboard atau laporan sesuai definisi KPI yang disepakati.",
+    "o": "Draft dashboard",
+    "n": [
+     "h"
+    ]
+   },
+   {
+    "k": "h",
+    "l": "owner",
+    "c": 7,
+    "y": "d",
+    "t": "Angka tervalidasi?",
+    "d": "Pengguna mencocokkan angka dashboard dengan sumber atau perhitungan manual sesuai PCR-TNID-01 §6.9.",
+    "o": "Rekaman validasi dashboard",
+    "n": [
+     [
+      "i",
+      "Ya"
+     ],
+     [
+      "g",
+      "Revisi"
+     ]
+    ]
+   },
+   {
+    "k": "i",
+    "l": "itdata",
+    "c": 8,
+    "t": "Publikasi dengan hak akses",
+    "d": "Menerbitkan dashboard dengan hak akses sesuai klasifikasi informasi.",
+    "o": "Dashboard terbit",
+    "n": [
+     "j"
+    ]
+   },
+   {
+    "k": "j",
+    "l": "md",
+    "c": 9,
+    "t": "Pemanfaatan dalam tinjauan manajemen",
+    "d": "Direksi dan HoD memakai dashboard untuk evaluasi kinerja, termasuk indikator mutu dan lingkungan, dalam tinjauan manajemen.",
+    "o": "Masukan tinjauan manajemen",
+    "n": [
+     "k"
+    ]
+   },
+   {
+    "k": "k",
+    "l": "itdata",
+    "c": 10,
+    "t": "Pemantauan refresh & kualitas berkala",
+    "d": "Memantau refresh terjadwal, memeriksa kualitas data secara berkala, dan menonaktifkan laporan yang tidak dipakai.",
+    "o": "Log refresh data",
+    "n": [
+     "z"
+    ]
+   },
+   {
+    "k": "z",
+    "l": "itdata",
+    "c": 11,
+    "y": "e",
+    "t": "Informasi manajemen andal"
+   }
+  ],
+  "num": {
+   "b": "M4.3-01",
+   "c": "M4.3-02",
+   "d": "M4.3-03",
+   "e": "M4.3-04",
+   "f": "M4.3-05",
+   "x": "M4.3-06",
+   "g": "M4.3-07",
+   "h": "M4.3-08",
+   "i": "M4.3-09",
+   "j": "M4.3-10",
+   "k": "M4.3-11"
+  }
+ },
+ {
+  "id": "M4.4",
+  "g": "M",
+  "name": "IT Infrastructure, Asset & Service Desk",
+  "l0": "IT & Digitalization",
+  "owner": "IT & Digitalization",
+  "purpose": "Menjaga infrastruktur, jaringan, dan perangkat TI tetap tersedia dan aman, serta menangani gangguan dan permintaan pengguna melalui helpdesk sesuai SLA, termasuk pembuangan perangkat yang ramah lingkungan.",
+  "kpi": [
+   "Penyelesaian tiket sesuai SLA",
+   "Kepuasan pengguna helpdesk",
+   "Uji restore backup berhasil",
+   "Perangkat akhir masa pakai terdisposal sesuai ketentuan"
+  ],
+  "sys": [
+   "Helpdesk / ticketing",
+   "IT asset register",
+   "Backup & monitoring tools"
+  ],
+  "ref": "ISO 9001:2015 7.1.3; ISO 14001:2015 8.1; ISO/IEC 27001:2022 A.5.9, A.7.14, A.8.13; K-RL 550",
+  "rel": [
+   "S2",
+   "S4",
+   "M4.5"
+  ],
+  "note": "Lane Service desk TI, Tim aplikasi & integrasi, Tim infrastruktur & jaringan, Tim data & BI, dan Fungsi keamanan informasi adalah peran fungsional di dalam IT & Digitalization; pembagiannya perlu dikonfirmasi terhadap struktur tim IT.",
+  "lanes": [
+   "user",
+   "itops",
+   "itsd",
+   "vendor",
+   "ga"
+  ],
+  "steps": [
+   {
+    "k": "a",
+    "l": "user",
+    "c": 0,
+    "y": "s",
+    "t": "Gangguan / kebutuhan layanan TI",
+    "n": [
+     "b"
+    ]
+   },
+   {
+    "k": "b",
+    "l": "user",
+    "c": 1,
+    "t": "Mengajukan tiket",
+    "d": "Pengguna mengajukan tiket di helpdesk dengan menyebut sistem, gejala, waktu, dan dampak.",
+    "o": "Tiket",
+    "n": [
+     "c"
+    ]
+   },
+   {
+    "k": "c",
+    "l": "itsd",
+    "c": 2,
+    "y": "d",
+    "t": "Jenis tiket?",
+    "d": "Service desk meregistrasi, memverifikasi, dan mengklasifikasikan tiket beserta prioritas SLA.",
+    "o": "Klasifikasi & prioritas tiket",
+    "n": [
+     [
+      "d",
+      "Insiden"
+     ],
+     [
+      "e",
+      "Permintaan layanan"
+     ],
+     [
+      "f",
+      "Perangkat / aset"
+     ]
+    ]
+   },
+   {
+    "k": "d",
+    "l": "itsd",
+    "c": 4,
+    "t": "Diagnosis & pemulihan insiden",
+    "d": "Diagnosis, workaround, dan pemulihan sesuai SLA; eskalasi ke tim infrastruktur atau vendor bila perlu; insiden keamanan diteruskan ke M4.5.",
+    "o": "Tiket terselesaikan",
+    "n": [
+     "g"
+    ]
+   },
+   {
+    "k": "e",
+    "l": "itsd",
+    "c": 5,
+    "t": "Pemenuhan permintaan layanan",
+    "d": "Memenuhi permintaan baku (akun, akses, instalasi) setelah disetujui atasan pemohon.",
+    "o": "Permintaan terpenuhi",
+    "n": [
+     "g"
+    ]
+   },
+   {
+    "k": "f",
+    "l": "itops",
+    "c": 4,
+    "t": "Penyediaan & konfigurasi perangkat",
+    "d": "Menyiapkan perangkat dari stok atau pengadaan (S2), memasang image standar, enkripsi, dan antimalware, lalu mencatatnya di register aset.",
+    "o": "Perangkat siap & register aset",
+    "n": [
+     "g"
+    ]
+   },
+   {
+    "k": "g",
+    "l": "user",
+    "c": 6,
+    "y": "d",
+    "t": "Layanan diterima?",
+    "d": "Pemohon mengonfirmasi penyelesaian; tiket dibuka kembali bila belum selesai.",
+    "n": [
+     [
+      "h",
+      "Ya"
+     ],
+     [
+      "d",
+      "Belum"
+     ]
+    ]
+   },
+   {
+    "k": "h",
+    "l": "itsd",
+    "c": 7,
+    "t": "Penutupan tiket & survei",
+    "d": "Menutup tiket dan mengirim survei kepuasan kepada pemohon.",
+    "o": "Tiket ditutup & umpan balik",
+    "n": [
+     "i"
+    ]
+   },
+   {
+    "k": "i",
+    "l": "itsd",
+    "c": 8,
+    "t": "Analisis tren & problem management",
+    "d": "Mengidentifikasi insiden berulang, akar masalah, dan tindakan permanen.",
+    "o": "Catatan problem & tindakan perbaikan",
+    "n": [
+     "j"
+    ]
+   },
+   {
+    "k": "j",
+    "l": "itops",
+    "c": 9,
+    "t": "Pemeliharaan infrastruktur, jaringan & backup",
+    "d": "Pemeliharaan preventif jaringan dan server, patch, backup terjadwal, uji restore, serta pemantauan kapasitas dan energi ruang server.",
+    "o": "Log pemeliharaan & uji restore",
+    "n": [
+     "k"
+    ]
+   },
+   {
+    "k": "k",
+    "l": "vendor",
+    "c": 10,
+    "t": "Dukungan & pemeliharaan vendor",
+    "d": "Vendor menjalankan pemeliharaan dan perbaikan sesuai kontrak dan SLA, dengan akses yang dibatasi dan diawasi.",
+    "o": "Laporan layanan vendor",
+    "n": [
+     "l"
+    ]
+   },
+   {
+    "k": "l",
+    "l": "itops",
+    "c": 11,
+    "y": "d",
+    "t": "Perangkat akhir masa pakai?",
+    "n": [
+     [
+      "m",
+      "Ya"
+     ],
+     [
+      "z",
+      "Tidak"
+     ]
+    ]
+   },
+   {
+    "k": "m",
+    "l": "ga",
+    "c": 12,
+    "t": "Penghapusan data & disposal e-waste",
+    "d": "IT menghapus data secara aman, lalu GA menyerahkan perangkat kepada pengelola limbah elektronik berizin dan register aset diperbarui.",
+    "o": "Berita acara penghapusan data & disposal",
+    "n": [
+     "z"
+    ]
+   },
+   {
+    "k": "z",
+    "l": "itops",
+    "c": 13,
+    "y": "e",
+    "t": "Layanan & infrastruktur TI tersedia"
+   }
+  ],
+  "num": {
+   "b": "M4.4-01",
+   "c": "M4.4-02",
+   "d": "M4.4-03",
+   "e": "M4.4-04",
+   "f": "M4.4-05",
+   "g": "M4.4-06",
+   "h": "M4.4-07",
+   "i": "M4.4-08",
+   "j": "M4.4-09",
+   "k": "M4.4-10",
+   "l": "M4.4-11",
+   "m": "M4.4-12"
+  }
+ },
+ {
+  "id": "M4.5",
+  "g": "M",
+  "name": "Information Security & Data Protection",
+  "l0": "IT & Digitalization",
+  "owner": "IT & Digitalization",
+  "purpose": "Menjalankan sistem manajemen keamanan informasi: menilai dan menangani risiko, mengendalikan akses, memantau ancaman, dan menangani insiden termasuk kegagalan pelindungan data pribadi sesuai K-RL 550 dan UU PDP.",
+  "kpi": [
+   "Risiko tinggi dengan rencana penanganan yang disetujui",
+   "Akses karyawan keluar dicabut tepat waktu",
+   "Kerentanan kritis ditutup sesuai target",
+   "Pemberitahuan kegagalan PDP dalam 3 × 24 jam"
+  ],
+  "sys": [
+   "Identity & access management",
+   "Security monitoring / EDR",
+   "Vulnerability scanner"
+  ],
+  "ref": "ISO/IEC 27001:2022 6.1.2, 6.1.3, 9.3, A.5.15–A.5.18, A.5.24–A.5.28, A.8.8; UU No. 27 Tahun 2022; K-RL 550",
+  "rel": [
+   "S3",
+   "G1",
+   "M4.4",
+   "G3"
+  ],
+  "note": "Lane Service desk TI, Tim aplikasi & integrasi, Tim infrastruktur & jaringan, Tim data & BI, dan Fungsi keamanan informasi adalah peran fungsional di dalam IT & Digitalization; pembagiannya perlu dikonfirmasi terhadap struktur tim IT.",
+  "lanes": [
+   "isec",
+   "steer",
+   "hr",
+   "it",
+   "legal"
+  ],
+  "steps": [
+   {
+    "k": "a",
+    "l": "isec",
+    "c": 0,
+    "y": "s",
+    "t": "Siklus ISMS tahunan / perubahan signifikan",
+    "n": [
+     "b"
+    ]
+   },
+   {
+    "k": "b",
+    "l": "isec",
+    "c": 1,
+    "t": "Identifikasi aset informasi & risiko",
+    "d": "Memperbarui inventaris aset informasi, ancaman, kerentanan, dan risiko, termasuk pemrosesan data pribadi.",
+    "o": "Register risiko keamanan informasi",
+    "n": [
+     "c"
+    ]
+   },
+   {
+    "k": "c",
+    "l": "steer",
+    "c": 2,
+    "t": "Persetujuan rencana penanganan risiko",
+    "d": "Menyetujui rencana penanganan, penerimaan risiko residual, dan Statement of Applicability.",
+    "o": "Rencana penanganan risiko & SoA",
+    "n": [
+     "d"
+    ]
+   },
+   {
+    "k": "d",
+    "l": "hr",
+    "c": 3,
+    "t": "Notifikasi joiner, mover, leaver",
+    "d": "HR memberi tahu IT atas karyawan masuk, mutasi, dan keluar sebagai dasar pengelolaan akses.",
+    "o": "Notifikasi perubahan personel",
+    "n": [
+     "e"
+    ]
+   },
+   {
+    "k": "e",
+    "l": "it",
+    "c": 4,
+    "t": "Pengelolaan hak akses",
+    "d": "Memberi, mengubah, dan mencabut akses sesuai prinsip least privilege; akses istimewa memerlukan persetujuan khusus; akses ditinjau berkala.",
+    "o": "Log hak akses & hasil tinjauan akses",
+    "n": [
+     "f"
+    ]
+   },
+   {
+    "k": "f",
+    "l": "isec",
+    "c": 5,
+    "t": "Pemantauan keamanan & kerentanan",
+    "d": "Memantau log, peringatan antimalware/EDR, dan hasil pemindaian kerentanan; memastikan patch kritis diterapkan tepat waktu.",
+    "o": "Laporan pemantauan & kerentanan",
+    "n": [
+     "g"
+    ]
+   },
+   {
+    "k": "g",
+    "l": "isec",
+    "c": 6,
+    "y": "d",
+    "t": "Insiden keamanan?",
+    "n": [
+     [
+      "h",
+      "Ya"
+     ],
+     [
+      "l",
+      "Tidak"
+     ]
+    ]
+   },
+   {
+    "k": "h",
+    "l": "isec",
+    "c": 7,
+    "t": "Penahanan & investigasi insiden",
+    "d": "Menetapkan tingkat keparahan, menahan dampak, mengamankan bukti, dan memulihkan layanan.",
+    "o": "Laporan insiden keamanan",
+    "n": [
+     "i"
+    ]
+   },
+   {
+    "k": "i",
+    "l": "legal",
+    "c": 8,
+    "y": "d",
+    "t": "Melibatkan data pribadi?",
+    "d": "Legal menilai apakah terjadi kegagalan pelindungan data pribadi menurut UU PDP.",
+    "n": [
+     [
+      "j",
+      "Ya"
+     ],
+     [
+      "k",
+      "Tidak"
+     ]
+    ]
+   },
+   {
+    "k": "j",
+    "l": "legal",
+    "c": 9,
+    "t": "Pemberitahuan kepada subjek data & lembaga PDP",
+    "d": "Pemberitahuan tertulis paling lambat 3 × 24 jam sesuai UU No. 27 Tahun 2022 Pasal 46.",
+    "o": "Surat pemberitahuan",
+    "n": [
+     "k"
+    ]
+   },
+   {
+    "k": "k",
+    "l": "isec",
+    "c": 10,
+    "t": "Analisis akar masalah & tindakan korektif",
+    "d": "Menganalisis akar masalah, menetapkan tindakan korektif, dan mencatat pelajaran dari insiden.",
+    "o": "Tindakan korektif & pelajaran insiden",
+    "n": [
+     "l"
+    ]
+   },
+   {
+    "k": "l",
+    "l": "steer",
+    "c": 11,
+    "t": "Tinjauan kinerja ISMS",
+    "d": "Meninjau hasil pemantauan, insiden, audit internal, dan efektivitas kontrol sebagai masukan tinjauan manajemen terintegrasi.",
+    "o": "Notulen tinjauan ISMS",
+    "n": [
+     "z"
+    ]
+   },
+   {
+    "k": "z",
+    "l": "isec",
+    "c": 12,
+    "y": "e",
+    "t": "Risiko keamanan informasi terkendali"
+   }
+  ],
+  "num": {
+   "b": "M4.5-01",
+   "c": "M4.5-02",
+   "d": "M4.5-03",
+   "e": "M4.5-04",
+   "f": "M4.5-05",
+   "g": "M4.5-06",
+   "h": "M4.5-07",
+   "i": "M4.5-08",
+   "j": "M4.5-09",
+   "k": "M4.5-10",
+   "l": "M4.5-11"
+  }
+ },
+ {
+  "id": "M4.6",
+  "g": "M",
+  "name": "Digital Transformation Roadmap & Portfolio",
+  "l0": "IT & Digitalization",
+  "owner": "IT & Digitalization",
+  "purpose": "Menyusun dan mengawal roadmap transformasi digital yang selaras dengan prioritas bisnis, dari usulan sampai realisasi manfaat, dengan mempertimbangkan risiko dan dampak lingkungan.",
+  "kpi": [
+   "Persentase proyek roadmap selesai tepat waktu",
+   "Manfaat terealisasi terhadap business case",
+   "Inisiatif dengan kajian dampak keberlanjutan"
+  ],
+  "sys": [
+   "Roadmap & project portfolio",
+   "Helpdesk / ticketing"
+  ],
+  "ref": "ISO 9001:2015 6.1, 6.3 & 9.3; ISO 14001:2015 6.1.2 & 6.2; ISO/IEC 27001:2022 6.1; K-RL 550",
+  "rel": [
+   "M1",
+   "M4.1",
+   "M4.2",
+   "M3"
+  ],
+  "lanes": [
+   "hods",
+   "it",
+   "steer",
+   "cis"
+  ],
+  "steps": [
+   {
+    "k": "a",
+    "l": "it",
+    "c": 0,
+    "y": "s",
+    "t": "Siklus perencanaan tahunan",
+    "n": [
+     "b"
+    ]
+   },
+   {
+    "k": "b",
+    "l": "hods",
+    "c": 1,
+    "t": "Menyampaikan prioritas & kebutuhan digital",
+    "d": "HoD BU dan divisi menyampaikan kebutuhan digital yang diturunkan dari rencana bisnis (M1).",
+    "o": "Daftar kebutuhan digital",
+    "n": [
+     "c"
+    ]
+   },
+   {
+    "k": "c",
+    "l": "it",
+    "c": 2,
+    "t": "Kajian kondisi & kapabilitas saat ini",
+    "d": "Menilai portofolio aplikasi, utang teknis, risiko keamanan, dan kapasitas tim.",
+    "o": "Kajian kondisi saat ini",
+    "n": [
+     "d"
+    ]
+   },
+   {
+    "k": "d",
+    "l": "cis",
+    "c": 3,
+    "t": "Kajian dampak keberlanjutan",
+    "d": "Menilai dampak lingkungan inisiatif (kertas, energi, perjalanan, e-waste) dan kontribusinya pada sasaran keberlanjutan.",
+    "o": "Catatan aspek lingkungan",
+    "n": [
+     "e"
+    ]
+   },
+   {
+    "k": "e",
+    "l": "it",
+    "c": 4,
+    "t": "Menyusun usulan roadmap & business case",
+    "d": "Menyusun inisiatif dengan nilai bisnis, biaya, risiko, jadwal, dan kebutuhan sumber daya.",
+    "o": "Draft roadmap & business case",
+    "n": [
+     "f"
+    ]
+   },
+   {
+    "k": "f",
+    "l": "steer",
+    "c": 5,
+    "y": "d",
+    "t": "Roadmap disetujui?",
+    "n": [
+     [
+      "g",
+      "Ya"
+     ],
+     [
+      "e",
+      "Revisi"
+     ]
+    ]
+   },
+   {
+    "k": "g",
+    "l": "it",
+    "c": 6,
+    "t": "Eksekusi portofolio proyek",
+    "d": "Menjalankan inisiatif melalui M4.1 dan M4.2 dengan rencana proyek, anggaran, dan manajemen risiko.",
+    "o": "Rencana & status proyek",
+    "n": [
+     "h"
+    ]
+   },
+   {
+    "k": "h",
+    "l": "steer",
+    "c": 7,
+    "t": "Pemantauan kuartalan",
+    "d": "Meninjau kemajuan, anggaran, risiko, dan perubahan prioritas; memutuskan percepatan, penundaan, atau penghentian.",
+    "o": "Notulen steering & keputusan",
+    "n": [
+     "i"
+    ]
+   },
+   {
+    "k": "i",
+    "l": "hods",
+    "c": 8,
+    "t": "Evaluasi realisasi manfaat",
+    "d": "Mengukur manfaat terhadap business case setelah implementasi.",
+    "o": "Laporan realisasi manfaat",
+    "n": [
+     "j"
+    ]
+   },
+   {
+    "k": "j",
     "l": "it",
     "c": 9,
-    "t": "Operasi, keamanan & monitoring",
-    "d": "Monitoring, backup, kontrol akses, dan penanganan insiden keamanan informasi.",
-    "o": "Laporan layanan TI",
+    "t": "Pembaruan roadmap & laporan ke Direksi",
+    "d": "Memperbarui roadmap dan melaporkan capaian transformasi digital sebagai masukan tinjauan manajemen.",
+    "o": "Roadmap terbarui & laporan capaian",
     "n": [
      "z"
     ]
@@ -775,20 +1755,19 @@
     "l": "it",
     "c": 10,
     "y": "e",
-    "t": "Sistem beroperasi stabil"
+    "t": "Transformasi digital selaras prioritas bisnis"
    }
   ],
   "num": {
-   "b": "M4-01",
-   "c": "M4-02",
-   "d": "M4-03",
-   "e": "M4-04",
-   "f": "M4-05",
-   "g": "M4-06",
-   "h": "M4-07",
-   "i": "M4-08",
-   "j": "M4-09",
-   "k": "M4-10"
+   "b": "M4.6-01",
+   "c": "M4.6-02",
+   "d": "M4.6-03",
+   "e": "M4.6-04",
+   "f": "M4.6-05",
+   "g": "M4.6-06",
+   "h": "M4.6-07",
+   "i": "M4.6-08",
+   "j": "M4.6-09"
   }
  },
  {

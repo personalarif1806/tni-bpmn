@@ -125,6 +125,7 @@ function contentStrings(): string[] {
     }
     addAll(procedure.records);
     addAll(procedure.refs);
+    for (const entry of procedure.revs as Record<string, unknown>[]) add(entry.note);
   }
 
   return [...found];

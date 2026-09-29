@@ -1,11 +1,12 @@
 import { useCallback, useMemo, useRef } from "react";
 import { useSearchParams } from "react-router";
-import { BadgeAlert, ListChecks, Printer, Table2 } from "lucide-react";
+import { BadgeAlert, ListChecks, Printer, ShieldCheck, Table2 } from "lucide-react";
 import { DetailPanel } from "@/components/level0/DetailPanel";
 import { InvolvementMatrix } from "@/components/level0/InvolvementMatrix";
 import { MapInteractionProvider } from "@/components/level0/MapFocusContext";
 import { ProcessMap } from "@/components/level0/ProcessMap";
 import { ResponsibilityCatalog } from "@/components/level0/ResponsibilityCatalog";
+import { StandardsCompliance } from "@/components/level0/StandardsCompliance";
 import {
   ToolbarButton,
   ToolbarDivider,
@@ -33,6 +34,7 @@ export function Level0Page() {
   const mapRef = useRef<HTMLDivElement>(null);
   const matrixRef = useRef<HTMLElement>(null);
   const catalogRef = useRef<HTMLElement>(null);
+  const standardsRef = useRef<HTMLElement>(null);
 
   /*
    * Fit-to-width measures `measureRef`, the wrapper around the map's scroll
@@ -108,14 +110,23 @@ export function Level0Page() {
           <ToolbarButton
             icon={<Table2 size={14} />}
             label={t("Matriks")}
+            compact
             title={t("Matriks keterlibatan")}
             onClick={() => scrollToSection(matrixRef.current, scrollBehavior)}
           />
           <ToolbarButton
             icon={<ListChecks size={14} />}
             label={t("Katalog")}
+            compact
             title={t("Katalog tugas & tanggung jawab")}
             onClick={() => scrollToSection(catalogRef.current, scrollBehavior)}
+          />
+          <ToolbarButton
+            icon={<ShieldCheck size={14} />}
+            label={t("Klausul")}
+            compact
+            title={t("Kesesuaian standar ISO 9001, ISO 14001, ISO/IEC 27001, dan K-RL 550")}
+            onClick={() => scrollToSection(standardsRef.current, scrollBehavior)}
           />
           <ToolbarButton
             icon={<BadgeAlert size={14} />}
@@ -176,7 +187,7 @@ export function Level0Page() {
           ref={catalogRef}
           id="katalog"
           aria-labelledby="katalog-title"
-          className={`px-4 pt-8 pb-12 ${SECTION_OFFSET}`}
+          className={`px-4 pt-8 pb-4 ${SECTION_OFFSET}`}
         >
           <h2 id="katalog-title" className="text-title font-demi">
             {t("Katalog tugas & tanggung jawab")}
@@ -185,6 +196,23 @@ export function Level0Page() {
             {t("Seluruh unit Level 0 beserta peran, tugas, dan output utamanya.")}
           </p>
           <ResponsibilityCatalog onOpenUnit={(unitId) => open("unit", unitId)} />
+        </section>
+
+        <section
+          ref={standardsRef}
+          id="standar"
+          aria-labelledby="standar-title"
+          className={`px-4 pt-8 pb-12 ${SECTION_OFFSET}`}
+        >
+          <h2 id="standar-title" className="text-title font-demi">
+            {t("Kesesuaian standar")}
+          </h2>
+          <p className="mt-1 mb-3 max-w-3xl text-table text-muted">
+            {t(
+              "Klausul ISO 9001, ISO 14001, ISO/IEC 27001, dan bidang K-RL 550 yang dijalankan setiap tahapan dan unit. Klik nama untuk membuka detailnya di peta.",
+            )}
+          </p>
+          <StandardsCompliance />
         </section>
       </div>
 

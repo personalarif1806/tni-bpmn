@@ -8,6 +8,7 @@ import type { ResolvedInvolvement, Stage } from "@/data/types";
 import { useDetailPanel } from "@/hooks/useDetailPanel";
 import { ProcessLink } from "@/components/shared/CrossLevelLink";
 import { PanelSection } from "@/components/shared/PanelSection";
+import { ClauseSection } from "@/components/shared/ClauseSection";
 import { stageJumpTargets } from "@/lib/cross-level";
 import { t } from "@/lib/i18n";
 
@@ -105,6 +106,8 @@ export function StageDetail({ stage }: { stage: Stage }) {
           <ul className="flex flex-col gap-3">{group.rows.map(renderRow)}</ul>
         </PanelSection>
       ))}
+
+      <ClauseSection elementId={stage.id} />
 
       {jumpTargets.length > 0 ? (
         <PanelSection title={t("Detail di Level 1")} count={jumpTargets.length}>

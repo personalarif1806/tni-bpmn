@@ -1,603 +1,2114 @@
 {
- "M4-P1": {
-  "p": "M4",
-  "doc": "PR-IT-01",
-  "n": "Pengajuan & Klasifikasi Permintaan TI",
+ "M4.1-P1": {
+  "p": "M4.1",
+  "doc": "PIT-TNI-01",
+  "n": "Pengelolaan Permintaan Perubahan & Analisis Kebutuhan Sistem",
   "rev": "00",
   "eff": "2026-10-01",
   "steps": [
    "a",
    "b",
-   "c"
-  ],
-  "purpose": "Memastikan setiap gangguan dan kebutuhan sistem tercatat, terklasifikasi, dan tersalurkan ke jalur penanganan yang tepat sejak awal.",
-  "scope": "Seluruh permintaan TI dari semua unit: insiden, permintaan layanan, dan demand pengembangan. Tidak mencakup pengadaan perangkat keras dan jasa, yang berjalan melalui S2.",
-  "defs": [
-   [
-    "Insiden",
-    "Gangguan tidak terencana yang menurunkan atau menghentikan layanan TI."
-   ],
-   [
-    "Permintaan layanan",
-    "Permintaan baku yang sudah ada prosedurnya, misalnya pembuatan akun atau pemulihan kata sandi."
-   ],
-   [
-    "Demand pengembangan",
-    "Permintaan fitur atau sistem baru yang memerlukan analisis dan kapasitas pengembangan."
-   ],
-   [
-    "Tiket",
-    "Rekaman elektronik satu permintaan di sistem helpdesk, dengan nomor unik dan riwayat penanganan."
-   ]
-  ],
-  "resp": [
-   [
-    "user",
-    "Mengajukan tiket dengan informasi yang lengkap dan melengkapinya bila diminta."
-   ],
-   [
-    "it",
-    "Meregistrasi, memverifikasi kelengkapan, dan mengklasifikasikan setiap tiket yang masuk."
-   ]
-  ],
-  "wi": [
-   {
-    "no": "1",
-    "t": "Pengguna membuka tiket di helpdesk dengan menyebut sistem, gejala, waktu kejadian, dan dampak terhadap pekerjaan.",
-    "l": "user",
-    "o": "Tiket terdaftar"
-   },
-   {
-    "no": "2",
-    "t": "Pengguna melampirkan tangkapan layar, pesan galat, atau berkas pendukung bila tersedia.",
-    "l": "user"
-   },
-   {
-    "no": "3",
-    "t": "Helpdesk memverifikasi kelengkapan informasi; tiket yang belum jelas dikembalikan kepada pengguna untuk dilengkapi.",
-    "l": "it"
-   },
-   {
-    "no": "4",
-    "t": "IT mengklasifikasikan tiket menjadi insiden, permintaan layanan, atau demand pengembangan.",
-    "l": "it",
-    "o": "Klasifikasi tiket"
-   },
-   {
-    "no": "5",
-    "t": "Insiden dan permintaan layanan diteruskan ke PR-IT-02; demand pengembangan diteruskan ke PR-IT-03.",
-    "l": "it"
-   }
-  ],
-  "records": [
-   "Tiket helpdesk",
-   "Log klasifikasi tiket"
-  ],
-  "refs": [
-   "Kebijakan TI TÜV NORD Group (K-RL 550)",
-   "SLA layanan TI internal"
-  ],
-  "sign": {
-   "prep": "IT & Digitalization",
-   "rev": "Corporate Management System",
-   "app": "Managing Directors"
-  }
- },
- "M4-P2": {
-  "p": "M4",
-  "doc": "PR-IT-02",
-  "n": "Penanganan Insiden & Permintaan Layanan",
-  "rev": "00",
-  "eff": "2026-10-01",
-  "steps": [
+   "c",
    "d",
-   "y"
+   "e",
+   "x"
   ],
-  "purpose": "Memulihkan layanan secepat mungkin dan menyelesaikan permintaan layanan dalam batas waktu yang dijanjikan.",
-  "scope": "Insiden dan permintaan layanan pada sistem inti (SIMCert, SIMLab, SIMCal), platform bersama, infrastruktur jaringan, dan perangkat pengguna.",
+  "purpose": "Memastikan setiap permintaan perubahan sistem inti tercatat, dianalisis dampaknya, dikaji keamanan dan privasinya, lalu diputuskan secara terkendali sebelum pengembangan dimulai.",
+  "scope": "Permintaan perubahan dan fitur untuk SIMCert, SIMLab, SIMCal, Central Customer, dan Central Invoicing. Gangguan dan permintaan layanan rutin ditangani melalui PIT-TNI-08; perubahan besar yang memerlukan investasi atau inisiatif baru diteruskan ke perencanaan roadmap digital (PIT-TNI-15).",
   "defs": [
    [
-    "Prioritas",
-    "Tingkat penanganan yang ditetapkan dari perpaduan dampak dan urgensi."
+    "Permintaan perubahan (RFC)",
+    "Permintaan tertulis melalui tiket untuk mengubah, menambah, atau menghapus fungsi sistem bisnis, beserta alasan dan manfaat yang diharapkan."
    ],
    [
-    "SLA",
-    "Batas waktu tanggap dan waktu selesai yang disepakati untuk tiap tingkat prioritas."
+    "Sistem inti",
+    "Sistem bisnis bersama yang dikelola terpusat: SIMCert, SIMLab, SIMCal, Central Customer, dan Central Invoicing."
    ],
    [
-    "Eskalasi",
-    "Pengalihan penanganan ke jenjang keahlian yang lebih tinggi atau ke vendor."
+    "Pemilik sistem",
+    "Pejabat unit bisnis yang bertanggung jawab atas kebutuhan fungsional, data, dan penerimaan suatu sistem inti."
    ],
    [
-    "Workaround",
-    "Penyelesaian sementara yang memulihkan layanan sebelum akar masalah tertangani."
+    "Analisis dampak",
+    "Kajian pengaruh perubahan terhadap data, integrasi, dokumen terkendali, pengguna, dan keamanan, termasuk estimasi upaya."
+   ],
+   [
+    "Security & privacy by design",
+    "Prinsip memasukkan persyaratan keamanan informasi dan pelindungan data pribadi sejak tahap analisis kebutuhan."
    ]
   ],
   "resp": [
    [
-    "it",
-    "Menetapkan prioritas, menangani, mengeskalasi bila perlu, dan menutup tiket."
+    "owner",
+    "Mengajukan permintaan perubahan yang lengkap, menjelaskan kebutuhan bisnis, dan menerima informasi keputusan."
    ],
    [
-    "user",
-    "Memverifikasi bahwa layanan telah pulih sebelum tiket ditutup."
+    "itdev",
+    "Menyusun spesifikasi fungsional, analisis dampak, dan estimasi upaya."
+   ],
+   [
+    "isec",
+    "Mengkaji klasifikasi data, kebutuhan kontrol akses, dan pemrosesan data pribadi pada setiap perubahan."
+   ],
+   [
+    "it",
+    "Memutuskan persetujuan atau penolakan perubahan dan meneruskan perubahan besar ke roadmap digital."
    ]
   ],
   "wi": [
    {
     "no": "1",
-    "t": "IT menetapkan prioritas tiket dari dampak dan urgensi sesuai matriks prioritas layanan.",
-    "l": "it",
-    "o": "Prioritas tiket"
+    "t": "Pemilik sistem mengajukan permintaan perubahan (RFC) melalui tiket dengan menyebut sistem, kebutuhan, alasan bisnis, dan manfaat yang diharapkan.",
+    "l": "owner",
+    "o": "Tiket permintaan perubahan"
    },
    {
     "no": "2",
-    "t": "IT melakukan diagnosis awal dan menerapkan workaround bila tersedia agar pekerjaan pengguna dapat berjalan.",
-    "l": "it"
+    "t": "Tim aplikasi memverifikasi kelengkapan RFC; permintaan yang belum jelas dikembalikan kepada pemilik sistem untuk dilengkapi.",
+    "l": "itdev"
    },
    {
     "no": "3",
-    "t": "Bila batas waktu tanggap terlampaui atau diperlukan keahlian lain, IT mengeskalasi ke jenjang berikutnya atau ke vendor.",
-    "l": "it",
-    "o": "Catatan eskalasi"
+    "t": "Tim aplikasi menyusun spesifikasi fungsional bersama pemilik sistem.",
+    "l": "itdev",
+    "o": "Spesifikasi fungsional"
    },
    {
     "no": "4",
-    "t": "IT memperbaiki akar masalah dan menguji bahwa layanan kembali berfungsi.",
-    "l": "it"
+    "t": "Tim aplikasi menganalisis dampak perubahan terhadap data, integrasi, dokumen terkendali, dan pengguna, serta menyusun estimasi upaya.",
+    "l": "itdev",
+    "o": "Analisis dampak & estimasi upaya"
    },
    {
     "no": "5",
-    "t": "Pengguna memverifikasi pemulihan layanan pada pekerjaannya sendiri.",
-    "l": "user",
-    "o": "Konfirmasi pengguna"
+    "t": "Fungsi keamanan informasi mengkaji klasifikasi data, kebutuhan kontrol akses, dan pemrosesan data pribadi, lalu menetapkan persyaratan keamanan dan privasi.",
+    "l": "isec",
+    "o": "Kajian keamanan & privasi"
    },
    {
     "no": "6",
-    "t": "IT menutup tiket dan mencatat solusinya ke basis pengetahuan agar kasus serupa lebih cepat tertangani.",
+    "t": "IT & Digitalization Manager meninjau spesifikasi, analisis dampak, dan kajian keamanan, lalu memutuskan apakah perubahan disetujui.",
     "l": "it",
-    "o": "Tiket tertutup"
+    "o": "Keputusan RFC"
    },
    {
     "no": "7",
-    "t": "Insiden yang berdampak pada kerahasiaan, keutuhan, atau ketersediaan data ditangani pula melalui PR-IT-06.",
+    "t": "Perubahan yang disetujui dijadwalkan dan diteruskan ke PIT-TNI-02; perubahan besar yang memerlukan investasi diteruskan ke PIT-TNI-15.",
     "l": "it"
+   },
+   {
+    "no": "8",
+    "t": "Pemilik sistem menerima pemberitahuan keputusan; permintaan yang ditolak ditutup di tiket dengan alasan penolakan.",
+    "l": "owner",
+    "o": "Tiket ditutup"
    }
   ],
   "records": [
-   "Tiket tertutup",
-   "Laporan pencapaian SLA bulanan",
-   "Basis pengetahuan"
+   "Tiket permintaan perubahan",
+   "Spesifikasi fungsional",
+   "Analisis dampak & estimasi upaya",
+   "Kajian keamanan & privasi",
+   "Keputusan RFC"
   ],
   "refs": [
-   "Kebijakan TI TÜV NORD Group (K-RL 550)",
-   "SLA layanan TI internal",
-   "UU Pelindungan Data Pribadi"
-  ],
-  "sign": {
-   "prep": "IT & Digitalization",
-   "rev": "Corporate Management System",
-   "app": "Managing Directors"
-  }
- },
- "M4-P3": {
-  "p": "M4",
-  "doc": "PR-IT-03",
-  "n": "Prioritisasi & Tata Kelola Roadmap TI",
-  "rev": "00",
-  "eff": "2026-10-01",
-  "steps": [
-   "e"
-  ],
-  "purpose": "Memastikan kapasitas pengembangan yang terbatas dialokasikan ke inisiatif dengan nilai bisnis tertinggi.",
-  "scope": "Seluruh demand pengembangan sistem dan perubahan besar. Tidak mencakup perbaikan kecil yang selesai melalui PR-IT-02.",
-  "defs": [
-   [
-    "Demand",
-    "Permintaan pengembangan yang telah diklasifikasikan pada PR-IT-01."
-   ],
-   [
-    "Roadmap",
-    "Daftar inisiatif yang disepakati untuk dikerjakan pada periode berjalan beserta urutannya."
-   ],
-   [
-    "Backlog",
-    "Daftar demand yang diterima tetapi belum dijadwalkan."
-   ],
-   [
-    "Steering digital",
-    "Forum keputusan yang terdiri atas HoD SID dan Direksi."
-   ]
-  ],
-  "resp": [
-   [
-    "it",
-    "Menyiapkan ringkasan demand, perkiraan usaha, dan ketergantungan antar inisiatif."
-   ],
-   [
-    "user",
-    "Menyampaikan nilai bisnis dan dampak bila inisiatif tidak dikerjakan."
-   ],
-   [
-    "steer",
-    "Memutuskan prioritas dan menyetujui roadmap."
-   ]
-  ],
-  "wi": [
-   {
-    "no": "1",
-    "t": "IT merangkum demand: masalah yang dipecahkan, manfaat yang diharapkan, perkiraan usaha, dan ketergantungannya.",
-    "l": "it",
-    "o": "Ringkasan demand"
-   },
-   {
-    "no": "2",
-    "t": "Unit pengusul menyampaikan nilai bisnis dan konsekuensi bila demand tidak dikerjakan.",
-    "l": "user"
-   },
-   {
-    "no": "3",
-    "t": "Steering digital menilai nilai bisnis, urgensi, risiko, dan kapasitas tim yang tersedia.",
-    "l": "steer",
-    "o": "Penilaian steering"
-   },
-   {
-    "no": "4",
-    "t": "Steering memutuskan: masuk roadmap periode berjalan, masuk backlog, atau ditolak dengan alasan.",
-    "l": "steer",
-    "o": "Keputusan roadmap"
-   },
-   {
-    "no": "5",
-    "t": "IT memperbarui roadmap dan backlog, lalu menyampaikan hasilnya kepada unit pengusul.",
-    "l": "it",
-    "o": "Roadmap TI"
-   },
-   {
-    "no": "6",
-    "t": "Roadmap ditinjau ulang bersama Steering sekurang-kurangnya setiap triwulan.",
-    "l": "steer",
-    "o": "Notulen tinjauan roadmap"
-   }
-  ],
-  "records": [
-   "Roadmap TI",
-   "Backlog demand",
-   "Notulen Steering digital"
-  ],
-  "refs": [
-   "RKAP dan prioritas strategis (M1)",
+   "ISO 9001:2015 8.3 Desain dan pengembangan produk dan jasa",
+   "ISO 9001:2015 6.3 Perencanaan perubahan",
+   "ISO/IEC 27001:2022 A.8.26 Persyaratan keamanan aplikasi",
+   "ISO/IEC 27001:2022 A.5.34 Privasi dan pelindungan PII",
+   "UU No. 27 Tahun 2022 tentang Pelindungan Data Pribadi",
    "Kebijakan TI TÜV NORD Group (K-RL 550)"
   ],
   "sign": {
-   "prep": "IT & Digitalization",
-   "rev": "Corporate Management System",
-   "app": "Managing Directors"
-  }
+   "prep": "IT & Digitalization Team",
+   "rev": "IT & Digitalization Manager",
+   "app": "Head of SID Division"
+  },
+  "revs": [
+   {
+    "rev": "00",
+    "date": "2026-10-01",
+    "part": "All",
+    "note": "Penerbitan awal"
+   }
+  ]
  },
- "M4-P4": {
-  "p": "M4",
-  "doc": "PR-IT-04",
-  "n": "Analisis Kebutuhan & Pengembangan Sistem",
+ "M4.1-P2": {
+  "p": "M4.1",
+  "doc": "PIT-TNI-02",
+  "n": "Pengembangan Aman & Pengendalian Perubahan Sistem",
   "rev": "00",
   "eff": "2026-10-01",
   "steps": [
    "f",
-   "g"
+   "i"
   ],
-  "purpose": "Menerjemahkan kebutuhan bisnis menjadi solusi yang benar, aman, dan dapat dipelihara.",
-  "scope": "Pengembangan dan konfigurasi sistem inti serta platform bersama, baik dikerjakan sendiri maupun oleh vendor.",
+  "purpose": "Memastikan perubahan sistem inti dibangun secara aman di lingkungan terpisah dan hanya dirilis setelah disetujui dengan rencana rilis dan rollback yang jelas.",
+  "scope": "Desain, pengembangan, tinjauan kode, dan persetujuan rilis untuk perubahan sistem inti yang telah disetujui melalui PIT-TNI-01. Pengujian, UAT, validasi, dan rilis ke produksi diatur dalam PIT-TNI-03.",
   "defs": [
    [
-    "Spesifikasi fungsional",
-    "Dokumen yang menetapkan alur proses, aturan bisnis, peran pengguna, dan keluaran sistem."
+    "Pemisahan lingkungan",
+    "Pemisahan lingkungan pengembangan, pengujian, dan produksi sehingga perubahan tidak menyentuh data dan layanan produksi sebelum disetujui."
    ],
    [
-    "Rancangan data",
-    "Struktur data, hubungan antar entitas, dan integrasi antar sistem."
+    "Secure coding",
+    "Praktik penulisan kode yang mencegah kerentanan umum, antara lain validasi input, penanganan galat, dan pengelolaan kredensial yang aman."
    ],
    [
-    "Lingkungan pengembangan",
-    "Lingkungan terpisah dari produksi, tempat solusi dibangun dan diuji."
+    "Tinjauan kode",
+    "Pemeriksaan kode oleh pengembang lain sebelum digabungkan untuk memastikan kualitas, kesesuaian spesifikasi, dan keamanan."
    ],
    [
-    "Jejak audit",
-    "Catatan otomatis tentang siapa mengubah apa dan kapan."
+    "Rencana rollback",
+    "Langkah terencana untuk mengembalikan sistem ke versi sebelumnya bila rilis gagal atau menimbulkan gangguan."
+   ],
+   [
+    "Kontrol versi",
+    "Pencatatan setiap perubahan kode dan konfigurasi dalam repositori sehingga riwayat, penulis, dan versi dapat ditelusuri."
    ]
   ],
   "resp": [
    [
-    "it",
-    "Menyusun spesifikasi dan rancangan, membangun solusi, dan menerapkan kontrol keamanan."
+    "itdev",
+    "Merancang dan membangun perubahan secara aman di lingkungan pengembangan, melakukan tinjauan kode, dan menyiapkan paket rilis."
    ],
    [
-    "user",
-    "Menyediakan kebutuhan bisnis dan menyetujui spesifikasi sebelum pembangunan dimulai."
+    "it",
+    "Menyetujui jadwal rilis, rencana rollback, dan komunikasi kepada pengguna."
    ]
   ],
   "wi": [
    {
     "no": "1",
-    "t": "IT bersama unit pengguna menyusun spesifikasi fungsional: alur proses, aturan bisnis, peran, dan keluaran.",
-    "l": "it",
-    "o": "Spesifikasi fungsional"
+    "t": "Tim aplikasi menyusun desain teknis berdasarkan spesifikasi fungsional dan persyaratan keamanan dari PIT-TNI-01, termasuk perubahan data dan antarmuka integrasi.",
+    "l": "itdev",
+    "o": "Desain teknis"
    },
    {
     "no": "2",
-    "t": "Unit pengguna menelaah dan menyetujui spesifikasi sebelum pembangunan dimulai.",
-    "l": "user",
-    "o": "Persetujuan spesifikasi"
+    "t": "Tim aplikasi membangun perubahan di lingkungan pengembangan yang terpisah dari produksi, tanpa menggunakan data produksi yang tidak dianonimkan.",
+    "l": "itdev"
    },
    {
     "no": "3",
-    "t": "IT menyusun rancangan data dan rancangan integrasi dengan sistem lain.",
-    "l": "it",
-    "o": "Rancangan data"
+    "t": "Tim aplikasi menerapkan pedoman secure coding dan menyimpan setiap perubahan kode dan konfigurasi dalam kontrol versi.",
+    "l": "itdev",
+    "o": "Riwayat kontrol versi"
    },
    {
     "no": "4",
-    "t": "IT membangun atau mengonfigurasi solusi di lingkungan pengembangan, terpisah dari produksi.",
-    "l": "it"
+    "t": "Pengembang lain melakukan tinjauan kode; temuan diperbaiki sebelum kode digabungkan.",
+    "l": "itdev",
+    "o": "Catatan tinjauan kode"
    },
    {
     "no": "5",
-    "t": "IT menerapkan kontrol keamanan: autentikasi, otorisasi berbasis peran, jejak audit, dan pelindungan data pribadi.",
-    "l": "it"
+    "t": "Tim aplikasi meneruskan hasil pengembangan ke pengujian sistem dan keamanan sesuai PIT-TNI-03.",
+    "l": "itdev"
    },
    {
     "no": "6",
-    "t": "IT melakukan uji internal dan menutup temuan sebelum solusi diserahkan untuk pengujian penerimaan.",
-    "l": "it",
-    "o": "Catatan uji internal"
+    "t": "Setelah UAT dan validasi diterima, Tim aplikasi menyiapkan paket rilis berisi jadwal rilis, langkah migrasi data, rencana rollback, dan rencana komunikasi pengguna.",
+    "l": "itdev",
+    "o": "Paket rilis"
    },
    {
     "no": "7",
-    "t": "Perubahan pada sistem yang menopang kegiatan penilaian kesesuaian diberitahukan kepada Corporate Management System.",
+    "t": "IT & Digitalization Manager meninjau paket rilis dan menyetujui atau menunda rilis sesuai jadwal yang disetujui.",
+    "l": "it",
+    "o": "Persetujuan rilis"
+   },
+   {
+    "no": "8",
+    "t": "Rilis yang disetujui diteruskan ke Tim aplikasi untuk dilaksanakan sesuai PIT-TNI-03.",
     "l": "it"
    }
   ],
   "records": [
-   "Spesifikasi fungsional disetujui",
-   "Rancangan data",
-   "Catatan uji internal"
+   "Desain teknis",
+   "Riwayat kontrol versi",
+   "Catatan tinjauan kode",
+   "Paket rilis",
+   "Persetujuan rilis"
   ],
   "refs": [
-   "Kebijakan TI TÜV NORD Group (K-RL 550)",
-   "UU Pelindungan Data Pribadi",
-   "ISO/IEC 17025:2017 klausul 7.11 (pengendalian data dan manajemen informasi)"
+   "ISO 9001:2015 8.3 Desain dan pengembangan produk dan jasa",
+   "ISO 9001:2015 8.5.6 Pengendalian perubahan",
+   "ISO/IEC 27001:2022 A.8.25 Siklus hidup pengembangan yang aman",
+   "ISO/IEC 27001:2022 A.8.27 Arsitektur sistem aman dan prinsip rekayasa",
+   "ISO/IEC 27001:2022 A.8.28 Secure coding",
+   "ISO/IEC 27001:2022 A.8.31 Pemisahan lingkungan pengembangan, uji, dan produksi"
   ],
   "sign": {
-   "prep": "IT & Digitalization",
-   "rev": "Corporate Management System",
-   "app": "Managing Directors"
-  }
+   "prep": "IT & Digitalization Team",
+   "rev": "IT & Digitalization Manager",
+   "app": "Head of SID Division"
+  },
+  "revs": [
+   {
+    "rev": "00",
+    "date": "2026-10-01",
+    "part": "All",
+    "note": "Penerbitan awal"
+   }
+  ]
  },
- "M4-P5": {
-  "p": "M4",
-  "doc": "PR-IT-05",
-  "n": "Pengujian Penerimaan, Rilis & Migrasi Data",
+ "M4.1-P3": {
+  "p": "M4.1",
+  "doc": "PIT-TNI-03",
+  "n": "Pengujian, Validasi Sistem, Rilis & Pemeliharaan",
   "rev": "00",
   "eff": "2026-10-01",
   "steps": [
+   "g",
    "h",
-   "i",
-   "j"
+   "j",
+   "k",
+   "z"
   ],
-  "purpose": "Memastikan solusi diterima pengguna, dirilis secara terkendali, dan datanya berpindah dengan utuh.",
-  "scope": "Pengujian penerimaan pengguna, rilis ke produksi, migrasi data, serta pelatihan dan pendampingan adopsi.",
+  "purpose": "Memastikan perubahan sistem inti diuji, divalidasi, dan diterima pengguna sebelum digunakan, dirilis ke produksi secara terkendali, serta dipantau dan dipelihara setelah rilis.",
+  "scope": "Pengujian fungsional, regresi, dan keamanan, UAT dan validasi sistem, rilis ke produksi, serta pemantauan dan pemeliharaan sistem inti. Gangguan operasional setelah masa pemantauan ditangani melalui PIT-TNI-08; penambalan dan pemantauan kerentanan melalui PIT-TNI-14.",
   "defs": [
    [
-    "UAT",
-    "User Acceptance Test — pengujian oleh pengguna terhadap skenario bisnis nyata."
+    "UAT (User Acceptance Test)",
+    "Pengujian oleh pemilik sistem atau pemilik proses untuk memastikan hasil pengembangan memenuhi kebutuhan yang disepakati sebelum dirilis."
    ],
    [
-    "Berita acara UAT",
-    "Dokumen persetujuan pengguna yang menjadi dasar rilis ke produksi."
+    "Validasi sistem",
+    "Pembuktian bahwa sistem terkomputerisasi memproses input, logika, tautan data, dan pembulatan dengan benar, dengan membandingkan input dan output atau perhitungan manual dan elektronik sesuai PCR-TNID-01 §6.9."
    ],
    [
-    "Rilis",
-    "Pemindahan solusi dari lingkungan pengembangan ke produksi."
+    "Data uji anonim",
+    "Data yang digunakan di lingkungan pengujian setelah data pribadi dan data rahasia dihapus atau disamarkan."
    ],
    [
-    "Rencana pemulihan",
-    "Langkah mengembalikan sistem ke kondisi sebelum rilis bila rilis gagal."
+    "Pengujian regresi",
+    "Pengujian ulang fungsi yang sudah ada untuk memastikan perubahan tidak merusak fungsi lain."
+   ],
+   [
+    "Pemantauan pasca-rilis",
+    "Pengamatan kinerja, galat, dan keluhan pengguna selama periode tertentu setelah rilis untuk mendeteksi masalah lebih awal."
    ]
   ],
   "resp": [
    [
-    "it",
-    "Menyiapkan skenario UAT, merilis, memigrasikan data, dan menyelenggarakan pelatihan."
+    "itdev",
+    "Melaksanakan pengujian sistem dan keamanan, merilis ke produksi, memperbarui dokumentasi sistem, serta memantau dan memelihara sistem."
    ],
    [
-    "user",
-    "Menjalankan UAT, menandatangani berita acara, dan mengikuti pelatihan."
+    "owner",
+    "Melaksanakan UAT dan validasi sistem, lalu menerima atau meminta perbaikan."
+   ],
+   [
+    "isec",
+    "Meninjau hasil pengujian keamanan dan memastikan temuan kritis ditutup sebelum rilis."
    ]
   ],
   "wi": [
    {
     "no": "1",
-    "t": "IT menyiapkan lingkungan dan skenario UAT berdasarkan spesifikasi yang telah disetujui.",
-    "l": "it",
-    "o": "Skenario UAT"
+    "t": "Tim aplikasi melaksanakan pengujian fungsional, regresi, dan keamanan di lingkungan pengujian dengan data uji anonim.",
+    "l": "itdev",
+    "o": "Laporan pengujian sistem & keamanan"
    },
    {
     "no": "2",
-    "t": "Unit pengguna menjalankan UAT dan mencatat temuan beserta tingkat keparahannya.",
-    "l": "user",
-    "o": "Catatan temuan UAT"
+    "t": "Fungsi keamanan informasi meninjau hasil pengujian keamanan; temuan yang belum ditutup dikembalikan ke Tim aplikasi untuk diperbaiki.",
+    "l": "isec"
    },
    {
     "no": "3",
-    "t": "Temuan yang menghambat diperbaiki IT, lalu diuji ulang oleh pengguna.",
-    "l": "it"
+    "t": "Pemilik sistem melaksanakan UAT dan validasi sistem sesuai PCR-TNID-01 §6.9 dengan membandingkan input dan output serta hasil perhitungan manual dan elektronik, termasuk pembulatan dan tautan data.",
+    "l": "owner",
+    "o": "Rekaman validasi sistem"
    },
    {
     "no": "4",
-    "t": "Unit pengguna menandatangani berita acara UAT sebagai dasar rilis.",
-    "l": "user",
+    "t": "Bila hasil UAT atau validasi belum sesuai, Pemilik sistem mencatat temuan dan perubahan dikembalikan ke pengembangan sesuai PIT-TNI-02.",
+    "l": "owner",
+    "o": "Daftar temuan UAT"
+   },
+   {
+    "no": "5",
+    "t": "Bila diterima, Pemilik sistem menandatangani berita acara UAT dan perubahan diteruskan untuk persetujuan rilis sesuai PIT-TNI-02.",
+    "l": "owner",
+    "o": "Berita acara UAT"
+   },
+   {
+    "no": "6",
+    "t": "Tim aplikasi merilis ke produksi sesuai jadwal yang disetujui, termasuk migrasi data bila diperlukan, dan menjalankan rencana rollback bila rilis gagal.",
+    "l": "itdev",
+    "o": "Catatan rilis"
+   },
+   {
+    "no": "7",
+    "t": "Tim aplikasi memperbarui dokumentasi sistem dan panduan pengguna, lalu menginformasikan perubahan kepada pengguna.",
+    "l": "itdev",
+    "o": "Dokumentasi sistem"
+   },
+   {
+    "no": "8",
+    "t": "Tim aplikasi memantau kinerja, galat, dan keluhan pengguna pasca-rilis serta memperbaiki bug sesuai matriks SLA.",
+    "l": "itdev"
+   },
+   {
+    "no": "9",
+    "t": "Tim aplikasi melaksanakan pemeliharaan rutin sesuai jadwal yang disetujui dan menutup tiket RFC setelah sistem berjalan sesuai kebutuhan.",
+    "l": "itdev",
+    "o": "Tiket ditutup"
+   }
+  ],
+  "records": [
+   "Laporan pengujian sistem & keamanan",
+   "Rekaman validasi sistem",
+   "Berita acara UAT",
+   "Catatan rilis",
+   "Dokumentasi sistem"
+  ],
+  "refs": [
+   "PCR-TNID-01 Prosedur Pengendalian Dokumen",
+   "ISO 9001:2015 8.5.6 Pengendalian perubahan",
+   "ISO/IEC 27001:2022 A.8.29 Pengujian keamanan dalam pengembangan dan penerimaan",
+   "ISO/IEC 27001:2022 A.8.31 Pemisahan lingkungan pengembangan, uji, dan produksi",
+   "ISO/IEC 27001:2022 A.8.33 Informasi uji",
+   "ISO/IEC 27001:2022 A.8.32 Manajemen perubahan"
+  ],
+  "sign": {
+   "prep": "IT & Digitalization Team",
+   "rev": "IT & Digitalization Manager",
+   "app": "Head of SID Division"
+  },
+  "revs": [
+   {
+    "rev": "00",
+    "date": "2026-10-01",
+    "part": "All",
+    "note": "Penerbitan awal"
+   }
+  ]
+ },
+ "M4.2-P1": {
+  "p": "M4.2",
+  "doc": "PIT-TNI-04",
+  "n": "Analisis & Perancangan Alur Kerja Digital",
+  "rev": "00",
+  "eff": "2026-10-01",
+  "steps": [
+   "a",
+   "b",
+   "c",
+   "d",
+   "e",
+   "f"
+  ],
+  "purpose": "Memastikan setiap usulan digitalisasi alur kerja dianalisis bersama pemilik proses, dampaknya terhadap dokumen terkendali ditangani, dan desain solusinya disetujui sebelum dikonfigurasi.",
+  "scope": "Usulan digitalisasi alur kerja, persetujuan, dan integrasi antarsistem dari seluruh unit, sampai desain solusi disetujui. Konfigurasi dan go-live diatur dalam PIT-TNI-05; perubahan pada sistem inti diatur dalam PIT-TNI-01; pengadaan platform baru melalui proses S2.",
+  "defs": [
+   [
+    "Digitalisasi alur kerja",
+    "Penggantian alur kerja manual atau berbasis kertas dengan alur elektronik, termasuk persetujuan, notifikasi, dan pertukaran data antarsistem."
+   ],
+   [
+    "Proses as-is dan to-be",
+    "Gambaran alur kerja saat ini (as-is) dan rancangan alur kerja digital yang dituju (to-be)."
+   ],
+   [
+    "Dokumen terkendali",
+    "Prosedur, formulir, atau instruksi kerja yang diterbitkan dan dikendalikan oleh CMS sesuai PCR-TNID-01."
+   ],
+   [
+    "Titik persetujuan",
+    "Langkah dalam alur kerja yang memerlukan keputusan atau tanda tangan elektronik dari pejabat berwenang."
+   ],
+   [
+    "Desain solusi",
+    "Rancangan yang menetapkan platform, alur, aturan persetujuan, data, dan kebutuhan integrasi suatu alur kerja digital."
+   ]
+  ],
+  "resp": [
+   [
+    "owner",
+    "Mengusulkan alur kerja yang akan didigitalisasi beserta manfaat yang diharapkan dan terlibat dalam pemetaan proses."
+   ],
+   [
+    "itdev",
+    "Memetakan proses as-is dan to-be bersama pemilik proses serta menyusun desain solusi."
+   ],
+   [
+    "cms",
+    "Menilai apakah desain mengubah dokumen terkendali dan mengelola revisinya sesuai PCR-TNID-01."
+   ],
+   [
+    "it",
+    "Menyetujui desain solusi berdasarkan arsitektur, platform, kebutuhan integrasi, dan prioritas."
+   ]
+  ],
+  "wi": [
+   {
+    "no": "1",
+    "t": "Pemilik proses mengajukan usulan digitalisasi melalui tiket dengan menyebut alur kerja, masalah saat ini, dan manfaat yang diharapkan.",
+    "l": "owner",
+    "o": "Usulan digitalisasi"
+   },
+   {
+    "no": "2",
+    "t": "Tim aplikasi bersama pemilik proses memetakan alur kerja as-is, termasuk formulir, titik persetujuan, dan data yang dipertukarkan.",
+    "l": "itdev",
+    "o": "Peta proses as-is"
+   },
+   {
+    "no": "3",
+    "t": "Tim aplikasi merancang alur kerja to-be dengan titik persetujuan, notifikasi, kebutuhan data, dan kebutuhan integrasi.",
+    "l": "itdev",
+    "o": "Peta proses to-be"
+   },
+   {
+    "no": "4",
+    "t": "CMS menilai apakah rancangan to-be mengubah prosedur, formulir, atau rekaman terkendali.",
+    "l": "cms"
+   },
+   {
+    "no": "5",
+    "t": "Bila ada perubahan, CMS memproses usulan perubahan dokumen terkendali sesuai PCR-TNID-01 dan mencatat formulir kertas yang akan ditarik.",
+    "l": "cms",
+    "o": "Usulan perubahan dokumen"
+   },
+   {
+    "no": "6",
+    "t": "Tim aplikasi menyusun desain solusi berisi platform, alur, aturan persetujuan, data, dan kebutuhan integrasi, termasuk persyaratan keamanan dan pelindungan data pribadi.",
+    "l": "itdev",
+    "o": "Desain solusi"
+   },
+   {
+    "no": "7",
+    "t": "IT & Digitalization Manager menilai desain solusi terhadap arsitektur, platform yang ada, dan prioritas, lalu menyetujui atau mengembalikannya untuk diperbaiki.",
+    "l": "it",
+    "o": "Persetujuan desain solusi"
+   },
+   {
+    "no": "8",
+    "t": "Desain yang disetujui diteruskan ke PIT-TNI-05; kebutuhan platform baru diteruskan ke PIT-TNI-15 dan pengadaannya melalui proses S2.",
+    "l": "it"
+   }
+  ],
+  "records": [
+   "Usulan digitalisasi",
+   "Peta proses as-is",
+   "Peta proses to-be",
+   "Usulan perubahan dokumen",
+   "Persetujuan desain solusi"
+  ],
+  "refs": [
+   "ISO 9001:2015 8.3 Desain dan pengembangan produk dan jasa",
+   "ISO 9001:2015 7.5 Informasi terdokumentasi",
+   "PCR-TNID-01 Prosedur Pengendalian Dokumen",
+   "ISO/IEC 27001:2022 A.8.27 Arsitektur sistem aman dan prinsip rekayasa",
+   "ISO/IEC 27001:2022 A.5.34 Privasi dan pelindungan PII",
+   "Kebijakan TI TÜV NORD Group (K-RL 550)"
+  ],
+  "sign": {
+   "prep": "IT & Digitalization Team",
+   "rev": "IT & Digitalization Manager",
+   "app": "Head of SID Division"
+  },
+  "revs": [
+   {
+    "rev": "00",
+    "date": "2026-10-01",
+    "part": "All",
+    "note": "Penerbitan awal"
+   }
+  ]
+ },
+ "M4.2-P2": {
+  "p": "M4.2",
+  "doc": "PIT-TNI-05",
+  "n": "Otomasi Workflow, Approval & Integrasi Sistem",
+  "rev": "00",
+  "eff": "2026-10-01",
+  "steps": [
+   "g",
+   "h",
+   "i",
+   "j",
+   "k",
+   "z"
+  ],
+  "purpose": "Memastikan alur kerja digital dikonfigurasi dan diintegrasikan secara aman, divalidasi sebelum digunakan, menggantikan alur lama secara terkendali, dan dievaluasi manfaatnya.",
+  "scope": "Konfigurasi alur kerja, aturan persetujuan, notifikasi, dan integrasi antarsistem berdasarkan desain yang disetujui melalui PIT-TNI-04, sampai go-live dan evaluasi manfaat. Pemberian hak akses pengguna diatur dalam PIT-TNI-12; pemantauan portofolio dan manfaat lintas inisiatif dalam PIT-TNI-16.",
+  "defs": [
+   [
+    "Antarmuka integrasi (API)",
+    "Titik pertukaran data terstandar antarsistem yang dilengkapi autentikasi dan pencatatan log."
+   ],
+   [
+    "Validasi sistem",
+    "Pembuktian bahwa sistem terkomputerisasi memproses input, logika, tautan data, dan pembulatan dengan benar, dengan membandingkan input dan output atau perhitungan manual dan elektronik sesuai PCR-TNID-01 §6.9."
+   ],
+   [
+    "Aturan persetujuan",
+    "Ketentuan dalam workflow yang menetapkan siapa menyetujui, dalam urutan apa, dan dengan batas kewenangan apa."
+   ],
+   [
+    "Go-live",
+    "Saat alur kerja digital mulai digunakan di lingkungan produksi dan alur lama dihentikan."
+   ],
+   [
+    "Evaluasi manfaat",
+    "Penilaian setelah go-live atas waktu siklus, penggunaan kertas, dan kepatuhan alur dibandingkan dengan manfaat yang diharapkan."
+   ]
+  ],
+  "resp": [
+   [
+    "itdev",
+    "Mengonfigurasi workflow dan integrasi secara aman, melaksanakan go-live, dan menghentikan alur lama."
+   ],
+   [
+    "owner",
+    "Melaksanakan validasi sistem, menerima hasil, dan mengevaluasi manfaat setelah go-live."
+   ],
+   [
+    "cms",
+    "Menerbitkan dokumen terkendali yang direvisi, menarik formulir kertas yang digantikan, dan menyosialisasikan alur baru."
+   ]
+  ],
+  "wi": [
+   {
+    "no": "1",
+    "t": "Tim aplikasi mengonfigurasi alur kerja, aturan persetujuan, dan notifikasi di lingkungan pengujian sesuai desain solusi yang disetujui.",
+    "l": "itdev",
+    "o": "Konfigurasi workflow"
+   },
+   {
+    "no": "2",
+    "t": "Tim aplikasi membangun antarmuka integrasi (API) dengan autentikasi, pembatasan akses, dan pencatatan log, lalu mengujinya bersama sistem terkait.",
+    "l": "itdev",
+    "o": "Spesifikasi & hasil uji integrasi"
+   },
+   {
+    "no": "3",
+    "t": "Pemilik proses melaksanakan validasi sistem sesuai PCR-TNID-01 §6.9 dengan membandingkan hasil workflow terhadap alur atau perhitungan manual.",
+    "l": "owner",
+    "o": "Rekaman validasi sistem"
+   },
+   {
+    "no": "4",
+    "t": "Bila hasil validasi belum sesuai, Pemilik proses mencatat temuan dan Tim aplikasi memperbaiki konfigurasi; bila sesuai, Pemilik proses menandatangani berita acara UAT.",
+    "l": "owner",
     "o": "Berita acara UAT"
    },
    {
     "no": "5",
-    "t": "IT menyusun rencana rilis: jadwal, dampak terhadap layanan, penanggung jawab, dan rencana pemulihan.",
-    "l": "it",
-    "o": "Rencana rilis"
+    "t": "Tim aplikasi mengaktifkan workflow di lingkungan produksi sesuai jadwal yang disetujui dan menghentikan alur lama, termasuk menonaktifkan formulir kertas.",
+    "l": "itdev",
+    "o": "Catatan go-live"
    },
    {
     "no": "6",
-    "t": "IT memigrasikan data dan memverifikasi kelengkapan serta kecocokan jumlah rekaman sebelum dan sesudah migrasi.",
-    "l": "it",
-    "o": "Berita acara migrasi data"
+    "t": "CMS menerbitkan dokumen terkendali yang direvisi, menarik formulir kertas yang digantikan sesuai PCR-TNID-01, dan menyosialisasikan alur baru kepada pengguna.",
+    "l": "cms",
+    "o": "Dokumen terkendali terbit & rekaman sosialisasi"
    },
    {
     "no": "7",
-    "t": "IT merilis ke produksi dan memantau stabilitas selama periode pengawasan yang ditetapkan.",
-    "l": "it",
-    "o": "Catatan rilis"
+    "t": "Pemilik proses mengevaluasi manfaat setelah go-live atas waktu siklus, penggunaan kertas, dan kepatuhan alur, lalu melaporkannya kepada IT & Digitalization.",
+    "l": "owner",
+    "o": "Laporan evaluasi manfaat"
    },
    {
     "no": "8",
-    "t": "IT dan unit pengguna menyelenggarakan pelatihan serta menyerahkan panduan pengguna.",
-    "l": "it",
-    "o": "Materi pelatihan dan daftar hadir"
-   },
-   {
-    "no": "9",
-    "t": "Bila rilis tidak memenuhi kriteria penerimaan, IT menjalankan rencana pemulihan dan melaporkannya kepada Steering digital.",
-    "l": "it"
+    "t": "Pemilik proses menutup tiket usulan setelah alur kerja digital berjalan; kebutuhan perbaikan lanjutan diajukan sebagai usulan baru sesuai PIT-TNI-04.",
+    "l": "owner",
+    "o": "Tiket ditutup"
    }
   ],
   "records": [
+   "Konfigurasi workflow",
+   "Rekaman validasi sistem",
    "Berita acara UAT",
-   "Berita acara migrasi data",
-   "Catatan rilis",
-   "Daftar hadir pelatihan"
+   "Catatan go-live",
+   "Laporan evaluasi manfaat"
   ],
   "refs": [
-   "Kebijakan TI TÜV NORD Group (K-RL 550)",
-   "UU Pelindungan Data Pribadi",
-   "ISO/IEC 17025:2017 klausul 7.11"
+   "PCR-TNID-01 Prosedur Pengendalian Dokumen",
+   "ISO 9001:2015 8.5.6 Pengendalian perubahan",
+   "ISO/IEC 27001:2022 A.8.32 Manajemen perubahan",
+   "ISO/IEC 27001:2022 A.8.29 Pengujian keamanan dalam pengembangan dan penerimaan",
+   "ISO 14001:2015 6.1.2 Aspek lingkungan",
+   "Kebijakan TI TÜV NORD Group (K-RL 550)"
   ],
   "sign": {
-   "prep": "IT & Digitalization",
-   "rev": "Corporate Management System",
-   "app": "Managing Directors"
-  }
+   "prep": "IT & Digitalization Team",
+   "rev": "IT & Digitalization Manager",
+   "app": "Head of SID Division"
+  },
+  "revs": [
+   {
+    "rev": "00",
+    "date": "2026-10-01",
+    "part": "All",
+    "note": "Penerbitan awal"
+   }
+  ]
  },
- "M4-P6": {
-  "p": "M4",
-  "doc": "PR-IT-06",
-  "n": "Operasi, Keamanan Informasi & Pemantauan",
+ "M4.3-P1": {
+  "p": "M4.3",
+  "doc": "PIT-TNI-06",
+  "n": "Tata Kelola & Kualitas Data",
   "rev": "00",
   "eff": "2026-10-01",
   "steps": [
-   "k",
-   "z"
+   "c",
+   "d",
+   "e",
+   "f",
+   "x",
+   "k"
   ],
-  "purpose": "Menjaga sistem tetap tersedia, data terlindungi, dan penyimpangan terdeteksi sebelum berdampak pada layanan pelanggan.",
-  "scope": "Operasi harian sistem inti dan infrastruktur, pengelolaan hak akses, pencadangan data, serta penanganan insiden keamanan informasi.",
+  "purpose": "Menetapkan cara definisi KPI, kepemilikan, klasifikasi dan kualitas data dikelola agar informasi manajemen bersumber dari data yang akurat, lengkap dan terkendali.",
+  "scope": "Berlaku untuk data dari SIMCert, SIMLab, SIMCal dan Central Invoicing yang digunakan untuk dashboard dan laporan manajemen, sejak definisi KPI hingga pemantauan kualitas berkala. Pembuatan dan publikasi dashboard diatur dalam PIT-TNI-07; pemberian hak akses individu diatur dalam PIT-TNI-12.",
   "defs": [
    [
-    "Uptime",
-    "Persentase waktu sistem tersedia dan dapat dipakai dalam satu periode."
+    "Kamus data",
+    "Daftar terkendali berisi definisi KPI, rumus, sumber data, pemilik data dan klasifikasi informasi."
    ],
    [
-    "Cadangan",
-    "Salinan data yang disimpan terpisah agar dapat dipulihkan bila data utama rusak atau hilang."
+    "Pemilik data",
+    "Pejabat di unit bisnis yang bertanggung jawab atas kebenaran data di sistem sumber serta menetapkan klasifikasi dan hak aksesnya."
    ],
    [
-    "Hak akses",
-    "Kewenangan seorang pengguna atas data dan fungsi tertentu di dalam sistem."
+    "Sistem sumber",
+    "Aplikasi operasional tempat data pertama kali dicatat, yaitu SIMCert, SIMLab, SIMCal dan Central Invoicing."
    ],
    [
-    "Insiden keamanan informasi",
-    "Kejadian yang mengancam kerahasiaan, keutuhan, atau ketersediaan informasi."
+    "Pipeline data",
+    "Proses terjadwal yang mengambil, mengolah dan memuat data dari sistem sumber ke basis data pelaporan."
+   ],
+   [
+    "Aturan kualitas data",
+    "Kriteria yang diperiksa pada data, meliputi kelengkapan, keunikan dan ketepatan waktu."
    ]
   ],
   "resp": [
    [
-    "it",
-    "Mengoperasikan, memantau, mencadangkan, dan mengamankan sistem serta menangani insiden keamanan."
+    "owner",
+    "Menyetujui definisi KPI, menetapkan klasifikasi informasi dan pihak yang berwenang mengakses data, serta memperbaiki data di sistem sumber."
    ],
    [
-    "user",
-    "Menjaga kerahasiaan kredensial dan melaporkan dugaan insiden keamanan tanpa menunda."
-   ],
-   [
-    "steer",
-    "Menerima laporan layanan TI sebagai masukan tinjauan manajemen."
+    "itdata",
+    "Memelihara kamus data, membangun pipeline dan aturan kualitas data, melaporkan isu kualitas data, serta memantau refresh dan kualitas data secara berkala."
    ]
   ],
   "wi": [
    {
     "no": "1",
-    "t": "IT memantau ketersediaan, kinerja, dan kapasitas sistem inti setiap hari kerja.",
-    "l": "it",
-    "o": "Log pemantauan"
+    "t": "Tim data & BI membahas bersama pemilik proses definisi, rumus, sumber data dan pemilik data untuk setiap KPI yang diminta.",
+    "l": "itdata",
+    "o": "Draf definisi KPI"
    },
    {
     "no": "2",
-    "t": "IT menjalankan pencadangan sesuai jadwal dan menguji pemulihannya secara berkala.",
-    "l": "it",
-    "o": "Log cadangan dan catatan uji pemulihan"
+    "t": "Tim data & BI mencatat definisi KPI yang telah disetujui pemilik proses dalam kamus data.",
+    "l": "itdata",
+    "o": "Kamus data"
    },
    {
     "no": "3",
-    "t": "IT meninjau hak akses pengguna sekurang-kurangnya setahun sekali dan mencabut akses yang tidak lagi diperlukan.",
-    "l": "it",
-    "o": "Berita acara tinjauan hak akses"
+    "t": "Pemilik data menetapkan klasifikasi informasi dan pihak yang berwenang mengakses data.",
+    "l": "owner",
+    "o": "Klasifikasi dan matriks akses data"
    },
    {
     "no": "4",
-    "t": "Pencabutan akses karyawan yang berhenti dilakukan pada hari kerja terakhir, terhubung dengan proses offboarding pada S3.",
-    "l": "it"
+    "t": "Tim data & BI membangun pipeline dari SIMCert, SIMLab, SIMCal dan Central Invoicing serta menerapkan aturan kualitas data untuk kelengkapan, keunikan dan ketepatan waktu.",
+    "l": "itdata",
+    "o": "Pipeline data dan aturan kualitas data"
    },
    {
     "no": "5",
-    "t": "Pengguna melaporkan dugaan insiden keamanan informasi melalui helpdesk tanpa menunda.",
-    "l": "user",
-    "o": "Laporan insiden"
+    "t": "Tim data & BI menjalankan pemeriksaan kualitas data; jika memadai, data diteruskan untuk pembuatan dashboard sesuai PIT-TNI-07.",
+    "l": "itdata",
+    "o": "Hasil pemeriksaan kualitas data"
    },
    {
     "no": "6",
-    "t": "IT menangani insiden keamanan informasi: pembendungan, pemulihan layanan, dan analisis akar masalah.",
-    "l": "it",
-    "o": "Laporan penanganan insiden"
+    "t": "Jika kualitas data tidak memadai, tim data & BI melaporkan temuan beserta rekaman yang bermasalah kepada pemilik data.",
+    "l": "itdata",
+    "o": "Log isu kualitas data"
    },
    {
     "no": "7",
-    "t": "Insiden yang melibatkan data pribadi dilaporkan sesuai UU Pelindungan Data Pribadi, berkoordinasi dengan Legal Administration Support.",
-    "l": "it"
+    "t": "Pemilik data memperbaiki data di sistem sumber; angka tidak boleh dikoreksi langsung di dashboard.",
+    "l": "owner",
+    "o": "Data sumber terkoreksi"
    },
    {
     "no": "8",
-    "t": "IT menyusun laporan layanan TI bulanan: uptime, pencapaian SLA, insiden, dan status pencadangan.",
-    "l": "it",
-    "o": "Laporan layanan TI bulanan"
+    "t": "Tim data & BI menjalankan ulang integrasi dan pemeriksaan kualitas data, lalu menutup isu jika hasilnya memadai.",
+    "l": "itdata",
+    "o": "Log isu kualitas data"
    },
    {
     "no": "9",
-    "t": "Laporan disampaikan kepada Steering digital sebagai masukan tinjauan.",
-    "l": "steer"
+    "t": "Tim data & BI memantau keberhasilan refresh terjadwal dan melakukan pemeriksaan kualitas data berkala sesuai jadwal yang disetujui.",
+    "l": "itdata",
+    "o": "Log pemantauan refresh"
+   },
+   {
+    "no": "10",
+    "t": "Tim data & BI meninjau pemakaian laporan secara berkala dan menonaktifkan laporan yang tidak digunakan setelah dikonfirmasi pemilik proses.",
+    "l": "itdata",
+    "o": "Daftar laporan yang dinonaktifkan"
    }
   ],
   "records": [
-   "Log pemantauan",
-   "Log cadangan",
-   "Berita acara tinjauan hak akses",
-   "Laporan insiden keamanan informasi",
-   "Laporan layanan TI bulanan"
+   "Kamus data",
+   "Klasifikasi dan matriks akses data",
+   "Hasil pemeriksaan kualitas data",
+   "Log isu kualitas data",
+   "Log pemantauan refresh"
   ],
   "refs": [
-   "Kebijakan TI TÜV NORD Group (K-RL 550)",
-   "UU Pelindungan Data Pribadi",
-   "ISO/IEC 17025:2017 klausul 7.11",
-   "ISO/IEC 17021-1:2015 klausul 8.4 (kerahasiaan)"
+   "ISO 9001:2015 7.5 Informasi terdokumentasi",
+   "ISO 9001:2015 9.1.3 Analisis dan evaluasi",
+   "ISO/IEC 27001:2022 A.5.9 Inventaris informasi dan aset terkait lainnya",
+   "ISO/IEC 27001:2022 A.5.12 Klasifikasi informasi",
+   "PCR-TNID-01 Prosedur Pengendalian Dokumen",
+   "UU No. 27 Tahun 2022 tentang Pelindungan Data Pribadi"
   ],
   "sign": {
-   "prep": "IT & Digitalization",
-   "rev": "Corporate Management System",
-   "app": "Managing Directors"
-  }
+   "prep": "IT & Digitalization Team",
+   "rev": "IT & Digitalization Manager",
+   "app": "Head of SID Division"
+  },
+  "revs": [
+   {
+    "rev": "00",
+    "date": "2026-10-01",
+    "part": "All",
+    "note": "Penerbitan awal"
+   }
+  ]
+ },
+ "M4.3-P2": {
+  "p": "M4.3",
+  "doc": "PIT-TNI-07",
+  "n": "Pengembangan & Publikasi Dashboard dan Laporan Manajemen",
+  "rev": "00",
+  "eff": "2026-10-01",
+  "steps": [
+   "a",
+   "b",
+   "g",
+   "h",
+   "i",
+   "j",
+   "z"
+  ],
+  "purpose": "Mengatur pengembangan, validasi dan publikasi dashboard serta laporan manajemen agar Direksi dan kepala departemen memperoleh informasi kinerja yang tervalidasi dan diakses sesuai klasifikasinya.",
+  "scope": "Berlaku untuk seluruh dashboard dan laporan manajemen yang dikembangkan tim data & BI, sejak pengajuan kebutuhan hingga pemanfaatan dalam tinjauan manajemen. Definisi KPI, kepemilikan dan kualitas data diatur dalam PIT-TNI-06; perubahan pada sistem inti diajukan melalui PIT-TNI-01.",
+  "defs": [
+   [
+    "Dashboard",
+    "Tampilan interaktif indikator kinerja yang bersumber dari basis data pelaporan dan diperbarui secara terjadwal."
+   ],
+   [
+    "Laporan manajemen",
+    "Laporan periodik berisi indikator kinerja untuk mendukung pengambilan keputusan Direksi dan kepala departemen."
+   ],
+   [
+    "Validasi angka",
+    "Rekonsiliasi angka dashboard dengan sistem sumber atau perhitungan manual sebelum publikasi, sesuai PCR-TNID-01 §6.9."
+   ],
+   [
+    "Hak akses",
+    "Izin melihat dashboard atau laporan yang diberikan sesuai klasifikasi informasi yang ditetapkan pemilik data."
+   ]
+  ],
+  "resp": [
+   [
+    "owner",
+    "Mengajukan kebutuhan laporan, memvalidasi angka dashboard sebelum publikasi dan menyetujui publikasinya."
+   ],
+   [
+    "itdata",
+    "Mengembangkan dan merevisi dashboard serta laporan, lalu mempublikasikannya dengan hak akses sesuai klasifikasi informasi."
+   ],
+   [
+    "md",
+    "Memanfaatkan dashboard untuk evaluasi kinerja, termasuk indikator mutu dan lingkungan, dalam tinjauan manajemen."
+   ]
+  ],
+  "wi": [
+   {
+    "no": "1",
+    "t": "Pemilik proses mengajukan kebutuhan laporan yang memuat keputusan yang didukung, KPI, definisi dan frekuensi pelaporan.",
+    "l": "owner",
+    "o": "Permintaan laporan"
+   },
+   {
+    "no": "2",
+    "t": "Tim data & BI memastikan setiap KPI yang diminta telah tercatat dalam kamus data; KPI baru diproses terlebih dahulu sesuai PIT-TNI-06.",
+    "l": "itdata",
+    "o": "Kamus data"
+   },
+   {
+    "no": "3",
+    "t": "Tim data & BI membuat dashboard atau laporan berdasarkan definisi KPI dalam kamus data.",
+    "l": "itdata",
+    "o": "Draf dashboard / laporan"
+   },
+   {
+    "no": "4",
+    "t": "Pemilik proses merekonsiliasi angka dashboard dengan sistem sumber atau perhitungan manual sesuai PCR-TNID-01 §6.9.",
+    "l": "owner",
+    "o": "Rekaman validasi angka"
+   },
+   {
+    "no": "5",
+    "t": "Jika angka belum sesuai, tim data & BI merevisi dashboard dan menyerahkannya kembali kepada pemilik proses untuk validasi.",
+    "l": "itdata",
+    "o": "Dashboard revisi"
+   },
+   {
+    "no": "6",
+    "t": "Pemilik proses menyatakan angka tervalidasi dan menyetujui publikasi dashboard.",
+    "l": "owner",
+    "o": "Persetujuan publikasi"
+   },
+   {
+    "no": "7",
+    "t": "Tim data & BI mempublikasikan dashboard dan memberikan hak akses sesuai klasifikasi informasi yang ditetapkan pemilik data.",
+    "l": "itdata",
+    "o": "Daftar hak akses dashboard"
+   },
+   {
+    "no": "8",
+    "t": "Direksi dan kepala departemen memanfaatkan dashboard untuk evaluasi kinerja, termasuk indikator mutu dan lingkungan, dalam tinjauan manajemen.",
+    "l": "md",
+    "o": "Notulen tinjauan manajemen"
+   }
+  ],
+  "records": [
+   "Permintaan laporan",
+   "Rekaman validasi angka",
+   "Persetujuan publikasi",
+   "Daftar hak akses dashboard",
+   "Notulen tinjauan manajemen"
+  ],
+  "refs": [
+   "ISO 9001:2015 9.1.3 Analisis dan evaluasi",
+   "ISO 9001:2015 9.3 Tinjauan manajemen",
+   "ISO 14001:2015 9.1 Pemantauan, pengukuran, analisis dan evaluasi",
+   "ISO/IEC 27001:2022 A.5.12 Klasifikasi informasi",
+   "ISO/IEC 27001:2022 A.5.15 Kontrol akses",
+   "PCR-TNID-01 Prosedur Pengendalian Dokumen"
+  ],
+  "sign": {
+   "prep": "IT & Digitalization Team",
+   "rev": "IT & Digitalization Manager",
+   "app": "Head of SID Division"
+  },
+  "revs": [
+   {
+    "rev": "00",
+    "date": "2026-10-01",
+    "part": "All",
+    "note": "Penerbitan awal"
+   }
+  ]
+ },
+ "M4.4-P1": {
+  "p": "M4.4",
+  "doc": "PIT-TNI-08",
+  "n": "Pengelolaan Layanan Helpdesk: Insiden & Permintaan Layanan",
+  "rev": "00",
+  "eff": "2026-10-01",
+  "steps": [
+   "a",
+   "b",
+   "c",
+   "d",
+   "e",
+   "g",
+   "h",
+   "i"
+  ],
+  "purpose": "Menetapkan cara service desk TI menerima, mengklasifikasikan, menangani dan menutup tiket insiden serta permintaan layanan agar layanan TI pulih dan terpenuhi sesuai matriks SLA.",
+  "scope": "Berlaku untuk seluruh tiket gangguan dan permintaan layanan TI dari unit pengguna, termasuk analisis tren dan problem management. Penyediaan perangkat diatur dalam PIT-TNI-09, permintaan hak akses dalam PIT-TNI-12 dan insiden keamanan informasi dalam PIT-TNI-13.",
+  "defs": [
+   [
+    "Tiket",
+    "Rekaman elektronik di aplikasi helpdesk untuk setiap gangguan atau permintaan layanan TI, dari pengajuan hingga penutupan."
+   ],
+   [
+    "Insiden",
+    "Gangguan tidak terencana atau penurunan kualitas layanan TI yang mengganggu pekerjaan pengguna."
+   ],
+   [
+    "Permintaan layanan",
+    "Permintaan standar dari pengguna, seperti pembuatan akun, pemberian akses atau instalasi perangkat lunak, yang bukan merupakan gangguan."
+   ],
+   [
+    "Matriks SLA",
+    "Tabel yang disetujui berisi tingkat prioritas tiket beserta target waktu respons dan penyelesaiannya."
+   ],
+   [
+    "Problem",
+    "Penyebab mendasar dari satu atau beberapa insiden berulang yang memerlukan analisis akar masalah dan perbaikan permanen."
+   ],
+   [
+    "Workaround",
+    "Solusi sementara untuk memulihkan layanan sebelum perbaikan permanen tersedia."
+   ]
+  ],
+  "resp": [
+   [
+    "user",
+    "Mengajukan tiket dengan informasi lengkap, mengonfirmasi hasil layanan dan mengisi survei kepuasan."
+   ],
+   [
+    "itsd",
+    "Meregistrasi, memverifikasi dan mengklasifikasikan tiket, menetapkan prioritas SLA, menangani insiden dan permintaan layanan, menutup tiket serta melakukan analisis tren dan problem management."
+   ],
+   [
+    "itops",
+    "Menangani insiden yang dieskalasi terkait infrastruktur, jaringan dan server serta memproses tiket perangkat / aset."
+   ],
+   [
+    "vendor",
+    "Menangani insiden yang dieskalasi sesuai kontrak dan SLA dengan akses terbatas dan diawasi."
+   ]
+  ],
+  "wi": [
+   {
+    "no": "1",
+    "t": "Unit pengguna mengajukan tiket melalui helpdesk dengan menyebutkan sistem terdampak, gejala, waktu kejadian dan dampaknya.",
+    "l": "user",
+    "o": "Tiket"
+   },
+   {
+    "no": "2",
+    "t": "Service desk meregistrasi dan memverifikasi tiket, mengklasifikasikannya sebagai insiden, permintaan layanan atau perangkat / aset, lalu menetapkan prioritas sesuai matriks SLA.",
+    "l": "itsd",
+    "o": "Klasifikasi dan prioritas tiket"
+   },
+   {
+    "no": "3",
+    "t": "Untuk insiden, service desk mendiagnosis gangguan, menerapkan workaround dan memulihkan layanan sesuai matriks SLA; insiden keamanan informasi diteruskan sesuai PIT-TNI-13.",
+    "l": "itsd",
+    "o": "Catatan penanganan insiden"
+   },
+   {
+    "no": "4",
+    "t": "Tim infrastruktur atau vendor menangani insiden yang dieskalasi service desk dan mencatat tindakan pemulihan pada tiket.",
+    "l": "itops",
+    "o": "Catatan eskalasi"
+   },
+   {
+    "no": "5",
+    "t": "Untuk permintaan layanan, service desk memenuhi permintaan standar setelah disetujui atasan pemohon; permintaan hak akses diproses sesuai PIT-TNI-12.",
+    "l": "itsd",
+    "o": "Persetujuan atasan dan catatan pemenuhan"
+   },
+   {
+    "no": "6",
+    "t": "Untuk tiket perangkat / aset, service desk meneruskan tiket kepada tim infrastruktur untuk diproses sesuai PIT-TNI-09.",
+    "l": "itsd"
+   },
+   {
+    "no": "7",
+    "t": "Unit pengguna mengonfirmasi hasil layanan; jika belum diterima, tiket dibuka kembali dan service desk mengulangi penanganan.",
+    "l": "user",
+    "o": "Konfirmasi pengguna"
+   },
+   {
+    "no": "8",
+    "t": "Service desk menutup tiket yang telah dikonfirmasi dan mengirimkan survei kepuasan kepada pengguna.",
+    "l": "itsd",
+    "o": "Hasil survei kepuasan"
+   },
+   {
+    "no": "9",
+    "t": "Service desk menganalisis tren tiket secara berkala, mengidentifikasi insiden berulang dan menentukan akar masalahnya.",
+    "l": "itsd",
+    "o": "Laporan tren tiket"
+   },
+   {
+    "no": "10",
+    "t": "Service desk menindaklanjuti perbaikan permanen dan memantau efektivitasnya; perbaikan yang memerlukan perubahan sistem diajukan sesuai PIT-TNI-01.",
+    "l": "itsd",
+    "o": "Catatan problem dan akar masalah"
+   }
+  ],
+  "records": [
+   "Tiket",
+   "Catatan penanganan insiden",
+   "Hasil survei kepuasan",
+   "Laporan tren tiket",
+   "Catatan problem dan akar masalah"
+  ],
+  "refs": [
+   "ISO 9001:2015 7.1.3 Infrastruktur",
+   "ISO 9001:2015 10.2 Ketidaksesuaian dan tindakan korektif",
+   "ISO/IEC 27001:2022 A.5.24 Perencanaan dan persiapan manajemen insiden keamanan informasi",
+   "ISO/IEC 27001:2022 A.5.26 Respons terhadap insiden keamanan informasi",
+   "ISO/IEC 27001:2022 A.5.15 Kontrol akses",
+   "Kebijakan TI TÜV NORD Group (K-RL 550)"
+  ],
+  "sign": {
+   "prep": "IT & Digitalization Team",
+   "rev": "IT & Digitalization Manager",
+   "app": "Head of SID Division"
+  },
+  "revs": [
+   {
+    "rev": "00",
+    "date": "2026-10-01",
+    "part": "All",
+    "note": "Penerbitan awal"
+   }
+  ]
+ },
+ "M4.4-P2": {
+  "p": "M4.4",
+  "doc": "PIT-TNI-09",
+  "n": "Pengelolaan Siklus Hidup Aset & Perangkat TI",
+  "rev": "00",
+  "eff": "2026-10-01",
+  "steps": [
+   "f",
+   "l",
+   "m"
+  ],
+  "purpose": "Mengatur penyediaan, konfigurasi, pencatatan, pengembalian dan pembuangan perangkat TI agar setiap aset TI aman, tercatat dan dibuang secara bertanggung jawab terhadap lingkungan.",
+  "scope": "Berlaku untuk perangkat TI milik perusahaan sejak penyediaan hingga penghapusan data dan disposal sebagai limbah elektronik. Pengadaan perangkat baru dilakukan melalui proses Level 1 S2; pemeliharaan server dan jaringan diatur dalam PIT-TNI-10.",
+  "defs": [
+   [
+    "Register aset TI",
+    "Daftar terkendali seluruh perangkat TI beserta spesifikasi, pengguna, lokasi, status dan riwayatnya."
+   ],
+   [
+    "Image standar",
+    "Konfigurasi baku sistem operasi dan aplikasi yang disetujui TI untuk dipasang pada perangkat pengguna."
+   ],
+   [
+    "Enkripsi disk",
+    "Pengamanan media penyimpanan perangkat sehingga data tidak dapat dibaca tanpa kunci otorisasi."
+   ],
+   [
+    "Penghapusan data aman",
+    "Penghapusan data dari media penyimpanan dengan metode yang mencegah data dipulihkan kembali."
+   ],
+   [
+    "E-waste (limbah B3)",
+    "Perangkat elektronik bekas yang dikategorikan sebagai limbah bahan berbahaya dan beracun dan wajib diserahkan kepada pengelola berizin."
+   ]
+  ],
+  "resp": [
+   [
+    "user",
+    "Menerima perangkat dengan berita acara serah terima, menggunakannya sesuai ketentuan penggunaan yang dapat diterima dan mengembalikannya saat tidak lagi diperlukan."
+   ],
+   [
+    "itops",
+    "Menyediakan dan mengonfigurasi perangkat, memelihara register aset TI, menilai akhir masa pakai dan menghapus data secara aman."
+   ],
+   [
+    "ga",
+    "Menyimpan perangkat yang akan dibuang dan menyerahkannya kepada pengelola limbah B3 berizin."
+   ]
+  ],
+  "wi": [
+   {
+    "no": "1",
+    "t": "Tim infrastruktur menyediakan perangkat dari stok atau, jika stok tidak tersedia, mengajukan pengadaan melalui proses Level 1 S2.",
+    "l": "itops",
+    "o": "Permintaan pengadaan"
+   },
+   {
+    "no": "2",
+    "t": "Tim infrastruktur memasang image standar, mengaktifkan enkripsi disk dan memasang anti-malware pada perangkat.",
+    "l": "itops",
+    "o": "Checklist konfigurasi perangkat"
+   },
+   {
+    "no": "3",
+    "t": "Tim infrastruktur mencatat perangkat dalam register aset TI dan menyerahkannya kepada pengguna dengan berita acara serah terima.",
+    "l": "itops",
+    "o": "Berita acara serah terima"
+   },
+   {
+    "no": "4",
+    "t": "Unit pengguna mengembalikan perangkat kepada tim infrastruktur saat mutasi, pengunduran diri atau penggantian perangkat.",
+    "l": "user",
+    "o": "Berita acara pengembalian"
+   },
+   {
+    "no": "5",
+    "t": "Tim infrastruktur menilai kondisi perangkat yang dikembalikan atau rusak; perangkat yang masih layak dikonfigurasi ulang dan dikembalikan ke stok.",
+    "l": "itops",
+    "o": "Hasil penilaian perangkat"
+   },
+   {
+    "no": "6",
+    "t": "Untuk perangkat akhir masa pakai, tim infrastruktur menghapus data secara aman dan mencatat nomor seri perangkat yang telah dihapus.",
+    "l": "itops",
+    "o": "Rekaman penghapusan data"
+   },
+   {
+    "no": "7",
+    "t": "GA menerima perangkat yang telah dihapus datanya dan menyimpannya di tempat penyimpanan sementara limbah B3.",
+    "l": "ga"
+   },
+   {
+    "no": "8",
+    "t": "GA menyerahkan perangkat kepada pengelola limbah B3 berizin dan menyimpan manifes limbah B3 sebagai bukti serah terima.",
+    "l": "ga",
+    "o": "Manifes limbah B3"
+   },
+   {
+    "no": "9",
+    "t": "Tim infrastruktur memperbarui status perangkat di register aset TI menjadi dibuang.",
+    "l": "itops",
+    "o": "Register aset TI"
+   }
+  ],
+  "records": [
+   "Register aset TI",
+   "Berita acara serah terima",
+   "Rekaman penghapusan data",
+   "Manifes limbah B3"
+  ],
+  "refs": [
+   "ISO/IEC 27001:2022 A.5.9 Inventaris informasi dan aset terkait lainnya",
+   "ISO/IEC 27001:2022 A.5.11 Pengembalian aset",
+   "ISO/IEC 27001:2022 A.7.14 Pembuangan atau penggunaan ulang peralatan secara aman",
+   "ISO/IEC 27001:2022 A.8.1 Perangkat titik akhir pengguna",
+   "ISO 14001:2015 8.1 Perencanaan dan pengendalian operasional",
+   "PP No. 22 Tahun 2021 tentang Penyelenggaraan Perlindungan dan Pengelolaan Lingkungan Hidup"
+  ],
+  "sign": {
+   "prep": "IT & Digitalization Team",
+   "rev": "IT & Digitalization Manager",
+   "app": "Head of SID Division"
+  },
+  "revs": [
+   {
+    "rev": "00",
+    "date": "2026-10-01",
+    "part": "All",
+    "note": "Penerbitan awal"
+   }
+  ]
+ },
+ "M4.4-P3": {
+  "p": "M4.4",
+  "doc": "PIT-TNI-10",
+  "n": "Pengelolaan Infrastruktur, Jaringan, Backup & Kapasitas",
+  "rev": "00",
+  "eff": "2026-10-01",
+  "steps": [
+   "j",
+   "k",
+   "z"
+  ],
+  "purpose": "Menetapkan pemeliharaan infrastruktur, jaringan, backup dan kapasitas TI agar layanan TI tetap tersedia dan aman serta data dapat dipulihkan.",
+  "scope": "Berlaku untuk server, jaringan, ruang server, backup dan pemeliharaan oleh vendor TI. Pemantauan kerentanan dan keamanan diatur dalam PIT-TNI-14; gangguan layanan ditangani sesuai PIT-TNI-08.",
+  "defs": [
+   [
+    "Pemeliharaan preventif",
+    "Pemeriksaan dan perawatan terjadwal atas server, jaringan dan ruang server untuk mencegah gangguan."
+   ],
+   [
+    "Jadwal backup",
+    "Jadwal yang disetujui berisi cakupan data, frekuensi, media dan lokasi penyimpanan backup."
+   ],
+   [
+    "Uji restore",
+    "Pengujian pemulihan data dari backup untuk membuktikan bahwa backup dapat digunakan."
+   ],
+   [
+    "Pemantauan kapasitas",
+    "Pemantauan penggunaan penyimpanan, prosesor, memori dan bandwidth untuk merencanakan kebutuhan kapasitas."
+   ],
+   [
+    "Akses vendor terawasi",
+    "Akses vendor ke sistem atau ruang server yang dibatasi pada lingkup pekerjaan, diberikan sementara dan didampingi tim infrastruktur."
+   ]
+  ],
+  "resp": [
+   [
+    "itops",
+    "Melaksanakan pemeliharaan preventif, patching, backup dan uji restore, memantau kapasitas dan energi ruang server, serta mengawasi pekerjaan vendor."
+   ],
+   [
+    "vendor",
+    "Melaksanakan pemeliharaan dan perbaikan sesuai kontrak dan SLA dengan akses terbatas dan diawasi."
+   ]
+  ],
+  "wi": [
+   {
+    "no": "1",
+    "t": "Tim infrastruktur menyusun jadwal pemeliharaan preventif dan jadwal backup untuk disetujui IT & Digitalization Manager.",
+    "l": "itops",
+    "o": "Jadwal pemeliharaan dan jadwal backup"
+   },
+   {
+    "no": "2",
+    "t": "Tim infrastruktur melaksanakan pemeliharaan preventif server, jaringan dan ruang server serta memasang patch sesuai jadwal; patch keamanan kritis ditangani sesuai PIT-TNI-14.",
+    "l": "itops",
+    "o": "Checklist pemeliharaan"
+   },
+   {
+    "no": "3",
+    "t": "Tim infrastruktur menjalankan backup sesuai jadwal backup yang disetujui dan memeriksa log keberhasilannya.",
+    "l": "itops",
+    "o": "Log backup"
+   },
+   {
+    "no": "4",
+    "t": "Tim infrastruktur melakukan uji restore secara berkala dan menangani setiap kegagalan sebagai insiden sesuai PIT-TNI-08.",
+    "l": "itops",
+    "o": "Laporan uji restore"
+   },
+   {
+    "no": "5",
+    "t": "Tim infrastruktur memantau kapasitas server, penyimpanan dan jaringan serta konsumsi energi ruang server, lalu mengusulkan penambahan kapasitas bila diperlukan.",
+    "l": "itops",
+    "o": "Laporan pemantauan kapasitas dan energi"
+   },
+   {
+    "no": "6",
+    "t": "Tim infrastruktur memberikan akses sementara dan terbatas kepada vendor sesuai lingkup pekerjaan serta mendampingi pelaksanaannya.",
+    "l": "itops",
+    "o": "Log akses vendor"
+   },
+   {
+    "no": "7",
+    "t": "Vendor melaksanakan pemeliharaan atau perbaikan sesuai kontrak dan SLA, lalu melaporkan hasil pekerjaan kepada tim infrastruktur.",
+    "l": "vendor",
+    "o": "Laporan pekerjaan vendor"
+   },
+   {
+    "no": "8",
+    "t": "Tim infrastruktur memverifikasi hasil pekerjaan vendor, mencabut akses vendor dan mengevaluasi kinerja vendor terhadap SLA secara berkala.",
+    "l": "itops",
+    "o": "Evaluasi kinerja vendor"
+   },
+   {
+    "no": "9",
+    "t": "Tim infrastruktur mencatat hasil pemeliharaan dalam register aset TI dan memastikan layanan serta infrastruktur TI tersedia.",
+    "l": "itops",
+    "o": "Register aset TI"
+   }
+  ],
+  "records": [
+   "Checklist pemeliharaan",
+   "Log backup",
+   "Laporan uji restore",
+   "Laporan pemantauan kapasitas dan energi",
+   "Evaluasi kinerja vendor"
+  ],
+  "refs": [
+   "ISO 9001:2015 7.1.3 Infrastruktur",
+   "ISO 14001:2015 9.1 Pemantauan, pengukuran, analisis dan evaluasi",
+   "ISO/IEC 27001:2022 A.5.22 Pemantauan, peninjauan dan manajemen perubahan layanan pemasok",
+   "ISO/IEC 27001:2022 A.8.6 Manajemen kapasitas",
+   "ISO/IEC 27001:2022 A.8.13 Cadangan informasi",
+   "ISO/IEC 27001:2022 A.8.20 Keamanan jaringan"
+  ],
+  "sign": {
+   "prep": "IT & Digitalization Team",
+   "rev": "IT & Digitalization Manager",
+   "app": "Head of SID Division"
+  },
+  "revs": [
+   {
+    "rev": "00",
+    "date": "2026-10-01",
+    "part": "All",
+    "note": "Penerbitan awal"
+   }
+  ]
+ },
+ "M4.5-P1": {
+  "p": "M4.5",
+  "doc": "PIT-TNI-11",
+  "n": "Manajemen Risiko Keamanan Informasi & Statement of Applicability",
+  "rev": "00",
+  "eff": "2026-10-01",
+  "steps": [
+   "a",
+   "b",
+   "c",
+   "l",
+   "z"
+  ],
+  "purpose": "Memastikan risiko keamanan informasi, termasuk risiko atas pemrosesan data pribadi, diidentifikasi, dinilai, dan ditangani secara konsisten, serta kinerja ISMS ditinjau sebagai dasar perbaikan berkelanjutan.",
+  "scope": "Siklus penilaian dan penanganan risiko ISMS tahunan maupun yang dipicu perubahan signifikan, penyusunan Statement of Applicability, dan tinjauan kinerja ISMS. Tidak mencakup penanganan insiden (PIT-TNI-13), pengelolaan kerentanan dan patch (PIT-TNI-14), serta pelaksanaan audit internal dan tinjauan manajemen terintegrasi (G1).",
+  "defs": [
+   [
+    "Aset informasi",
+    "Informasi serta aset terkait (perangkat keras, perangkat lunak, layanan, dan personel) yang bernilai bagi organisasi dan perlu dilindungi."
+   ],
+   [
+    "Register risiko",
+    "Daftar terkendali berisi risiko keamanan informasi, hasil penilaiannya, pemilik risiko, dan status penanganannya."
+   ],
+   [
+    "Risiko residual",
+    "Risiko yang tersisa setelah kontrol penanganan risiko diterapkan."
+   ],
+   [
+    "Statement of Applicability (SoA)",
+    "Dokumen yang memuat kontrol Annex A ISO/IEC 27001:2022 yang diperlukan, justifikasi pencantuman atau pengecualiannya, dan status penerapannya."
+   ],
+   [
+    "Pemilik risiko",
+    "Pihak yang memiliki akuntabilitas dan kewenangan untuk mengelola suatu risiko, termasuk menerima risiko residual."
+   ]
+  ],
+  "resp": [
+   [
+    "isec",
+    "Memelihara inventaris aset informasi dan register risiko, melaksanakan penilaian risiko, menyusun rencana penanganan risiko dan SoA, serta memantau efektivitas kontrol."
+   ],
+   [
+    "steer",
+    "Menyetujui rencana penanganan risiko, penerimaan risiko residual, dan SoA, serta meninjau kinerja ISMS dan menetapkan keputusan perbaikan."
+   ]
+  ],
+  "wi": [
+   {
+    "no": "1",
+    "t": "Fungsi keamanan informasi memulai siklus penilaian risiko sesuai jadwal yang ditetapkan dalam rencana ISMS atau ketika terjadi perubahan signifikan pada organisasi, teknologi, pemasok, atau regulasi.",
+    "l": "isec",
+    "o": "Pemicu siklus ISMS"
+   },
+   {
+    "no": "2",
+    "t": "Fungsi keamanan informasi memperbarui inventaris aset informasi beserta pemilik dan klasifikasinya, termasuk aktivitas pemrosesan data pribadi.",
+    "l": "isec",
+    "o": "Inventaris aset informasi"
+   },
+   {
+    "no": "3",
+    "t": "Fungsi keamanan informasi mengidentifikasi ancaman, kerentanan, dan risiko terhadap kerahasiaan, integritas, dan ketersediaan setiap aset, dengan memanfaatkan hasil pemantauan (PIT-TNI-14) dan insiden (PIT-TNI-13).",
+    "l": "isec",
+    "o": "Register risiko keamanan informasi"
+   },
+   {
+    "no": "4",
+    "t": "Fungsi keamanan informasi menganalisis dan mengevaluasi risiko berdasarkan kriteria kemungkinan, dampak, dan penerimaan risiko yang ditetapkan dalam metodologi risiko ISMS.",
+    "l": "isec",
+    "o": "Hasil penilaian risiko"
+   },
+   {
+    "no": "5",
+    "t": "Fungsi keamanan informasi menyusun rencana penanganan risiko (modifikasi, penghindaran, berbagi, atau penerimaan) lengkap dengan kontrol, pemilik, dan target waktu, serta memperbarui SoA.",
+    "l": "isec",
+    "o": "Draf rencana penanganan risiko dan SoA"
+   },
+   {
+    "no": "6",
+    "t": "Steering digital meninjau dan menyetujui rencana penanganan risiko, penerimaan risiko residual oleh pemilik risiko, dan SoA; draf yang belum memadai dikembalikan untuk diperbaiki.",
+    "l": "steer",
+    "o": "Rencana penanganan risiko dan SoA yang disetujui"
+   },
+   {
+    "no": "7",
+    "t": "Fungsi keamanan informasi memantau pelaksanaan rencana penanganan risiko serta mengukur efektivitas kontrol dan pencapaian sasaran keamanan informasi.",
+    "l": "isec",
+    "o": "Laporan status penanganan risiko"
+   },
+   {
+    "no": "8",
+    "t": "Steering digital meninjau kinerja ISMS berdasarkan hasil pemantauan, insiden, hasil audit internal (G1), status tindakan korektif, dan efektivitas kontrol, lalu menetapkan keputusan perbaikan.",
+    "l": "steer",
+    "o": "Notulen tinjauan kinerja ISMS"
+   },
+   {
+    "no": "9",
+    "t": "Fungsi keamanan informasi meneruskan hasil tinjauan sebagai masukan tinjauan manajemen terintegrasi (G1) dan memutakhirkan register risiko, sehingga risiko keamanan informasi tetap terkendali.",
+    "l": "isec",
+    "o": "Masukan tinjauan manajemen"
+   }
+  ],
+  "records": [
+   "Inventaris aset informasi",
+   "Register risiko keamanan informasi",
+   "Rencana penanganan risiko dan SoA yang disetujui",
+   "Notulen tinjauan kinerja ISMS"
+  ],
+  "refs": [
+   "ISO/IEC 27001:2022 6.1.2 Penilaian risiko keamanan informasi",
+   "ISO/IEC 27001:2022 6.1.3 Penanganan risiko keamanan informasi",
+   "ISO/IEC 27001:2022 8.2 Penilaian risiko keamanan informasi; 8.3 Penanganan risiko keamanan informasi",
+   "ISO/IEC 27001:2022 9.1 Pemantauan, pengukuran, analisis dan evaluasi; 9.3 Tinjauan manajemen",
+   "ISO/IEC 27001:2022 A.5.9 Inventaris informasi dan aset terkait lainnya",
+   "ISO 9001:2015 6.1 Tindakan untuk menangani risiko dan peluang"
+  ],
+  "sign": {
+   "prep": "IT & Digitalization Team",
+   "rev": "IT & Digitalization Manager",
+   "app": "Head of SID Division"
+  },
+  "revs": [
+   {
+    "rev": "00",
+    "date": "2026-10-01",
+    "part": "All",
+    "note": "Penerbitan awal"
+   }
+  ]
+ },
+ "M4.5-P2": {
+  "p": "M4.5",
+  "doc": "PIT-TNI-12",
+  "n": "Manajemen Akses Pengguna & Akses Istimewa",
+  "rev": "00",
+  "eff": "2026-10-01",
+  "steps": [
+   "d",
+   "e"
+  ],
+  "purpose": "Memastikan hak akses ke sistem dan informasi diberikan, diubah, dan dicabut tepat waktu sesuai prinsip least privilege, serta akses istimewa dikendalikan secara ketat.",
+  "scope": "Siklus hidup identitas dan hak akses seluruh pegawai dan pihak eksternal ke aplikasi, infrastruktur, dan layanan cloud perusahaan, termasuk akses istimewa dan tinjauan hak akses berkala. Proses rekrutmen, mutasi, dan pemutusan hubungan kerja berjalan melalui S3; pengembalian perangkat berjalan melalui PIT-TNI-09.",
+  "defs": [
+   [
+    "Joiner, mover, leaver",
+    "Pegawai baru, pegawai yang berpindah jabatan atau unit, dan pegawai yang keluar, yang masing-masing memicu pemberian, perubahan, atau pencabutan hak akses."
+   ],
+   [
+    "Least privilege",
+    "Prinsip pemberian hak akses minimum yang diperlukan untuk menjalankan tugas."
+   ],
+   [
+    "Akses istimewa",
+    "Hak akses administratif atau setara yang memungkinkan pengubahan konfigurasi sistem, keamanan, atau data dalam jumlah besar."
+   ],
+   [
+    "Tinjauan hak akses",
+    "Verifikasi berkala oleh pemilik aset bahwa setiap hak akses yang aktif masih sesuai dengan kebutuhan tugas."
+   ]
+  ],
+  "resp": [
+   [
+    "hr",
+    "Menyampaikan notifikasi joiner, mover, dan leaver kepada IT secara lengkap dan tepat waktu."
+   ],
+   [
+    "it",
+    "Membuat, mengubah, menonaktifkan akun dan hak akses sesuai persetujuan, serta menindaklanjuti hasil tinjauan hak akses."
+   ],
+   [
+    "isec",
+    "Menyetujui akses istimewa dan mengoordinasikan tinjauan hak akses berkala."
+   ]
+  ],
+  "wi": [
+   {
+    "no": "1",
+    "t": "HR menyampaikan notifikasi joiner, mover, atau leaver kepada IT sebelum tanggal efektif, memuat nama, jabatan, unit, dan tanggal efektif.",
+    "l": "hr",
+    "o": "Notifikasi joiner, mover, leaver"
+   },
+   {
+    "no": "2",
+    "t": "IT memverifikasi notifikasi dan persetujuan atasan langsung atau pemilik aset atas hak akses yang diminta berdasarkan peran dan prinsip least privilege.",
+    "l": "it",
+    "o": "Permintaan akses terverifikasi"
+   },
+   {
+    "no": "3",
+    "t": "IT membuat identitas pengguna yang unik, memberikan hak akses sesuai peran, dan menyerahkan informasi autentikasi awal secara aman dengan kewajiban penggantian pada login pertama.",
+    "l": "it",
+    "o": "Log pemberian hak akses"
+   },
+   {
+    "no": "4",
+    "t": "Fungsi keamanan informasi menilai permintaan akses istimewa berdasarkan justifikasi, masa berlaku, dan penggunaan akun terpisah dari akun harian, lalu menyetujui atau menolaknya.",
+    "l": "isec",
+    "o": "Persetujuan akses istimewa"
+   },
+   {
+    "no": "5",
+    "t": "IT memberikan akses istimewa yang disetujui melalui akun administratif terpisah dengan autentikasi aman dan pencatatan aktivitas.",
+    "l": "it",
+    "o": "Register akses istimewa"
+   },
+   {
+    "no": "6",
+    "t": "Untuk mover, IT menyesuaikan hak akses dengan peran baru dan mencabut hak akses yang tidak lagi diperlukan.",
+    "l": "it",
+    "o": "Log perubahan hak akses"
+   },
+   {
+    "no": "7",
+    "t": "Untuk leaver, IT menonaktifkan akun dan mencabut seluruh hak akses paling lambat pada tanggal efektif keluar, serta berkoordinasi dengan HR atas pengembalian aset (PIT-TNI-09).",
+    "l": "it",
+    "o": "Log pencabutan hak akses"
+   },
+   {
+    "no": "8",
+    "t": "Fungsi keamanan informasi mengoordinasikan tinjauan hak akses bersama pemilik aset sesuai jadwal yang ditetapkan dalam rencana ISMS, dengan prioritas pada akses istimewa.",
+    "l": "isec",
+    "o": "Rekaman tinjauan hak akses"
+   },
+   {
+    "no": "9",
+    "t": "IT menindaklanjuti temuan tinjauan, seperti akun tidak aktif atau hak akses berlebih, dengan mencabut atau menyesuaikan hak akses dan melaporkan hasilnya kepada fungsi keamanan informasi.",
+    "l": "it",
+    "o": "Log tindak lanjut tinjauan hak akses"
+   }
+  ],
+  "records": [
+   "Notifikasi joiner, mover, leaver",
+   "Log pemberian, perubahan, dan pencabutan hak akses",
+   "Register akses istimewa",
+   "Rekaman tinjauan hak akses"
+  ],
+  "refs": [
+   "ISO/IEC 27001:2022 A.5.15 Kontrol akses; A.5.16 Manajemen identitas",
+   "ISO/IEC 27001:2022 A.5.17 Informasi autentikasi; A.5.18 Hak akses",
+   "ISO/IEC 27001:2022 A.8.2 Hak akses istimewa; A.8.5 Autentikasi aman",
+   "ISO/IEC 27001:2022 A.6.5 Tanggung jawab setelah pemutusan atau perubahan hubungan kerja",
+   "Kebijakan TI TÜV NORD Group (K-RL 550)"
+  ],
+  "sign": {
+   "prep": "IT & Digitalization Team",
+   "rev": "IT & Digitalization Manager",
+   "app": "Head of SID Division"
+  },
+  "revs": [
+   {
+    "rev": "00",
+    "date": "2026-10-01",
+    "part": "All",
+    "note": "Penerbitan awal"
+   }
+  ]
+ },
+ "M4.5-P3": {
+  "p": "M4.5",
+  "doc": "PIT-TNI-13",
+  "n": "Penanganan Insiden Keamanan Informasi & Kegagalan Pelindungan Data Pribadi",
+  "rev": "00",
+  "eff": "2026-10-01",
+  "steps": [
+   "g",
+   "h",
+   "i",
+   "j",
+   "k"
+  ],
+  "purpose": "Memastikan insiden keamanan informasi ditahan, diinvestigasi, dan dipulihkan secara terkendali, serta kegagalan pelindungan data pribadi diberitahukan sesuai UU No. 27 Tahun 2022.",
+  "scope": "Seluruh kejadian dan insiden keamanan informasi yang memengaruhi informasi, sistem, atau layanan perusahaan, termasuk yang melibatkan data pribadi. Gangguan layanan TI tanpa aspek keamanan ditangani melalui PIT-TNI-08; pemulihan dari cadangan mengikuti PIT-TNI-10.",
+  "defs": [
+   [
+    "Kejadian keamanan informasi",
+    "Kejadian yang teridentifikasi pada sistem, layanan, atau jaringan yang menunjukkan kemungkinan pelanggaran kebijakan keamanan informasi atau kegagalan kontrol."
+   ],
+   [
+    "Insiden keamanan informasi",
+    "Satu atau serangkaian kejadian keamanan informasi yang berpeluang signifikan membahayakan operasi bisnis atau mengancam keamanan informasi."
+   ],
+   [
+    "Kegagalan pelindungan data pribadi",
+    "Kegagalan melindungi data pribadi dalam hal kerahasiaan, integritas, dan ketersediaan, termasuk pengungkapan atau akses yang tidak sah, sebagaimana dimaksud UU No. 27 Tahun 2022."
+   ],
+   [
+    "Subjek data",
+    "Orang perseorangan yang pada dirinya melekat data pribadi."
+   ],
+   [
+    "Penahanan",
+    "Tindakan segera untuk membatasi penyebaran dan dampak insiden."
+   ]
+  ],
+  "resp": [
+   [
+    "isec",
+    "Menilai kejadian, menetapkan tingkat keparahan, memimpin penahanan, investigasi, pemulihan, dan analisis akar masalah, serta memelihara register insiden."
+   ],
+   [
+    "legal",
+    "Menilai terjadinya kegagalan pelindungan data pribadi dan menyampaikan pemberitahuan tertulis kepada subjek data dan lembaga PDP dalam batas waktu undang-undang."
+   ]
+  ],
+  "wi": [
+   {
+    "no": "1",
+    "t": "Fungsi keamanan informasi menerima laporan kejadian keamanan dari pengguna melalui helpdesk (PIT-TNI-08) atau dari pemantauan keamanan (PIT-TNI-14) dan mencatatnya di register insiden.",
+    "l": "isec",
+    "o": "Register insiden"
+   },
+   {
+    "no": "2",
+    "t": "Fungsi keamanan informasi menilai kejadian dan memutuskan apakah merupakan insiden keamanan; kejadian yang bukan insiden ditutup dengan catatan dan menjadi masukan tinjauan kinerja ISMS (PIT-TNI-11).",
+    "l": "isec",
+    "o": "Keputusan penilaian kejadian"
+   },
+   {
+    "no": "3",
+    "t": "Fungsi keamanan informasi menetapkan tingkat keparahan insiden dan melakukan penahanan, seperti isolasi sistem, penonaktifan akun terdampak, atau pemblokiran akses.",
+    "l": "isec",
+    "o": "Catatan penahanan insiden"
+   },
+   {
+    "no": "4",
+    "t": "Fungsi keamanan informasi mengumpulkan dan mengamankan bukti dengan menjaga rantai penguasaan bukti.",
+    "l": "isec",
+    "o": "Rekaman bukti insiden"
+   },
+   {
+    "no": "5",
+    "t": "Fungsi keamanan informasi menginvestigasi cakupan dan dampak insiden, memulihkan layanan dari sumber yang bersih atau cadangan (PIT-TNI-10), dan segera menginformasikan Legal bila terdapat indikasi data pribadi terdampak.",
+    "l": "isec",
+    "o": "Laporan investigasi insiden"
+   },
+   {
+    "no": "6",
+    "t": "Legal menilai apakah telah terjadi kegagalan pelindungan data pribadi menurut UU No. 27 Tahun 2022; bila tidak, penilaian didokumentasikan dan proses berlanjut ke analisis akar masalah.",
+    "l": "legal",
+    "o": "Penilaian kegagalan pelindungan data pribadi"
+   },
+   {
+    "no": "7",
+    "t": "Bila ya, Legal menyampaikan pemberitahuan tertulis kepada subjek data dan lembaga PDP paling lambat 3 × 24 jam, memuat data pribadi yang terungkap, kapan dan bagaimana data terungkap, serta upaya penanganan dan pemulihan.",
+    "l": "legal",
+    "o": "Pemberitahuan tertulis kegagalan pelindungan data pribadi"
+   },
+   {
+    "no": "8",
+    "t": "Fungsi keamanan informasi melakukan analisis akar masalah dan menetapkan tindakan korektif beserta pemilik dan target waktunya.",
+    "l": "isec",
+    "o": "Laporan analisis akar masalah dan tindakan korektif"
+   },
+   {
+    "no": "9",
+    "t": "Fungsi keamanan informasi memverifikasi efektivitas tindakan korektif, mendokumentasikan pembelajaran, memutakhirkan register risiko (PIT-TNI-11), dan menutup insiden.",
+    "l": "isec",
+    "o": "Laporan penutupan insiden"
+   }
+  ],
+  "records": [
+   "Register insiden",
+   "Laporan investigasi insiden",
+   "Rekaman bukti insiden",
+   "Pemberitahuan tertulis kegagalan pelindungan data pribadi",
+   "Laporan analisis akar masalah dan tindakan korektif"
+  ],
+  "refs": [
+   "ISO/IEC 27001:2022 A.5.24 Perencanaan dan persiapan manajemen insiden keamanan informasi; A.6.8 Pelaporan kejadian keamanan informasi",
+   "ISO/IEC 27001:2022 A.5.25 Penilaian dan keputusan atas kejadian keamanan informasi; A.5.26 Respons terhadap insiden keamanan informasi",
+   "ISO/IEC 27001:2022 A.5.27 Pembelajaran dari insiden keamanan informasi; A.5.28 Pengumpulan bukti",
+   "ISO/IEC 27001:2022 A.5.34 Privasi dan pelindungan PII",
+   "ISO/IEC 27001:2022 10.2 Ketidaksesuaian dan tindakan korektif",
+   "UU No. 27 Tahun 2022 tentang Pelindungan Data Pribadi, Pasal 46"
+  ],
+  "sign": {
+   "prep": "IT & Digitalization Team",
+   "rev": "IT & Digitalization Manager",
+   "app": "Head of SID Division"
+  },
+  "revs": [
+   {
+    "rev": "00",
+    "date": "2026-10-01",
+    "part": "All",
+    "note": "Penerbitan awal"
+   }
+  ]
+ },
+ "M4.5-P4": {
+  "p": "M4.5",
+  "doc": "PIT-TNI-14",
+  "n": "Manajemen Kerentanan, Patch & Pemantauan Keamanan",
+  "rev": "00",
+  "eff": "2026-10-01",
+  "steps": [
+   "f"
+  ],
+  "purpose": "Memastikan kerentanan teknis teridentifikasi dan ditangani berdasarkan risiko, patch diterapkan tepat waktu secara terkendali, dan aktivitas mencurigakan terdeteksi melalui pemantauan keamanan.",
+  "scope": "Pemindaian kerentanan, penerapan patch, pemantauan log, dan peringatan anti-malware/EDR untuk server, perangkat jaringan, endpoint, aplikasi, dan layanan cloud perusahaan. Penanganan insiden yang terdeteksi berjalan melalui PIT-TNI-13; pelaksanaan perubahan mengikuti PIT-TNI-02.",
+  "defs": [
+   [
+    "Kerentanan teknis",
+    "Kelemahan pada perangkat lunak, perangkat keras, atau konfigurasi yang dapat dieksploitasi oleh ancaman."
+   ],
+   [
+    "Patch",
+    "Pembaruan dari vendor untuk memperbaiki kerentanan atau cacat perangkat lunak."
+   ],
+   [
+    "EDR",
+    "Endpoint Detection and Response, yaitu perangkat lunak pada endpoint yang mendeteksi dan merespons aktivitas berbahaya."
+   ],
+   [
+    "Kontrol kompensasi",
+    "Kontrol alternatif yang menurunkan risiko ketika remediasi utama belum dapat diterapkan."
+   ]
+  ],
+  "resp": [
+   [
+    "isec",
+    "Menetapkan cakupan, melaksanakan pemindaian dan pemantauan, memprioritaskan kerentanan, mengelola pengecualian, dan melaporkan status keamanan."
+   ],
+   [
+    "it",
+    "Menguji dan menerapkan patch serta perbaikan konfigurasi melalui manajemen perubahan."
+   ]
+  ],
+  "wi": [
+   {
+    "no": "1",
+    "t": "Fungsi keamanan informasi menetapkan cakupan pemindaian dan pemantauan berdasarkan inventaris aset (PIT-TNI-09, PIT-TNI-11), mencakup server, perangkat jaringan, endpoint, aplikasi, dan layanan cloud.",
+    "l": "isec",
+    "o": "Daftar aset dalam cakupan"
+   },
+   {
+    "no": "2",
+    "t": "Fungsi keamanan informasi memantau intelijen ancaman dan pengumuman kerentanan dari vendor serta sumber tepercaya.",
+    "l": "isec",
+    "o": "Catatan intelijen ancaman"
+   },
+   {
+    "no": "3",
+    "t": "Fungsi keamanan informasi melaksanakan pemindaian kerentanan sesuai jadwal yang ditetapkan dalam rencana ISMS dan setelah perubahan signifikan.",
+    "l": "isec",
+    "o": "Laporan pemindaian kerentanan"
+   },
+   {
+    "no": "4",
+    "t": "Fungsi keamanan informasi memprioritaskan kerentanan berdasarkan tingkat keparahan, eksposur, dan kekritisan aset, lalu menetapkan target waktu remediasi sesuai kebijakan ISMS dengan mendahulukan kerentanan kritis.",
+    "l": "isec",
+    "o": "Register kerentanan"
+   },
+   {
+    "no": "5",
+    "t": "IT menguji patch di lingkungan uji, lalu menerapkannya ke produksi melalui manajemen perubahan PIT-TNI-02 dengan rencana rollback.",
+    "l": "it",
+    "o": "Rekaman perubahan dan penerapan patch"
+   },
+   {
+    "no": "6",
+    "t": "Fungsi keamanan informasi memverifikasi remediasi melalui pemindaian ulang dan menutup kerentanan di register.",
+    "l": "isec",
+    "o": "Hasil verifikasi remediasi"
+   },
+   {
+    "no": "7",
+    "t": "Fungsi keamanan informasi memantau log keamanan dan peringatan anti-malware/EDR secara berkelanjutan; kejadian mencurigakan diteruskan ke PIT-TNI-13.",
+    "l": "isec",
+    "o": "Log pemantauan keamanan"
+   },
+   {
+    "no": "8",
+    "t": "Bila patch tidak dapat diterapkan dalam target waktu, fungsi keamanan informasi menetapkan kontrol kompensasi dan mengajukan penerimaan risiko melalui PIT-TNI-11.",
+    "l": "isec",
+    "o": "Rekaman pengecualian dan penerimaan risiko"
+   },
+   {
+    "no": "9",
+    "t": "Fungsi keamanan informasi melaporkan status kerentanan, patch, dan hasil pemantauan sebagai masukan tinjauan kinerja ISMS (PIT-TNI-11).",
+    "l": "isec",
+    "o": "Laporan pemantauan keamanan"
+   }
+  ],
+  "records": [
+   "Register kerentanan",
+   "Laporan pemindaian kerentanan",
+   "Rekaman perubahan dan penerapan patch",
+   "Rekaman pengecualian dan penerimaan risiko",
+   "Laporan pemantauan keamanan"
+  ],
+  "refs": [
+   "ISO/IEC 27001:2022 A.8.8 Manajemen kerentanan teknis; A.5.7 Intelijen ancaman",
+   "ISO/IEC 27001:2022 A.8.7 Perlindungan terhadap malware",
+   "ISO/IEC 27001:2022 A.8.15 Logging; A.8.16 Aktivitas pemantauan",
+   "ISO/IEC 27001:2022 A.8.32 Manajemen perubahan",
+   "ISO/IEC 27001:2022 9.1 Pemantauan, pengukuran, analisis dan evaluasi",
+   "Kebijakan TI TÜV NORD Group (K-RL 550)"
+  ],
+  "sign": {
+   "prep": "IT & Digitalization Team",
+   "rev": "IT & Digitalization Manager",
+   "app": "Head of SID Division"
+  },
+  "revs": [
+   {
+    "rev": "00",
+    "date": "2026-10-01",
+    "part": "All",
+    "note": "Penerbitan awal"
+   }
+  ]
+ },
+ "M4.6-P1": {
+  "p": "M4.6",
+  "doc": "PIT-TNI-15",
+  "n": "Penyusunan & Persetujuan Roadmap Transformasi Digital",
+  "rev": "00",
+  "eff": "2026-10-01",
+  "steps": [
+   "a",
+   "b",
+   "c",
+   "d",
+   "e",
+   "f"
+  ],
+  "purpose": "Memastikan roadmap transformasi digital disusun dari prioritas bisnis, kondisi kapabilitas TI, dan dampak keberlanjutan, serta disetujui berdasarkan business case yang teruji.",
+  "scope": "Siklus perencanaan tahunan roadmap transformasi digital, dari penyampaian kebutuhan hingga keputusan persetujuan. Penyusunan rencana bisnis berjalan melalui M1; eksekusi dan pemantauan inisiatif yang disetujui mengikuti PIT-TNI-16.",
+  "defs": [
+   [
+    "Roadmap transformasi digital",
+    "Rencana bertahap inisiatif digital yang disetujui, lengkap dengan prioritas, urutan, dan jadwal indikatif."
+   ],
+   [
+    "Business case",
+    "Justifikasi inisiatif yang memuat nilai bisnis, biaya, risiko, jadwal, sumber daya, dan ukuran manfaat."
+   ],
+   [
+    "Utang teknis",
+    "Beban perbaikan di masa depan akibat solusi teknis yang usang atau kompromi desain sebelumnya."
+   ],
+   [
+    "Portofolio aplikasi",
+    "Seluruh aplikasi yang digunakan perusahaan beserta fungsi, pemilik, dan kondisi teknisnya."
+   ]
+  ],
+  "resp": [
+   [
+    "it",
+    "Mengoordinasikan siklus perencanaan, mengkaji kondisi dan kapabilitas TI, serta menyusun usulan roadmap dan business case."
+   ],
+   [
+    "hods",
+    "Menyampaikan prioritas dan kebutuhan digital yang diturunkan dari rencana bisnis."
+   ],
+   [
+    "cis",
+    "Mengkaji dampak keberlanjutan setiap inisiatif dan kontribusinya terhadap sasaran keberlanjutan."
+   ],
+   [
+    "steer",
+    "Meninjau usulan roadmap dan memutuskan persetujuan atau revisi."
+   ]
+  ],
+  "wi": [
+   {
+    "no": "1",
+    "t": "IT memulai siklus perencanaan tahunan dan meminta HoD BU & divisi menyampaikan kebutuhan digital selaras dengan jadwal rencana bisnis (M1).",
+    "l": "it",
+    "o": "Permintaan masukan perencanaan"
+   },
+   {
+    "no": "2",
+    "t": "HoD BU & divisi menyampaikan prioritas dan kebutuhan digital yang diturunkan dari rencana bisnis, beserta masalah bisnis dan manfaat yang diharapkan.",
+    "l": "hods",
+    "o": "Daftar kebutuhan digital"
+   },
+   {
+    "no": "3",
+    "t": "IT mengkaji portofolio aplikasi, utang teknis, risiko keamanan informasi (PIT-TNI-11), dan kapasitas tim.",
+    "l": "it",
+    "o": "Kajian kondisi dan kapabilitas"
+   },
+   {
+    "no": "4",
+    "t": "Corporate Innovation & Sustainability mengkaji dampak lingkungan inisiatif (kertas, energi, perjalanan, limbah elektronik) dan kontribusinya terhadap sasaran keberlanjutan.",
+    "l": "cis",
+    "o": "Kajian dampak keberlanjutan"
+   },
+   {
+    "no": "5",
+    "t": "IT menyusun business case setiap inisiatif yang memuat nilai bisnis, biaya, risiko, jadwal, sumber daya, dan ukuran manfaat.",
+    "l": "it",
+    "o": "Business case inisiatif"
+   },
+   {
+    "no": "6",
+    "t": "IT menyusun usulan roadmap dengan prioritas dan urutan inisiatif berdasarkan kajian dan business case.",
+    "l": "it",
+    "o": "Usulan roadmap"
+   },
+   {
+    "no": "7",
+    "t": "Steering digital meninjau usulan roadmap dan memutuskan disetujui atau direvisi; usulan yang perlu direvisi dikembalikan kepada IT dengan catatan.",
+    "l": "steer",
+    "o": "Keputusan steering digital"
+   },
+   {
+    "no": "8",
+    "t": "IT merevisi usulan roadmap dan business case sesuai catatan steering digital, lalu mengajukannya kembali.",
+    "l": "it",
+    "o": "Usulan roadmap revisi"
+   },
+   {
+    "no": "9",
+    "t": "Bila disetujui, steering digital menetapkan roadmap sebagai baseline dan menunjuk pemilik setiap inisiatif; eksekusi berlanjut melalui PIT-TNI-16.",
+    "l": "steer",
+    "o": "Roadmap transformasi digital yang disetujui"
+   }
+  ],
+  "records": [
+   "Daftar kebutuhan digital",
+   "Kajian dampak keberlanjutan",
+   "Business case inisiatif",
+   "Roadmap transformasi digital yang disetujui"
+  ],
+  "refs": [
+   "ISO 9001:2015 6.1 Tindakan untuk menangani risiko dan peluang",
+   "ISO 9001:2015 6.2 Sasaran mutu dan perencanaan untuk mencapainya",
+   "ISO 14001:2015 6.1.2 Aspek lingkungan",
+   "ISO 14001:2015 6.2 Sasaran lingkungan dan perencanaan untuk mencapainya",
+   "ISO/IEC 27001:2022 6.1 Tindakan untuk menangani risiko dan peluang",
+   "Kebijakan TI TÜV NORD Group (K-RL 550)"
+  ],
+  "sign": {
+   "prep": "IT & Digitalization Team",
+   "rev": "IT & Digitalization Manager",
+   "app": "Head of SID Division"
+  },
+  "revs": [
+   {
+    "rev": "00",
+    "date": "2026-10-01",
+    "part": "All",
+    "note": "Penerbitan awal"
+   }
+  ]
+ },
+ "M4.6-P2": {
+  "p": "M4.6",
+  "doc": "PIT-TNI-16",
+  "n": "Pemantauan Portofolio Proyek Digital & Realisasi Manfaat",
+  "rev": "00",
+  "eff": "2026-10-01",
+  "steps": [
+   "g",
+   "h",
+   "i",
+   "j",
+   "z"
+  ],
+  "purpose": "Memastikan portofolio proyek digital dieksekusi dan dipantau secara terkendali, manfaat yang dijanjikan dalam business case diukur, dan hasilnya menjadi masukan tinjauan manajemen.",
+  "scope": "Eksekusi, pemantauan kuartalan, evaluasi realisasi manfaat, dan pembaruan roadmap untuk inisiatif yang disetujui melalui PIT-TNI-15. Pelaksanaan teknis proyek mengikuti PIT-TNI-01 s.d. PIT-TNI-05; tinjauan manajemen terintegrasi berjalan melalui G1.",
+  "defs": [
+   [
+    "Portofolio proyek digital",
+    "Kumpulan proyek dan inisiatif digital yang disetujui dalam roadmap dan dikelola bersama untuk mencapai sasaran bisnis."
+   ],
+   [
+    "Realisasi manfaat",
+    "Manfaat aktual yang tercapai setelah implementasi, diukur terhadap ukuran manfaat dalam business case."
+   ],
+   [
+    "Pemilik inisiatif",
+    "HoD yang bertanggung jawab atas pencapaian manfaat bisnis suatu inisiatif."
+   ],
+   [
+    "Laporan status portofolio",
+    "Ringkasan kemajuan, anggaran, risiko, dan isu seluruh proyek dalam portofolio."
+   ]
+  ],
+  "resp": [
+   [
+    "it",
+    "Menjalankan proyek, menyusun laporan status portofolio, memperbarui roadmap, dan melaporkan hasil transformasi digital kepada Direksi."
+   ],
+   [
+    "steer",
+    "Meninjau portofolio setiap kuartal dan memutuskan percepatan, penundaan, atau penghentian proyek."
+   ],
+   [
+    "hods",
+    "Mengukur realisasi manfaat inisiatif terhadap business case setelah implementasi."
+   ]
+  ],
+  "wi": [
+   {
+    "no": "1",
+    "t": "IT memulai setiap inisiatif yang disetujui sebagai proyek dengan rencana proyek, anggaran, dan manajemen risiko, lalu menjalankannya melalui PIT-TNI-01 s.d. PIT-TNI-05.",
+    "l": "it",
+    "o": "Rencana proyek"
+   },
+   {
+    "no": "2",
+    "t": "IT memantau kemajuan, anggaran, risiko, dan isu setiap proyek, lalu menyusun laporan status portofolio setiap kuartal.",
+    "l": "it",
+    "o": "Laporan status portofolio"
+   },
+   {
+    "no": "3",
+    "t": "Steering digital meninjau laporan status portofolio bersama perubahan prioritas bisnis dalam rapat pemantauan kuartalan.",
+    "l": "steer",
+    "o": "Notulen pemantauan kuartalan"
+   },
+   {
+    "no": "4",
+    "t": "Steering digital memutuskan untuk setiap proyek apakah dilanjutkan, dipercepat, ditunda, atau dihentikan, termasuk realokasi anggaran dan sumber daya.",
+    "l": "steer",
+    "o": "Keputusan portofolio"
+   },
+   {
+    "no": "5",
+    "t": "IT memperbarui rencana proyek sesuai keputusan steering digital dan mengomunikasikannya kepada pemilik inisiatif.",
+    "l": "it",
+    "o": "Rencana proyek terbarui"
+   },
+   {
+    "no": "6",
+    "t": "HoD BU & divisi mengukur realisasi manfaat setiap inisiatif terhadap business case setelah implementasi, pada waktu yang ditetapkan dalam business case.",
+    "l": "hods",
+    "o": "Laporan realisasi manfaat"
+   },
+   {
+    "no": "7",
+    "t": "IT menganalisis selisih antara manfaat yang direncanakan dan yang tercapai, serta mengusulkan tindakan perbaikan atau optimalisasi.",
+    "l": "it",
+    "o": "Analisis selisih manfaat"
+   },
+   {
+    "no": "8",
+    "t": "IT memperbarui roadmap dan menyusun laporan hasil transformasi digital kepada Direksi sebagai masukan tinjauan manajemen (G1).",
+    "l": "it",
+    "o": "Laporan transformasi digital"
+   },
+   {
+    "no": "9",
+    "t": "IT meneruskan pembelajaran dan roadmap terbarui ke siklus perencanaan berikutnya (PIT-TNI-15), sehingga transformasi digital tetap selaras dengan prioritas bisnis.",
+    "l": "it",
+    "o": "Roadmap terbarui"
+   }
+  ],
+  "records": [
+   "Laporan status portofolio",
+   "Notulen pemantauan kuartalan",
+   "Laporan realisasi manfaat",
+   "Laporan transformasi digital"
+  ],
+  "refs": [
+   "ISO 9001:2015 6.2 Sasaran mutu dan perencanaan untuk mencapainya",
+   "ISO 9001:2015 9.1.3 Analisis dan evaluasi",
+   "ISO 9001:2015 9.3 Tinjauan manajemen",
+   "ISO 14001:2015 6.2 Sasaran lingkungan dan perencanaan untuk mencapainya",
+   "Kebijakan TI TÜV NORD Group (K-RL 550)"
+  ],
+  "sign": {
+   "prep": "IT & Digitalization Team",
+   "rev": "IT & Digitalization Manager",
+   "app": "Head of SID Division"
+  },
+  "revs": [
+   {
+    "rev": "00",
+    "date": "2026-10-01",
+    "part": "All",
+    "note": "Penerbitan awal"
+   }
+  ]
  }
 }

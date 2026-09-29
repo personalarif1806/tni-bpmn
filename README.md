@@ -154,18 +154,67 @@ Four rules worth knowing before you change anything:
    sentence written straight into JSX is invisible to that scan and is exactly
    how one language leaks into the other.
 
+## Level 0 — standards compliance
+
+The Level 0 page ends with **Kesesuaian standar**: which clauses of ISO
+9001:2015, ISO 14001:2015 and ISO/IEC 27001:2022, and which areas of the
+TÜV NORD Group IT policy K-RL 550, each value-chain stage, profit-center lane
+step, unit and external party carries — and the reverse view, each clause with
+the elements that carry it. The same clauses appear in every stage and unit
+panel on the map.
+
+The mapping lives in `src/data/l0-clauses.json`. `clauses.test.ts` keeps every
+required clause (4.1–10.x of each standard) covered by at least one element.
+K-RL 550 is mapped by subject area until the policy text is available.
+
 ## Level 2 — controlled procedures
 
 Level 1 answers *what happens and who does it*. Level 2 answers *how*: each
 procedure is the controlled document behind a run of Level 1 steps, rendered as
-the document itself — control block, numbered sections, work instruction table,
-records, references.
+the document itself.
 
-Only **M4 Digital & IT Service Management** is detailed so far, into six
-procedures (`PR-IT-01` … `PR-IT-06`). The rest of the machinery is general; a
-process gets a Level 2 by adding entries to `l2-procedures.json` and nothing
-else. `ProcedureList` renders nothing for a process that has none, so the
-Level 1 pages of the other nineteen are unchanged.
+**Document control follows PCR-TNID-01 Rev.12**, written down for this project
+in [`docs/document-control-spec_PCR-TNID-01_R12.md`](docs/document-control-spec_PCR-TNID-01_R12.md).
+Read it before adding or renumbering any document. Two parts of it are code:
+
+- **Numbering (spec §1–§3)** lives in `src/lib/doc-number.ts`. A procedure is
+  `PX-TNI-YY` (or `PSC-SCH-TNI-YY` for SCS), where `X` is a department or
+  business-unit code from spec §2 — IT is `IT`, so IT procedures are
+  `PIT-TNI-01`, `PIT-TNI-02`, …. Codes are case-sensitive. The validator
+  rejects any number §6.1 would not issue, a revision that is not two digits,
+  and revision notes that are not cumulative up to the header revision.
+- **Format (spec §8)** is `ProcedureDocument`: a cover, A4 sheets that each carry
+  the header (logo, title, Document No., Revision No., Published Date
+  `DD.MM.YYYY`, Page x of y) and the footer, and the chapters in the order
+  Daftar Isi, Catatan Revisi, then 1 Tujuan to 7 Dokumen Terkait.
+
+One deliberate departure from spec §8.4: the SOP prints Indonesian and English
+side by side, but here the document is drawn in the reader's language only,
+because the app's language switch already provides the other one. Its wording
+goes through `t()` like everything else.
+
+Only **IT & Digitalization** is detailed so far. Its Level 1 is split into six
+sub-processes, one per responsibility of the unit, following the `C4.1`–`C4.4`
+pattern:
+
+| Process | Level 2 procedures |
+|---|---|
+| M4.1 Core System & Shared Platform Management | `PIT-TNI-01` – `03` |
+| M4.2 Workflow Digitalization & Integration | `PIT-TNI-04` – `05` |
+| M4.3 Data, Dashboard & Management Reporting | `PIT-TNI-06` – `07` |
+| M4.4 IT Infrastructure, Asset & Service Desk | `PIT-TNI-08` – `10` |
+| M4.5 Information Security & Data Protection | `PIT-TNI-11` – `14` |
+| M4.6 Digital Transformation Roadmap & Portfolio | `PIT-TNI-15` – `16` |
+
+The procedures cite ISO 9001:2015, ISO 14001:2015 and ISO/IEC 27001:2022
+(clauses and Annex A controls), UU No. 27/2022 (PDP) and PCR-TNID-01. The lanes
+inside IT & Digitalization (service desk, applications, infrastructure, data,
+information security) are functional roles still to be confirmed against the IT
+team structure.
+
+The rest of the machinery is general; a process gets a Level 2 by adding
+entries to `l2-procedures.json` and nothing else. `ProcedureList` renders
+nothing for a process that has none, so the other Level 1 pages are unchanged.
 
 ```
 src/data/l2-procedures.json          the procedures
@@ -179,9 +228,10 @@ procedure usually details several steps. The rule the validator enforces is
 **coverage**: once a process has procedures at all, every one of its steps must
 be detailed by exactly one of them. A step claimed twice means two documents
 own the same work; a step claimed by none is a gap an assessor finds before we
-do. `validate.ts` also checks that document numbers are unique, that effective
-dates are ISO dates, and that every lane a procedure names really is a lane of
-its parent process.
+do. `validate.ts` also checks that document numbers are unique and follow
+PCR-TNID-01, that dates are ISO dates, that the revision notes end at the header
+revision and date, and that every lane a procedure names really is a lane of its
+parent process.
 
 ## Language
 

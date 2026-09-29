@@ -29,11 +29,11 @@ export const TRANSLATABLE = {
     ["l0", "owner", "purpose", "kpi", "ref", "note", "t", "d", "o"].includes(key),
   /*
    * A Level 2 procedure is prose end to end. What stays put is the document
-   * number, the revision, the effective date, the lane ids, and the units named
-   * in the signature block.
+   * number, revision numbers and dates, the lane ids, and the roles in the
+   * signature block. In `revs` only the note is prose.
    */
   "l2-procedures.json": (_p, key) =>
-    ["n", "purpose", "scope", "defs", "resp", "wi", "records", "refs"].includes(key),
+    ["n", "purpose", "scope", "defs", "resp", "wi", "records", "refs", "revs"].includes(key),
 };
 
 /** Layout's external columns are tuples, so they are picked out by position. */

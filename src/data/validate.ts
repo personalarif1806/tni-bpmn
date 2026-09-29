@@ -28,6 +28,7 @@ import type {
   Unit,
   UnitGroup,
 } from "./types";
+import { isProcedureNumber, REVISION_PATTERN } from "@/lib/doc-number";
 
 /** Everything the validator needs. Injectable so the checks can be tested. */
 export interface DataSet {
@@ -411,6 +412,63 @@ function checkCrosslinks(data: DataSet, issues: DataIssue[]): void {
  * them. A step covered twice means two documents claim the same work; a step
  * covered by none is a gap an assessor will find before we do.
  */
+const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
+
+/**
+ * The Revision Note(s) table is cumulative from the first issue (spec §8.5):
+ * two-digit numbers, strictly rising, ending at the revision on the header and
+ * dated the day it was published.
+ */
+function checkRevisions(
+  procedure: Procedure,
+  where: string,
+  issues: DataIssue[],
+): void {
+  if (!REVISION_PATTERN.test(procedure.rev)) {
+    issues.push({ scope: where, message: `revision "${procedure.rev}" is not two digits` });
+  }
+
+  const revs = procedure.revs ?? [];
+  if (revs.length === 0) {
+    issues.push({ scope: where, message: "has no revision notes" });
+    return;
+  }
+
+  revs.forEach((entry, index) => {
+    const at = `${where} · revs ${index + 1}`;
+    if (!REVISION_PATTERN.test(entry.rev)) {
+      issues.push({ scope: at, message: `revision "${entry.rev}" is not two digits` });
+    }
+    if (!ISO_DATE.test(entry.date)) {
+      issues.push({ scope: at, message: `date "${entry.date}" is not ISO YYYY-MM-DD` });
+    }
+    if (!entry.part.trim() || !entry.note.trim()) {
+      issues.push({ scope: at, message: "needs both a part number and a note" });
+    }
+    const previous = revs[index - 1];
+    if (previous && !(Number(entry.rev) > Number(previous.rev))) {
+      issues.push({
+        scope: at,
+        message: `revision "${entry.rev}" does not follow "${previous.rev}"`,
+      });
+    }
+  });
+
+  const last = revs[revs.length - 1];
+  if (last.rev !== procedure.rev) {
+    issues.push({
+      scope: where,
+      message: `last revision note is "${last.rev}" but the document is revision "${procedure.rev}"`,
+    });
+  }
+  if (last.date !== procedure.eff) {
+    issues.push({
+      scope: where,
+      message: `revision "${last.rev}" is dated ${last.date} but published ${procedure.eff}`,
+    });
+  }
+}
+
 function checkProcedures(data: DataSet, issues: DataIssue[]): void {
   const scope = "l2-procedures.json";
   const processById = new Map(data.processes.map((process) => [process.id, process]));
@@ -437,12 +495,22 @@ function checkProcedures(data: DataSet, issues: DataIssue[]): void {
       documentNumbers.set(procedure.doc, procedureId);
     }
 
-    if (!/^\d{4}-\d{2}-\d{2}$/.test(procedure.eff)) {
+    /* PCR-TNID-01 §6.1 — docs/document-control-spec_PCR-TNID-01_R12.md §3. */
+    if (!isProcedureNumber(procedure.doc)) {
       issues.push({
         scope: where,
-        message: `effective date "${procedure.eff}" is not ISO YYYY-MM-DD`,
+        message: `document number "${procedure.doc}" is not a procedure number (PX-TNI-YY or PSC-SCH-TNI-YY)`,
       });
     }
+
+    if (!ISO_DATE.test(procedure.eff)) {
+      issues.push({
+        scope: where,
+        message: `published date "${procedure.eff}" is not ISO YYYY-MM-DD`,
+      });
+    }
+
+    checkRevisions(procedure, where, issues);
 
     const stepKeys = new Set(process.steps.map((step) => step.k));
     const byStep = claims.get(procedure.p) ?? new Map<string, string[]>();

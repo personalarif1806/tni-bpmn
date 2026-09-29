@@ -56,6 +56,7 @@ for (const proc of Object.values(read("l2-procedures.json"))) {
   for (const [, duty] of proc.resp) add(duty);
   for (const line of proc.wi) { add(line.t); add(line.o); }
   all(proc.records); all(proc.refs);
+  for (const entry of proc.revs ?? []) add(entry.note);
 }
 
 const which = process.argv[2] ?? "all";

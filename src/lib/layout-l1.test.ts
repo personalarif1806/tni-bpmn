@@ -123,7 +123,7 @@ describe("edge routing", () => {
       layout.edges.filter((edge) => edge.backward).map((edge) => `${id} ${edge.id}`),
     );
 
-    expect(backward.length).toBe(15);
+    expect(backward.length).toBe(20);
     for (const { layout } of layouts) {
       const byKey = new Map(layout.nodes.map((node) => [node.key, node]));
       for (const edge of layout.edges) {
@@ -156,8 +156,19 @@ describe("architecture chain", () => {
     ]);
   });
 
+  test("M4.1–M4.6 share one stage after M1–M3", () => {
+    const stages = chainStages(listProcessesByGroup("M"));
+
+    expect(stages.map((members) => members.map((item) => item.id))).toEqual([
+      ["M1"],
+      ["M2"],
+      ["M3"],
+      ["M4.1", "M4.2", "M4.3", "M4.4", "M4.5", "M4.6"],
+    ]);
+  });
+
   test("groups without a split render one block per process", () => {
-    for (const group of ["M", "G", "S"] as const) {
+    for (const group of ["G", "S"] as const) {
       const processes = listProcessesByGroup(group);
       expect(chainStages(processes)).toHaveLength(processes.length);
     }

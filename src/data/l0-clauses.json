@@ -1,0 +1,1206 @@
+{
+ "standards": {
+  "iso9001": {
+   "n": "ISO 9001:2015",
+   "clauses": {
+    "4.1": {
+     "id": "Memahami organisasi dan konteksnya",
+     "en": "Understanding the organization and its context",
+     "req": true
+    },
+    "4.2": {
+     "id": "Memahami kebutuhan dan harapan pihak berkepentingan",
+     "en": "Understanding the needs and expectations of interested parties",
+     "req": true
+    },
+    "4.3": {
+     "id": "Menetapkan ruang lingkup sistem manajemen mutu",
+     "en": "Determining the scope of the quality management system",
+     "req": true
+    },
+    "4.4": {
+     "id": "Sistem manajemen mutu dan prosesnya",
+     "en": "Quality management system and its processes",
+     "req": true
+    },
+    "5.1": {
+     "id": "Kepemimpinan dan komitmen",
+     "en": "Leadership and commitment",
+     "req": true
+    },
+    "5.1.2": {
+     "id": "Fokus pelanggan",
+     "en": "Customer focus",
+     "req": true
+    },
+    "5.2": {
+     "id": "Kebijakan mutu",
+     "en": "Quality policy",
+     "req": true
+    },
+    "5.3": {
+     "id": "Peran, tanggung jawab, dan wewenang organisasi",
+     "en": "Organizational roles, responsibilities and authorities",
+     "req": true
+    },
+    "6.1": {
+     "id": "Tindakan untuk menangani risiko dan peluang",
+     "en": "Actions to address risks and opportunities",
+     "req": true
+    },
+    "6.2": {
+     "id": "Sasaran mutu dan perencanaan untuk mencapainya",
+     "en": "Quality objectives and planning to achieve them",
+     "req": true
+    },
+    "6.3": {
+     "id": "Perencanaan perubahan",
+     "en": "Planning of changes",
+     "req": true
+    },
+    "7.1": {
+     "id": "Sumber daya",
+     "en": "Resources",
+     "req": true
+    },
+    "7.1.2": {
+     "id": "Personel",
+     "en": "People",
+     "req": true
+    },
+    "7.1.3": {
+     "id": "Infrastruktur",
+     "en": "Infrastructure",
+     "req": true
+    },
+    "7.1.4": {
+     "id": "Lingkungan untuk operasional proses",
+     "en": "Environment for the operation of processes",
+     "req": true
+    },
+    "7.1.5": {
+     "id": "Sumber daya pemantauan dan pengukuran",
+     "en": "Monitoring and measuring resources",
+     "req": true
+    },
+    "7.1.6": {
+     "id": "Pengetahuan organisasi",
+     "en": "Organizational knowledge",
+     "req": true
+    },
+    "7.2": {
+     "id": "Kompetensi",
+     "en": "Competence",
+     "req": true
+    },
+    "7.3": {
+     "id": "Kepedulian",
+     "en": "Awareness",
+     "req": true
+    },
+    "7.4": {
+     "id": "Komunikasi",
+     "en": "Communication",
+     "req": true
+    },
+    "7.5": {
+     "id": "Informasi terdokumentasi",
+     "en": "Documented information",
+     "req": true
+    },
+    "8.1": {
+     "id": "Perencanaan dan pengendalian operasional",
+     "en": "Operational planning and control",
+     "req": true
+    },
+    "8.2": {
+     "id": "Persyaratan produk dan jasa",
+     "en": "Requirements for products and services",
+     "req": true
+    },
+    "8.3": {
+     "id": "Desain dan pengembangan produk dan jasa",
+     "en": "Design and development of products and services",
+     "req": true
+    },
+    "8.4": {
+     "id": "Pengendalian proses, produk, dan jasa dari penyedia eksternal",
+     "en": "Control of externally provided processes, products and services",
+     "req": true
+    },
+    "8.5.1": {
+     "id": "Pengendalian produksi dan penyediaan jasa",
+     "en": "Control of production and service provision",
+     "req": true
+    },
+    "8.5.2": {
+     "id": "Identifikasi dan ketertelusuran",
+     "en": "Identification and traceability",
+     "req": true
+    },
+    "8.5.3": {
+     "id": "Properti milik pelanggan atau penyedia eksternal",
+     "en": "Property belonging to customers or external providers",
+     "req": true
+    },
+    "8.5.4": {
+     "id": "Preservasi",
+     "en": "Preservation",
+     "req": true
+    },
+    "8.5.5": {
+     "id": "Kegiatan pasca-penyerahan",
+     "en": "Post-delivery activities",
+     "req": true
+    },
+    "8.5.6": {
+     "id": "Pengendalian perubahan",
+     "en": "Control of changes",
+     "req": true
+    },
+    "8.6": {
+     "id": "Pelepasan produk dan jasa",
+     "en": "Release of products and services",
+     "req": true
+    },
+    "8.7": {
+     "id": "Pengendalian output yang tidak sesuai",
+     "en": "Control of nonconforming outputs",
+     "req": true
+    },
+    "9.1.2": {
+     "id": "Kepuasan pelanggan",
+     "en": "Customer satisfaction",
+     "req": true
+    },
+    "9.1.3": {
+     "id": "Analisis dan evaluasi",
+     "en": "Analysis and evaluation",
+     "req": true
+    },
+    "9.2": {
+     "id": "Audit internal",
+     "en": "Internal audit",
+     "req": true
+    },
+    "9.3": {
+     "id": "Tinjauan manajemen",
+     "en": "Management review",
+     "req": true
+    },
+    "10.2": {
+     "id": "Ketidaksesuaian dan tindakan korektif",
+     "en": "Nonconformity and corrective action",
+     "req": true
+    },
+    "10.3": {
+     "id": "Peningkatan berkelanjutan",
+     "en": "Continual improvement",
+     "req": true
+    }
+   }
+  },
+  "iso14001": {
+   "n": "ISO 14001:2015",
+   "clauses": {
+    "4.1": {
+     "id": "Memahami organisasi dan konteksnya",
+     "en": "Understanding the organization and its context",
+     "req": true
+    },
+    "4.2": {
+     "id": "Memahami kebutuhan dan harapan pihak berkepentingan",
+     "en": "Understanding the needs and expectations of interested parties",
+     "req": true
+    },
+    "4.3": {
+     "id": "Menetapkan ruang lingkup sistem manajemen lingkungan",
+     "en": "Determining the scope of the environmental management system",
+     "req": true
+    },
+    "4.4": {
+     "id": "Sistem manajemen lingkungan",
+     "en": "Environmental management system",
+     "req": true
+    },
+    "5.1": {
+     "id": "Kepemimpinan dan komitmen",
+     "en": "Leadership and commitment",
+     "req": true
+    },
+    "5.2": {
+     "id": "Kebijakan lingkungan",
+     "en": "Environmental policy",
+     "req": true
+    },
+    "5.3": {
+     "id": "Peran, tanggung jawab, dan wewenang organisasi",
+     "en": "Organizational roles, responsibilities and authorities",
+     "req": true
+    },
+    "6.1": {
+     "id": "Tindakan untuk menangani risiko dan peluang",
+     "en": "Actions to address risks and opportunities",
+     "req": true
+    },
+    "6.1.2": {
+     "id": "Aspek lingkungan",
+     "en": "Environmental aspects",
+     "req": true
+    },
+    "6.1.3": {
+     "id": "Kewajiban penaatan",
+     "en": "Compliance obligations",
+     "req": true
+    },
+    "6.1.4": {
+     "id": "Perencanaan tindakan",
+     "en": "Planning action",
+     "req": true
+    },
+    "6.2": {
+     "id": "Sasaran lingkungan dan perencanaan untuk mencapainya",
+     "en": "Environmental objectives and planning to achieve them",
+     "req": true
+    },
+    "7.1": {
+     "id": "Sumber daya",
+     "en": "Resources",
+     "req": true
+    },
+    "7.2": {
+     "id": "Kompetensi",
+     "en": "Competence",
+     "req": true
+    },
+    "7.3": {
+     "id": "Kepedulian",
+     "en": "Awareness",
+     "req": true
+    },
+    "7.4": {
+     "id": "Komunikasi",
+     "en": "Communication",
+     "req": true
+    },
+    "7.5": {
+     "id": "Informasi terdokumentasi",
+     "en": "Documented information",
+     "req": true
+    },
+    "8.1": {
+     "id": "Perencanaan dan pengendalian operasional",
+     "en": "Operational planning and control",
+     "req": true
+    },
+    "8.2": {
+     "id": "Kesiapsiagaan dan tanggap darurat",
+     "en": "Emergency preparedness and response",
+     "req": true
+    },
+    "9.1": {
+     "id": "Pemantauan, pengukuran, analisis, dan evaluasi",
+     "en": "Monitoring, measurement, analysis and evaluation",
+     "req": true
+    },
+    "9.1.2": {
+     "id": "Evaluasi penaatan",
+     "en": "Evaluation of compliance",
+     "req": true
+    },
+    "9.2": {
+     "id": "Audit internal",
+     "en": "Internal audit",
+     "req": true
+    },
+    "9.3": {
+     "id": "Tinjauan manajemen",
+     "en": "Management review",
+     "req": true
+    },
+    "10.2": {
+     "id": "Ketidaksesuaian dan tindakan korektif",
+     "en": "Nonconformity and corrective action",
+     "req": true
+    },
+    "10.3": {
+     "id": "Peningkatan berkelanjutan",
+     "en": "Continual improvement",
+     "req": true
+    }
+   }
+  },
+  "iso27001": {
+   "n": "ISO/IEC 27001:2022",
+   "clauses": {
+    "4.1": {
+     "id": "Memahami organisasi dan konteksnya",
+     "en": "Understanding the organization and its context",
+     "req": true
+    },
+    "4.2": {
+     "id": "Memahami kebutuhan dan harapan pihak berkepentingan",
+     "en": "Understanding the needs and expectations of interested parties",
+     "req": true
+    },
+    "4.3": {
+     "id": "Menetapkan ruang lingkup sistem manajemen keamanan informasi",
+     "en": "Determining the scope of the information security management system",
+     "req": true
+    },
+    "4.4": {
+     "id": "Sistem manajemen keamanan informasi",
+     "en": "Information security management system",
+     "req": true
+    },
+    "5.1": {
+     "id": "Kepemimpinan dan komitmen",
+     "en": "Leadership and commitment",
+     "req": true
+    },
+    "5.2": {
+     "id": "Kebijakan",
+     "en": "Policy",
+     "req": true
+    },
+    "5.3": {
+     "id": "Peran, tanggung jawab, dan wewenang organisasi",
+     "en": "Organizational roles, responsibilities and authorities",
+     "req": true
+    },
+    "6.1.2": {
+     "id": "Penilaian risiko keamanan informasi",
+     "en": "Information security risk assessment",
+     "req": true
+    },
+    "6.1.3": {
+     "id": "Penanganan risiko keamanan informasi",
+     "en": "Information security risk treatment",
+     "req": true
+    },
+    "6.2": {
+     "id": "Sasaran keamanan informasi dan perencanaan untuk mencapainya",
+     "en": "Information security objectives and planning to achieve them",
+     "req": true
+    },
+    "6.3": {
+     "id": "Perencanaan perubahan",
+     "en": "Planning of changes",
+     "req": true
+    },
+    "7.1": {
+     "id": "Sumber daya",
+     "en": "Resources",
+     "req": true
+    },
+    "7.2": {
+     "id": "Kompetensi",
+     "en": "Competence",
+     "req": true
+    },
+    "7.3": {
+     "id": "Kepedulian",
+     "en": "Awareness",
+     "req": true
+    },
+    "7.4": {
+     "id": "Komunikasi",
+     "en": "Communication",
+     "req": true
+    },
+    "7.5": {
+     "id": "Informasi terdokumentasi",
+     "en": "Documented information",
+     "req": true
+    },
+    "8.1": {
+     "id": "Perencanaan dan pengendalian operasional",
+     "en": "Operational planning and control",
+     "req": true
+    },
+    "8.2": {
+     "id": "Penilaian risiko keamanan informasi",
+     "en": "Information security risk assessment",
+     "req": true
+    },
+    "8.3": {
+     "id": "Penanganan risiko keamanan informasi",
+     "en": "Information security risk treatment",
+     "req": true
+    },
+    "9.1": {
+     "id": "Pemantauan, pengukuran, analisis, dan evaluasi",
+     "en": "Monitoring, measurement, analysis and evaluation",
+     "req": true
+    },
+    "9.2": {
+     "id": "Audit internal",
+     "en": "Internal audit",
+     "req": true
+    },
+    "9.3": {
+     "id": "Tinjauan manajemen",
+     "en": "Management review",
+     "req": true
+    },
+    "10.1": {
+     "id": "Peningkatan berkelanjutan",
+     "en": "Continual improvement",
+     "req": true
+    },
+    "10.2": {
+     "id": "Ketidaksesuaian dan tindakan korektif",
+     "en": "Nonconformity and corrective action",
+     "req": true
+    },
+    "A.5.1": {
+     "id": "Kebijakan keamanan informasi",
+     "en": "Policies for information security"
+    },
+    "A.5.9": {
+     "id": "Inventaris informasi dan aset terkait lainnya",
+     "en": "Inventory of information and other associated assets"
+    },
+    "A.5.12": {
+     "id": "Klasifikasi informasi",
+     "en": "Classification of information"
+    },
+    "A.5.14": {
+     "id": "Transfer informasi",
+     "en": "Information transfer"
+    },
+    "A.5.15": {
+     "id": "Kontrol akses",
+     "en": "Access control"
+    },
+    "A.5.19": {
+     "id": "Keamanan informasi dalam hubungan pemasok",
+     "en": "Information security in supplier relationships"
+    },
+    "A.5.20": {
+     "id": "Penanganan keamanan informasi dalam perjanjian pemasok",
+     "en": "Addressing information security within supplier agreements"
+    },
+    "A.5.23": {
+     "id": "Keamanan informasi untuk penggunaan layanan cloud",
+     "en": "Information security for use of cloud services"
+    },
+    "A.5.24": {
+     "id": "Perencanaan dan persiapan manajemen insiden keamanan informasi",
+     "en": "Information security incident management planning and preparation"
+    },
+    "A.5.29": {
+     "id": "Keamanan informasi selama gangguan",
+     "en": "Information security during disruption"
+    },
+    "A.5.30": {
+     "id": "Kesiapan TIK untuk kelangsungan bisnis",
+     "en": "ICT readiness for business continuity"
+    },
+    "A.5.31": {
+     "id": "Persyaratan hukum, perundang-undangan, regulasi, dan kontraktual",
+     "en": "Legal, statutory, regulatory and contractual requirements"
+    },
+    "A.5.33": {
+     "id": "Pelindungan rekaman",
+     "en": "Protection of records"
+    },
+    "A.5.34": {
+     "id": "Privasi dan pelindungan PII",
+     "en": "Privacy and protection of PII"
+    },
+    "A.5.35": {
+     "id": "Tinjauan independen atas keamanan informasi",
+     "en": "Independent review of information security"
+    },
+    "A.5.36": {
+     "id": "Kepatuhan terhadap kebijakan, aturan, dan standar keamanan informasi",
+     "en": "Compliance with policies, rules and standards for information security"
+    },
+    "A.6.1": {
+     "id": "Penyaringan",
+     "en": "Screening"
+    },
+    "A.6.2": {
+     "id": "Syarat dan ketentuan kerja",
+     "en": "Terms and conditions of employment"
+    },
+    "A.6.3": {
+     "id": "Kepedulian, pendidikan, dan pelatihan keamanan informasi",
+     "en": "Information security awareness, education and training"
+    },
+    "A.6.5": {
+     "id": "Tanggung jawab setelah pemutusan atau perubahan hubungan kerja",
+     "en": "Responsibilities after termination or change of employment"
+    },
+    "A.6.6": {
+     "id": "Perjanjian kerahasiaan",
+     "en": "Confidentiality or non-disclosure agreements"
+    },
+    "A.7.1": {
+     "id": "Perimeter keamanan fisik",
+     "en": "Physical security perimeters"
+    },
+    "A.7.2": {
+     "id": "Entri fisik",
+     "en": "Physical entry"
+    },
+    "A.7.14": {
+     "id": "Pembuangan atau penggunaan ulang peralatan secara aman",
+     "en": "Secure disposal or re-use of equipment"
+    },
+    "A.8.13": {
+     "id": "Cadangan informasi",
+     "en": "Information backup"
+    },
+    "A.8.25": {
+     "id": "Siklus hidup pengembangan yang aman",
+     "en": "Secure development life cycle"
+    },
+    "A.8.32": {
+     "id": "Manajemen perubahan",
+     "en": "Change management"
+    }
+   }
+  },
+  "krl550": {
+   "n": "K-RL 550",
+   "clauses": {
+    "gov": {
+     "id": "Tata kelola & organisasi TI",
+     "en": "IT governance & organisation"
+    },
+    "sec": {
+     "id": "Keamanan informasi",
+     "en": "Information security"
+    },
+    "acc": {
+     "id": "Pengelolaan identitas & akses",
+     "en": "Identity & access management"
+    },
+    "asset": {
+     "id": "Aset & perangkat TI",
+     "en": "IT assets & devices"
+    },
+    "dev": {
+     "id": "Pengembangan & perubahan sistem",
+     "en": "System development & change"
+    },
+    "svc": {
+     "id": "Operasi layanan TI & pemasok TI",
+     "en": "IT service operations & IT suppliers"
+    },
+    "data": {
+     "id": "Pelindungan data",
+     "en": "Data protection"
+    }
+   },
+   "note": {
+    "id": "Kebijakan TI TÜV NORD Group. Dipetakan per bidang, bukan per nomor pasal: teks K-RL 550 belum tersedia di proyek ini.",
+    "en": "TÜV NORD Group IT policy. Mapped by subject area, not by section number: the K-RL 550 text is not yet in this project."
+   }
+  }
+ },
+ "map": {
+  "vc_bd": {
+   "iso9001": [
+    "4.1",
+    "4.2",
+    "6.1",
+    "8.3"
+   ]
+  },
+  "vc_mk": {
+   "iso9001": [
+    "5.1.2",
+    "7.4",
+    "8.2"
+   ],
+   "iso27001": [
+    "A.5.34"
+   ],
+   "krl550": [
+    "data"
+   ]
+  },
+  "vc_sales": {
+   "iso9001": [
+    "5.1.2",
+    "8.2",
+    "7.5"
+   ],
+   "iso27001": [
+    "A.5.34",
+    "A.6.6"
+   ],
+   "krl550": [
+    "data"
+   ]
+  },
+  "vc_del": {
+   "iso9001": [
+    "8.1",
+    "7.1.5",
+    "7.2",
+    "8.5.1",
+    "8.5.2",
+    "8.5.3",
+    "8.5.4",
+    "8.6",
+    "8.7"
+   ],
+   "iso14001": [
+    "8.1",
+    "8.2"
+   ],
+   "iso27001": [
+    "A.5.12",
+    "A.5.14",
+    "A.5.33",
+    "A.5.34"
+   ],
+   "krl550": [
+    "data"
+   ]
+  },
+  "vc_bill": {
+   "iso9001": [
+    "8.5.5",
+    "9.1.2",
+    "9.1.3",
+    "10.2"
+   ],
+   "iso27001": [
+    "A.5.34"
+   ]
+  },
+  "cs_1": {
+   "iso9001": [
+    "8.2"
+   ],
+   "iso27001": [
+    "A.6.6"
+   ]
+  },
+  "cs_2": {
+   "iso9001": [
+    "8.1",
+    "7.2"
+   ]
+  },
+  "cs_3": {
+   "iso9001": [
+    "8.5.1",
+    "8.5.3"
+   ],
+   "iso27001": [
+    "A.5.14"
+   ]
+  },
+  "cs_4": {
+   "iso9001": [
+    "8.6",
+    "8.7"
+   ]
+  },
+  "cs_5": {
+   "iso9001": [
+    "8.6",
+    "7.5"
+   ],
+   "iso27001": [
+    "A.5.33"
+   ]
+  },
+  "cs_6": {
+   "iso9001": [
+    "8.5.5",
+    "9.1.2"
+   ]
+  },
+  "lab_1": {
+   "iso9001": [
+    "8.2"
+   ]
+  },
+  "lab_2": {
+   "iso9001": [
+    "8.5.2",
+    "8.5.3",
+    "8.5.4"
+   ],
+   "iso14001": [
+    "8.1"
+   ]
+  },
+  "lab_3": {
+   "iso9001": [
+    "8.5.1",
+    "7.1.5",
+    "7.2"
+   ],
+   "iso14001": [
+    "8.1",
+    "8.2"
+   ]
+  },
+  "lab_4": {
+   "iso9001": [
+    "8.6",
+    "8.7"
+   ]
+  },
+  "lab_5": {
+   "iso9001": [
+    "8.6",
+    "7.5"
+   ],
+   "iso27001": [
+    "A.5.14",
+    "A.5.33"
+   ]
+  },
+  "lab_6": {
+   "iso9001": [
+    "8.5.4",
+    "8.5.5",
+    "9.1.2"
+   ],
+   "iso14001": [
+    "8.1"
+   ]
+  },
+  "is_1": {
+   "iso9001": [
+    "8.2"
+   ]
+  },
+  "is_2": {
+   "iso9001": [
+    "8.1",
+    "7.2"
+   ]
+  },
+  "is_3": {
+   "iso9001": [
+    "8.5.1",
+    "8.5.3",
+    "7.1.5"
+   ],
+   "iso14001": [
+    "8.1",
+    "8.2"
+   ]
+  },
+  "is_4": {
+   "iso9001": [
+    "8.6",
+    "8.7"
+   ]
+  },
+  "is_5": {
+   "iso9001": [
+    "8.6",
+    "7.5"
+   ],
+   "iso27001": [
+    "A.5.14",
+    "A.5.33"
+   ]
+  },
+  "is_6": {
+   "iso9001": [
+    "8.5.5",
+    "9.1.2"
+   ]
+  },
+  "pct_1": {
+   "iso9001": [
+    "8.2"
+   ]
+  },
+  "pct_2": {
+   "iso9001": [
+    "8.1",
+    "8.4"
+   ]
+  },
+  "pct_3": {
+   "iso9001": [
+    "8.5.1",
+    "8.4",
+    "7.1.5"
+   ],
+   "iso14001": [
+    "8.1"
+   ]
+  },
+  "pct_4": {
+   "iso9001": [
+    "8.6"
+   ]
+  },
+  "pct_5": {
+   "iso9001": [
+    "8.6",
+    "7.5"
+   ],
+   "iso27001": [
+    "A.5.33"
+   ]
+  },
+  "pct_6": {
+   "iso9001": [
+    "8.5.5",
+    "9.1.2"
+   ]
+  },
+  "cs": {
+   "iso9001": [
+    "8.1",
+    "8.5.1"
+   ]
+  },
+  "lab": {
+   "iso9001": [
+    "8.1",
+    "8.5.1"
+   ],
+   "iso14001": [
+    "8.1",
+    "8.2"
+   ]
+  },
+  "is": {
+   "iso9001": [
+    "8.1",
+    "8.5.1"
+   ],
+   "iso14001": [
+    "8.1"
+   ]
+  },
+  "pct": {
+   "iso9001": [
+    "8.1",
+    "8.5.1"
+   ]
+  },
+  "md": {
+   "iso9001": [
+    "5.1",
+    "5.1.2",
+    "5.2",
+    "5.3",
+    "6.2",
+    "7.1",
+    "9.3"
+   ],
+   "iso14001": [
+    "5.1",
+    "5.2",
+    "5.3",
+    "6.2",
+    "7.1",
+    "9.3"
+   ],
+   "iso27001": [
+    "5.1",
+    "5.2",
+    "5.3",
+    "6.2",
+    "7.1",
+    "9.3",
+    "A.5.1"
+   ],
+   "krl550": [
+    "gov"
+   ]
+  },
+  "boc": {
+   "iso9001": [
+    "4.2"
+   ]
+  },
+  "planner": {
+   "iso9001": [
+    "4.1",
+    "4.2",
+    "6.1",
+    "6.2",
+    "9.1.3"
+   ],
+   "iso14001": [
+    "4.1",
+    "4.2",
+    "6.2"
+   ],
+   "iso27001": [
+    "4.1",
+    "4.2",
+    "6.2"
+   ]
+  },
+  "portfolio": {
+   "iso9001": [
+    "5.1.2",
+    "8.3",
+    "9.1.2"
+   ],
+   "iso27001": [
+    "A.5.34"
+   ],
+   "krl550": [
+    "data"
+   ]
+  },
+  "cis": {
+   "iso9001": [
+    "6.3",
+    "7.1.6",
+    "10.3"
+   ],
+   "iso14001": [
+    "6.1.2",
+    "7.4",
+    "9.1",
+    "10.3"
+   ],
+   "iso27001": [
+    "10.1"
+   ]
+  },
+  "it": {
+   "iso9001": [
+    "7.1.3",
+    "7.5",
+    "8.5.6"
+   ],
+   "iso14001": [
+    "8.1"
+   ],
+   "iso27001": [
+    "4.3",
+    "6.1.2",
+    "6.1.3",
+    "6.3",
+    "8.1",
+    "8.2",
+    "8.3",
+    "9.1",
+    "A.5.9",
+    "A.5.15",
+    "A.5.23",
+    "A.5.24",
+    "A.5.29",
+    "A.5.30",
+    "A.7.14",
+    "A.8.13",
+    "A.8.25",
+    "A.8.32"
+   ],
+   "krl550": [
+    "gov",
+    "sec",
+    "acc",
+    "asset",
+    "dev",
+    "svc",
+    "data"
+   ]
+  },
+  "mkt": {
+   "iso9001": [
+    "7.4",
+    "8.2"
+   ],
+   "iso14001": [
+    "7.4"
+   ],
+   "iso27001": [
+    "7.4"
+   ]
+  },
+  "cms": {
+   "iso9001": [
+    "4.3",
+    "4.4",
+    "6.1",
+    "7.5",
+    "8.7",
+    "9.2",
+    "10.2"
+   ],
+   "iso14001": [
+    "4.3",
+    "4.4",
+    "6.1",
+    "6.1.2",
+    "6.1.4",
+    "7.5",
+    "8.2",
+    "9.1",
+    "9.1.2",
+    "9.2",
+    "10.2"
+   ],
+   "iso27001": [
+    "4.4",
+    "7.5",
+    "9.2",
+    "10.2",
+    "A.5.33",
+    "A.5.35",
+    "A.5.36"
+   ]
+  },
+  "legal": {
+   "iso9001": [
+    "4.2",
+    "8.2"
+   ],
+   "iso14001": [
+    "6.1.3",
+    "9.1.2"
+   ],
+   "iso27001": [
+    "A.5.20",
+    "A.5.31",
+    "A.5.34"
+   ],
+   "krl550": [
+    "data"
+   ]
+  },
+  "gbac": {
+   "iso9001": [
+    "4.2"
+   ]
+  },
+  "cf": {
+   "iso9001": [
+    "6.1",
+    "7.1"
+   ]
+  },
+  "acc": {
+   "iso27001": [
+    "A.5.33"
+   ]
+  },
+  "ric": {
+   "iso9001": [
+    "6.2",
+    "9.1.3"
+   ]
+  },
+  "hr": {
+   "iso9001": [
+    "5.3",
+    "7.1.2",
+    "7.2",
+    "7.3"
+   ],
+   "iso14001": [
+    "7.2",
+    "7.3"
+   ],
+   "iso27001": [
+    "7.2",
+    "7.3",
+    "A.6.1",
+    "A.6.2",
+    "A.6.3",
+    "A.6.5",
+    "A.6.6"
+   ],
+   "krl550": [
+    "acc"
+   ]
+  },
+  "ga": {
+   "iso9001": [
+    "7.1.3",
+    "7.1.4"
+   ],
+   "iso14001": [
+    "8.1",
+    "8.2",
+    "9.1"
+   ],
+   "iso27001": [
+    "A.7.1",
+    "A.7.2",
+    "A.7.14"
+   ],
+   "krl550": [
+    "asset"
+   ]
+  },
+  "proc": {
+   "iso9001": [
+    "8.4",
+    "7.1.5"
+   ],
+   "iso14001": [
+    "8.1"
+   ],
+   "iso27001": [
+    "A.5.19",
+    "A.5.20"
+   ],
+   "krl550": [
+    "svc"
+   ]
+  },
+  "sec": {
+   "iso9001": [
+    "7.5",
+    "9.3"
+   ]
+  },
+  "cust": {
+   "iso9001": [
+    "4.2",
+    "5.1.2",
+    "9.1.2"
+   ],
+   "iso14001": [
+    "4.2"
+   ],
+   "iso27001": [
+    "4.2"
+   ]
+  },
+  "stake": {
+   "iso9001": [
+    "4.2"
+   ],
+   "iso14001": [
+    "4.2"
+   ],
+   "iso27001": [
+    "4.2"
+   ]
+  },
+  "reg": {
+   "iso9001": [
+    "4.2"
+   ],
+   "iso14001": [
+    "4.2",
+    "6.1.3"
+   ],
+   "iso27001": [
+    "4.2",
+    "A.5.31"
+   ]
+  },
+  "pub": {
+   "iso14001": [
+    "4.2",
+    "7.4"
+   ]
+  }
+ }
+}

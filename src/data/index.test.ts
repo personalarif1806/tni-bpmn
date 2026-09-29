@@ -27,11 +27,22 @@ describe("accessors", () => {
     expect(getUnit("does-not-exist")).toBeUndefined();
   });
 
-  test("group the 20 processes into M, G, C, S", () => {
+  test("group the 25 processes into M, G, C, S", () => {
     const groups = listProcessGroups();
 
     expect(groups.map((group) => group.id)).toEqual(["M", "G", "C", "S"]);
-    expect(groups.flatMap((group) => group.processes)).toHaveLength(20);
+    expect(groups.flatMap((group) => group.processes)).toHaveLength(25);
+    expect(listProcessesByGroup("M").map((process) => process.id)).toEqual([
+      "M1",
+      "M2",
+      "M3",
+      "M4.1",
+      "M4.2",
+      "M4.3",
+      "M4.4",
+      "M4.5",
+      "M4.6",
+    ]);
     expect(listProcessesByGroup("C").map((process) => process.id)).toEqual([
       "C1",
       "C2",

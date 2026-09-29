@@ -44,6 +44,7 @@ export function ToolbarButton({
   disabled = false,
   title,
   pressed,
+  compact = false,
 }: {
   icon: ReactNode;
   label: string;
@@ -52,6 +53,12 @@ export function ToolbarButton({
   title?: string;
   /** Present when the button toggles something; drives `aria-pressed`. */
   pressed?: boolean;
+  /**
+   * Icon only until the widest screens. For buttons that jump within the page,
+   * so a crowded toolbar gives up their labels before it squeezes the title;
+   * the label stays as the accessible name and tooltip.
+   */
+  compact?: boolean;
 }) {
   return (
     <button
@@ -71,7 +78,9 @@ export function ToolbarButton({
       <span aria-hidden="true" className={pressed ? "text-orange-ink" : "text-muted"}>
         {icon}
       </span>
-      <span className="hidden sm:inline">{label}</span>
+      <span className={`hidden whitespace-nowrap ${compact ? "2xl:inline" : "sm:inline"}`}>
+        {label}
+      </span>
     </button>
   );
 }

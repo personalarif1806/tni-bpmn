@@ -16,6 +16,7 @@
   --color-paper: #f5f6f8;
   --color-line: #d9dce3;
   --color-muted: #5b6075;
+  --color-desk: #e2e4ea; /* the surface Level 2 document sheets lie on */
 
   /* Hover shades — boxes change background only, never position (PRD 10) */
   --color-cyan-hover: color-mix(in srgb, var(--color-cyan) 78%, white);
@@ -184,6 +185,11 @@
     margin: 12mm;
   }
 
+  @page procedure {
+    size: A4 portrait;
+    margin: 0;
+  }
+
   :root {
     --header-h: 0px;
   }
@@ -244,6 +250,30 @@
    */
   .focus-mode .map-dim[data-involved="false"] {
     opacity: 1 !important;
+  }
+
+  /*
+   * Level 2 procedures are already laid out as A4 sheets on screen, so print
+   * takes those sheets as they are: a portrait page of its own for each, no
+   * page margin (the sheet carries its own), and the desk and shadow removed.
+   * The sheet loses half a millimetre so rounding cannot push it onto a
+   * second, blank page.
+   */
+  .procedure-desk {
+    background: none;
+    padding: 0;
+    gap: 0;
+  }
+
+  .procedure-sheet {
+    page: procedure;
+    height: 296.5mm;
+    box-shadow: none;
+    break-after: page;
+  }
+
+  .procedure-sheet:last-child {
+    break-after: auto;
   }
 
   .print-break-before {

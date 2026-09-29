@@ -201,6 +201,18 @@ export interface WorkInstruction {
   o?: string;
 }
 
+/** One row of a procedure's Revision Note(s) table (spec §8.5). */
+export interface RevisionNote {
+  /** Revision number, two digits. */
+  rev: string;
+  /** ISO `YYYY-MM-DD`. */
+  date: string;
+  /** Clause numbers changed, or `All`. */
+  part: string;
+  /** What changed. */
+  note: string;
+}
+
 /**
  * A Level 2 procedure — the controlled document behind a run of Level 1 steps
  * (PRD 4, "Level 2: prosedur detail per langkah").
@@ -212,14 +224,22 @@ export interface WorkInstruction {
 export interface Procedure {
   /** Parent Level 1 process id. */
   p: string;
-  /** Controlled document number, e.g. `PR-IT-01`. */
+  /**
+   * Controlled document number in the PCR-TNID-01 format, `PX-TNI-YY` or
+   * `PSC-SCH-TNI-YY`, e.g. `PIT-TNI-01`. See `src/lib/doc-number.ts`.
+   */
   doc: string;
   /** Title. */
   n: string;
-  /** Revision as written on the document, e.g. `00`. */
+  /** Revision as written on the document, two digits, `00` for the first issue. */
   rev: string;
-  /** Effective date, ISO `YYYY-MM-DD`. */
+  /** Published date of the current revision, ISO `YYYY-MM-DD`. */
   eff: string;
+  /**
+   * Every revision since the first issue, oldest first; the last one is `rev`
+   * and was published on `eff`.
+   */
+  revs: RevisionNote[];
   /** Level 1 step keys this procedure details, in step order. */
   steps: string[];
   purpose: string;
@@ -233,7 +253,10 @@ export interface Procedure {
   records: string[];
   /** Standards, policies and regulations the procedure answers to. */
   refs: string[];
-  /** The document control block. */
+  /**
+   * Who prepares, verifies and approves — roles, never names (spec §0, §6.1).
+   * They keep their official English spelling in both languages.
+   */
   sign: { prep: string; rev: string; app: string };
 }
 
